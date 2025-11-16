@@ -1,0 +1,4094 @@
+{
+    "warRegions": {
+        "Afganistan": {
+            "sectorsTypes": [
+                "None",
+                "None",
+                "IndustrialCenter",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "AgriculturalCenter",
+                "None",
+                "AgriculturalCenter",
+                "None"
+            ],
+            "supplyLines": [
+                {
+                    "startRegion": "MainTurkmenia",
+                    "points": [
+                        1,
+                        7,
+                        3,
+                        0,
+                        2
+                    ]
+                },
+                {
+                    "startRegion": "MainTajikistan",
+                    "points": [
+                        4,
+                        2,
+                        0,
+                        3,
+                        7,
+                        1
+                    ]
+                }
+            ],
+            "adjacentRegions": {
+                "0": [
+                    "MainPakistan"
+                ],
+                "1": [
+                    "MainTurkmenia",
+                    "MainIran"
+                ],
+                "2": [
+                    "MainPakistan"
+                ],
+                "3": [
+                    "MainPakistan"
+                ],
+                "4": [
+                    "MainTajikistan",
+                    "MainPakistan"
+                ],
+                "5": [
+                    "MainTurkmenia",
+                    "MainUzbekistan"
+                ],
+                "6": [
+                    "MainTajikistan",
+                    "Uyghuristan",
+                    "MainPakistan"
+                ],
+                "7": [
+                    "MainIran"
+                ],
+                "8": [
+                    "MainIran",
+                    "MainPakistan"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1,
+                    2,
+                    3,
+                    5,
+                    7
+                ],
+                "1": [
+                    0,
+                    3,
+                    5,
+                    7
+                ],
+                "2": [
+                    0,
+                    4
+                ],
+                "3": [
+                    0,
+                    1,
+                    7,
+                    8
+                ],
+                "4": [
+                    0,
+                    2,
+                    5,
+                    6
+                ],
+                "5": [
+                    0,
+                    1,
+                    4
+                ],
+                "6": [
+                    4
+                ],
+                "7": [
+                    0,
+                    1,
+                    3,
+                    8
+                ],
+                "8": [
+                    3,
+                    7
+                ]
+            }
+        },
+        "Korea": {
+            "sectorsTypes": [
+                "IndustrialCenter",
+                "IndustrialCenter",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "IndustrialCenter",
+                "IndustrialCenter"
+            ],
+            "supplyLines": [
+                {
+                    "startRegion": "Manchuria",
+                    "points": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                },
+                {
+                    "startRegion": "Manchuria",
+                    "points": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        7
+                    ]
+                },
+                {
+                    "startRegion": "MainRussia",
+                    "points": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6
+                    ]
+                },
+                {
+                    "startRegion": "MainRussia",
+                    "points": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        7
+                    ]
+                },
+                {
+                    "startRegion": "MainJapan",
+                    "points": [
+                        6,
+                        5,
+                        4,
+                        3,
+                        2,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "startRegion": "MainJapan",
+                    "points": [
+                        7,
+                        5,
+                        4,
+                        3,
+                        2,
+                        1,
+                        0
+                    ]
+                }
+            ],
+            "adjacentRegions": {
+                "0": [
+                    "Manchuria",
+                    "MainRussia"
+                ],
+                "1": [
+                    "Sakhalin"
+                ],
+                "2": [
+                    "Veihai"
+                ],
+                "3": [
+                    "Veihai"
+                ],
+                "4": [
+                    "Veihai"
+                ],
+                "5": [
+                    "Veihai"
+                ],
+                "6": [
+                    "MainJapan"
+                ],
+                "7": [
+                    "MainJapan"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1
+                ],
+                "1": [
+                    0,
+                    2
+                ],
+                "2": [
+                    1,
+                    3
+                ],
+                "3": [
+                    2,
+                    4
+                ],
+                "4": [
+                    3,
+                    5
+                ],
+                "5": [
+                    4,
+                    6,
+                    7
+                ],
+                "6": [
+                    5,
+                    7
+                ],
+                "7": [
+                    5,
+                    6
+                ]
+            }
+        },
+        "Nicaragua": {
+            "sectorsTypes": [
+                "AgriculturalCenter",
+                "None",
+                "AgriculturalCenter",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "AgriculturalCenter",
+                "AgriculturalCenter",
+                "AgriculturalCenter"
+            ],
+            "supplyLines": [
+                {
+                    "startRegion": "MainHonduras",
+                    "points": [
+                        0,
+                        1,
+                        2
+                    ]
+                },
+                {
+                    "startRegion": "MainHonduras",
+                    "points": [
+                        2,
+                        4,
+                        6
+                    ]
+                },
+                {
+                    "startRegion": "MainHonduras",
+                    "points": [
+                        2,
+                        4,
+                        3
+                    ]
+                },
+                {
+                    "startRegion": "MainCostaRica",
+                    "points": [
+                        3,
+                        4,
+                        2
+                    ]
+                },
+                {
+                    "startRegion": "MainCostaRica",
+                    "points": [
+                        3,
+                        4,
+                        6
+                    ]
+                }
+            ],
+            "adjacentRegions": {
+                "0": [
+                    "MainHonduras",
+                    "MainCuba"
+                ],
+                "1": [
+                    "MainHonduras"
+                ],
+                "2": [
+                    "MainHonduras"
+                ],
+                "3": [
+                    "MainHonduras",
+                    "MainCostaRica",
+                    "MainSalvador"
+                ],
+                "4": [],
+                "5": [
+                    "MainCuba"
+                ],
+                "6": [
+                    "MainCuba"
+                ],
+                "7": [
+                    "MainCostaRica",
+                    "MainCuba"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1,
+                    5
+                ],
+                "1": [
+                    0,
+                    2,
+                    4,
+                    5
+                ],
+                "2": [
+                    1,
+                    3,
+                    4
+                ],
+                "3": [
+                    2,
+                    4
+                ],
+                "4": [
+                    1,
+                    2,
+                    3,
+                    5,
+                    6
+                ],
+                "5": [
+                    0,
+                    1,
+                    4,
+                    6
+                ],
+                "6": [
+                    4,
+                    5,
+                    7
+                ],
+                "7": [
+                    3,
+                    6
+                ]
+            }
+        },
+        "IranIraq": {
+            "sectorsTypes": [
+                "AgriculturalCenter",
+                "None",
+                "AgriculturalCenter",
+                "IndustrialCenter",
+                "None",
+                "IndustrialCenter",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "IndustrialCenter",
+                "AgriculturalCenter"
+            ],
+            "supplyLines": [
+                {
+                    "startRegion": "MainIran",
+                    "points": [
+                        11
+                    ]
+                },
+                {
+                    "startRegion": "MainIran",
+                    "points": [
+                        8,
+                        7,
+                        6
+                    ]
+                },
+                {
+                    "startRegion": "TurkishKurdistan",
+                    "points": [
+                        6,
+                        7,
+                        8
+                    ]
+                },
+                {
+                    "startRegion": "MainIran",
+                    "points": [
+                        8,
+                        9,
+                        10
+                    ]
+                },
+                {
+                    "startRegion": "MainIran",
+                    "points": [
+                        11,
+                        10
+                    ]
+                },
+                {
+                    "startRegion": "MainIran",
+                    "points": [
+                        11,
+                        9
+                    ]
+                },
+                {
+                    "startRegion": "MainKuwait",
+                    "points": [
+                        5,
+                        3
+                    ]
+                },
+                {
+                    "startRegion": "TurkishKurdistan",
+                    "points": [
+                        0,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "startRegion": "MainJordan",
+                    "points": [
+                        4,
+                        3
+                    ]
+                },
+                {
+                    "startRegion": "MainSyria",
+                    "points": [
+                        4,
+                        3
+                    ]
+                }
+            ],
+            "adjacentRegions": {
+                "0": [
+                    "TurkishKurdistan",
+                    "SyriaKurdistan"
+                ],
+                "1": [
+                    "SyriaKurdistan",
+                    "MainSyria"
+                ],
+                "2": [],
+                "3": [],
+                "4": [
+                    "MainSyria",
+                    "MainJordan",
+                    "MainSaudiArabia",
+                    "MainKuwait"
+                ],
+                "5": [
+                    "MainKuwait",
+                    "MainSaudiArabia",
+                    "MainQatar",
+                    "MainUAE",
+                    "MainOman"
+                ],
+                "6": [
+                    "TurkishKurdistan",
+                    "Nakhichevan",
+                    "MainArmenia"
+                ],
+                "7": [
+                    "MainAzerbaijan",
+                    "Nakhichevan",
+                    "MainArmenia",
+                    "TurkmenIran",
+                    "MainTurkmenia",
+                    "Mangystau",
+                    "WesternKazakhstan",
+                    "Dagestan",
+                    "MainIran"
+                ],
+                "8": [
+                    "TurkmenIran",
+                    "MainTurkmenia",
+                    "Mangystau",
+                    "WesternKazakhstan",
+                    "MainAzerbaijan",
+                    "Dagestan",
+                    "MainIran"
+                ],
+                "9": [],
+                "10": [
+                    "MainKuwait",
+                    "MainSaudiArabia",
+                    "MainQatar",
+                    "MainUAE",
+                    "MainOman"
+                ],
+                "11": [
+                    "MainKuwait",
+                    "MainSaudiArabia",
+                    "MainQatar",
+                    "MainUAE",
+                    "MainOman",
+                    "MainIran"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1,
+                    2,
+                    6
+                ],
+                "1": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "2": [
+                    0,
+                    1,
+                    3,
+                    6
+                ],
+                "3": [
+                    1,
+                    2,
+                    4,
+                    5,
+                    6,
+                    9
+                ],
+                "4": [
+                    1,
+                    3,
+                    5
+                ],
+                "5": [
+                    3,
+                    4,
+                    9,
+                    10
+                ],
+                "6": [
+                    0,
+                    2,
+                    3,
+                    9,
+                    7,
+                    8
+                ],
+                "7": [
+                    8,
+                    6
+                ],
+                "8": [
+                    6,
+                    7,
+                    9,
+                    11
+                ],
+                "9": [
+                    3,
+                    5,
+                    6,
+                    10,
+                    8,
+                    11
+                ],
+                "10": [
+                    5,
+                    9,
+                    11
+                ],
+                "11": [
+                    8,
+                    9,
+                    10
+                ]
+            }
+        },
+        "Israel": {
+            "sectorsTypes": [
+                "None",
+                "AgriculturalCenter",
+                "AgriculturalCenter",
+                "AgriculturalCenter",
+                "IndustrialCenter",
+                "AgriculturalCenter"
+            ],
+            "supplyLines": [
+                {
+                    "startRegion": "MainEgypt",
+                    "points": [
+                        2,
+                        1,
+                        4,
+                        5
+                    ]
+                },
+                {
+                    "startRegion": "MainEgypt",
+                    "points": [
+                        2,
+                        1,
+                        4,
+                        3
+                    ]
+                },
+                {
+                    "startRegion": "MainSyria",
+                    "points": [
+                        5,
+                        4,
+                        1,
+                        2
+                    ]
+                },
+                {
+                    "startRegion": "MainSyria",
+                    "points": [
+                        5,
+                        4,
+                        3
+                    ]
+                }
+            ],
+            "adjacentRegions": {
+                "0": [
+                    "MainEgypt",
+                    "MainJordan"
+                ],
+                "1": [
+                    "MainEgypt",
+                    "MainJordan"
+                ],
+                "2": [
+                    "MainEgypt"
+                ],
+                "3": [
+                    "MainJordan"
+                ],
+                "4": [],
+                "5": [
+                    "MainJordan",
+                    "MainSyria",
+                    "MainLebanon"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1
+                ],
+                "1": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "2": [
+                    1
+                ],
+                "3": [
+                    1,
+                    4,
+                    5
+                ],
+                "4": [
+                    1,
+                    3,
+                    5
+                ],
+                "5": [
+                    3,
+                    4
+                ]
+            }
+        },
+        "Angola": {
+            "sectorsTypes": [
+                "None",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "IndustrialCenter",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "None",
+                "None"
+            ],
+            "supplyLines": [
+                {
+                    "startRegion": "Namibia",
+                    "points": [
+                        6,
+                        4,
+                        1
+                    ]
+                },
+                {
+                    "startRegion": "Namibia",
+                    "points": [
+                        6,
+                        4,
+                        3
+                    ]
+                },
+                {
+                    "startRegion": "MainZaire",
+                    "points": [
+                        5,
+                        2,
+                        4,
+                        3
+                    ]
+                },
+                {
+                    "startRegion": "MainZaire",
+                    "points": [
+                        5,
+                        2,
+                        4,
+                        1
+                    ]
+                }
+            ],
+            "adjacentRegions": {
+                "0": [
+                    "MainZaire",
+                    "MainCongo"
+                ],
+                "1": [
+                    "MainZaire"
+                ],
+                "2": [
+                    "MainZaire"
+                ],
+                "3": [],
+                "4": [],
+                "5": [
+                    "MainZaire",
+                    "MainZambia"
+                ],
+                "6": [
+                    "Namibia"
+                ],
+                "7": [
+                    "Namibia",
+                    "MainZambia"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1
+                ],
+                "1": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "2": [
+                    1,
+                    4,
+                    5
+                ],
+                "3": [
+                    1,
+                    4,
+                    6
+                ],
+                "4": [
+                    1,
+                    2,
+                    3,
+                    5,
+                    6
+                ],
+                "5": [
+                    2,
+                    4,
+                    6,
+                    7
+                ],
+                "6": [
+                    3,
+                    4,
+                    5,
+                    7
+                ],
+                "7": [
+                    5,
+                    6
+                ]
+            }
+        },
+        "Kashmir": {
+            "sectorsTypes": [
+                "None",
+                "None",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "AgriculturalCenter",
+                "None",
+                "None"
+            ],
+            "supplyLines": [
+                {
+                    "startRegion": "MainIndia",
+                    "points": [
+                        4,
+                        3,
+                        2
+                    ]
+                },
+                {
+                    "startRegion": "MainPakistan",
+                    "points": [
+                        2,
+                        3,
+                        4
+                    ]
+                }
+            ],
+            "adjacentRegions": {
+                "0": [
+                    "PashtunPakistan",
+                    "TajikAfghanistan",
+                    "Uyghuristan"
+                ],
+                "1": [
+                    "MainPakistan",
+                    "PashtunPakistan",
+                    "Uyghuristan"
+                ],
+                "2": [
+                    "MainPakistan",
+                    "PashtunPakistan"
+                ],
+                "3": [
+                    "MainPakistan",
+                    "PashtunPakistan"
+                ],
+                "4": [
+                    "MainPakistan",
+                    "MainIndia",
+                    "Khalistan"
+                ],
+                "5": [
+                    "MainIndia",
+                    "Uyghuristan"
+                ],
+                "6": [
+                    "Tibet",
+                    "MainIndia",
+                    "Uyghuristan"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1
+                ],
+                "1": [
+                    3,
+                    5
+                ],
+                "2": [
+                    3
+                ],
+                "3": [
+                    1,
+                    2,
+                    4,
+                    5
+                ],
+                "4": [
+                    3,
+                    5
+                ],
+                "5": [
+                    1,
+                    3,
+                    4,
+                    6
+                ],
+                "6": [
+                    5
+                ]
+            }
+        },
+        "China": {
+            "sectorsTypes": [
+                "None",
+                "None",
+                "None",
+                "None",
+                "None",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "AgriculturalCenter",
+                "AgriculturalCenter",
+                "None",
+                "AgriculturalCenter",
+                "IndustrialCenter"
+            ],
+            "supplyLines": [
+                {
+                    "startRegion": "MainRussia",
+                    "points": [
+                        4,
+                        5,
+                        7,
+                        9,
+                        12,
+                        15,
+                        14
+                    ]
+                },
+                {
+                    "startRegion": "MainRussia",
+                    "points": [
+                        4,
+                        5,
+                        7,
+                        9,
+                        8,
+                        11,
+                        10
+                    ]
+                },
+                {
+                    "startRegion": "MainRussia",
+                    "points": [
+                        4,
+                        5,
+                        6,
+                        10,
+                        11
+                    ]
+                },
+                {
+                    "startRegion": "MainRussia",
+                    "points": [
+                        4,
+                        5,
+                        6,
+                        8,
+                        11
+                    ]
+                },
+                {
+                    "startRegion": "MainRussia",
+                    "points": [
+                        4,
+                        5,
+                        6,
+                        8,
+                        9,
+                        7
+                    ]
+                },
+                {
+                    "startRegion": "MainRussia",
+                    "points": [
+                        4,
+                        5,
+                        6,
+                        8,
+                        9,
+                        12,
+                        15,
+                        14
+                    ]
+                },
+                {
+                    "startRegion": "MainVietnam",
+                    "points": [
+                        14,
+                        15,
+                        12,
+                        9,
+                        7,
+                        5,
+                        4
+                    ]
+                },
+                {
+                    "startRegion": "MainVietnam",
+                    "points": [
+                        14,
+                        15,
+                        12,
+                        9,
+                        8,
+                        6,
+                        5,
+                        4
+                    ]
+                },
+                {
+                    "startRegion": "MainVietnam",
+                    "points": [
+                        14,
+                        15,
+                        12,
+                        9,
+                        8,
+                        11,
+                        10
+                    ]
+                },
+                {
+                    "startRegion": "MainVietnam",
+                    "points": [
+                        14,
+                        15,
+                        12,
+                        9,
+                        8,
+                        6,
+                        10,
+                        11
+                    ]
+                }
+            ],
+            "adjacentRegions": {
+                "0": [
+                    "MainMongolia",
+                    "TajikAfghanistan",
+                    "MainMongolia",
+                    "MainKasakhstan",
+                    "MainKyrgizia",
+                    "SouthKyrgizia",
+                    "EastTajikistan",
+                    "MainPakistan",
+                    "JammuKashmir",
+                    "ArunachalPradesh"
+                ],
+                "1": [
+                    "MainIndia",
+                    "MainNepal",
+                    "MainBhutan",
+                    "ArunachalPradesh",
+                    "MainBirma"
+                ],
+                "2": [
+                    "MainMongolia"
+                ],
+                "3": [
+                    "MainMongolia"
+                ],
+                "4": [
+                    "MainRussia",
+                    "MainNorthKorea"
+                ],
+                "5": [],
+                "6": [],
+                "7": [
+                    "MainNorthKorea",
+                    "MainSouthKorea"
+                ],
+                "8": [],
+                "9": [
+                    "Kyushu",
+                    "Okinawa"
+                ],
+                "10": [],
+                "11": [],
+                "12": [
+                    "Kyushu",
+                    "Okinawa",
+                    "MainTaiwan"
+                ],
+                "13": [
+                    "MainBirma",
+                    "MainLaos",
+                    "MainVietnam"
+                ],
+                "14": [
+                    "MainVietnam"
+                ],
+                "15": [
+                    "MainPhilippines",
+                    "MainVietnam"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1,
+                    2
+                ],
+                "1": [
+                    1,
+                    2,
+                    13
+                ],
+                "2": [
+                    0,
+                    1,
+                    3,
+                    6,
+                    10,
+                    13
+                ],
+                "3": [
+                    2,
+                    4,
+                    5,
+                    6
+                ],
+                "4": [
+                    3,
+                    5
+                ],
+                "5": [
+                    3,
+                    4,
+                    6,
+                    7
+                ],
+                "6": [
+                    2,
+                    3,
+                    5,
+                    7,
+                    8,
+                    10
+                ],
+                "7": [
+                    5,
+                    6,
+                    8,
+                    9
+                ],
+                "8": [
+                    6,
+                    7,
+                    9,
+                    10,
+                    11
+                ],
+                "9": [
+                    7,
+                    8,
+                    11,
+                    12
+                ],
+                "10": [
+                    2,
+                    6,
+                    8,
+                    11,
+                    13,
+                    14
+                ],
+                "11": [
+                    8,
+                    9,
+                    10,
+                    12,
+                    14,
+                    15
+                ],
+                "12": [
+                    9,
+                    11,
+                    15
+                ],
+                "13": [
+                    2,
+                    10,
+                    14
+                ],
+                "14": [
+                    10,
+                    11,
+                    13,
+                    15
+                ],
+                "15": [
+                    11,
+                    12,
+                    14
+                ]
+            }
+        },
+        "Salvador": {
+            "adjacentRegions": {
+                "0": [
+                    "MainHonduras",
+                    "MainGuatemala"
+                ],
+                "1": [
+                    "MainHonduras"
+                ],
+                "2": [
+                    "MainGuatemala"
+                ],
+                "6": [
+                    "MainHonduras"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "1": [
+                    0,
+                    4,
+                    6
+                ],
+                "2": [
+                    0,
+                    3
+                ],
+                "3": [
+                    0,
+                    2,
+                    4,
+                    5
+                ],
+                "4": [
+                    0,
+                    1,
+                    3,
+                    5,
+                    6
+                ],
+                "5": [
+                    3,
+                    4,
+                    6
+                ],
+                "6": [
+                    1,
+                    4,
+                    5
+                ]
+            }
+        },
+        "Ethiopia": {
+            "sectorsTypes": [
+                "None",
+                "IndustrialCenter",
+                "None",
+                "AgriculturalCenter",
+                "AgriculturalCenter",
+                "IndustrialCenter",
+                "None"
+            ],
+            "supplyLines": [
+                {
+                    "startRegion": "MainKenya",
+                    "points": [
+                        5,
+                        3
+                    ]
+                },
+                {
+                    "startRegion": "MainKenya",
+                    "points": [
+                        5,
+                        4,
+                        3,
+                        2,
+                        1,
+                        0
+                    ]
+                },
+                {
+                    "startRegion": "MainDjibouti",
+                    "points": [
+                        3,
+                        5
+                    ]
+                },
+                {
+                    "startRegion": "NorthSudan",
+                    "points": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        5
+                    ]
+                }
+            ],
+            "adjacentRegions": {
+                "0": [
+                    "NorthSudan",
+                    "MainSaudiArabia"
+                ],
+                "1": [
+                    "MainNorthYemen",
+                    "MainSaudiArabia",
+                    "MainDjibouti"
+                ],
+                "2": [
+                    "NorthSudan"
+                ],
+                "3": [
+                    "NorthSudan",
+                    "MainDjibouti"
+                ],
+                "4": [
+                    "NorthSudan",
+                    "SouthSudan"
+                ],
+                "5": [
+                    "SouthSudan",
+                    "MainKenya",
+                    "EastKenya",
+                    "MainDjibouti"
+                ],
+                "6": [
+                    "EastKenya",
+                    "MainSomali",
+                    "Somalilend",
+                    "MainDjibouti"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1,
+                    2
+                ],
+                "1": [
+                    0,
+                    2,
+                    3
+                ],
+                "2": [
+                    0,
+                    1,
+                    3
+                ],
+                "3": [
+                    1,
+                    2,
+                    4,
+                    5
+                ],
+                "4": [
+                    3,
+                    5
+                ],
+                "5": [
+                    3,
+                    4,
+                    6
+                ],
+                "6": [
+                    5
+                ]
+            }
+        },
+        "Somalia": {
+            "sectorsTypes": [
+                "IndustrialCenter",
+                "None",
+                "None",
+                "None",
+                "IndustrialCenter",
+                "AgriculturalCenter"
+            ],
+            "supplyLines": [
+                {
+                    "startRegion": "MainDjibouti",
+                    "points": [
+                        0
+                    ]
+                },
+                {
+                    "startRegion": "Ogaden",
+                    "points": [
+                        0
+                    ]
+                },
+                {
+                    "startRegion": "EastKenya",
+                    "points": [
+                        5,
+                        4
+                    ]
+                },
+                {
+                    "startRegion": "Ogaden",
+                    "points": [
+                        5,
+                        4
+                    ]
+                }
+            ],
+            "adjacentRegions": {
+                "0": [
+                    "MainDjibouti",
+                    "Ogaden",
+                    "MainNorthYemen"
+                ],
+                "1": [
+                    "Ogaden",
+                    "MainNorthYemen",
+                    "MainSouthYemen"
+                ],
+                "2": [
+                    "Ogaden",
+                    "MainNorthYemen",
+                    "MainSouthYemen"
+                ],
+                "3": [
+                    "Ogaden"
+                ],
+                "4": [
+                    "Ogaden"
+                ],
+                "5": [
+                    "Ogaden",
+                    "EastKenya"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1
+                ],
+                "1": [
+                    0,
+                    2
+                ],
+                "2": [
+                    1,
+                    3
+                ],
+                "3": [
+                    2,
+                    4
+                ],
+                "4": [
+                    3,
+                    5
+                ],
+                "5": [
+                    4
+                ]
+            }
+        },
+        "Algeria": {
+            "sectorsTypes": [
+                "None",
+                "None",
+                "None",
+                "AgriculturalCenter",
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "None",
+                "AgriculturalCenter"
+            ],
+            "supplyLines": [
+                {
+                    "startRegion": "MainTunisia",
+                    "points": [
+                        7,
+                        5,
+                        6,
+                        1,
+                        3
+                    ]
+                },
+                {
+                    "startRegion": "MainTunisia",
+                    "points": [
+                        7,
+                        5,
+                        6,
+                        4
+                    ]
+                },
+                {
+                    "startRegion": "MainTunisia",
+                    "points": [
+                        7,
+                        5,
+                        4,
+                        3,
+                        1
+                    ]
+                },
+                {
+                    "startRegion": "MainTunisia",
+                    "points": [
+                        7,
+                        5,
+                        4,
+                        6,
+                        1
+                    ]
+                },
+                {
+                    "startRegion": "MainMauritania",
+                    "points": [
+                        1,
+                        6,
+                        5,
+                        7
+                    ]
+                },
+                {
+                    "startRegion": "MainMauritania",
+                    "points": [
+                        1,
+                        3
+                    ]
+                },
+                {
+                    "startRegion": "MainMauritania",
+                    "points": [
+                        1,
+                        6,
+                        4
+                    ]
+                },
+                {
+                    "startRegion": "MainMauritania",
+                    "points": [
+                        1,
+                        3,
+                        4,
+                        5,
+                        7
+                    ]
+                },
+                {
+                    "startRegion": "MainMauritania",
+                    "points": [
+                        1,
+                        3,
+                        4,
+                        6,
+                        5,
+                        7
+                    ]
+                },
+                {
+                    "startRegion": "MainMarocco",
+                    "points": [
+                        3,
+                        1,
+                        6,
+                        5,
+                        7
+                    ]
+                },
+                {
+                    "startRegion": "MainMarocco",
+                    "points": [
+                        3,
+                        4,
+                        5,
+                        7
+                    ]
+                },
+                {
+                    "startRegion": "MainMarocco",
+                    "points": [
+                        3,
+                        4,
+                        6,
+                        5,
+                        7
+                    ]
+                },
+                {
+                    "startRegion": "MainMarocco",
+                    "points": [
+                        3,
+                        4,
+                        6,
+                        1
+                    ]
+                }
+            ],
+            "adjacentRegions": {
+                "0": [
+                    "MainMauritania",
+                    "MainMali",
+                    "MainNiger",
+                    "MainLibia"
+                ],
+                "1": [
+                    "MainMauritania",
+                    "MainMarocco",
+                    "MainSahara"
+                ],
+                "2": [
+                    "MainTunisia",
+                    "MainLibia"
+                ],
+                "3": [
+                    "MainMarocco",
+                    "Ocsitania"
+                ],
+                "4": [
+                    "Ocsitania"
+                ],
+                "5": [
+                    "Sardinia",
+                    "Ocsitania"
+                ],
+                "6": [
+                    "MainTunisia"
+                ],
+                "7": [
+                    "MainTunisia",
+                    "Sardinia"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1,
+                    2
+                ],
+                "1": [
+                    0,
+                    2,
+                    3,
+                    6
+                ],
+                "2": [
+                    0,
+                    1,
+                    6
+                ],
+                "3": [
+                    1,
+                    4,
+                    6
+                ],
+                "4": [
+                    3,
+                    5,
+                    6
+                ],
+                "5": [
+                    4,
+                    6,
+                    7
+                ],
+                "6": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    7
+                ],
+                "7": [
+                    5,
+                    6
+                ]
+            }
+        },
+        "Yemen": {
+            "sectorsTypes": [
+                "IndustrialCenter",
+                "AgriculturalCenter",
+                "None",
+                "IndustrialCenter",
+                "None",
+                "None",
+                "None"
+            ],
+            "supplyLines": [
+                {
+                    "startRegion": "MainSaudiArabia",
+                    "points": [
+                        0,
+                        1,
+                        3,
+                        4
+                    ]
+                }
+            ],
+            "adjacentRegions": {
+                "0": [
+                    "MainSaudiArabia",
+                    "Erithrea"
+                ],
+                "1": [
+                    "Erithrea",
+                    "MainDjibouti"
+                ],
+                "2": [
+                    "MainSaudiArabia"
+                ],
+                "3": [
+                    "MainDjibouti",
+                    "Somalilend"
+                ],
+                "4": [
+                    "MainSaudiArabia",
+                    "Somalilend",
+                    "MainSomali"
+                ],
+                "5": [
+                    "MainSaudiArabia",
+                    "Somalilend",
+                    "MainSomali"
+                ],
+                "6": [
+                    "MainSaudiArabia",
+                    "MainOman",
+                    "Somalilend",
+                    "MainSomali"
+                ]
+            },
+            "adjacentSectors": {
+                "0": [
+                    1,
+                    2
+                ],
+                "1": [
+                    0,
+                    2,
+                    3,
+                    4
+                ],
+                "2": [
+                    0,
+                    1,
+                    4
+                ],
+                "3": [
+                    1,
+                    4
+                ],
+                "4": [
+                    1,
+                    2,
+                    3,
+                    5
+                ],
+                "5": [
+                    4,
+                    6
+                ],
+                "6": [
+                    5
+                ]
+            }
+        }
+    },
+    "traitsPrices": {
+        "Ascetic": -2,
+        "Atlantophile": 3,
+        "Atlantophobe": -2,
+        "Compromise": -2,
+        "Uncompromising": -1,
+        "Peoplefavorite": -3,
+        "Orientalist": -2,
+        "GlasnostActivist": 2,
+        "Technocrat": 1,
+        "Economical": -3,
+        "ProMarket": -2,
+        "StrongArm": -3,
+        "Industrialist": -4,
+        "Partocrat": 3,
+        "RocketBuilder": -2,
+        "EffectiveManager": -4,
+        "NuclearScientist": -3,
+        "ConspiracyTheorist": 5,
+        "Maoist": -2,
+        "Dissident": 1,
+        "InefficientManager": 3,
+        "Schemer": 0,
+        "Hedonist": 1,
+        "Idealist": 1,
+        "Chauvinist": 2,
+        "Unambitious": 1,
+        "Voluntarist": 3,
+        "Radical": 0,
+        "Peaceful": -1,
+        "Monarchist": 4,
+        "ProSocialPatriot": 0,
+        "ProNeotrotskist": 0,
+        "ProNeostalinist": 0,
+        "ProConservative": 0,
+        "ProModerate": 0,
+        "ProReformist": 0,
+        "ProLiberalDemocrat": 0,
+        "ProNationalDemocrat": 0,
+        "Intelligent": 3
+    },
+    "traitsMutualExclusion": {
+        "Ascetic": [
+            "Hedonist"
+        ],
+        "Compromise": [
+            "Uncompromising"
+        ],
+        "Uncompromising": [
+            "Compromise"
+        ],
+        "Atlantophile": [
+            "Atlantophobe",
+            "ProSocialPatriot"
+        ],
+        "Atlantophobe": [
+            "Atlantophile",
+            "ProReformist",
+            "ProLiberalDemocrat"
+        ],
+        "Peoplefavorite": [],
+        "Orientalist": [],
+        "GlasnostActivist": [
+            "Maoist",
+            "ProSocialPatriot",
+            "ProConservative",
+            "ProNationalDemocrat"
+        ],
+        "Technocrat": [
+            "Schemer"
+        ],
+        "Economical": [
+            "Voluntarist"
+        ],
+        "ProMarket": [
+            "Maoist",
+            "ProNeostalinist",
+            "ProConservative"
+        ],
+        "StrongArm": [
+            "Peaceful"
+        ],
+        "Industrialist": [],
+        "Partocrat": [
+            "Dissident",
+            "Intelligent",
+            "ProNeotrotskist"
+        ],
+        "RocketBuilder": [],
+        "EffectiveManager": [
+            "InefficientManager"
+        ],
+        "NuclearScientist": [],
+        "ConspiracyTheorist": [
+            "Peaceful"
+        ],
+        "Maoist": [
+            "ProMarket",
+            "Monarchist",
+            "GlasnostActivist",
+            "ProReformist",
+            "ProLiberalDemocrat"
+        ],
+        "Dissident": [
+            "Partocrat",
+            "Unambitious",
+            "ProConservative"
+        ],
+        "InefficientManager": [
+            "EffectiveManager"
+        ],
+        "Schemer": [
+            "Unambitious",
+            "Technocrat"
+        ],
+        "Hedonist": [
+            "Ascetic"
+        ],
+        "Idealist": [],
+        "Chauvinist": [
+            "Peaceful",
+            "ProReformist"
+        ],
+        "Unambitious": [
+            "Radical",
+            "Dissident",
+            "Schemer"
+        ],
+        "Voluntarist": [
+            "Economical"
+        ],
+        "Radical": [
+            "Peaceful",
+            "Unambitious"
+        ],
+        "Peaceful": [
+            "Radical",
+            "Chauvinist",
+            "StrongArm",
+            "ProSocialPatriot",
+            "ProNeotrotskist",
+            "ProNeostalinist",
+            "ProNationalDemocrat",
+            "ConspiracyTheorist"
+        ],
+        "Monarchist": [
+            "Maoist",
+            "ProNeotrotskist",
+            "ProNeostalinist",
+            "ProConservative",
+            "ProModerate",
+            "ProReformist"
+        ],
+        "ProSocialPatriot": [
+            "Peaceful",
+            "Atlantophile",
+            "GlasnostActivist",
+            "ProNeotrotskist",
+            "ProNeostalinist",
+            "ProConservative",
+            "ProModerate",
+            "ProReformist",
+            "ProLiberalDemocrat",
+            "ProNationalDemocrat"
+        ],
+        "ProNeotrotskist": [
+            "Peaceful",
+            "Partocrat",
+            "ProSocialPatriot",
+            "ProNeostalinist",
+            "ProConservative",
+            "ProModerate",
+            "ProReformist",
+            "ProLiberalDemocrat",
+            "ProNationalDemocrat",
+            "Monarchist"
+        ],
+        "ProNeostalinist": [
+            "Peaceful",
+            "ProMarket",
+            "ProSocialPatriot",
+            "ProNeotrotskist",
+            "ProConservative",
+            "ProModerate",
+            "ProReformist",
+            "ProLiberalDemocrat",
+            "ProNationalDemocrat",
+            "Monarchist"
+        ],
+        "ProConservative": [
+            "Dissident",
+            "GlasnostActivist",
+            "ProSocialPatriot",
+            "ProNeotrotskist",
+            "ProNeostalinist",
+            "ProModerate",
+            "ProReformist",
+            "ProLiberalDemocrat",
+            "ProNationalDemocrat",
+            "Monarchist",
+            "ProMarket"
+        ],
+        "ProModerate": [
+            "ProSocialPatriot",
+            "ProNeotrotskist",
+            "ProNeostalinist",
+            "ProConservative",
+            "ProReformist",
+            "ProLiberalDemocrat",
+            "ProNationalDemocrat",
+            "Monarchist"
+        ],
+        "ProReformist": [
+            "Chauvinist",
+            "Atlantophobe",
+            "Maoist",
+            "ProSocialPatriot",
+            "ProNeotrotskist",
+            "ProNeostalinist",
+            "ProConservative",
+            "ProModerate",
+            "ProLiberalDemocrat",
+            "ProNationalDemocrat",
+            "Monarchist"
+        ],
+        "ProLiberalDemocrat": [
+            "Atlantophobe",
+            "Maoist",
+            "ProSocialPatriot",
+            "ProNeotrotskist",
+            "ProNeostalinist",
+            "ProConservative",
+            "ProModerate",
+            "ProReformist",
+            "ProNationalDemocrat"
+        ],
+        "ProNationalDemocrat": [
+            "GlasnostActivist",
+            "Peaceful",
+            "ProSocialPatriot",
+            "ProNeotrotskist",
+            "ProNeostalinist",
+            "ProConservative",
+            "ProModerate",
+            "ProReformist",
+            "ProLiberalDemocrat"
+        ],
+        "Intelligent": [
+            "Partocrat"
+        ]
+    },
+    "statisticValuesWithInvertedColors": [
+        "CorruptionLevel",
+        "ForgeryLevel",
+        "RadicalsPower"
+    ],
+    "statisticValuesCountries": {
+        "GDPGrowth": [
+            "USSR"
+        ],
+        "GDP": [
+            "USSR",
+            "USA",
+            "France",
+            "Britain"
+        ],
+        "HDI": [
+            "USSR",
+            "USA",
+            "France",
+            "Britain"
+        ],
+        "IPI": [],
+        "AverageAge": [
+            "USSR",
+            "PostSovietFakeState",
+            "WorldFakeState",
+            "Japan",
+            "Switzerland"
+        ],
+        "PriceIndex": [],
+        "TotalIncome": [],
+        "Balance": [],
+        "HealthCare": [],
+        "Education": [],
+        "Ecology": [],
+        "MilitaryStaffLoyalty": [],
+        "ArmyLoyalty": [],
+        "SpecialServicesLoyalty": [],
+        "SpecialServices": [],
+        "RadicalsPower": [],
+        "FreedomLevel": [],
+        "LiberalizationLevel": [],
+        "EducationAccess": [],
+        "HealthCareAccess": [],
+        "SelfFulfillment": [],
+        "LuxuryGoodsLevel": [],
+        "OrderLevel": [],
+        "FirstNeedsGoods": [],
+        "HousingLevel": [],
+        "EmploymentLevel": [],
+        "AgroEffectiveness": [],
+        "ServicesEffectiveness": [],
+        "LightIndustryEffectiveness": [],
+        "HeavyIndustryEffectiveness": [],
+        "ArmyIndustryEffectiveness": [],
+        "IntelligentsiaLoyalty": [],
+        "SpiritualContentment": [],
+        "UnityLevel": [],
+        "ForgeryLevel": [],
+        "ArmyQuantityLevel": [],
+        "WarheadsQuantity": [],
+        "Combatability": [],
+        "CompetitivenessLevel": [],
+        "CorruptionLevel": [],
+        "AmericanArmyLevel": [],
+        "AmericanEconomyLevel": [],
+        "AmericanPopularHappiness": [],
+        "Population": [],
+        "Reserve": [],
+        "PoliticalPower": [],
+        "DEFCON": [],
+        "ResearchPoints": [],
+        "SumOfTradeValues": [],
+        "TradeLimit": [],
+        "AverageSubjectLoyalty": []
+    },
+    "statisticValues": {
+        "GDP": "ArbitraryPercent",
+        "GDPGrowth": "ArbitraryPercent",
+        "HDI": "ArbitraryPercent",
+        "IPI": "ArbitraryPercent",
+        "PriceIndex": "ArbitraryPercent",
+        "Export": "ZeroToHundred",
+        "HealthCare": "ZeroToHundred",
+        "Education": "ZeroToHundred",
+        "Ecology": "ZeroToHundred",
+        "MilitaryStaffLoyalty": "ZeroToHundred",
+        "ArmyLoyalty": "ZeroToHundred",
+        "SpecialServicesLoyalty": "ZeroToHundred",
+        "SpecialServices": "ZeroToHundred",
+        "RadicalsPower": "ZeroToHundred",
+        "FreedomLevel": "ZeroToHundred",
+        "LiberalizationLevel": "ZeroToHundred",
+        "EducationAccess": "ZeroToHundred",
+        "HealthCareAccess": "ZeroToHundred",
+        "SelfFulfillment": "ZeroToHundred",
+        "LuxuryGoodsLevel": "ZeroToHundred",
+        "OrderLevel": "ZeroToHundred",
+        "FirstNeedsGoods": "ZeroToHundred",
+        "HousingLevel": "ZeroToHundred",
+        "EmploymentLevel": "ZeroToHundred",
+        "AgroEffectiveness": "ZeroToHundred",
+        "ServicesEffectiveness": "ZeroToHundred",
+        "LightIndustryEffectiveness": "ZeroToHundred",
+        "HeavyIndustryEffectiveness": "ZeroToHundred",
+        "ArmyIndustryEffectiveness": "ZeroToHundred",
+        "IntelligentsiaLoyalty": "ZeroToHundred",
+        "SpiritualContentment": "ZeroToHundred",
+        "UnityLevel": "ZeroToHundred",
+        "ForgeryLevel": "ZeroToHundred",
+        "ArmyQuantityLevel": "ZeroToHundred",
+        "WarheadsQuantity": "ZeroToHundred",
+        "Combatability": "ZeroToHundred",
+        "CompetitivenessLevel": "ZeroToHundred",
+        "CorruptionLevel": "ZeroToHundred",
+        "AmericanArmyLevel": "ZeroToHundred",
+        "AmericanEconomyLevel": "ZeroToHundred",
+        "AmericanPopularHappiness": "ZeroToHundred",
+        "TotalIncome": "ArbitraryPercent",
+        "Balance": "ArbitraryPercent",
+        "Population": "ArbitraryPercent",
+        "AverageAge": "ArbitraryPercent",
+        "Reserve": "ArbitraryPercent",
+        "PoliticalPower": "ArbitraryPercent",
+        "DEFCON": "ArbitraryPercent",
+        "ResearchPoints": "ArbitraryPercent",
+        "USARel": "ZeroToHundred",
+        "ChinaRel": "ZeroToHundred",
+        "FranceRel": "ZeroToHundred",
+        "USSRRel": "ZeroToHundred",
+        "SumOfTradeValues": "ArbitraryPercent",
+        "TradeLimit": "ArbitraryPercent",
+        "AverageSubjectLoyalty": "ZeroToHundred"
+    },
+    "statisticValuesGroups": {
+        "InternalPolicy": [
+            "Ecology",
+            "HealthCare",
+            "HealthCareAccess",
+            "Education",
+            "EducationAccess",
+            "SpecialServices",
+            "ResearchPoints",
+            "OrderLevel",
+            "AverageSubjectLoyalty"
+        ],
+        "ExternalPolicy": [
+            "AmericanArmyLevel",
+            "AmericanEconomyLevel",
+            "AmericanPopularHappiness",
+            "DEFCON",
+            "Combatability",
+            "ArmyQuantityLevel",
+            "WarheadsQuantity"
+        ],
+        "Society": [
+            "IntelligentsiaLoyalty",
+            "ArmyLoyalty",
+            "MilitaryStaffLoyalty",
+            "SpecialServicesLoyalty",
+            "UnityLevel",
+            "LiberalizationLevel",
+            "RadicalsPower",
+            "FreedomLevel",
+            "SelfFulfillment",
+            "SpiritualContentment",
+            "Population",
+            "HDI",
+            "AverageAge",
+            "EmploymentLevel"
+        ],
+        "Economy": [
+            "GDP",
+            "GDPGrowth",
+            "IPI",
+            "Export",
+            "GDP-PPP",
+            "TotalIncome",
+            "Balance",
+            "ProductionPotential",
+            "PriceIndex",
+            "Reserve",
+            "TradeLimit",
+            "SumOfTradeValues",
+            "CompetitivenessLevel",
+            "ForgeryLevel",
+            "CorruptionLevel",
+            "LightIndustryEffectiveness",
+            "HeavyIndustryEffectiveness",
+            "ArmyIndustryEffectiveness",
+            "AgroEffectiveness",
+            "ServicesEffectiveness",
+            "FirstNeedsGoods",
+            "LuxuryGoodsLevel",
+            "HousingLevel"
+        ]
+    },
+    "statisticValuesExcludedFromStatisticWindow": [
+        "USSRRel",
+        "FranceRel",
+        "ChinaRel",
+        "USARel",
+        "PoliticalPower",
+        "Balance"
+    ],
+    "sovietPossibleRegions": [
+        "Finland",
+        "PanamaCanal",
+        "MainMongolia",
+        "Uyghuristan",
+        "Tibet",
+        "InnerMongolia",
+        "Manchuria",
+        "KVZHD",
+        "MainPoland",
+        "Zakerzonia",
+        "IranAzerbaijan",
+        "TurkmenIran",
+        "Alaska",
+        "UzbekAfghanistan",
+        "TajikAfghanistan",
+        "Qinghai",
+        "Silezia",
+        "Kashubia",
+        "Pomerania",
+        "WestPolandLemki",
+        "EastPolandLemki",
+        "Bulgaria"
+    ],
+    "sovietStartedRegions": [
+        "Crimea",
+        "Novorussia",
+        "UkraineLemki",
+        "Donbass",
+        "Ruthenia",
+        "GaliciaUk",
+        "KharkivDniproKirovograd",
+        "Transcarpathia",
+        "MainUkraine",
+        "MainBelorussia",
+        "MainMoldavia",
+        "Gagauzia",
+        "Pridnestrovje",
+        "MainLitva",
+        "Vilnus",
+        "Druskininkai",
+        "MainLatvia",
+        "RussianLatvia",
+        "MainEstonia",
+        "EstonianIslands",
+        "Tartu",
+        "MainRussia",
+        "Chechnya",
+        "Tatarstan",
+        "AbkhazianRussia",
+        "Ingushetia",
+        "Dagestan",
+        "Kuriles",
+        "Sakhalin",
+        "SouthKuriles",
+        "Karelia",
+        "Kozakia",
+        "JewishAR",
+        "NorthKazakhstan",
+        "Mangystau",
+        "WesternKazakhstan",
+        "MainKasakhstan",
+        "Shymkent",
+        "Karakalpakstan",
+        "FerghanaValley",
+        "MainUzbekistan",
+        "SouthKyrgizia",
+        "MainKyrgizia",
+        "MainTajikistan",
+        "EastTajikistan",
+        "MainTurkmenia",
+        "MainArmenia",
+        "NagornoKarabakh",
+        "Nakhichevan",
+        "MainAzerbaijan",
+        "Abkhazia",
+        "SouthOsetia",
+        "MainGeorgia"
+    ],
+    "authoritarian_left": [
+        "LeftNationalism",
+        "ConservativeSocialism",
+        "SocialismNationalSpecific",
+        "LeftPragmatism"
+    ],
+    "authoritarian_right": [
+        "PopulistConservative",
+        "RightPopulism",
+        "ReactonaryAuthoritarian",
+        "MarketAuthoritarian"
+    ],
+    "liberal_right": [
+        "LiberalCorporativism",
+        "LiberalProgressive",
+        "ClassicalLiberalism",
+        "LiberalConservative",
+        "Centrism"
+    ],
+    "liberal_left": [
+        "DemocraticSocialism",
+        "SocialistReformism",
+        "SocialDemocracy",
+        "ConstructingCommunism"
+    ],
+    "NATO_Regimes": [
+        "LiberalConservative",
+        "PopulistConservative",
+        "RightPopulism",
+        "SocialDemocracy",
+        "LiberalCorporativism",
+        "LiberalProgressive",
+        "ClassicalLiberalism",
+        "Centrism"
+    ],
+    "EU_Regimes": [
+        "LiberalConservative",
+        "SocialDemocracy",
+        "LiberalCorporativism",
+        "LiberalProgressive",
+        "ClassicalLiberalism",
+        "Centrism"
+    ],
+    "targetDoctrines": {
+        "DiplomacyLine": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 0
+            },
+            "NeoTrotskyist": {
+                "branch": "Top",
+                "number": 1
+            },
+            "NeoStalinist": {
+                "branch": "Top",
+                "number": 1
+            },
+            "Conservative": {
+                "branch": "Top",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "Bottom",
+                "number": 1
+            },
+            "NationalLiberal": {
+                "branch": "Top",
+                "number": 0
+            }
+        },
+        "InternationalTreaties": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 2
+            },
+            "NeoTrotskyist": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "Top",
+                "number": 1
+            },
+            "Conservative": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Bottom",
+                "number": 1
+            },
+            "LiberalDemocracy": {
+                "branch": "Bottom",
+                "number": 1
+            },
+            "NationalLiberal": {
+                "branch": "Top",
+                "number": 0
+            }
+        },
+        "MigrationPolicy": {
+            "SocialPatriot": {
+                "branch": "TopLeft",
+                "number": 1
+            },
+            "NeoTrotskyist": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "TopLeft",
+                "number": 0
+            },
+            "Conservative": {
+                "branch": "TopRight",
+                "number": 1
+            },
+            "Moderate": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "Bottom",
+                "number": 1
+            },
+            "NationalLiberal": {
+                "branch": "Central",
+                "number": 0
+            }
+        },
+        "InternationalDepartment": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 0
+            },
+            "NeoTrotskyist": {
+                "branch": "Top",
+                "number": 1
+            },
+            "NeoStalinist": {
+                "branch": "BottomLeft",
+                "number": 0
+            },
+            "Conservative": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "BottomRight",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "BottomRight",
+                "number": 1
+            },
+            "LiberalDemocracy": {
+                "branch": "BottomRight",
+                "number": 1
+            },
+            "NationalLiberal": {
+                "branch": "BottomLeft",
+                "number": 1
+            }
+        },
+        "COMECON": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 2
+            },
+            "NeoTrotskyist": {
+                "branch": "Top",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "Top",
+                "number": 2
+            },
+            "Conservative": {
+                "branch": "Top",
+                "number": 1
+            },
+            "Moderate": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Bottom",
+                "number": 1
+            },
+            "LiberalDemocracy": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "Top",
+                "number": 1
+            }
+        },
+        "TypeOfEconomy": {
+            "NeoStalinist": {
+                "branch": "TopRight",
+                "number": 0
+            },
+            "NeoTrotskyist": {
+                "branch": "BottomRight",
+                "number": 1
+            },
+            "SocialPatriot": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "Conservative": {
+                "branch": "TopLeft",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "Bottom",
+                "number": 1
+            },
+            "Reformist": {
+                "branch": "BottomLeft",
+                "number": 1
+            },
+            "LiberalDemocracy": {
+                "branch": "BottomLeft",
+                "number": 2
+            },
+            "NationalLiberal": {
+                "branch": "Bottom",
+                "number": 2
+            }
+        },
+        "Taxation": {
+            "SocialPatriot": {
+                "branch": "BottomRight",
+                "number": 0
+            },
+            "NeoTrotskyist": {
+                "branch": "BottomRight",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Conservative": {
+                "branch": "BottomRight",
+                "number": 1
+            },
+            "Moderate": {
+                "branch": "BottomRight",
+                "number": 2
+            },
+            "Reformist": {
+                "branch": "BottomLeft",
+                "number": 1
+            },
+            "LiberalDemocracy": {
+                "branch": "BottomLeft",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "BottomLeft",
+                "number": 2
+            }
+        },
+        "LabourFreedoms": {
+            "SocialPatriot": {
+                "branch": "Bottom",
+                "number": 1
+            },
+            "NeoTrotskyist": {
+                "branch": "Top",
+                "number": 2
+            },
+            "NeoStalinist": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "Conservative": {
+                "branch": "Top",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "Top",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Top",
+                "number": 1
+            },
+            "LiberalDemocracy": {
+                "branch": "Central",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "Bottom",
+                "number": 2
+            }
+        },
+        "PricingPolicy": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 0
+            },
+            "NeoTrotskyist": {
+                "branch": "Top",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "Top",
+                "number": 2
+            },
+            "Conservative": {
+                "branch": "Top",
+                "number": 1
+            },
+            "Moderate": {
+                "branch": "Top",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Central",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "Central",
+                "number": 0
+            }
+        },
+        "TradePolicy": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 2
+            },
+            "NeoTrotskyist": {
+                "branch": "Top",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "Top",
+                "number": 2
+            },
+            "Conservative": {
+                "branch": "Top",
+                "number": 1
+            },
+            "Moderate": {
+                "branch": "Top",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Central",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "Top",
+                "number": 2
+            }
+        },
+        "TradeUnions": {
+            "SocialPatriot": {
+                "branch": "Central",
+                "number": 0
+            },
+            "NeoTrotskyist": {
+                "branch": "BottomLeft",
+                "number": 2
+            },
+            "NeoStalinist": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Conservative": {
+                "branch": "BottomLeft",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "BottomLeft",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "BottomLeft",
+                "number": 1
+            },
+            "LiberalDemocracy": {
+                "branch": "BottomRight",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "BottomRight",
+                "number": 1
+            }
+        },
+        "TypeOfGovernment": {
+            "SocialPatriot": {
+                "branch": "TopLeft",
+                "number": 1
+            },
+            "NeoTrotskyist": {
+                "branch": "BottomRight",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "TopLeft",
+                "number": 2
+            },
+            "Conservative": {
+                "branch": "TopLeft",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "BottomLeft",
+                "number": 1
+            },
+            "LiberalDemocracy": {
+                "branch": "BottomLeft",
+                "number": 1
+            },
+            "NationalLiberal": {
+                "branch": "BottomLeft",
+                "number": 0
+            }
+        },
+        "SeparationOfGovernmentBranches": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 1
+            },
+            "NeoTrotskyist": {
+                "branch": "BottomLeft",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "Top",
+                "number": 1
+            },
+            "Conservative": {
+                "branch": "Top",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "BottomRight",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Central",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "BottomLeft",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "Top",
+                "number": 1
+            }
+        },
+        "RelationToReligion": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 2
+            },
+            "NeoTrotskyist": {
+                "branch": "Top",
+                "number": 1
+            },
+            "NeoStalinist": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Conservative": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "BottomLeft",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "BottomLeft",
+                "number": 1
+            },
+            "LiberalDemocracy": {
+                "branch": "BottomLeft",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "BottomRight",
+                "number": 1
+            }
+        },
+        "CultOfPersonality": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 0
+            },
+            "NeoTrotskyist": {
+                "branch": "BottomRight",
+                "number": 1
+            },
+            "NeoStalinist": {
+                "branch": "Top",
+                "number": 0
+            },
+            "Conservative": {
+                "branch": "BottomLeft",
+                "number": 1
+            },
+            "Moderate": {
+                "branch": "BottomLeft",
+                "number": 2
+            },
+            "Reformist": {
+                "branch": "BottomRight",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "BottomRight",
+                "number": 1
+            },
+            "NationalLiberal": {
+                "branch": "Top",
+                "number": 0
+            }
+        },
+        "StateStructure": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 2
+            },
+            "NeoTrotskyist": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "Top",
+                "number": 2
+            },
+            "Conservative": {
+                "branch": "Top",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "Top",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Central",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "Top",
+                "number": 1
+            }
+        },
+        "ArmyDoctrine": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 2
+            },
+            "NeoTrotskyist": {
+                "branch": "Central",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "Top",
+                "number": 1
+            },
+            "Conservative": {
+                "branch": "Top",
+                "number": 1
+            },
+            "Moderate": {
+                "branch": "Top",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "TopRight",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "TopRight",
+                "number": 1
+            }
+        },
+        "PolicyOfRecruitment": {
+            "SocialPatriot": {
+                "branch": "TopRight",
+                "number": 2
+            },
+            "NeoTrotskyist": {
+                "branch": "TopLeft",
+                "number": 2
+            },
+            "NeoStalinist": {
+                "branch": "TopRight",
+                "number": 2
+            },
+            "Conservative": {
+                "branch": "TopRight",
+                "number": 1
+            },
+            "Moderate": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "Bottom",
+                "number": 1
+            },
+            "NationalLiberal": {
+                "branch": "BottomLeft",
+                "number": 0
+            }
+        },
+        "AppointmentOfHeadOfState": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 0
+            },
+            "NeoTrotskyist": {
+                "branch": "BottomRight",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "BottomRight",
+                "number": 1
+            },
+            "Conservative": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "BottomLeft",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "BottomLeft",
+                "number": 1
+            },
+            "LiberalDemocracy": {
+                "branch": "BottomLeft",
+                "number": 1
+            },
+            "NationalLiberal": {
+                "branch": "Central",
+                "number": 0
+            }
+        },
+        "LegislationLaw": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 1
+            },
+            "NeoTrotskyist": {
+                "branch": "TopRight",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "Top",
+                "number": 2
+            },
+            "Conservative": {
+                "branch": "Top",
+                "number": 1
+            },
+            "Moderate": {
+                "branch": "Top",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Top",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "Top",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "Top",
+                "number": 2
+            }
+        },
+        "JudicialPower": {
+            "SocialPatriot": {
+                "branch": "TopLeft",
+                "number": 1
+            },
+            "NeoTrotskyist": {
+                "branch": "TopLeft",
+                "number": 1
+            },
+            "NeoStalinist": {
+                "branch": "TopLeft",
+                "number": 1
+            },
+            "Conservative": {
+                "branch": "TopLeft",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "TopRight",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Central",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "TopLeft",
+                "number": 1
+            }
+        },
+        "ControlOfMedia": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 2
+            },
+            "NeoTrotskyist": {
+                "branch": "Top",
+                "number": 2
+            },
+            "NeoStalinist": {
+                "branch": "Top",
+                "number": 2
+            },
+            "Conservative": {
+                "branch": "Top",
+                "number": 1
+            },
+            "Moderate": {
+                "branch": "BottomRight",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "BottomLeft",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "Central",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "Top",
+                "number": 2
+            }
+        },
+        "FreedomInArt": {
+            "SocialPatriot": {
+                "branch": "TopLeft",
+                "number": 1
+            },
+            "NeoTrotskyist": {
+                "branch": "Top",
+                "number": 0
+            },
+            "NeoStalinist": {
+                "branch": "TopRight",
+                "number": 0
+            },
+            "Conservative": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "Bottom",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "Bottom",
+                "number": 1
+            },
+            "NationalLiberal": {
+                "branch": "TopRight",
+                "number": 1
+            }
+        },
+        "LawEnforcement": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 1
+            },
+            "NeoTrotskyist": {
+                "branch": "BottomLeft",
+                "number": 1
+            },
+            "NeoStalinist": {
+                "branch": "Top",
+                "number": 0
+            },
+            "Conservative": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "BottomRight",
+                "number": 0
+            },
+            "LiberalDemocracy": {
+                "branch": "BottomRight",
+                "number": 1
+            },
+            "NationalLiberal": {
+                "branch": "BottomRight",
+                "number": 0
+            }
+        },
+        "ChambersOfParliament": {
+            "SocialPatriot": {
+                "branch": "Top",
+                "number": 0
+            },
+            "NeoTrotskyist": {
+                "branch": "BottomRight",
+                "number": 2
+            },
+            "NeoStalinist": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Conservative": {
+                "branch": "Central",
+                "number": 0
+            },
+            "Moderate": {
+                "branch": "BottomRight",
+                "number": 0
+            },
+            "Reformist": {
+                "branch": "BottomLeft",
+                "number": 1
+            },
+            "LiberalDemocracy": {
+                "branch": "Central",
+                "number": 0
+            },
+            "NationalLiberal": {
+                "branch": "BottomLeft",
+                "number": 0
+            }
+        }
+    },
+    "leftismOfDoctrines": {
+        "0": "10",
+        "1": "10",
+        "2": "5",
+        "3": "0",
+        "4": "-5",
+        "5": "-10",
+        "6": "0",
+        "7": "0",
+        "8": "0",
+        "9": "0",
+        "10": "0",
+        "11": "0",
+        "12": "0",
+        "13": "0",
+        "14": "0",
+        "15": "0",
+        "16": "0",
+        "17": "0",
+        "18": "0",
+        "19": "10",
+        "20": "0",
+        "21": "0",
+        "22": "0",
+        "23": "-10",
+        "24": "0",
+        "25": "0",
+        "26": "0",
+        "27": "0",
+        "28": "0",
+        "29": "0",
+        "30": "0",
+        "31": "0",
+        "32": "0",
+        "33": "10",
+        "34": "10",
+        "35": "10",
+        "36": "6",
+        "37": "0",
+        "38": "-9",
+        "39": "7",
+        "40": "2",
+        "41": "-10",
+        "42": "5",
+        "43": "3",
+        "44": "4",
+        "45": "-3",
+        "46": "-6",
+        "47": "-8",
+        "48": "4",
+        "49": "0",
+        "50": "3",
+        "51": "0",
+        "52": "0",
+        "53": "0",
+        "54": "0",
+        "55": "-2",
+        "56": "-6",
+        "57": "-10",
+        "58": "7",
+        "59": "5",
+        "60": "3",
+        "61": "0",
+        "62": "-8",
+        "63": "0",
+        "64": "0",
+        "65": "0",
+        "66": "0",
+        "67": "0",
+        "68": "-2",
+        "69": "0",
+        "70": "0",
+        "71": "7",
+        "72": "-9",
+        "73": "-6",
+        "74": "-10",
+        "75": "-7",
+        "76": "-5",
+        "77": "0",
+        "78": "10",
+        "79": "2",
+        "80": "-10",
+        "81": "-10",
+        "82": "0",
+        "83": "0",
+        "84": "0",
+        "85": "0",
+        "86": "0",
+        "87": "0",
+        "88": "0",
+        "89": "-5",
+        "90": "0",
+        "91": "0",
+        "92": "0",
+        "93": "0",
+        "94": "0",
+        "95": "0",
+        "96": "-3",
+        "97": "0",
+        "98": "0",
+        "99": "0",
+        "100": "0",
+        "101": "0",
+        "102": "0",
+        "103": "0",
+        "104": "0",
+        "105": "0",
+        "106": "0",
+        "107": "0",
+        "108": "0",
+        "109": "0",
+        "110": "0",
+        "111": "0",
+        "112": "0",
+        "113": "0",
+        "114": "0",
+        "115": "0",
+        "116": "0",
+        "117": "0",
+        "118": "0",
+        "119": "0",
+        "120": "0",
+        "121": "0",
+        "122": "0",
+        "123": "0",
+        "124": "0",
+        "125": "-2",
+        "126": "-1",
+        "127": "0",
+        "128": "2",
+        "129": "0",
+        "130": "0",
+        "131": "-2",
+        "132": "0",
+        "133": "0",
+        "134": "2",
+        "135": "0",
+        "136": "0",
+        "137": "0",
+        "138": "0",
+        "139": "0",
+        "140": "0",
+        "141": "0",
+        "142": "0",
+        "143": "0",
+        "144": "0",
+        "145": "0",
+        "146": "0",
+        "147": "0",
+        "148": "0",
+        "149": "0",
+        "150": "-3",
+        "151": "0",
+        "152": "0",
+        "153": "6",
+        "154": "7",
+        "155": "-3",
+        "156": "-5",
+        "157": "0",
+        "158": "0",
+        "159": "0",
+        "160": "5",
+        "161": "10",
+        "162": "1",
+        "163": "1",
+        "164": "1",
+        "165": "0",
+        "166": "0",
+        "167": "0",
+        "168": "0",
+        "169": "10",
+        "170": "10",
+        "171": "10",
+        "172": "0",
+        "173": "0",
+        "174": "0",
+        "175": "0",
+        "176": "-5",
+        "177": "-5"
+    },
+    "authismOfDoctrines": {
+        "0": "0",
+        "1": "0",
+        "2": "0",
+        "3": "0",
+        "4": "0",
+        "5": "0",
+        "6": "0",
+        "7": "0",
+        "8": "0",
+        "9": "0",
+        "10": "0",
+        "11": "0",
+        "12": "7",
+        "13": "6",
+        "14": "5",
+        "15": "3",
+        "16": "3",
+        "17": "0",
+        "18": "-1",
+        "19": "0",
+        "20": "0",
+        "21": "0",
+        "22": "0",
+        "23": "5",
+        "24": "-1",
+        "25": "-1",
+        "26": "5",
+        "27": "3",
+        "28": "2",
+        "29": "0",
+        "30": "-4",
+        "31": "-5",
+        "32": "0",
+        "33": "0",
+        "34": "0",
+        "35": "5",
+        "36": "1",
+        "37": "0",
+        "38": "-3",
+        "39": "4",
+        "40": "2",
+        "41": "8",
+        "42": "1",
+        "43": "-3",
+        "44": "-1",
+        "45": "0",
+        "46": "0",
+        "47": "2",
+        "48": "-1",
+        "49": "0",
+        "50": "0",
+        "51": "-2",
+        "52": "-1",
+        "53": "0",
+        "54": "1",
+        "55": "6",
+        "56": "7",
+        "57": "8",
+        "58": "2",
+        "59": "5",
+        "60": "1",
+        "61": "0",
+        "62": "-3",
+        "63": "1",
+        "64": "1",
+        "65": "0",
+        "66": "0",
+        "67": "-2",
+        "68": "4",
+        "69": "0",
+        "70": "0",
+        "71": "-5",
+        "72": "5",
+        "73": "5",
+        "74": "7",
+        "75": "10",
+        "76": "8",
+        "77": "5",
+        "78": "-10",
+        "79": "3",
+        "80": "2",
+        "81": "-5",
+        "82": "0",
+        "83": "-8",
+        "84": "6",
+        "85": "3",
+        "86": "0",
+        "87": "-3",
+        "88": "-1",
+        "89": "7",
+        "90": "6",
+        "91": "5",
+        "92": "2",
+        "93": "0",
+        "94": "0",
+        "95": "2",
+        "96": "5",
+        "97": "6",
+        "98": "5",
+        "99": "3",
+        "100": "3",
+        "101": "2",
+        "102": "0",
+        "103": "0",
+        "104": "-1",
+        "105": "3",
+        "106": "10",
+        "107": "5",
+        "108": "0",
+        "109": "-5",
+        "110": "-10",
+        "111": "0",
+        "112": "0",
+        "113": "0",
+        "114": "0",
+        "115": "-5",
+        "116": "3",
+        "117": "2",
+        "118": "1",
+        "119": "6",
+        "120": "4",
+        "121": "2",
+        "122": "0",
+        "123": "-1",
+        "124": "-1",
+        "125": "10",
+        "126": "8",
+        "127": "0",
+        "128": "-5",
+        "129": "5",
+        "130": "0",
+        "131": "10",
+        "132": "5",
+        "133": "0",
+        "134": "-10",
+        "135": "8",
+        "136": "6",
+        "137": "2",
+        "138": "0",
+        "139": "-4",
+        "140": "7",
+        "141": "6",
+        "142": "3",
+        "143": "0",
+        "144": "-3",
+        "145": "7",
+        "146": "6",
+        "147": "5",
+        "148": "0",
+        "149": "-1",
+        "150": "10",
+        "151": "6",
+        "152": "0",
+        "153": "-3",
+        "154": "-10",
+        "155": "-1",
+        "156": "-1",
+        "157": "1",
+        "158": "0",
+        "159": "-1",
+        "160": "-5",
+        "161": "-8",
+        "162": "-3",
+        "163": "-3",
+        "164": "-3",
+        "165": "2",
+        "166": "6",
+        "167": "7",
+        "168": "6",
+        "169": "-10",
+        "170": "10",
+        "171": "8",
+        "172": "0",
+        "173": "0",
+        "174": "0",
+        "175": "1",
+        "176": "7",
+        "177": "-1"
+    },
+    "governmentTypeArea": {
+        "Centrism": {
+            "topX": 5,
+            "topY": 39,
+            "bottomX": -24,
+            "bottomY": -12
+        },
+        "LiberalProgressive": {
+            "topX": -1,
+            "topY": -1,
+            "bottomX": -62,
+            "bottomY": -45
+        },
+        "ClassicalLiberalism": {
+            "topX": -10,
+            "topY": -38,
+            "bottomX": -90,
+            "bottomY": -96
+        },
+        "LiberalCorporativism": {
+            "topX": -63,
+            "topY": 29,
+            "bottomX": -90,
+            "bottomY": -37
+        },
+        "DemocraticSocialism": {
+            "topX": 79,
+            "topY": -30,
+            "bottomX": 11,
+            "bottomY": -96
+        },
+        "SocialDemocracy": {
+            "topX": 10,
+            "topY": -1,
+            "bottomX": 0,
+            "bottomY": -96
+        },
+        "SocialismNationalSpecific": {
+            "topX": 79,
+            "topY": 140,
+            "bottomX": 11,
+            "bottomY": 85
+        },
+        "LeftNationalism": {
+            "topX": 10,
+            "topY": 140,
+            "bottomX": -7,
+            "bottomY": 85
+        },
+        "ConservativeSocialism": {
+            "topX": 79,
+            "topY": 84,
+            "bottomX": 10,
+            "bottomY": 30
+        },
+        "LeftPragmatism": {
+            "topX": 20,
+            "topY": 39,
+            "bottomX": 6,
+            "bottomY": 0
+        },
+        "SocialistReformism": {
+            "topX": 79,
+            "topY": 29,
+            "bottomX": 11,
+            "bottomY": -29
+        },
+        "ReactonaryAuthoritarian": {
+            "topX": -44,
+            "topY": 140,
+            "bottomX": -90,
+            "bottomY": 85
+        },
+        "MarketAuthoritarian": {
+            "topX": -37,
+            "topY": 84,
+            "bottomX": -90,
+            "bottomY": 30
+        },
+        "RightPopulism": {
+            "topX": -8,
+            "topY": 140,
+            "bottomX": -43,
+            "bottomY": 85
+        },
+        "PopulistConservative": {
+            "topX": 10,
+            "topY": 84,
+            "bottomX": -36,
+            "bottomY": 40
+        },
+        "LiberalConservative": {
+            "topX": -62,
+            "topY": 39,
+            "bottomX": -12,
+            "bottomY": 0
+        }
+    },
+    "governmentTypePoints": {
+        "ConservativeSocialism": {
+            "Item1": 70,
+            "Item2": 67
+        },
+        "SocialistReformism": {
+            "Item1": 46,
+            "Item2": -5
+        },
+        "SocialismNationalSpecific": {
+            "Item1": 70,
+            "Item2": 121
+        },
+        "LeftNationalism": {
+            "Item1": 7,
+            "Item2": 121
+        },
+        "LeftPragmatism": {
+            "Item1": 10,
+            "Item2": 25
+        },
+        "DemocraticSocialism": {
+            "Item1": 70,
+            "Item2": -80
+        },
+        "SocialDemocracy": {
+            "Item1": 10,
+            "Item2": -9
+        },
+        "Centrism": {
+            "Item1": -6,
+            "Item2": 19
+        },
+        "LiberalProgressive": {
+            "Item1": -20,
+            "Item2": -9
+        },
+        "ClassicalLiberalism": {
+            "Item1": -37,
+            "Item2": -80
+        },
+        "LiberalCorporativism": {
+            "Item1": -80,
+            "Item2": -24
+        },
+        "LiberalConservative": {
+            "Item1": -20,
+            "Item2": 25
+        },
+        "PopulistConservative": {
+            "Item1": -6,
+            "Item2": 67
+        },
+        "RightPopulism": {
+            "Item1": -20,
+            "Item2": 121
+        },
+        "MarketAuthoritarian": {
+            "Item1": -50,
+            "Item2": 67
+        },
+        "ReactonaryAuthoritarian": {
+            "Item1": -80,
+            "Item2": 121
+        }
+    },
+    "factionsColors": {
+        "SocialPatriot": {
+            "Item1": 205,
+            "Item2": 92,
+            "Item3": 92
+        },
+        "NeoTrotskyist": {
+            "Item1": 220,
+            "Item2": 20,
+            "Item3": 60
+        },
+        "NeoStalinist": {
+            "Item1": 128,
+            "Item2": 0,
+            "Item3": 0
+        },
+        "Conservative": {
+            "Item1": 128,
+            "Item2": 0,
+            "Item3": 128
+        },
+        "Moderate": {
+            "Item1": 255,
+            "Item2": 131,
+            "Item3": 201
+        },
+        "Reformist": {
+            "Item1": 0,
+            "Item2": 255,
+            "Item3": 127
+        },
+        "LiberalDemocracy": {
+            "Item1": 0,
+            "Item2": 128,
+            "Item3": 128
+        },
+        "NationalLiberal": {
+            "Item1": 179,
+            "Item2": 123,
+            "Item3": 96
+        }
+    },
+    "countriesColors": {
+        "USSR": {
+            "Item1": 255,
+            "Item2": 0,
+            "Item3": 0
+        },
+        "USA": {
+            "Item1": 0,
+            "Item2": 0,
+            "Item3": 255
+        },
+        "China": {
+            "Item1": 255,
+            "Item2": 215,
+            "Item3": 0
+        },
+        "Britain": {
+            "Item1": 255,
+            "Item2": 128,
+            "Item3": 0
+        },
+        "France": {
+            "Item1": 0,
+            "Item2": 102,
+            "Item3": 102
+        },
+        "PostSovietFakeState": {
+            "Item1": 0,
+            "Item2": 102,
+            "Item3": 102
+        },
+        "WorldFakeState": {
+            "Item1": 0,
+            "Item2": 0,
+            "Item3": 255
+        },
+        "Japan": {
+            "Item1": 204,
+            "Item2": 172,
+            "Item3": 0
+        },
+        "Switzerland": {
+            "Item1": 255,
+            "Item2": 128,
+            "Item3": 0
+        }
+    },
+    "expenseGroups": {
+        "ArmedForces": [
+            "ArmamentAndEquipment",
+            "SoldiersSupply"
+        ],
+        "Miscellaneous": [
+            "CulturalEducation",
+            "Ecology",
+            "DiplomaticMissions"
+        ],
+        "Influence": [
+            "BribesToGenerals",
+            "BribesToSecretServices",
+            "BribesToIntellectuals",
+            "BribesToOfficials",
+            "Propaganda"
+        ],
+        "Science": [
+            "MilitaryTechnology",
+            "NuclearTechnology",
+            "ElectronicTechnology",
+            "CivilTechnology",
+            "MedicalSystem",
+            "EducationSystem"
+        ],
+        "StimulationOfEconomy": [
+            "Agriculture",
+            "Infrastructure",
+            "LightIndustry",
+            "HeavyIndustry",
+            "MilitaryIndustrialComplex",
+            "ServicesSector"
+        ],
+        "AdministrationAndManagement": [
+            "StateMechanism",
+            "SalariesOfCivilServants",
+            "SocialSpending",
+            "LawAndOrder",
+            "SpecialServices"
+        ],
+        "Import": [
+            "ImportOfAgriculture",
+            "ImportOfLuxuryGoods",
+            "ImportOfMedicines",
+            "ImportOfArts",
+            "ImportOfIndustrialEquipment"
+        ],
+        "Fixed": [
+            "DebtService",
+            "DiplomaticActions"
+        ]
+    },
+    "militaryAllianceColors": {
+        "NATO": {
+            "Item1": 0,
+            "Item2": 0,
+            "Item3": 255
+        },
+        "PartnershipNATO": {
+            "Item1": 0,
+            "Item2": 255,
+            "Item3": 255
+        },
+        "WarsawPact": {
+            "Item1": 255,
+            "Item2": 0,
+            "Item3": 0
+        },
+        "OfficialNeutrality": {
+            "Item1": 0,
+            "Item2": 255,
+            "Item3": 0
+        },
+        "AACS": {
+            "Item1": 153,
+            "Item2": 31,
+            "Item3": 162
+        },
+        "None": {
+            "Item1": 255,
+            "Item2": 255,
+            "Item3": 255
+        }
+    },
+    "economyAllianceTypeColors": {
+        "EU": {
+            "Item1": 0,
+            "Item2": 0,
+            "Item3": 255
+        },
+        "COMECON": {
+            "Item1": 255,
+            "Item2": 0,
+            "Item3": 0
+        },
+        "AssociativeCOMECON": {
+            "Item1": 255,
+            "Item2": 105,
+            "Item3": 180
+        },
+        "WAFT": {
+            "Item1": 153,
+            "Item2": 31,
+            "Item3": 162
+        },
+        "None": {
+            "Item1": 255,
+            "Item2": 255,
+            "Item3": 255
+        }
+    },
+    "governmentTypeTypeColors": {
+        "ConstructingCommunism": {
+            "Item1": 242,
+            "Item2": 100,
+            "Item3": 72
+        },
+        "ConservativeSocialism": {
+            "Item1": 255,
+            "Item2": 0,
+            "Item3": 0
+        },
+        "SocialistReformism": {
+            "Item1": 242,
+            "Item2": 87,
+            "Item3": 151
+        },
+        "SocialismNationalSpecific": {
+            "Item1": 152,
+            "Item2": 0,
+            "Item3": 45
+        },
+        "LeftNationalism": {
+            "Item1": 250,
+            "Item2": 200,
+            "Item3": 75
+        },
+        "LeftPragmatism": {
+            "Item1": 100,
+            "Item2": 235,
+            "Item3": 65
+        },
+        "DemocraticSocialism": {
+            "Item1": 90,
+            "Item2": 160,
+            "Item3": 54
+        },
+        "SocialDemocracy": {
+            "Item1": 30,
+            "Item2": 235,
+            "Item3": 180
+        },
+        "Centrism": {
+            "Item1": 165,
+            "Item2": 150,
+            "Item3": 230
+        },
+        "LiberalProgressive": {
+            "Item1": 70,
+            "Item2": 215,
+            "Item3": 240
+        },
+        "LiberalConservative": {
+            "Item1": 0,
+            "Item2": 115,
+            "Item3": 195
+        },
+        "PopulistConservative": {
+            "Item1": 88,
+            "Item2": 52,
+            "Item3": 173
+        },
+        "RightPopulism": {
+            "Item1": 153,
+            "Item2": 68,
+            "Item3": 39
+        },
+        "MarketAuthoritarian": {
+            "Item1": 102,
+            "Item2": 110,
+            "Item3": 127
+        },
+        "ReactonaryAuthoritarian": {
+            "Item1": 110,
+            "Item2": 115,
+            "Item3": 85
+        },
+        "ClassicalLiberalism": {
+            "Item1": 62,
+            "Item2": 85,
+            "Item3": 215
+        },
+        "LiberalCorporativism": {
+            "Item1": 25,
+            "Item2": 25,
+            "Item3": 180
+        }
+    },
+    "supportedStateSys": {
+        "SocialPatriot": [
+            4,
+            5,
+            3,
+            11,
+            13
+        ],
+        "NeoTrotskyist": [
+            0,
+            6
+        ],
+        "NeoStalinist": [
+            0,
+            3,
+            4
+        ],
+        "Conservative": [
+            0,
+            3,
+            1
+        ],
+        "Moderate": [
+            0,
+            1,
+            2,
+            5
+        ],
+        "Reformist": [
+            2,
+            5,
+            6,
+            7
+        ],
+        "LiberalDemocracy": [
+            8,
+            9,
+            10,
+            11,
+            15,
+            16
+        ],
+        "NationalLiberal": [
+            8,
+            10,
+            11,
+            12,
+            13,
+            14
+        ]
+    }
+}

@@ -1,0 +1,105 @@
+﻿using System;
+using System.Collections.Generic;
+using AugustDaysMod.Assets;
+using Backend.Gamedesign;
+using Backend.Gamedesign.EventSystem.DataStructures;
+using Backend.Gamedesign.EventSystem.Events;
+using Backend.Gamedesign.EventSystem.Utils;
+using Backend.Gamedesign.Utils;
+using Backend.Gamedesign.Utils.UnitsOfWork;
+
+namespace AugustDaysMod.Events
+{
+    public class MiltaryAction : AbstractEvent
+    {
+        public const int ID = 1002;
+        public const int TITLE = 4;
+        public const int DESCRIPTION = 3;
+        public const int ANSWER_1 = 0;
+        public const int ANSWER_2 = 1;
+        public const int ANSWER_3 = 2;
+        public const int RESULT_1 = 5;
+        public const int RESULT_2 = 6;
+        public const int RESULT_3 = 7;
+        
+        private EventInfo eventInfo = new EventInfo()
+        {
+            priority = 0,
+            startDate = new DateTime(1991, 8, 19),
+            endDate = new DateTime(1991, 8, 20),
+            countryLimitation = Countries.USSR,
+            eventType = EventType.Dialog,
+        };
+        
+        public override EventInfo EventInfo => eventInfo;
+        
+        private int[] _resultNumbers = Array.Empty<int>();
+        
+        public override bool CheckConditions(GameState gameState)
+        {
+            return !gameState.eventsDone.ContainsKey(ID) && gameState.date >= eventInfo.startDate;
+        }
+
+        public override UnitOfWork[] StartEvent(GameState gameState, EventDrawInfo eventDrawInfo)
+        {
+            const int optionsCount = 3;
+            _resultNumbers = new int[optionsCount];
+            string eventTitle = Texts.GetEvent(ID, TITLE);
+            string eventDesc = Texts.GetEvent(ID, DESCRIPTION);
+            Characters minister = gameState.politicPositions[PoliticPosition.MinisterOfDefense].Value;
+            EventUtils.SetupEventDrawInfo(eventDrawInfo, ID, eventInfo, optionsCount, eventTitle, eventDesc, minister);
+            List<UnitOfWork[]> descriptionVariants = EventUtils.PrepareDescriptionVariants(3, optionsCount);
+            UnitOfWork[] unitOfWorkArray = new UnitOfWork[optionsCount];
+        
+            for (int index = 0; index < optionsCount; ++index)
+            {
+                _resultNumbers[index] = 0;
+                unitOfWorkArray[index] = UnitOfWork.StartCreation();
+                SetupOption(gameState, eventDrawInfo, index, descriptionVariants, unitOfWorkArray[index]);
+            }
+            
+            return unitOfWorkArray;
+        }
+        
+        public override string FinishEvent(GameState gameState, int choice)
+        {
+            EventUtils.ExecuteEventEffects(gameState, ID, choice);
+            // Запускаем следующий ивент сразу, потому что обычным способом он появится только на следующий день, а нам нужно в тот же самый
+            EventManager.inst.ProccessEventImmediately(gameState, YeltsinProblem.ID, false);
+            return Texts.GetEvent(ID, Manager.RESULT_START + choice);
+        }
+
+        private void SetupOption(
+            GameState gameState,
+            EventDrawInfo eventDrawInfo,
+            int optionIndex,
+            List<UnitOfWork[]> descriptionVariants,
+            UnitOfWork description)
+        {
+            switch (optionIndex)
+            {
+                case ANSWER_1:
+                    description.AddRadicalsPower(10);
+                    break;
+                case ANSWER_2:
+                    description.AddChangeLeaderType(gameState, Countries.Ukraine, Country.LeaderType.Moderate);
+
+                    description.AddChangePuppetType(gameState, Countries.Estonia, Countries.USSR, Country.PuppetType.InnerState);
+                    description.AddChangePuppetType(gameState, Countries.Latvia, Countries.USSR, Country.PuppetType.InnerState);
+                    description.AddChangePuppetType(gameState, Countries.Litva, Countries.USSR, Country.PuppetType.InnerState);
+                    description.AddRadicalsPower(-10);
+                    description.AddMilitaryStaffLoyalty(-10);
+                    break;
+                case ANSWER_3:
+                    description.AddCombatability(-10);
+                    break;
+            }
+        
+            eventDrawInfo.optionsNames[optionIndex] = Texts.GetEvent(ID, optionIndex);
+            eventDrawInfo.optionsEnabled[optionIndex] = true;
+            eventDrawInfo.optionsNamesAlt[optionIndex] = EventUtils.GenerateOptionDescription(descriptionVariants, optionIndex, description);
+        
+            EventUtils.FinalizeDescription(descriptionVariants, optionIndex, description, _resultNumbers);
+        }
+    }
+}

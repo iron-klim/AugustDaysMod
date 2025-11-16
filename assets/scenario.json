@@ -1,0 +1,1363 @@
+{
+  "baseIncomeValue": 3173,
+  "portraitsInfo": {
+    "atlasName": "characters_portraits_ussr",
+    "firstIndex": 0,
+    "count": 353
+  },
+  "politicTraitsChangeDescription": {
+    "Yanayev": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      }
+    ],
+    "Kosolapov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Idealist",
+        "newTrait": "ConspiracyTheorist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiPartySystem",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Idealist",
+        "newTrait": "ConspiracyTheorist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Idealist",
+        "newTrait": "ConspiracyTheorist"
+      }
+    ],
+    "Ligachyov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Compromise",
+        "newTrait": "Uncompromising"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiPartySystem",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Compromise",
+        "newTrait": "Uncompromising"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Compromise",
+        "newTrait": "Uncompromising"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "WeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Compromise",
+        "newTrait": "Uncompromising"
+      }
+    ],
+    "Zyuganov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Goryacheva": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProSocialPatriot",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProSocialPatriot",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "LiberalPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProSocialPatriot",
+        "newTrait": "ProNationalDemocrat"
+      }
+    ],
+    "Lukashenko": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "HomeCountrySeparated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Akaev": [
+      {
+        "conditions": [
+          {
+            "conditionType": "PatriotsPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "StalinistPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "HomeCountrySeparated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProNationalDemocrat"
+      }
+    ],
+    "Mutalibov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "HomeCountrySeparated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProNationalDemocrat"
+      }
+    ],
+    "TerPetrosyan": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Chauvinist",
+        "newTrait": "Voluntarist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "HomeCountrySeparated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Chauvinist",
+        "newTrait": "Voluntarist"
+      }
+    ],
+    "Vlasov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiPartySystem",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      }
+    ],
+    "Kagarlitsky": [
+      {
+        "conditions": [
+          {
+            "conditionType": "NationalPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProReformist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "StalinistPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProReformist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "PatriotsPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProReformist"
+      }
+    ],
+    "Gromyko": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProConservative"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiPartySystem",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProConservative"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProConservative"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "WeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProConservative"
+      }
+    ],
+    "Mishin": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiPartySystem",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "WeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Sokolov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiPartySystem",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "WeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Gromov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProReformist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiPartySystem",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProReformist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProReformist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "WeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProReformist"
+      }
+    ],
+    "Rybkin": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProReformist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiPartySystem",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProReformist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProReformist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "WeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProReformist"
+      }
+    ],
+    "Kuptsov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      }
+    ],
+    "Lukyanov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      }
+    ],
+    "Rubiks": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "HomeCountrySeparated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Vorotnikov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProConservative"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProConservative"
+      }
+    ],
+    "Dolgikh": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Yeltsin": [
+      {
+        "conditions": [
+          {
+            "conditionType": "HasPosition",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProLiberalDemocrat",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "WeakEconomyAndHasNoPosition",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProLiberalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "ProWesternAndHasNoPosition",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProLiberalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "ConfederatedAndHasNoPosition",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProLiberalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "HasNoPosition",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNationalDemocrat",
+        "newTrait": "ProLiberalDemocrat"
+      }
+    ],
+    "Yavlinskiy": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProLiberalDemocrat"
+      }
+    ],
+    "Pugo": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "HomeCountrySeparated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Gidaspov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Prokofiev": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "InefficientManager",
+        "newTrait": "ProMarket"
+      }
+    ],
+    "Baklanov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProNationalDemocrat"
+      }
+    ],
+    "Kryuchkov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      }
+    ],
+    "Pavlov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      }
+    ],
+    "Starodubtsev": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      }
+    ],
+    "Tizyakov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      }
+    ],
+    "Yazov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProReformist",
+        "newTrait": "ProModerate"
+      }
+    ],
+    "Gorbachev": [
+      {
+        "conditions": [
+          {
+            "conditionType": "WeakEconomyAndHDIAndPresident",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Peoplefavorite",
+        "newTrait": "Peaceful"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiParyMarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Peoplefavorite",
+        "newTrait": "Peaceful"
+      }
+    ],
+    "Romanov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProModerate"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "WeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProModerate"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "PatriotsPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProNeostalinist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "NationalPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProNeostalinist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "StalinistPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProConservative",
+        "newTrait": "ProNeostalinist"
+      }
+    ],
+    "Alksnis": [
+      {
+        "conditions": [
+          {
+            "conditionType": "ProWesternAndAuth",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Uncompromising",
+        "newTrait": "ConspiracyTheorist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "ProWesternAndWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Radical",
+        "newTrait": "Chauvinist"
+      }
+    ],
+    "Kruchina": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProReformist"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiPartySystem",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProNationalDemocrat"
+      }
+    ],
+    "Aliyev": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiParyMarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "HomeCountrySeparated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "ConfederatedAndHasNoPosition",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "LiberalPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "ProWesternAndWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProModerate",
+        "newTrait": "ProNationalDemocrat"
+      }
+    ],
+    "Lazarenko": [
+      {
+        "conditions": [
+          {
+            "conditionType": "NationalPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNationalDemocrat",
+        "newTrait": "ProLiberalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "AntiWesternAndAuthAndWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNationalDemocrat",
+        "newTrait": "ProLiberalDemocrat"
+      }
+    ],
+    "Shiropaev": [
+      {
+        "conditions": [
+          {
+            "conditionType": "NationalPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Chauvinist",
+        "newTrait": "Atlantophile"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "AntiWesternAndAuthAndWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "Chauvinist",
+        "newTrait": "Atlantophile"
+      }
+    ],
+    "Isaev2": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiParyMarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeotrotskist",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiParyMarketEconomyHasPosition",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeotrotskist",
+        "newTrait": "ProNationalDemocrat"
+      }
+    ],
+    "Cherepanov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "PatriotsPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeostalinist",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Bylevsky": [
+      {
+        "conditions": [
+          {
+            "conditionType": "PatriotsPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeostalinist",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "NationalPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeostalinist",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Kostenko": [
+      {
+        "conditions": [
+          {
+            "conditionType": "PatriotsPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeotrotskist",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "StalinistPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeotrotskist",
+        "newTrait": "ProNeostalinist"
+      }
+    ],
+    "Pechenyov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "NationalPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeostalinist",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MultiPartySystem",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeostalinist",
+        "newTrait": "ProNationalDemocrat"
+      }
+    ],
+    "Marychev": [
+      {
+        "conditions": [
+          {
+            "conditionType": "PatriotsPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNationalDemocrat",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "StalinistPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNationalDemocrat",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Ostanina": [
+      {
+        "conditions": [
+          {
+            "conditionType": "Confederated",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProSocialPatriot",
+        "newTrait": "ProNationalDemocrat"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProSocialPatriot",
+        "newTrait": "ProNationalDemocrat"
+      }
+    ],
+    "Kryuchkov2": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeotrotskist",
+        "newTrait": "ProConservative"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "LiberalPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeotrotskist",
+        "newTrait": "ProConservative"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "NationalPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeotrotskist",
+        "newTrait": "ProConservative"
+      }
+    ],
+    "Malentsov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "PatriotsPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNeostalinist",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Kvachkov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "MarketWeakEconomy",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNationalDemocrat",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "LiberalPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNationalDemocrat",
+        "newTrait": "ProSocialPatriot"
+      },
+      {
+        "conditions": [
+          {
+            "conditionType": "PatriotsPresidentAndMajority",
+            "parameter": 0
+          }
+        ],
+        "oldTrait": "ProNationalDemocrat",
+        "newTrait": "ProSocialPatriot"
+      }
+    ],
+    "Pribytkov": [
+      {
+        "conditions": [
+          {
+            "conditionType": "EventNumberAndVariantNumberAndModif",
+            "parameter": 76,
+            "parameter1": 3,
+            "parameter2": 46
+          }
+        ],
+        "oldTrait": "ProNeostalinist",
+        "newTrait": "ProConservative"
+      }
+    ]
+  },
+  "startDate": "1991-01-01T00:00:00"
+}
