@@ -2,6 +2,7 @@
 using System.Text;
 using AugustDaysMod.Endings;
 using AugustDaysMod.Events;
+using AugustDaysMod.src.Events;
 
 namespace AugustDaysMod.Assets
 {
@@ -72,7 +73,7 @@ namespace AugustDaysMod.Assets
                         Append("Расщепов также получил приказ - обследовать обстановку вокруг ").
                         Append("дачи Бориса Ельцина, куда тот, судя по имеющейся в КГБ ").
                         Append("информации, собирается прибыть после возвращения из Алма-Аты.").
-                        ToString()      
+                        ToString()
                     },
                     {CoupBegin.RESULT_3, new StringBuilder().
                         Append("Крючков проводит совещание с руководством КГБ и приказывает ").
@@ -85,7 +86,7 @@ namespace AugustDaysMod.Assets
                         Append("Расщепов получил приказ - обследовать обстановку вокруг дачи ").
                         Append("Бориса Ельцина, куда тот, судя по имеющейся в КГБ информации, ").
                         Append("собирается прибыть после возвращения из Алма-Аты.").
-                        ToString() 
+                        ToString()
                     },
                 }
             },
@@ -585,7 +586,35 @@ namespace AugustDaysMod.Assets
                         ToString()
                     }
                 }
-            }
+            },
+            {
+                 Event1009.ID, new Dictionary<int, string>()
+                 {
+                     {Event1009.TITLE, "Дальнейшая поддержка Афганистана"},
+                     {Event1009.DESCRIPTION, new StringBuilder().
+                        Append("Хотя мы и вывели контингент войск из Афганистана более двух ").
+                        Append("лет назад, мы до сих пор оказывали широкую поддержку Афганскому ").
+                        Append("правительству в виде поставок вооружения, боеприпасов, топлива ").
+                        Append("и продовольствия, в стране продолжают действовать наши военные ").
+                        Append("специалисты. ").
+                        Append("<br>Однако с каждым месяцем оказание подобной поддержки становится для ").
+                        Append("нас все труднее, а правительство Афганистана неуклонно теряет свои ").
+                        Append("позиции.<br>Следует ли нам продолжать поддержку Афганистана при таком положении дел? ").
+                        ToString()
+                     },
+                     {Event1009.ANSWER_1, "Полностью прекращаем военную поддержку"},
+                     {Event1009.ANSWER_2, "Сохраняем текущее положение"},
+                     {Event1009.ANSWER_3, "Расширяем помощь"},
+                     {Event1009.RESULT_1, "Все советские поставки в Афганистан будут прекращены в ближайшее время. Правительство Наджибуллы доживает последние месяцы."},
+                     {Event1009.RESULT_2, "Несмотря на тяжелое положение дел, мы продолжим оказывать поддержку правительственным силам Афганистана."},
+                     {Event1009.RESULT_3, new StringBuilder()
+                         .Append("Не обращая внимания на протест либеральных кругов и некоторых генералов, вы ")
+                         .Append("расширили объем помощи, предоставляемый Афганистану. Наверное, лучше уж так, чем")
+                         .Append("иметь душманов под боком")
+                         .ToString()},
+                 }
+            },
+
         };
 
         private static Dictionary<int, Dictionary<int, string>> EndingsText = new Dictionary<int, Dictionary<int, string>>()
@@ -618,7 +647,7 @@ namespace AugustDaysMod.Assets
                 }
             }
         };
-        
+
         public static string GetEvent(int section, int subsection)
         {
             return EventsText[section][subsection];

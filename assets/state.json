@@ -2,7 +2,7 @@
   "currentWars": {
     "AfganWar": {
       "region": "Afganistan",
-      "playersAdvisor": "Varennikov",
+      "playersAdvisor": null,
       "activateButtons": [
         "SendSpecialsts",
         "SecretSupport",
@@ -10,53 +10,53 @@
         "HumanitarianAid"
       ],
       "sectors": [
-        {
-          "control": 50,
-          "firstSideMorale": 70,
-          "secondSideMorale": 30
-        },
-        {
-          "control": 50,
-          "firstSideMorale": 56,
-          "secondSideMorale": 44
-        },
-        {
-          "control": 15,
-          "firstSideMorale": 40,
-          "secondSideMorale": 60
-        },
-        {
-          "control": 70,
-          "firstSideMorale": 21,
-          "secondSideMorale": 79
-        },
-        {
-          "control": 70,
-          "firstSideMorale": 42,
+        { //Центральный Афганистан
+          "control": 65,
+          "firstSideMorale": 31,
           "secondSideMorale": 58
         },
-        {
-          "control": 40,
+        { //Западный Афганистан
+          "control": 69,
           "firstSideMorale": 25,
-          "secondSideMorale": 75
+          "secondSideMorale": 58
         },
-        {
-          "control": 80,
-          "firstSideMorale": 67,
-          "secondSideMorale": 33
+        { //Восточный Афганистан
+          "control": 51,
+          "firstSideMorale": 35,
+          "secondSideMorale": 60
         },
-        {
-          "control": 30,
-          "firstSideMorale": 21,
-          "secondSideMorale": 79
+        { //Юго-Восточный Афганистан
+          "control": 71,
+          "firstSideMorale": 23,
+          "secondSideMorale": 71
         },
-        {
-          "control": 70,
-          "firstSideMorale": 25,
+        { //Северо-Восточный Афганистан
+          "control": 73,
+          "firstSideMorale": 29,
+          "secondSideMorale": 64
+        },
+        { //Северный Афганистан
+          "control": 65,
+          "firstSideMorale": 27,
+          "secondSideMorale": 68
+        },
+        { //Бадшахан
+          "control": 100,
+          "firstSideMorale": 15,
+          "secondSideMorale": 50
+        },
+        { //Юго-Западный Афганистан
+          "control": 72,
+          "firstSideMorale": 24,
+          "secondSideMorale": 74
+        },
+        { //Южный Афганистан
+          "control": 93,
+          "firstSideMorale": 19,
           "secondSideMorale": 75
         }
       ],
-      "firstSideBalance": 70,
+      "firstSideBalance": 90,
       "firstSideSupporters": [
         "USSR"
       ],
@@ -66,67 +66,6 @@
       ],
       "firstSideMapCountry": "Afghanistan",
       "secondSideMapCountry": "Afghanistan"
-    },
-    "NicaraguanWar": {
-      "region": "Nicaragua",
-      "playersAdvisor": "Ryzhov",
-      "activateButtons": [
-        "SendSpecialsts",
-        "SecretSupport",
-        "OpenAgreement",
-        "HumanitarianAid"
-      ],
-      "sectors": [
-        {
-          "control": 70,
-          "firstSideMorale": 21,
-          "secondSideMorale": 79
-        },
-        {
-          "control": 70,
-          "firstSideMorale": 21,
-          "secondSideMorale": 79
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 100,
-          "secondSideMorale": 0
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 100,
-          "secondSideMorale": 0
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 80,
-          "secondSideMorale": 20
-        },
-        {
-          "control": 70,
-          "firstSideMorale": 21,
-          "secondSideMorale": 79
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 90,
-          "secondSideMorale": 10
-        },
-        {
-          "control": 95,
-          "firstSideMorale": 67,
-          "secondSideMorale": 33
-        }
-      ],
-      "firstSideBalance": 55,
-      "firstSideSupporters": [
-        "USSR"
-      ],
-      "secondSideSupporters": [
-        "USA"
-      ],
-      "firstSideMapCountry": "Nicaragua",
-      "secondSideMapCountry": "Nicaragua"
     },
     "AngolanWar": {
       "region": "Angola",
@@ -10567,10 +10506,10 @@
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "ZoneType": "OtherAsia",
-      "governmentType": "ConservativeSocialism",
+      "governmentType": "SocialistReformism",
       "puppetType": "None",
       "puppetOf": null,
-      "rulingPartyName": "CommunistParty",
+      "rulingPartyName": "SocialistParty",
       "foreignPolicyVector": 100,
       "needRelations": true,
       "relationshipWithPlayer": 100,
@@ -11999,14 +11938,14 @@
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "SocialistReformism",
-      "puppetType": "UnderInfluence",
-      "puppetOf": "USSR",
+      "governmentType": "LiberalConservative",
+      "puppetType": "None",
+      "puppetOf": null,
       "ZoneType": "NorthAmerica",
-      "rulingPartyName": "SocialistParty",
-      "foreignPolicyVector": 60,
+      "rulingPartyName": "LiberalConservativeParty",
+      "foreignPolicyVector": 40,
       "needRelations": true,
-      "relationshipWithPlayer": 60
+      "relationshipWithPlayer": 50
     },
     "CostaRica": {
       "activeInGame": true,
