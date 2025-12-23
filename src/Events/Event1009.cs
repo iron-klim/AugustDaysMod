@@ -36,9 +36,9 @@ namespace AugustDaysMod.src.Events
 
         private EventInfo eventInfo = new EventInfo()
         {
-            priority = 0,
-            startDate = new DateTime(1991, 11, 15),
-            endDate = new DateTime(1992, 12, 1),
+            priority = 20,
+            startDate = new DateTime(1991, 11, 1),
+            endDate = new DateTime(1992, 12, 31),
             countryLimitation = Countries.USSR,
             eventType = EventType.Dialog,
         };

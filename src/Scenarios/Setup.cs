@@ -43,6 +43,14 @@ namespace AugustDaysMod.Scenarios
 
             //Наджибулла у власти
             gameState.eventsDone.Add(153, new EventCompletionState(1, 0, DateTime.MaxValue, new DateTime(1986, 5, 4)));
+
+            //Отмена призыва студентов в армию
+            var descion = new Backend.Gamedesign.DecisionsSystem.Decisions.GameDecisions.Decision118();
+            descion.DoDecisionAfterTransitionEnded(gameState);
+
+            gameState.endedWars.Add(Wars.EthiopianWar, new WarEndingInfo() { endingNum = 2, warResultStatus=WarInfo.WarResultStatus.SecondSideWin});
+            gameState.endedWars.Add(Wars.SomaliWar, new WarEndingInfo() { endingNum = 0, warResultStatus = WarInfo.WarResultStatus.SecondSideWin });
+
         }
 
         private static void AssignByPresident(GameState gameState, Characters president)
