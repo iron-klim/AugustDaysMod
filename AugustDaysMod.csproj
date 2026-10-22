@@ -79,6 +79,13 @@
         <Compile Include="src\Scenarios\NewGame.cs" />
         <Compile Include="src\Scenarios\Setup.cs" />
         <Compile Include="src\Scenarios\SovietGarrisons.cs" />
+        <Compile Include="src\Catalog\CountryCatalog.cs" />
+        <Compile Include="src\Catalog\DependentCountryEndings.cs" />
+        <Compile Include="src\Catalog\PlayerCountry.cs" />
+        <Compile Include="src\DevTools\DevTools.cs" />
+        <Compile Include="src\Union\SafeRepublicAggregates.cs" />
+        <Compile Include="src\Union\UnionContext.cs" />
+        <Compile Include="src\Union\UnionTick.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />
@@ -87,6 +94,7 @@
     <ItemGroup>
       <Content Include="assets\0Harmony.dll" />
       <Content Include="assets\code.dll" />
+      <Content Include="assets\countries.json" />
       <Content Include="assets\icon.png" />
       <Content Include="assets\localRU.xml" />
       <Content Include="assets\scenario.json" />
