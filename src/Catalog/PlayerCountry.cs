@@ -171,4 +171,65 @@ namespace AugustDaysMod.Catalog
             }
         }
     }
+
+    // Совет и парламент страны игрока называются по-своему, а не Политбюро и Верховный Совет СССР
+    public static class CountryInstitutionNames
+    {
+        public static string Pick(List<string> forms, int padej) =>
+            forms == null || forms.Count == 0 ? null : forms[Math.Max(0, Math.Min(padej, forms.Count - 1))];
+    }
+
+    [HarmonyPatch(typeof(HighCouncilUtils), nameof(HighCouncilUtils.GetPolitburoNameInCase))]
+    public static class PatchPolitburoName
+    {
+        static void Postfix(GameState gameState, int padej, ref string __result)
+        {
+            if (gameState.playerCountry == Countries.USSR)
+            {
+                return;
+            }
+
+            string name = CountryInstitutionNames.Pick(CountryCatalog.Get(gameState.playerCountry)?.councilName, padej);
+            if (name != null)
+            {
+                __result = name;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(HighCouncilUtils), nameof(HighCouncilUtils.GetCurrentHighCounciName))]
+    public static class PatchCurrentHighCouncilName
+    {
+        static void Postfix(GameState gameState, int padej, ref string __result)
+        {
+            if (gameState.playerCountry == Countries.USSR)
+            {
+                return;
+            }
+
+            string name = CountryInstitutionNames.Pick(CountryCatalog.Get(gameState.playerCountry)?.parliamentName, padej);
+            if (name != null)
+            {
+                __result = name;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(HighCouncilUtils), nameof(HighCouncilUtils.GetOfficialParliamentName))]
+    public static class PatchOfficialParliamentName
+    {
+        static void Postfix(GameState gameState, int padej, Countries country, string Add, ref string __result)
+        {
+            if (gameState.playerCountry == Countries.USSR || country != Countries.USSR || Add != null)
+            {
+                return;
+            }
+
+            string name = CountryInstitutionNames.Pick(CountryCatalog.Get(gameState.playerCountry)?.parliamentName, padej);
+            if (name != null)
+            {
+                __result = name;
+            }
+        }
+    }
 }

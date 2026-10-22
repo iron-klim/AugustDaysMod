@@ -44,6 +44,11 @@ namespace AugustDaysMod.Catalog
         // Подпись на карточке правителя в меню новой игры
         [JsonProperty] public string rulerCard;
 
+        // Названия совета (аналог Политбюро) и парламента по падежам: именительный, родительный, дательный,
+        // винительный, творительный, предложный
+        [JsonProperty] public List<string> councilName;
+        [JsonProperty] public List<string> parliamentName;
+
         // Руководство. Персонажи задаются именем из Characters или @ключом нового персонажа из newCharacters
         [JsonProperty] public string ruler;
         [JsonProperty] public Dictionary<PoliticPosition, string> posts;

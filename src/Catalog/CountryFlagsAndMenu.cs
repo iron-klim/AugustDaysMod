@@ -172,6 +172,7 @@ namespace AugustDaysMod.Catalog
         private static readonly AccessTools.FieldRef<PoliticEntity, TMPro.TextMeshProUGUI> CardTextRef = AccessTools.FieldRefAccess<PoliticEntity, TMPro.TextMeshProUGUI>("cardText");
 
         private static PoliticEntity card;
+        private static Characters? loadedPortraitOf;
 
         public static void Show(NewGameController controller, CountryProfile profile)
         {
@@ -183,23 +184,45 @@ namespace AugustDaysMod.Catalog
 
             if (card == null)
             {
-                PoliticEntity source = controller.politics[0];
+                // Образец — карточка из набора политиков 1991 года: Янаев есть только в нем
+                PoliticEntity source = controller.politics.FirstOrDefault(p => p != null && CharacterRef(p) == Characters.Yanayev) ?? controller.politics[0];
+                loadedPortraitOf = null;
                 Transform setsParent = controller.politicSets[0].transform.parent;
                 GameObject clone = Object.Instantiate(source.gameObject, setsParent);
                 clone.name = "CatalogRuler";
-                ((RectTransform)clone.transform).position = source.transform.position;
+                // Ставим на место первой карточки того же набора
+                Transform firstSlot = source.transform.parent.childCount > 0 ? source.transform.parent.GetChild(0) : source.transform;
+                ((RectTransform)clone.transform).position = firstSlot.position;
                 card = clone.GetComponent<PoliticEntity>();
             }
 
             CharacterRef(card) = ruler.Value;
             StartVariantRef(card) = 0;
+            // Карточка скопирована с чужой: портрет правителя лежит отдельным слоем поверх области фото,
+            // а пока он не загрузился, область закрашена цветом бумаги
+            Image portraitImage = PortraitLayer();
+            if (portraitImage != null && loadedPortraitOf != ruler.Value)
+            {
+                portraitImage.sprite = null;
+                portraitImage.color = PaperColor;
+            }
+
             card.gameObject.SetActive(true);
 
             controller.StartCoroutine(LoadPortrait(controller, ruler.Value));
 
-            if (CardTextRef(card) != null && !string.IsNullOrEmpty(profile.rulerCard))
+            cardText = profile.rulerCard;
+            ApplyText(card);
+        }
+
+        private static string cardText;
+
+        // Карточка сама перерисовывает подпись по ключам локализации, которых у правителей из справочника нет
+        public static void ApplyText(PoliticEntity entity)
+        {
+            if (entity != null && entity == card && CardTextRef(entity) != null && !string.IsNullOrEmpty(cardText))
             {
-                CardTextRef(card).SetText(profile.rulerCard);
+                CardTextRef(entity).SetText(cardText);
             }
         }
 
@@ -209,8 +232,8 @@ namespace AugustDaysMod.Catalog
             for (int attempt = 0; attempt < 50 && card != null; attempt++)
             {
                 GameState tooltipState = controller.GetScenarioGameStateForTooltip();
-                Transform photo = card.transform.Find("Photo");
-                if (photo != null && tooltipState != null && tooltipState.characters.ContainsKey(ruler) && PortraitsManager.inst != null)
+                Image layer = PortraitLayer();
+                if (layer != null && tooltipState != null && tooltipState.characters.ContainsKey(ruler) && PortraitsManager.inst != null)
                 {
                     Sprite portrait = null;
                     try
@@ -223,13 +246,47 @@ namespace AugustDaysMod.Catalog
 
                     if (portrait != null)
                     {
-                        photo.GetComponent<Image>().sprite = portrait;
+                        layer.sprite = portrait;
+                        layer.color = Color.white;
+                        loadedPortraitOf = ruler;
                         yield break;
                     }
                 }
 
                 yield return new WaitForSeconds(0.2f);
             }
+        }
+
+        private static readonly Color PaperColor = new Color(0.93f, 0.9f, 0.82f);
+
+        // Область портрета на карточке 1991 года: сверху, над полосой с подписью
+        private static readonly Vector2 PortraitMin = new Vector2(0.0625f, 0.355f);
+        private static readonly Vector2 PortraitMax = new Vector2(0.935f, 0.96f);
+
+        private static Image PortraitLayer()
+        {
+            Transform photo = card != null ? card.transform.Find("Photo") : null;
+            if (photo == null)
+            {
+                return null;
+            }
+
+            Transform existing = photo.Find("CatalogPortrait");
+            if (existing != null)
+            {
+                return existing.GetComponent<Image>();
+            }
+
+            var layer = new GameObject("CatalogPortrait", typeof(RectTransform), typeof(Image));
+            var rect = (RectTransform)layer.transform;
+            rect.SetParent(photo, false);
+            rect.anchorMin = PortraitMin;
+            rect.anchorMax = PortraitMax;
+            rect.offsetMin = Vector2.zero;
+            rect.offsetMax = Vector2.zero;
+            Image image = layer.GetComponent<Image>();
+            image.raycastTarget = false;
+            return image;
         }
 
         public static void Hide()
@@ -239,5 +296,11 @@ namespace AugustDaysMod.Catalog
                 card.gameObject.SetActive(false);
             }
         }
+    }
+
+    [HarmonyPatch(typeof(PoliticEntity), "RepaintCardText")]
+    public static class PatchPoliticEntityRepaintCardText
+    {
+        static void Postfix(PoliticEntity __instance) => RulerCard.ApplyText(__instance);
     }
 }
