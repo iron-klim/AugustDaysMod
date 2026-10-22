@@ -1,4 +1,5 @@
-﻿using Backend.Gamedesign;
+﻿using System;
+using Backend.Gamedesign;
 using Backend.Gamedesign.ScenarioSettings.Scenarios.GameScenarios;
 using HarmonyLib;
 
@@ -36,7 +37,12 @@ namespace AugustDaysMod.Scenarios
           level = 1
         };
         gameState.activeModificators[91] = modificatorState;
-        
+        // «Последствия зачистки КПСС 1983» добавляет сценарий 1985 года, к 1991 году они неактуальны
+        gameState.activeModificators.Remove(99);
+        // Сценарий 1985 года сам отмечает съезд партии, поэтому в state.json его нет: XXVIII съезд прошёл в июле 1990,
+        // следующий очередной — через пять лет
+        gameState.eventsDone[109] = new EventCompletionState(2, 0, new DateTime(1995, 7, 13), new DateTime(1990, 7, 13));
+
         var yeltsinTraits = gameState.characters[Characters.Yeltsin].traits;
         yeltsinTraits.Remove(Traits.ProReformist);
         yeltsinTraits.Add(Traits.ProNationalDemocrat);

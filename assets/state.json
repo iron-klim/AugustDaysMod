@@ -2,7 +2,7 @@
   "currentWars": {
     "AfganWar": {
       "region": "Afganistan",
-      "playersAdvisor": "Varennikov",
+      "playersAdvisor": null,
       "activateButtons": [
         "SendSpecialsts",
         "SecretSupport",
@@ -56,139 +56,17 @@
           "secondSideMorale": 75
         }
       ],
-      "firstSideBalance": 70,
+      "firstSideBalance": 75,
       "firstSideSupporters": [
         "USSR"
       ],
       "secondSideSupporters": [
         "USA",
-        "China"
+        "Pakistan",
+        "SaudiArabia"
       ],
       "firstSideMapCountry": "Afghanistan",
       "secondSideMapCountry": "Afghanistan"
-    },
-    "NicaraguanWar": {
-      "region": "Nicaragua",
-      "playersAdvisor": "Ryzhov",
-      "activateButtons": [
-        "SendSpecialsts",
-        "SecretSupport",
-        "OpenAgreement",
-        "HumanitarianAid"
-      ],
-      "sectors": [
-        {
-          "control": 70,
-          "firstSideMorale": 21,
-          "secondSideMorale": 79
-        },
-        {
-          "control": 70,
-          "firstSideMorale": 21,
-          "secondSideMorale": 79
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 100,
-          "secondSideMorale": 0
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 100,
-          "secondSideMorale": 0
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 80,
-          "secondSideMorale": 20
-        },
-        {
-          "control": 70,
-          "firstSideMorale": 21,
-          "secondSideMorale": 79
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 90,
-          "secondSideMorale": 10
-        },
-        {
-          "control": 95,
-          "firstSideMorale": 67,
-          "secondSideMorale": 33
-        }
-      ],
-      "firstSideBalance": 55,
-      "firstSideSupporters": [
-        "USSR"
-      ],
-      "secondSideSupporters": [
-        "USA"
-      ],
-      "firstSideMapCountry": "Nicaragua",
-      "secondSideMapCountry": "Nicaragua"
-    },
-    "AngolanWar": {
-      "region": "Angola",
-      "playersAdvisor": null,
-      "activateButtons": [
-        "SecretSupport",
-        "HumanitarianAid",
-        "ForcePartners"
-      ],
-      "sectors": [
-        {
-          "control": 0,
-          "firstSideMorale": 100,
-          "secondSideMorale": 40
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 100,
-          "secondSideMorale": 0
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 100,
-          "secondSideMorale": 0
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 100,
-          "secondSideMorale": 0
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 100,
-          "secondSideMorale": 0
-        },
-        {
-          "control": 60,
-          "firstSideMorale": 50,
-          "secondSideMorale": 50
-        },
-        {
-          "control": 0,
-          "firstSideMorale": 100,
-          "secondSideMorale": 40
-        },
-        {
-          "control": 100,
-          "firstSideMorale": 0,
-          "secondSideMorale": 100
-        }
-      ],
-      "firstSideBalance": 35,
-      "firstSideSupporters": [
-        "USSR"
-      ],
-      "secondSideSupporters": [
-        "USA",
-        "France",
-        "China"
-      ],
-      "firstSideMapCountry": "Angola",
-      "secondSideMapCountry": "Angola"
     }
   },
   "regionsStorage": {
@@ -9795,7 +9673,7 @@
       "enabled": "true"
     },
     "3": {
-      "enabled": "false"
+      "enabled": "true"
     },
     "4": {
       "enabled": "false"
@@ -9873,7 +9751,7 @@
       "enabled": "false"
     },
     "101": {
-      "enabled": "true"
+      "enabled": "false"
     },
     "102": {
       "enabled": "false"
@@ -9885,13 +9763,14 @@
       "enabled": "false"
     },
     "105": {
-      "enabled": "false"
+      "enabled": "false",
+      "cooldown": "1996-01-22T00:00:00"
     },
     "106": {
-      "enabled": "true"
+      "enabled": "false"
     },
     "107": {
-      "enabled": "true"
+      "enabled": "false"
     },
     "108": {
       "enabled": "true"
@@ -9919,18 +9798,25 @@
       "enabled": "false"
     },
     "132": {
-      "enabled": "false"
+      "enabled": "true",
+      "cooldown": "1991-07-16T00:00:00"
     },
     "133": {
       "enabled": "true"
     },
     "134": {
-      "enabled": "true"
+      "enabled": "false"
     },
     "135": {
       "enabled": "false"
     },
     "136": {
+      "enabled": "false"
+    },
+    "152": {
+      "enabled": "false"
+    },
+    "153": {
       "enabled": "false"
     }
   },
@@ -9967,7 +9853,7 @@
     },
     "1": {
       "endingDate": null,
-      "level": 1
+      "level": 2
     },
     "2": {
       "endingDate": null,
@@ -9997,19 +9883,11 @@
       "endingDate": null,
       "level": 1
     },
-    "93": {
-      "endingDate": null,
-      "level": 1
-    },
     "10": {
       "endingDate": null,
       "level": 1
     },
     "11": {
-      "endingDate": null,
-      "level": 1
-    },
-    "12": {
       "endingDate": null,
       "level": 1
     },
@@ -10019,18 +9897,46 @@
     },
     "16": {
       "endingDate": null,
-      "level": 3,
-      "progressToNextLevel": 300,
-      "lastProgressToNextLevel": 294
+      "level": 5,
+      "progressToNextLevel": 550
     },
     "17": {
       "endingDate": null,
-      "level": 3,
-      "progressToNextLevel": 300
+      "level": 5,
+      "progressToNextLevel": 550
+    },
+    "21": {
+      "endingDate": null,
+      "level": 3
+    },
+    "26": {
+      "endingDate": null,
+      "level": 5
+    },
+    "29": {
+      "endingDate": null,
+      "level": 1
+    },
+    "31": {
+      "endingDate": null,
+      "level": 2
+    },
+    "45": {
+      "endingDate": null,
+      "level": 1
+    },
+    "50": {
+      "endingDate": null,
+      "level": 1
+    },
+    "57": {
+      "endingDate": null,
+      "level": 1,
+      "progressToNextLevel": 100
     },
     "61": {
       "endingDate": null,
-      "level": 1
+      "level": 2
     },
     "65": {
       "endingDate": null,
@@ -10042,15 +9948,11 @@
     },
     "70": {
       "endingDate": null,
-      "level": 4
-    },
-    "74": {
-      "endingDate": null,
       "level": 1
     },
     "83": {
       "endingDate": null,
-      "level": 1
+      "level": 2
     },
     "85": {
       "endingDate": null,
@@ -10060,18 +9962,39 @@
       "endingDate": null,
       "level": 1
     },
+    "87": {
+      "endingDate": null,
+      "level": 1
+    },
     "88": {
       "endingDate": null,
       "level": 1,
       "progressToNextLevel": 110
     },
-    "90": {
+    "93": {
       "endingDate": null,
-      "level": 1
+      "level": 4
+    },
+    "94": {
+      "endingDate": null,
+      "level": 1,
+      "progressToNextLevel": 100
     },
     "95": {
       "endingDate": null,
       "level": 1
+    },
+    "102": {
+      "endingDate": null,
+      "level": 1
+    },
+    "103": {
+      "endingDate": null,
+      "level": 0
+    },
+    "106": {
+      "endingDate": null,
+      "level": 0
     }
   },
   "doctrines": {
@@ -13567,11 +13490,12 @@
       {
         "investedCost": {
           "militaryPoints": 0,
-          "physicPoints": 0,
-          "cyberneticPoints": 0,
+          "physicPoints": 60,
+          "cyberneticPoints": 60,
           "civilPoints": 0
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1980-01-01T00:00:00"
       },
       {
         "investedCost": {
@@ -13612,17 +13536,18 @@
       {
         "investedCost": {
           "militaryPoints": 0,
-          "physicPoints": 0,
-          "cyberneticPoints": 0,
+          "physicPoints": 60,
+          "cyberneticPoints": 60,
           "civilPoints": 0
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1980-01-01T00:00:00"
       },
       {
         "investedCost": {
           "militaryPoints": 0,
-          "physicPoints": 0,
-          "cyberneticPoints": 0,
+          "physicPoints": 40,
+          "cyberneticPoints": 40,
           "civilPoints": 0
         },
         "state": "NotStarted"
@@ -13658,12 +13583,43 @@
     "SpaceProgram": [
       {
         "investedCost": {
-          "militaryPoints": 0,
-          "physicPoints": 0,
+          "militaryPoints": 60,
+          "physicPoints": 60,
           "cyberneticPoints": 0,
           "civilPoints": 0
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1975-01-01T00:00:00"
+      },
+      {
+        "investedCost": {
+          "militaryPoints": 83,
+          "physicPoints": 83,
+          "cyberneticPoints": 5,
+          "civilPoints": 0
+        },
+        "state": "Completed",
+        "researchEndDate": "1984-01-01T00:00:00"
+      },
+      {
+        "investedCost": {
+          "militaryPoints": 200,
+          "physicPoints": 100,
+          "cyberneticPoints": 100,
+          "civilPoints": 0
+        },
+        "state": "Completed",
+        "researchEndDate": "1976-06-22T00:00:00"
+      },
+      {
+        "investedCost": {
+          "militaryPoints": 312,
+          "physicPoints": 156,
+          "cyberneticPoints": 0,
+          "civilPoints": 312
+        },
+        "state": "Completed",
+        "researchEndDate": "1979-01-01T00:00:00"
       },
       {
         "investedCost": {
@@ -13677,56 +13633,32 @@
       {
         "investedCost": {
           "militaryPoints": 0,
-          "physicPoints": 0,
+          "physicPoints": 60,
           "cyberneticPoints": 0,
-          "civilPoints": 0
+          "civilPoints": 60
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1986-02-20T00:00:00"
       },
       {
         "investedCost": {
           "militaryPoints": 0,
-          "physicPoints": 0,
+          "physicPoints": 83,
           "cyberneticPoints": 0,
-          "civilPoints": 0
+          "civilPoints": 83
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1987-05-15T00:00:00"
       },
       {
         "investedCost": {
           "militaryPoints": 0,
-          "physicPoints": 0,
-          "cyberneticPoints": 0,
-          "civilPoints": 0
+          "physicPoints": 200,
+          "cyberneticPoints": 100,
+          "civilPoints": 100
         },
-        "state": "NotStarted"
-      },
-      {
-        "investedCost": {
-          "militaryPoints": 0,
-          "physicPoints": 0,
-          "cyberneticPoints": 0,
-          "civilPoints": 0
-        },
-        "state": "NotStarted"
-      },
-      {
-        "investedCost": {
-          "militaryPoints": 0,
-          "physicPoints": 0,
-          "cyberneticPoints": 0,
-          "civilPoints": 0
-        },
-        "state": "NotStarted"
-      },
-      {
-        "investedCost": {
-          "militaryPoints": 0,
-          "physicPoints": 0,
-          "cyberneticPoints": 0,
-          "civilPoints": 0
-        },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1988-11-15T00:00:00"
       },
       {
         "investedCost": {
@@ -13753,9 +13685,10 @@
           "militaryPoints": 0,
           "physicPoints": 0,
           "cyberneticPoints": 0,
-          "civilPoints": 0
+          "civilPoints": 60
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1982-05-24T00:00:00"
       },
       {
         "investedCost": {
@@ -13796,18 +13729,19 @@
       {
         "investedCost": {
           "militaryPoints": 0,
-          "physicPoints": 0,
+          "physicPoints": 60,
           "cyberneticPoints": 0,
-          "civilPoints": 0
+          "civilPoints": 60
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1986-01-01T00:00:00"
       },
       {
         "investedCost": {
           "militaryPoints": 0,
-          "physicPoints": 0,
+          "physicPoints": 40,
           "cyberneticPoints": 0,
-          "civilPoints": 0
+          "civilPoints": 40
         },
         "state": "NotStarted"
       },
@@ -13842,27 +13776,29 @@
     "Military": [
       {
         "investedCost": {
-          "militaryPoints": 0,
+          "militaryPoints": 60,
           "physicPoints": 0,
           "cyberneticPoints": 0,
           "civilPoints": 0
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1985-01-01T00:00:00"
       },
       {
         "investedCost": {
-          "militaryPoints": 0,
+          "militaryPoints": 83,
           "physicPoints": 0,
-          "cyberneticPoints": 0,
+          "cyberneticPoints": 83,
           "civilPoints": 0
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1984-09-01T00:00:00"
       },
       {
         "investedCost": {
-          "militaryPoints": 0,
-          "physicPoints": 0,
-          "cyberneticPoints": 0,
+          "militaryPoints": 100,
+          "physicPoints": 50,
+          "cyberneticPoints": 50,
           "civilPoints": 0
         },
         "state": "NotStarted"
@@ -13935,7 +13871,7 @@
       {
         "investedCost": {
           "militaryPoints": 0,
-          "physicPoints": 0,
+          "physicPoints": 30,
           "cyberneticPoints": 0,
           "civilPoints": 0
         },
@@ -13979,21 +13915,23 @@
       },
       {
         "investedCost": {
-          "militaryPoints": 0,
-          "physicPoints": 0,
+          "militaryPoints": 60,
+          "physicPoints": 60,
           "cyberneticPoints": 0,
           "civilPoints": 0
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1985-07-01T00:00:00"
       },
       {
         "investedCost": {
-          "militaryPoints": 0,
-          "physicPoints": 0,
+          "militaryPoints": 83,
+          "physicPoints": 83,
           "cyberneticPoints": 0,
           "civilPoints": 0
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1985-01-01T00:00:00"
       },
       {
         "investedCost": {
@@ -14026,12 +13964,22 @@
     "American": [
       {
         "investedCost": {
-          "militaryPoints": 0,
-          "physicPoints": 0,
+          "militaryPoints": 500,
+          "physicPoints": 100,
+          "cyberneticPoints": 100,
+          "civilPoints": 0
+        },
+        "state": "Completed",
+        "researchEndDate": "1991-01-28T00:00:00"
+      },
+      {
+        "investedCost": {
+          "militaryPoints": 400,
+          "physicPoints": 600,
           "cyberneticPoints": 0,
           "civilPoints": 0
         },
-        "state": "NotStarted"
+        "state": "InProgess"
       },
       {
         "investedCost": {
@@ -14062,39 +14010,32 @@
       },
       {
         "investedCost": {
-          "militaryPoints": 0,
+          "militaryPoints": 500,
           "physicPoints": 0,
-          "cyberneticPoints": 0,
-          "civilPoints": 0
+          "cyberneticPoints": 100,
+          "civilPoints": 100
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1988-01-01T00:00:00"
       },
       {
         "investedCost": {
           "militaryPoints": 0,
           "physicPoints": 0,
-          "cyberneticPoints": 0,
-          "civilPoints": 0
+          "cyberneticPoints": 1500,
+          "civilPoints": 1500
         },
-        "state": "NotStarted"
+        "state": "Completed",
+        "researchEndDate": "1990-01-01T00:00:00"
       },
       {
         "investedCost": {
           "militaryPoints": 0,
           "physicPoints": 0,
-          "cyberneticPoints": 0,
-          "civilPoints": 0
+          "cyberneticPoints": 3800,
+          "civilPoints": 3800
         },
-        "state": "NotStarted"
-      },
-      {
-        "investedCost": {
-          "militaryPoints": 0,
-          "physicPoints": 0,
-          "cyberneticPoints": 0,
-          "civilPoints": 0
-        },
-        "state": "NotStarted"
+        "state": "InProgess"
       },
       {
         "investedCost": {
@@ -14177,59 +14118,632 @@
   "SumOfTradeValues": 44,
   "TradeLimit": 112,
   "eventsDone": {
+    "2": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1985-04-23T00:00:00"
+    },
+    "5": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "1986-05-07T00:00:00",
+      "dateOfDone": "1985-05-07T00:00:00"
+    },
+    "10": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1985-07-27T00:00:00"
+    },
+    "42": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1985-08-24T00:00:00"
+    },
+    "43": {
+      "choice": 3,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-12-16T00:00:00"
+    },
+    "44": {
+      "choice": 3,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-02-05T00:00:00"
+    },
+    "45": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1985-04-07T00:00:00"
+    },
+    "47": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1985-08-01T00:00:00"
+    },
+    "51": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1985-12-01T00:00:00"
+    },
+    "53": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1991-01-15T00:00:00"
+    },
+    "57": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1991-01-22T00:00:00"
+    },
+    "58": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1985-09-01T00:00:00"
+    },
+    "70": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1985-10-02T00:00:00"
+    },
+    "76": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-03-06T00:00:00"
+    },
+    "81": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-12-24T00:00:00"
+    },
+    "82": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-04-13T00:00:00"
+    },
+    "84": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1987-02-01T00:00:00"
+    },
+    "85": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-04-26T00:00:00"
+    },
+    "86": {
+      "choice": 3,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1987-09-07T00:00:00"
+    },
+    "88": {
+      "choice": 6,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-10-10T00:00:00"
+    },
+    "90": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-04-18T00:00:00"
+    },
+    "91": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-01-31T00:00:00"
+    },
+    "95": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-07-08T00:00:00"
+    },
+    "98": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1985-04-11T00:00:00"
+    },
+    "99": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-11-30T00:00:00"
+    },
+    "100": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-02-12T00:00:00"
+    },
+    "101": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-06-12T00:00:00"
+    },
+    "102": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-10-15T00:00:00"
+    },
+    "103": {
+      "choice": 4,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-02-01T00:00:00"
+    },
+    "104": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1987-06-25T00:00:00"
+    },
+    "105": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-12-10T00:00:00"
+    },
+    "107": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-03-26T00:00:00"
+    },
+    "108": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-12-17T00:00:00"
+    },
+    "113": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-06-28T00:00:00"
+    },
+    "116": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1987-07-21T00:00:00"
+    },
+    "117": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-10-01T00:00:00"
+    },
+    "118": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-01-05T00:00:00"
+    },
+    "119": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1987-10-15T00:00:00"
+    },
+    "123": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-06-05T00:00:00"
+    },
+    "124": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-10-01T00:00:00"
+    },
+    "125": {
+      "choice": 3,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-04-24T00:00:00"
+    },
+    "126": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-10-19T00:00:00"
+    },
+    "129": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-12-01T00:00:00"
+    },
+    "130": {
+      "choice": 3,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1991-05-20T00:00:00"
+    },
+    "137": {
+      "choice": 4,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-10-12T00:00:00"
+    },
+    "138": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-11-08T00:00:00"
+    },
+    "140": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1987-03-01T00:00:00"
+    },
+    "149": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-06-15T00:00:00"
+    },
+    "150": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-08-23T00:00:00"
+    },
+    "153": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-05-04T00:00:00"
+    },
+    "157": {
+      "choice": 4,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1987-03-01T00:00:00"
+    },
+    "165": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-10-28T00:00:00"
+    },
+    "169": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-04-14T00:00:00"
+    },
+    "170": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1991-01-13T00:00:00"
+    },
+    "178": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-10-01T00:00:00"
+    },
+    "182": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-02-28T00:00:00"
+    },
+    "183": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-01-20T00:00:00"
+    },
+    "195": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-02-01T00:00:00"
+    },
+    "197": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-04-25T00:00:00"
+    },
+    "198": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1991-05-31T00:00:00"
+    },
+    "202": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-12-01T00:00:00"
+    },
+    "207": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-03-20T00:00:00"
+    },
+    "210": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-05-22T00:00:00"
+    },
+    "216": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-05-01T00:00:00"
+    },
+    "218": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-08-20T00:00:00"
+    },
+    "223": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-08-02T00:00:00"
+    },
+    "224": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1991-02-28T00:00:00"
+    },
+    "229": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-08-15T00:00:00"
+    },
+    "232": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-09-14T00:00:00"
+    },
+    "233": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-08-20T00:00:00"
+    },
+    "234": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1987-05-06T00:00:00"
+    },
+    "235": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-01-28T00:00:00"
+    },
+    "255": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-10-19T00:00:00"
+    },
     "256": {
       "choice": 3,
       "variantOfChoice": 0,
       "expirationDate": "9999-12-31T23:59:59",
-      "completionDate": "1987-08-01T00:00:00"
+      "dateOfDone": "1987-08-01T00:00:00"
     },
     "257": {
       "choice": 0,
       "variantOfChoice": 0,
       "expirationDate": "9999-12-31T23:59:59",
-      "completionDate": "1987-09-23T00:00:00"
+      "dateOfDone": "1987-09-23T00:00:00"
     },
     "258": {
       "choice": 3,
       "variantOfChoice": 0,
       "expirationDate": "9999-12-31T23:59:59",
-      "completionDate": "1988-03-14T00:00:00"
+      "dateOfDone": "1988-03-14T00:00:00"
     },
     "259": {
       "choice": 0,
       "variantOfChoice": 0,
       "expirationDate": "9999-12-31T23:59:59",
-      "completionDate": "1988-06-01T00:00:00"
+      "dateOfDone": "1988-06-01T00:00:00"
     },
     "260": {
       "choice": 1,
       "variantOfChoice": 0,
       "expirationDate": "9999-12-31T23:59:59",
-      "completionDate": "1989-03-16T00:00:00"
+      "dateOfDone": "1989-03-16T00:00:00"
     },
     "261": {
       "choice": 2,
       "variantOfChoice": 0,
       "expirationDate": "9999-12-31T23:59:59",
-      "completionDate": "1990-01-22T00:00:00"
+      "dateOfDone": "1990-01-22T00:00:00"
     },
     "262": {
       "choice": 1,
       "variantOfChoice": 0,
       "expirationDate": "9999-12-31T23:59:59",
-      "completionDate": "1990-10-14T00:00:00"
+      "dateOfDone": "1990-10-14T00:00:00"
     },
     "263": {
       "choice": 1,
       "variantOfChoice": 0,
       "expirationDate": "9999-12-31T23:59:59",
-      "completionDate": "1991-05-15T00:00:00"
+      "dateOfDone": "1991-05-15T00:00:00"
     },
     "264": {
       "choice": 1,
       "variantOfChoice": 0,
       "expirationDate": "9999-12-31T23:59:59",
-      "completionDate": "1991-06-25T00:00:00"
+      "dateOfDone": "1991-06-25T00:00:00"
+    },
+    "277": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-05-15T00:00:00"
+    },
+    "278": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-06-04T00:00:00"
+    },
+    "305": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-11-18T00:00:00"
+    },
+    "320": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1989-04-05T00:00:00"
+    },
+    "358": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-09-25T00:00:00"
+    },
+    "378": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-05-22T00:00:00"
+    },
+    "380": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1987-12-17T00:00:00"
+    },
+    "382": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1987-07-28T00:00:00"
+    },
+    "418": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-03-01T00:00:00"
+    },
+    "428": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1986-03-01T00:00:00"
+    },
+    "430": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-05-09T00:00:00"
+    },
+    "435": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-10-05T00:00:00"
+    },
+    "436": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1988-05-15T00:00:00"
+    },
+    "440": {
+      "choice": 3,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1987-10-01T00:00:00"
+    },
+    "444": {
+      "choice": 3,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1990-08-23T00:00:00"
+    },
+    "452": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1987-12-15T00:00:00"
+    },
+    "454": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "dateOfDone": "1985-04-15T00:00:00"
+    }
+  },
+  "acceptedDecisions": [
+    9,
+    24,
+    25,
+    26,
+    29,
+    30,
+    31,
+    45,
+    50,
+    51,
+    118,
+    140,
+    141
+  ],
+  "endedWars": {
+    "IranIraqWar": {
+      "warResultStatus": "StatusQuo",
+      "endingNum": 0
+    },
+    "NicaraguanWar": {
+      "warResultStatus": "StatusQuo",
+      "endingNum": 2
+    },
+    "AngolanWar": {
+      "warResultStatus": "StatusQuo",
+      "endingNum": 1
+    },
+    "EthiopianWar": {
+      "warResultStatus": "SecondSideWin",
+      "endingNum": 0
     }
   }
 }
