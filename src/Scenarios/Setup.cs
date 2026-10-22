@@ -50,6 +50,10 @@ namespace AugustDaysMod.Scenarios
         AssignPolitburo(gameState);
         AssignCabinet(gameState);
 
+        if (GkchpConspiracy.IsGorbachevGame(gameState))
+        {
+          GkchpConspiracy.Create(gameState);
+        }
 
         gameState.MilitaryStaffLoyalty = 70;
         gameState.SpecialServicesLoyalty = 70;
@@ -61,15 +65,10 @@ namespace AugustDaysMod.Scenarios
         switch (president)
         {
           case Characters.Gorbachev:
-            // gameState.politicPositions[Characters.Yanayev] =  PoliticPosition.SecondSecretary;
-            // gameState.politicPositions[Characters.Pugo] =  PoliticPosition.MinisterOfInternalAffairs;
-            // gameState.politicPositions[Characters.Lukyanov] =  PoliticPosition.ChairmanOfTheSupremeCouncil;
-
-            gameState.politicPositions[Characters.Yanayev] = PoliticPosition.President;
+            // Горбачев остается президентом. Должности вице-президента в игре нет, поэтому Янаев — второй секретарь
+            gameState.politicPositions[Characters.Yanayev] =  PoliticPosition.SecondSecretary;
             gameState.politicPositions[Characters.Pugo] =  PoliticPosition.MinisterOfInternalAffairs;
             gameState.politicPositions[Characters.Lukyanov] =  PoliticPosition.ChairmanOfTheSupremeCouncil;
-            gameState.politicPositions[Characters.Baklanov] = PoliticPosition.SecondSecretary;
-            
             break;
           case Characters.Lukyanov:
             gameState.politicPositions[Characters.Yanayev] =  PoliticPosition.SecondSecretary;

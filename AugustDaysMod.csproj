@@ -64,11 +64,14 @@
         <Compile Include="src\Events\CoupEvent.cs" />
         <Compile Include="src\Events\Final.cs" />
         <Compile Include="src\Events\Foros.cs" />
+        <Compile Include="src\Events\ForosIsolation.cs" />
+        <Compile Include="src\Events\ForosReturn.cs" />
         <Compile Include="src\Events\MiltaryAction.cs" />
         <Compile Include="src\Events\Negotiations.cs" />
         <Compile Include="src\Events\PoliticalDirection.cs" />
         <Compile Include="src\Events\SovietsPalace.cs" />
         <Compile Include="src\Events\YeltsinProblem.cs" />
+        <Compile Include="src\Scenarios\GkchpConspiracy.cs" />
         <Compile Include="src\Scenarios\NewGame.cs" />
         <Compile Include="src\Scenarios\Setup.cs" />
         <Compile Include="src\Scenarios\SovietGarrisons.cs" />

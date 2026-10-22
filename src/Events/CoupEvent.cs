@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using AugustDaysMod.Assets;
+using AugustDaysMod.Scenarios;
 using Backend.Gamedesign;
 using Backend.Gamedesign.EventSystem.DataStructures;
 using Backend.Gamedesign.EventSystem.Events;
@@ -37,10 +38,15 @@ namespace AugustDaysMod.Events
 
         public override EventInfo EventInfo => eventInfo;
 
+        // События путча разделены на ветку ГКЧП и ветку Горбачева
+        protected virtual bool IsGorbachevBranch => false;
+
         public override bool CheckConditions(GameState gameState)
         {
             // Используем кастомное условие потому, что у кризисных событий не проверяются даты и факт выполнения
-            return !gameState.eventsDone.ContainsKey(Id) && gameState.date >= eventInfo.startDate;
+            return GkchpConspiracy.IsGorbachevGame(gameState) == IsGorbachevBranch
+                && !gameState.eventsDone.ContainsKey(Id)
+                && gameState.date >= eventInfo.startDate;
         }
 
         // Заполняет окно события вариантами ответа, эффекты которых задает SetupOption
