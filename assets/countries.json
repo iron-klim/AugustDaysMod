@@ -9,13 +9,14 @@
       "name": "Украина",
       "economyScale": 0.18,
       "baseIncome": 2696,
-      "politicalPowerBonus": 55,
+      "politicalPowerBonus": 75,
       "dependent": true,
       "comment": "Доля в населении и экономике СССР около 18%. Бюджет, доход и резерв заданы в союзном эквиваленте на душу населения (см. economyScale): союзный бюджет без космической программы, с небольшими расходами на размещенный ядерный арсенал, почти без посольств, без импорта зерна, с повышенными расходами на экологию после Чернобыля. Внешних долгов нет",
       "fullName": "Украина",
       "abbreviation": "Украина",
       "flagImage": "flag_ukraine.png",
       "startDescription": "16 августа 1991 года. Украинская ССР — вторая по величине республика Союза: 52 миллиона человек, Донбасс, черноземы, Черноморский флот, третий в мире ядерный арсенал. Год назад Верховный Совет провозгласил государственный суверенитет, и председатель Рады Леонид Кравчук осторожно ведет республику между Москвой и Рухом. Через три дня в Москве попытаются остановить развал Союза силой. Сумеет ли Украина стать независимым государством — и каким оно будет?",
+      "rulerCard": "<b>Леонид Кравчук</b>\nПредседатель Верховной Рады\nОсторожный аппаратчик\nКоммунист, ставший государственником",
       "ruler": "Kravchuk",
       "posts": {
         "ChairmanOfTheCouncilOfMinisters": "Fokin",
@@ -222,6 +223,134 @@
           "diplomacy": 3,
           "intrigue": 3,
           "thrift": 5
+        },
+        {
+          "key": "pynzenyk",
+          "name": "Виктор",
+          "surname": "Пинзеник",
+          "age": 37,
+          "homeLand": "GaliciaUk",
+          "traits": [
+            "ProLiberalDemocrat",
+            "ProMarket",
+            "Economical"
+          ],
+          "power": 15,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 6
+        },
+        {
+          "key": "lanovyi",
+          "name": "Владимир",
+          "surname": "Лановой",
+          "age": 39,
+          "homeLand": "MainUkraine",
+          "traits": [
+            "ProLiberalDemocrat",
+            "ProMarket",
+            "Idealist"
+          ],
+          "power": 15,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 5
+        },
+        {
+          "key": "drach",
+          "name": "Иван",
+          "surname": "Драч",
+          "age": 55,
+          "homeLand": "MainUkraine",
+          "traits": [
+            "ProNationalDemocrat",
+            "Intelligent",
+            "Peoplefavorite"
+          ],
+          "power": 20,
+          "diplomacy": 5,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "horyn",
+          "name": "Михаил",
+          "surname": "Горынь",
+          "age": 61,
+          "homeLand": "GaliciaUk",
+          "traits": [
+            "ProNationalDemocrat",
+            "Dissident",
+            "Uncompromising"
+          ],
+          "power": 20,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "symonenko",
+          "name": "Петр",
+          "surname": "Симоненко",
+          "age": 39,
+          "homeLand": "Donbass",
+          "traits": [
+            "ProNeostalinist",
+            "Partocrat",
+            "Uncompromising"
+          ],
+          "power": 15,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "yushchenko",
+          "name": "Виктор",
+          "surname": "Ющенко",
+          "age": 37,
+          "homeLand": "MainUkraine",
+          "traits": [
+            "ProLiberalDemocrat",
+            "Economical",
+            "Compromise"
+          ],
+          "power": 15,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 6
+        },
+        {
+          "key": "zvyahilsky",
+          "name": "Ефим",
+          "surname": "Звягильский",
+          "age": 58,
+          "homeLand": "Donbass",
+          "traits": [
+            "ProModerate",
+            "Industrialist",
+            "Schemer"
+          ],
+          "power": 25,
+          "diplomacy": 3,
+          "intrigue": 6,
+          "thrift": 3
+        },
+        {
+          "key": "pustovoitenko",
+          "name": "Валерий",
+          "surname": "Пустовойтенко",
+          "age": 44,
+          "homeLand": "KharkivDniproKirovograd",
+          "traits": [
+            "ProModerate",
+            "Technocrat",
+            "Unambitious"
+          ],
+          "power": 15,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 3
         }
       ],
       "relations": {

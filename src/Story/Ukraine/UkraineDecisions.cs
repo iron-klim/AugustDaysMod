@@ -162,4 +162,28 @@ namespace AugustDaysMod.Story.Ukraine
         protected override void AddEffects(GameState gameState, UnitOfWork effects) =>
             effects.AddArmyQuantityLevel(-10).AddReserveAction(100).AddMilitaryStaffLoyalty(-10);
     }
+
+    [Decision(ID)]
+    public class UkraineAddressToNation : UkraineDecision
+    {
+        public const int ID = 3011;
+        protected override int CooldownMonths => 3;
+        protected override DecisionType Type => DecisionType.PoliticalDecision;
+
+        protected override void AddEffects(GameState gameState, UnitOfWork effects) =>
+            effects.AddPoliticalPower(25).AddUnityLevel(2).AddIntelligentsiaLoyalty(-3);
+    }
+
+    [Decision(ID)]
+    public class UkraineCoalitionGovernment : UkraineDecision
+    {
+        public const int ID = 3012;
+        protected override int CooldownMonths => 12;
+        protected override DecisionType Type => DecisionType.PoliticalDecision;
+
+        protected override bool Available(GameState gameState) => Independent(gameState);
+
+        protected override void AddEffects(GameState gameState, UnitOfWork effects) =>
+            effects.AddPoliticalPower(40).AddUnityLevel(5).AddRadicalsPower(-5).AddIntelligentsiaLoyalty(5).AddMilitaryStaffLoyalty(-5);
+    }
 }

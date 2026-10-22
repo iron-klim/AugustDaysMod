@@ -41,6 +41,9 @@ namespace AugustDaysMod.Catalog
         // Описание старта в меню новой игры
         [JsonProperty] public string startDescription;
 
+        // Подпись на карточке правителя в меню новой игры
+        [JsonProperty] public string rulerCard;
+
         // Руководство. Персонажи задаются именем из Characters или @ключом нового персонажа из newCharacters
         [JsonProperty] public string ruler;
         [JsonProperty] public Dictionary<PoliticPosition, string> posts;

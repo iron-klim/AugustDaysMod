@@ -49,7 +49,7 @@ namespace AugustDaysMod.DevTools
 
         public static bool DebugLog => File.Exists(Path.Combine(Application.persistentDataPath, "august_debug_log"));
 
-        // Сюжетные события мода решаются сами первым вариантом — для долгих проверочных прогонов
+        // События мода решаются сами первым вариантом — для долгих проверочных прогонов
         public static bool AutoPlay => File.Exists(Path.Combine(Application.persistentDataPath, "august_autoplay"));
 
         public static void Log(string message) => Debug.Log($"{LOG_TAG} {message}");
@@ -85,6 +85,9 @@ namespace AugustDaysMod.DevTools
             }
 
             builder.Append($"  субъектов СССР: {SovietUnion.Subjects(gameState).Count()}, республик игрока: {CountryUtils.GetNumberOfRepublicsOfPlayer(gameState)}\n");
+            var alive = gameState.characters.Where(c => c.Value.status == CharacterInfo.PoliticStatus.Alive).ToList();
+            var foreign = alive.Where(c => CharacterUtils.GetHomeLandCountry(gameState, c.Value) != gameState.playerCountry).Select(c => c.Key.ToString()).ToList();
+            builder.Append($"  политиков: {alive.Count}, не из страны игрока: {foreign.Count} {string.Join(" ", foreign.Take(10))}\n");
             List<int> decisions = Backend.Gamedesign.DecisionsSystem.Utils.DecisionsManager.inst.GetDecisionsIdsForCountry(gameState);
             builder.Append($"  решения игрока: {string.Join(", ", decisions)}");
             DevSettings.Log(builder.ToString());
@@ -100,6 +103,41 @@ namespace AugustDaysMod.DevTools
             return $"{key}: puppet={country.puppetType}/{country.puppetOf?.ToString() ?? "-"} gov={country.governmentType} " +
                    $"leader={country.leaderType} party={country.rulingPartyName} кИгроку={country.RelationshipWithPlayer:F0} " +
                    $"кСоюзу={UnionRelations.Get(gameState, key):F0} вектор={country.ForeignPolicyVector:F0}";
+        }
+    }
+
+    // В автопрогоне вакансии заполняются сами: самым влиятельным свободным политиком
+    [HarmonyPatch(typeof(TickUtils), "ProcessTickCore")]
+    public static class PatchAutoPlayVacancies
+    {
+        static void Postfix(GameState gameState)
+        {
+            if (!DevSettings.AutoPlay)
+            {
+                return;
+            }
+
+            foreach (PoliticPosition position in Enum.GetValues(typeof(PoliticPosition)))
+            {
+                if (gameState.politicPositions[position].HasValue || !gameState.IfPositionPossible(position))
+                {
+                    continue;
+                }
+
+                KeyValuePair<Characters, CharacterInfo> candidate = gameState.characters
+                    .Where(c => c.Value.status == CharacterInfo.PoliticStatus.Alive && c.Key != gameState.gameCharacter &&
+                                !gameState.politicPositions[c.Key].HasValue)
+                    .OrderByDescending(c => c.Value.Power)
+                    .FirstOrDefault();
+                if (candidate.Value == null)
+                {
+                    DevSettings.Log($"автоназначение: на пост {position} некого назначить");
+                    continue;
+                }
+
+                CountryLeadership.Assign(gameState, candidate.Key, position);
+                DevSettings.Log($"автоназначение {gameState.date:dd.MM.yyyy}: {PoliticUtils.GetPoliticFullName(gameState, candidate.Key)} — {position}");
+            }
         }
     }
 
@@ -179,7 +217,7 @@ namespace AugustDaysMod.DevTools
 
             if (!DevSettings.AutoPlay ||
                 !(Events(__instance).TryGetValue(__result.Value, out AbstractEvent story) || CrisisEvents(__instance).TryGetValue(__result.Value, out story)) ||
-                !(story is StoryEvent))
+                story.GetType().Assembly != typeof(DevSettings).Assembly)
             {
                 return;
             }

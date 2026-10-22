@@ -202,7 +202,43 @@ namespace AugustDaysMod.Compat
 
             float multiplier = 1f + gameState.FreedomLevel / 50f + (DoctrineUtils.IsOneParty(gameState) ? 0f : 1f);
             gameState.PoliticalPowerNotClamped += (int)(gameState.UnityLevel * gameState.FreedomLevel / 100f) * multiplier;
+            float before = gameState.PoliticalPower;
             gameState.PoliticalPowerNotClamped += CountryCatalog.Get(gameState.playerCountry)?.politicalPowerBonus ?? 0f;
+            if (DevTools.DevSettings.DebugLog)
+            {
+                Debug.Log($"[AugustDays] власть страны без республик: {before:F0} -> {gameState.PoliticalPower:F0}");
+            }
+        }
+    }
+
+    // Игра выводит на сцену новых политиков из всех, кто еще не в политике, в том числе советских.
+    // У страны игрока не из Союза политика своя: чужих возвращаем обратно
+    [HarmonyPatch(typeof(PoliticUtils), nameof(PoliticUtils.AddNewAvailablePolitician))]
+    public static class PatchAddNewAvailablePolitician
+    {
+        static void Prefix(GameState gameState, out HashSet<Characters> __state)
+        {
+            __state = NonUnionPlayer.Active(gameState)
+                ? new HashSet<Characters>(gameState.characters.Where(c => c.Value.status == CharacterInfo.PoliticStatus.Alive).Select(c => c.Key))
+                : null;
+        }
+
+        static void Postfix(GameState gameState, HashSet<Characters> __state)
+        {
+            if (__state == null)
+            {
+                return;
+            }
+
+            foreach (KeyValuePair<Characters, CharacterInfo> character in gameState.characters)
+            {
+                if (character.Value.status == CharacterInfo.PoliticStatus.Alive && !__state.Contains(character.Key) &&
+                    CharacterUtils.GetHomeLandCountry(gameState, character.Value) != gameState.playerCountry)
+                {
+                    character.Value.status = CharacterInfo.PoliticStatus.NotPresented;
+                    Debug.Log($"[AugustDays] {character.Key} не из {gameState.playerCountry}, в политику не выходит");
+                }
+            }
         }
     }
 
