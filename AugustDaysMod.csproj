@@ -33,8 +33,10 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="0Harmony, Version=2.4.2.0, Culture=neutral, processorArchitecture=MSIL">
-          <HintPath>packages\Lib.Harmony.2.4.2\lib\net48\0Harmony.dll</HintPath>
+        <!-- Собираем с той же версией Harmony, что лежит в assets и поставляется с модом -->
+        <Reference Include="0Harmony, Version=2.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+          <HintPath>assets\0Harmony.dll</HintPath>
+          <Private>False</Private>
         </Reference>
         <Reference Include="Assembly-CSharp">
           <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Crisis in the Kremlin Cold War\CrisisInTheKremlin2_Data\Managed\Assembly-CSharp.dll</HintPath>
@@ -56,12 +58,12 @@
         <Compile Include="src\Assets\Interceptor.cs" />
         <Compile Include="src\Assets\Texts.cs" />
         <Compile Include="src\Endings\LiberalVictory.cs" />
-        <Compile Include="src\Endings\Manager.cs" />
         <Compile Include="src\Events\Broadcast.cs" />
+        <Compile Include="src\Events\BuiltInEvents.cs" />
         <Compile Include="src\Events\CoupBegin.cs" />
+        <Compile Include="src\Events\CoupEvent.cs" />
         <Compile Include="src\Events\Final.cs" />
         <Compile Include="src\Events\Foros.cs" />
-        <Compile Include="src\Events\Manager.cs" />
         <Compile Include="src\Events\MiltaryAction.cs" />
         <Compile Include="src\Events\Negotiations.cs" />
         <Compile Include="src\Events\PoliticalDirection.cs" />
@@ -69,7 +71,7 @@
         <Compile Include="src\Events\YeltsinProblem.cs" />
         <Compile Include="src\Scenarios\NewGame.cs" />
         <Compile Include="src\Scenarios\Setup.cs" />
-        <Compile Include="src\Utils\ReflectionUtils.cs" />
+        <Compile Include="src\Scenarios\SovietGarrisons.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />
@@ -80,7 +82,6 @@
       <Content Include="assets\code.dll" />
       <Content Include="assets\icon.png" />
       <Content Include="assets\localRU.xml" />
-      <Content Include="assets\rules.json" />
       <Content Include="assets\scenario.json" />
       <Content Include="assets\state.json" />
       <Content Include="readme.md" />

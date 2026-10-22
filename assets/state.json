@@ -248,25 +248,27 @@
       ],
       "Pridnestrovje": [],
       "Gagauzia": [],
-      "Croatia": [],
+      "Croatia": [
+        "Croatia",
+        "SerbianCroatia"
+      ],
       "BosniaAndHerzegovina": [],
       "Bosnia": [],
       "CroatiaBiG": [],
       "SerbianBosnia": [],
       "Montenegro": [],
       "Serbia": [],
-      "Slovenia": [],
+      "Slovenia": [
+        "Slovenia"
+      ],
       "Macedonia": [],
       "SecondYugoslavia": [],
       "SerbiaAndMontenegro": [],
       "Yugoslavia": [
         "CroatiaBiG",
-        "Croatia",
         "Montenegro",
-        "Slovenia",
         "Macedonia",
         "BosniaAndHerzegovina",
-        "SerbianCroatia",
         "SerbianBosnia",
         "Kosovo",
         "MainSerbia"
@@ -450,13 +452,12 @@
       "SouthKorea": [
         "MainSouthKorea"
       ],
-      "NorthYemen": [
-        "MainNorthYemen"
-      ],
-      "SouthYemen": [
+      "NorthYemen": [],
+      "SouthYemen": [],
+      "UnitedYemen": [
+        "MainNorthYemen",
         "MainSouthYemen"
       ],
-      "UnitedYemen": [],
       "UnitedKorea": [],
       "Kampuchia": [
         "MainKampuchia"
@@ -507,9 +508,10 @@
         "GolanHeights",
         "MainIsrael"
       ],
-      "Namibia": [],
+      "Namibia": [
+        "Namibia"
+      ],
       "SouthAfrica": [
-        "Namibia",
         "Venda",
         "Ciskei",
         "BoerRepublic",
@@ -724,10 +726,7 @@
       "BurkinaFaso": [
         "MainBurkinaFaso"
       ],
-      "Senegambia": [
-        "MainSenegal",
-        "MainGambia"
-      ],
+      "Senegambia": [],
       "Gambia": [
         "MainGambia"
       ],
@@ -887,7 +886,17 @@
       ],
       "Silezia": [],
       "Lemki": [],
-      "Kashubia": []
+      "Kashubia": [],
+      "DDR": [],
+      "CentralEurope": [],
+      "England": [],
+      "Scotland": [],
+      "Wales": [],
+      "Cathalony": [],
+      "SpainBasque": [],
+      "Galicia": [],
+      "Quebec": [],
+      "Iberia": []
     },
     "regionToCountry": {
       "MainArmenia": "Armenia",
@@ -908,8 +917,8 @@
       "MainVietnam": "Vietnam",
       "MainNorthKorea": "NorthKorea",
       "MainSouthKorea": "SouthKorea",
-      "MainNorthYemen": "NorthYemen",
-      "MainSouthYemen": "SouthYemen",
+      "MainNorthYemen": "UnitedYemen",
+      "MainSouthYemen": "UnitedYemen",
       "MainBelorussia": "Belorussia",
       "MainTaiwan": "Taiwan",
       "MainBangladesh": "Bangladesh",
@@ -948,8 +957,8 @@
       "MainMauritania": "Mauritania",
       "MainNiger": "Niger",
       "MainBurkinaFaso": "BurkinaFaso",
-      "MainSenegal": "Senegambia",
-      "MainGambia": "Senegambia",
+      "MainSenegal": "Senegal",
+      "MainGambia": "Gambia",
       "MainBissau": "Bissau",
       "MainGuinea": "Guinea",
       "MainIvoryCoast": "IvoryCoast",
@@ -1089,12 +1098,12 @@
       "BlackSeaRegion": "Romania",
       "MainRomania": "Romania",
       "CroatiaBiG": "Yugoslavia",
-      "Croatia": "Yugoslavia",
+      "Croatia": "Croatia",
       "Montenegro": "Yugoslavia",
-      "Slovenia": "Yugoslavia",
+      "Slovenia": "Slovenia",
       "Macedonia": "Yugoslavia",
       "BosniaAndHerzegovina": "Yugoslavia",
-      "SerbianCroatia": "Yugoslavia",
+      "SerbianCroatia": "Croatia",
       "SerbianBosnia": "Yugoslavia",
       "Kosovo": "Yugoslavia",
       "MainSerbia": "Yugoslavia",
@@ -1115,7 +1124,7 @@
       "Palestina": "Israel",
       "GolanHeights": "Israel",
       "MainIsrael": "Israel",
-      "Namibia": "SouthAfrica",
+      "Namibia": "Namibia",
       "Venda": "SouthAfrica",
       "Ciskei": "SouthAfrica",
       "BoerRepublic": "SouthAfrica",
@@ -1208,967 +1217,1522 @@
   },
   "regions": {
     "Qwebec": {
-      "population": 67
+      "population": 67,
+      "tradeValue": 5,
+      "area": 1542.056
     },
     "MainCanada": {
-      "population": 250
+      "population": 250,
+      "tradeValue": 7,
+      "hasOil": "Large",
+      "area": 9984.67
     },
     "Crimea": {
-      "population": 23
+      "population": 23,
+      "tradeValue": 1,
+      "hasOil": "Small",
+      "area": 27.0
     },
     "Novorussia": {
-      "population": 87
+      "population": 87,
+      "tradeValue": 1,
+      "area": 313.0
     },
     "Donbass": {
-      "population": 78
+      "population": 78,
+      "tradeValue": 1,
+      "area": 53.199
     },
     "Ruthenia": {
-      "population": 17
+      "population": 17,
+      "area": 17.075
     },
     "GaliciaUk": {
-      "population": 58
+      "population": 58,
+      "tradeValue": 1,
+      "area": 70.0
     },
     "KharkivDniproKirovograd": {
-      "population": 105
+      "population": 105,
+      "tradeValue": 2,
+      "area": 87.965
     },
     "MainUkraine": {
-      "population": 128
+      "population": 128,
+      "tradeValue": 2,
+      "hasOil": "Small",
+      "area": 603.55
     },
     "NorthPanama": {
-      "population": 10
+      "population": 10,
+      "tradeValue": 1,
+      "area": 37.5
     },
     "SouthPanama": {
-      "population": 13
+      "population": 13,
+      "tradeValue": 2,
+      "area": 37.5
     },
     "PanamaCanal": {
-      "population": 1
+      "population": 1,
+      "tradeValue": 2,
+      "area": 1.43
     },
     "MainRussia": {
-      "population": 1131
+      "population": 1131,
+      "tradeValue": 1,
+      "hasOil": "Large",
+      "area": 17075.4
     },
     "Chechnya": {
-      "population": 11
+      "population": 11,
+      "tradeValue": 1,
+      "hasOil": "Small",
+      "area": 16.16
     },
     "Tatarstan": {
-      "population": 35
+      "population": 35,
+      "tradeValue": 1,
+      "hasOil": "Large",
+      "area": 67.85
     },
     "AbkhazianRussia": {
-      "population": 5
+      "population": 5,
+      "tradeValue": 1,
+      "area": 3.526
     },
     "Kozakia": {
-      "population": 200
+      "population": 200,
+      "tradeValue": 1,
+      "area": 27.183
     },
     "Ingushetia": {
-      "population": 12
+      "population": 12,
+      "tradeValue": 1,
+      "area": 3.13
     },
     "Dagestan": {
-      "population": 15
+      "population": 15,
+      "tradeValue": 1,
+      "hasOil": "Small",
+      "area": 50.3
     },
     "Kuriles": {
-      "population": 0.2
+      "population": 0.2,
+      "tradeValue": 1,
+      "area": 10.5
     },
     "Sakhalin": {
-      "population": 7
+      "population": 7,
+      "tradeValue": 1,
+      "hasOil": "Medium",
+      "area": 72.49
     },
     "MainSomali": {
-      "population": 70
+      "population": 70,
+      "tradeValue": 2,
+      "area": 637.659
     },
     "Somalilend": {
-      "population": 10
+      "population": 10,
+      "tradeValue": 1,
+      "area": 177.0
     },
     "Pridnestrovje": {
-      "population": 7
+      "population": 7,
+      "tradeValue": 1,
+      "area": 4.163
     },
     "Gagauzia": {
-      "population": 0.2
+      "population": 0.2,
+      "tradeValue": 1,
+      "area": 1.83
     },
     "MainMoldavia": {
-      "population": 32
+      "population": 32,
+      "tradeValue": 1,
+      "area": 33.84
     },
     "Abkhazia": {
-      "population": 5
+      "population": 5,
+      "tradeValue": 1,
+      "area": 8.66
     },
     "SouthOsetia": {
-      "population": 1
+      "population": 1,
+      "tradeValue": 2,
+      "area": 3.9
     },
     "MainGeorgia": {
-      "population": 45
+      "population": 45,
+      "tradeValue": 6,
+      "area": 153.91
     },
     "NagornoKarabakh": {
-      "population": 1.7
+      "population": 1.7,
+      "tradeValue": 3,
+      "area": 4.4
     },
     "Nakhichevan": {
-      "population": 0.5
+      "population": 0.5,
+      "tradeValue": 3,
+      "area": 5.5
     },
     "MainAzerbaijan": {
-      "population": 64
+      "population": 64,
+      "tradeValue": 3,
+      "hasOil": "Medium",
+      "area": 86.6
     },
     "Karakalpakstan": {
-      "population": 12
+      "population": 12,
+      "tradeValue": 1,
+      "hasOil": "Small",
+      "area": 160.0
     },
     "FerghanaValley": {
-      "population": 57
+      "population": 57,
+      "tradeValue": 4,
+      "hasOil": "Small",
+      "area": 22.0
     },
     "MainUzbekistan": {
-      "population": 115
+      "population": 115,
+      "tradeValue": 4,
+      "hasOil": "Small",
+      "area": 448.98
     },
     "Silezia": {
-      "population": 50
+      "population": 50,
+      "tradeValue": 2,
+      "area": 40.0
     },
     "Kashubia": {
-      "population": 6
+      "population": 6,
+      "tradeValue": 1,
+      "area": 10.0
     },
     "Pomerania": {
-      "population": 24
+      "population": 24,
+      "tradeValue": 1,
+      "area": 38.4
     },
     "Lemkovschina": {
       "population": 0
     },
     "Zakerzonia": {
-      "population": 12
+      "population": 12,
+      "tradeValue": 1,
+      "area": 50.0
     },
     "MainPoland": {
-      "population": 290
+      "population": 290,
+      "tradeValue": 5,
+      "area": 312.68
     },
     "MainDDR": {
-      "population": 165
+      "population": 165,
+      "tradeValue": 11,
+      "area": 357.461
     },
     "IranAzerbaijan": {
-      "population": 150
+      "population": 150,
+      "tradeValue": 9,
+      "area": 86.58
     },
     "Luzhica": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "TurkmenIran": {
-      "population": 25
+      "population": 25,
+      "tradeValue": 1,
+      "area": 471.029
     },
     "Moravija": {
-      "population": 40
+      "population": 40,
+      "tradeValue": 4,
+      "area": 22.35
     },
     "Bohemia": {
-      "population": 65
+      "population": 65,
+      "tradeValue": 4,
+      "area": 52.06
     },
     "MainCzech": {
-      "population": 105
+      "population": 105,
+      "tradeValue": 8,
+      "area": 78.87
     },
     "SouthSlovakia": {
-      "population": 20
+      "population": 20,
+      "tradeValue": 1,
+      "area": 48.488
     },
     "MainSlovakia": {
-      "population": 50
+      "population": 50,
+      "tradeValue": 3,
+      "area": 49.03
     },
     "Huzestan": {
-      "population": 22
+      "population": 22,
+      "tradeValue": 2,
+      "hasOil": "Medium",
+      "area": 64.06
     },
     "IranKurdistan": {
-      "population": 15
+      "population": 15,
+      "tradeValue": 1,
+      "area": 110.0
     },
     "Balochistan": {
-      "population": 10
+      "population": 10,
+      "tradeValue": 1,
+      "area": 347.19
     },
     "MainIran": {
-      "population": 440
+      "population": 440,
+      "tradeValue": 3,
+      "hasOil": "Small",
+      "area": 1648.19
     },
     "GilanMazendaran": {
-      "population": 30
+      "population": 30,
+      "tradeValue": 1,
+      "area": 38.55
     },
     "IraqKurdistan": {
-      "population": 20
+      "population": 20,
+      "tradeValue": 3,
+      "hasOil": "Small",
+      "area": 111.0
     },
     "ShiiteIraq": {
-      "population": 100
+      "population": 100,
+      "tradeValue": 2,
+      "hasOil": "Medium",
+      "area": 175.0
     },
     "MainIraq": {
-      "population": 170
+      "population": 170,
+      "tradeValue": 4,
+      "area": 437.07
     },
     "CroatiaBiG": {
-      "population": 10
+      "population": 10,
+      "tradeValue": 1,
+      "area": 54.541
     },
     "Herzegovina": {
-      "population": 12
+      "population": 12,
+      "tradeValue": 1,
+      "area": 11.0
     },
     "SerbianBosnia": {
-      "population": 16
+      "population": 16,
+      "tradeValue": 1,
+      "area": 50.0
     },
     "FrenchBasque": {
-      "population": 3
+      "population": 3,
+      "tradeValue": 1,
+      "area": 2.96
     },
     "Ocsitania": {
-      "population": 20
+      "population": 20,
+      "tradeValue": 3,
+      "area": 79.0
     },
     "Corsica": {
-      "population": 2.5
+      "population": 2.5,
+      "tradeValue": 5,
+      "area": 8.68
     },
     "Bretan": {
-      "population": 3.5
+      "population": 3.5,
+      "tradeValue": 1,
+      "area": 27.21
     },
     "Guiana": {
-      "population": 0.5
+      "population": 0.5,
+      "area": 83.53
     },
     "MainFrance": {
-      "population": 550
+      "population": 550,
+      "tradeValue": 7,
+      "area": 643.8
     },
     "Cathalony": {
-      "population": 60
+      "population": 60,
+      "tradeValue": 2,
+      "area": 32.108
     },
     "SpainBasque": {
-      "population": 20
+      "population": 20,
+      "tradeValue": 1,
+      "area": 7.23
     },
     "Galicia": {
-      "population": 30
+      "population": 30,
+      "tradeValue": 1,
+      "area": 29.57
     },
     "MainSpain": {
-      "population": 380
+      "population": 380,
+      "tradeValue": 8,
+      "area": 505.99
     },
     "England": {
-      "population": 470
+      "population": 470,
+      "tradeValue": 5,
+      "area": 130.28
     },
     "Scotland": {
-      "population": 55
+      "population": 55,
+      "tradeValue": 3,
+      "hasOil": "Large",
+      "area": 78.78
     },
     "Wales": {
-      "population": 29
+      "population": 29,
+      "tradeValue": 2,
+      "area": 21.22
     },
     "NorthIreland": {
-      "population": 16
+      "population": 16,
+      "tradeValue": 2,
+      "area": 14.13
     },
     "Hibraltar": {
-      "population": 0.3
+      "population": 0.3,
+      "tradeValue": 2,
+      "area": 0.01
     },
     "FalklandIslands": {
-      "population": 0.002
+      "population": 0.002,
+      "tradeValue": 1,
+      "area": 12.2
     },
     "Greenland": {
-      "population": 5.5
+      "population": 5.5,
+      "tradeValue": 1,
+      "area": 2166.09
     },
     "MainDanmark": {
-      "population": 52
+      "population": 52,
+      "tradeValue": 10,
+      "area": 2171.354
     },
     "Sicily": {
-      "population": 50
+      "population": 50,
+      "tradeValue": 1,
+      "area": 25.71
     },
     "Sardinia": {
-      "population": 16
+      "population": 16,
+      "tradeValue": 1,
+      "area": 23.95
     },
     "TrentinoAltoAdige": {
-      "population": 9
+      "population": 9,
+      "tradeValue": 1,
+      "area": 13.607
     },
     "NorthItaly": {
-      "population": 280
+      "population": 280,
+      "tradeValue": 6,
+      "area": 120.4
     },
     "SouthItaly": {
-      "population": 230
+      "population": 230,
+      "tradeValue": 3,
+      "area": 123.0
     },
     "Flandria": {
-      "population": 40
+      "population": 40,
+      "tradeValue": 6,
+      "area": 13.522
     },
     "Wallony": {
-      "population": 35
+      "population": 35,
+      "tradeValue": 6,
+      "area": 16.84
     },
     "Bavarien": {
-      "population": 90
+      "population": 90,
+      "tradeValue": 3,
+      "area": 70.55
     },
     "WesternBerlin": {
-      "population": 20
+      "population": 20,
+      "tradeValue": 1,
+      "area": 0.891
     },
     "MainFRG": {
-      "population": 610
+      "population": 610,
+      "tradeValue": 11,
+      "area": 357.461
     },
     "MainBelorussia": {
-      "population": 101
+      "population": 101,
+      "tradeValue": 9,
+      "area": 207.6
     },
     "MainLitva": {
-      "population": 30
+      "population": 30,
+      "tradeValue": 6,
+      "area": 200.0
     },
     "MainTurkmenia": {
-      "population": 32
+      "population": 32,
+      "tradeValue": 9,
+      "hasOil": "Small",
+      "area": 491.21
     },
     "MainArmenia": {
-      "population": 33
+      "population": 33,
+      "tradeValue": 9,
+      "area": 29.74
     },
     "Serbia": {
-      "population": 72
+      "population": 72,
+      "tradeValue": 3,
+      "area": 88.5
     },
     "BosniaAndHerzegovina": {
-      "population": 43
+      "population": 43,
+      "tradeValue": 1,
+      "area": 51.2
     },
     "Croatia": {
-      "population": 47
+      "population": 47,
+      "tradeValue": 1,
+      "area": 56.59
     },
     "Montenegro": {
-      "population": 6
+      "population": 6,
+      "tradeValue": 1,
+      "area": 13.88
     },
     "Slovenia": {
-      "population": 20
+      "population": 20,
+      "tradeValue": 1,
+      "area": 20.27
     },
     "Macedonia": {
-      "population": 21
+      "population": 21,
+      "tradeValue": 1,
+      "area": 13.2
     },
     "MainSweden": {
-      "population": 83
+      "population": 83,
+      "tradeValue": 11,
+      "area": 447.43
     },
     "Lapland": {
-      "population": 2
+      "population": 2,
+      "tradeValue": 1,
+      "area": 92.68
     },
     "MainNorway": {
-      "population": 41
+      "population": 41,
+      "tradeValue": 11,
+      "hasOil": "Large",
+      "area": 385.21
     },
     "Finnmark": {
-      "population": 1
+      "population": 1,
+      "tradeValue": 1,
+      "area": 74.29
     },
     "Transylvania": {
-      "population": 60
+      "population": 60,
+      "tradeValue": 2,
+      "area": 100.29
     },
     "BlackSeaRegion": {
-      "population": 25
+      "population": 25,
+      "tradeValue": 2,
+      "hasOil": "Small",
+      "area": 143.54
     },
     "MainRomania": {
-      "population": 235
+      "population": 235,
+      "tradeValue": 8,
+      "hasOil": "Small",
+      "area": 238.4
     },
     "Kosovo": {
-      "population": 16
+      "population": 16,
+      "tradeValue": 1,
+      "area": 10.91
     },
     "MainSerbia": {
-      "population": 56
+      "population": 56,
+      "tradeValue": 3,
+      "area": 88.5
     },
     "Thrace": {
-      "population": 15
+      "population": 15,
+      "tradeValue": 2,
+      "area": 8.58
     },
     "StraitsIslands": {
-      "population": 6
+      "population": 6,
+      "tradeValue": 2,
+      "area": 1.0
     },
     "Crete": {
-      "population": 5
+      "population": 5,
+      "tradeValue": 2,
+      "area": 8.34
     },
     "MainGreece": {
-      "population": 95
+      "population": 95,
+      "tradeValue": 6,
+      "area": 131.96
     },
     "EuropeanTurkey": {
-      "population": 92
+      "population": 92,
+      "tradeValue": 1,
+      "area": 23.76
     },
     "Istanbul": {
-      "population": 54
+      "population": 54,
+      "tradeValue": 2,
+      "area": 5.34
     },
     "Dardanelles": {
-      "population": 3
+      "population": 3,
+      "tradeValue": 1,
+      "area": 0.1
     },
     "TurkishKurdistan": {
-      "population": 50
+      "population": 50,
+      "tradeValue": 1,
+      "area": 160.0
     },
     "Kars": {
-      "population": 4
+      "population": 4,
+      "tradeValue": 1,
+      "area": 9.44
     },
     "MainTurkey": {
-      "population": 507
+      "population": 507,
+      "tradeValue": 2,
+      "hasOil": "Small",
+      "area": 783.56
     },
     "Hatay": {
-      "population": 8
+      "population": 8,
+      "tradeValue": 1,
+      "area": 5.4
     },
     "SyriaKurdistan": {
-      "population": 12
+      "population": 12,
+      "tradeValue": 2,
+      "hasOil": "Small",
+      "area": 70.0
     },
     "TurkeyBorder": {
-      "population": 23
+      "population": 23,
+      "tradeValue": 1,
+      "area": 20.0
     },
     "MainSyria": {
-      "population": 110
+      "population": 110,
+      "tradeValue": 6,
+      "hasOil": "Small",
+      "area": 185.18
     },
     "GazaStrip": {
-      "population": 6
+      "population": 6,
+      "tradeValue": 2,
+      "area": 0.36
     },
     "Palestina": {
-      "population": 15
+      "population": 15,
+      "tradeValue": 2,
+      "area": 6.329
     },
     "GolanHeights": {
-      "population": 1
+      "population": 1,
+      "tradeValue": 2,
+      "area": 1.8
     },
     "MainIsrael": {
-      "population": 42
+      "population": 42,
+      "tradeValue": 6,
+      "area": 20.77
     },
     "Namibia": {
-      "population": 11
+      "population": 11,
+      "tradeValue": 3,
+      "area": 825.62
     },
     "Venda": {
-      "population": 7
+      "population": 7,
+      "area": 910.446
     },
     "Ciskei": {
-      "population": 6
+      "population": 6,
+      "area": 19.0
     },
     "BoerRepublic": {
-      "population": 20
+      "population": 20,
+      "tradeValue": 3,
+      "area": 150.0
     },
     "MainSouthAfrica": {
-      "population": 310
+      "population": 310,
+      "tradeValue": 9,
+      "area": 1221.04
     },
     "Erithrea": {
-      "population": 29
+      "population": 29,
+      "tradeValue": 1,
+      "area": 123.248
     },
     "Ogaden": {
-      "population": 21
+      "population": 21,
+      "tradeValue": 1,
+      "hasOil": "Small",
+      "area": 327.07
     },
     "MainEthiopia": {
-      "population": 360
+      "population": 360,
+      "tradeValue": 2,
+      "area": 1104.3
     },
     "Tartu": {
-      "population": 1.5
+      "population": 1.5,
+      "tradeValue": 4,
+      "area": 0.04
     },
     "EstonianIslands": {
-      "population": 0.5
+      "population": 0.5,
+      "area": 4.0
     },
     "MainEstonia": {
-      "population": 13
+      "population": 13,
+      "tradeValue": 5,
+      "area": 45.34
     },
     "RussianLatvia": {
-      "population": 10
+      "population": 10,
+      "tradeValue": 2,
+      "area": 64.6
     },
     "MainLatvia": {
-      "population": 17
+      "population": 17,
+      "tradeValue": 7,
+      "area": 62.23
     },
     "NorthKazakhstan": {
-      "population": 40
+      "population": 40,
+      "tradeValue": 2,
+      "hasOil": "Small",
+      "area": 97.99
     },
     "Mangystau": {
-      "population": 3
+      "population": 3,
+      "tradeValue": 2,
+      "hasOil": "Medium",
+      "area": 165.0
     },
     "WesternKazakhstan": {
-      "population": 12
+      "population": 12,
+      "tradeValue": 1,
+      "hasOil": "Medium",
+      "area": 151.0
     },
     "MainKasakhstan": {
-      "population": 102
+      "population": 102,
+      "tradeValue": 4,
+      "hasOil": "Medium",
+      "area": 2724.9
     },
     "SouthKyrgizia": {
-      "population": 14
+      "population": 14,
+      "tradeValue": 3,
+      "area": 46.0
     },
     "MainKyrgizia": {
-      "population": 26
+      "population": 26,
+      "tradeValue": 6,
+      "area": 199.9
     },
     "Uyghuristan": {
-      "population": 125
+      "population": 125,
+      "tradeValue": 1,
+      "hasOil": "Small",
+      "area": 1660.0
     },
     "Tibet": {
-      "population": 21
+      "population": 21,
+      "tradeValue": 1,
+      "area": 2500.0
     },
     "InnerMongolia": {
-      "population": 190
+      "population": 190,
+      "tradeValue": 2,
+      "area": 1181.1
     },
     "Manchuria": {
-      "population": 950
+      "population": 950,
+      "tradeValue": 3,
+      "hasOil": "Large",
+      "area": 800.0
     },
     "Hainan": {
-      "population": 60
+      "population": 60,
+      "tradeValue": 1,
+      "area": 33.21
     },
     "KVZHD": {
-      "population": 3
+      "population": 3,
+      "tradeValue": 1,
+      "area": 300.0
     },
     "BolivianChile": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "ArgentineChile": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "MainChile": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 2
     },
     "Timor": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "WestGuinea": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "MainIndonesia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Large"
     },
     "Ainu": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "Kyushu": {
       "population": 0
     },
     "Okinawa": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 2
     },
     "Shikoku": {
       "population": 0
     },
     "MainMalaysia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Medium"
     },
     "MainJapan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 13
     },
     "MainChina": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 5,
+      "hasOil": "Small"
     },
     "TamilIlan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "MainSriLanka": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 2
     },
     "Bangalore": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "ArunachalPradesh": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "JammuKashmir": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "Khalistan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "MainIndia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 5,
+      "hasOil": "Medium"
     },
     "BalochPakistan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 2,
+      "hasOil": "Small"
     },
     "PashtunPakistan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 2
     },
     "Hindus": {
       "population": 0
     },
     "MainPakistan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 4
     },
     "Durani": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "UzbekAfghanistan": {
-      "population": 30
+      "population": 30,
+      "tradeValue": 1,
+      "area": 641.833
     },
     "TajikAfghanistan": {
-      "population": 40
+      "population": 40,
+      "tradeValue": 1,
+      "area": 641.833
     },
     "PashtunAfghanistan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "PakistaniAfghanistan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "Patagonia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1,
+      "hasOil": "Small"
     },
     "ChileanArgentina": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "MainArgentine": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 2
     },
     "Yukatan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1,
+      "hasOil": "Small"
     },
     "Tijuana": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "MainMexica": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 7,
+      "hasOil": "Large"
     },
     "Alaska": {
-      "population": 5
+      "population": 5,
+      "tradeValue": 2,
+      "hasOil": "Large",
+      "area": 1717.86
     },
     "California": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12,
+      "hasOil": "Large"
     },
     "NorthWestImperative": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "Chicago": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9
     },
     "Texas": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 8,
+      "hasOil": "Large"
     },
     "CSA": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 5,
+      "hasOil": "Large"
     },
     "Hawaii": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "PuertoRico": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "NewEngland": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 10
     },
     "NorthYemen": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 8
     },
     "SouthYemen": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9
     },
     "Transcarpathia": {
-      "population": 12
+      "population": 12,
+      "tradeValue": 1,
+      "area": 12.78
     },
     "Bulgaria": {
-      "population": 90
+      "population": 90,
+      "tradeValue": 12,
+      "area": 110.99
     },
     "Hungary": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12
     },
     "WestPolandLemki": {
-      "population": 0.5
+      "population": 0.5,
+      "tradeValue": 1,
+      "area": 5.0
     },
     "UkraineLemki": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "EastPolandLemki": {
-      "population": 0.5
+      "population": 0.5,
+      "tradeValue": 1,
+      "area": 5.0
     },
     "Austria": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12
     },
     "Alsace": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "Surinam": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Small"
     },
     "Netherland": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12
     },
     "Luxemburg": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12
     },
     "Switzerland": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12
     },
     "Albania": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 6,
+      "hasOil": "Small"
     },
     "SerbianCroatia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "Portugal": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12
     },
     "Finland": {
-      "population": 50
+      "population": 50,
+      "tradeValue": 12,
+      "area": 305.4
     },
     "Cyprus": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 5
     },
     "TurkCyprus": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "Ireland": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12
     },
     "Iceland": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12,
+      "hasOil": "Small"
     },
     "FarerIslands": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "MainTajikistan": {
-      "population": 38
+      "population": 38,
+      "tradeValue": 9,
+      "area": 143.1
     },
     "EastTajikistan": {
-      "population": 7
+      "population": 7,
+      "tradeValue": 3,
+      "area": 142.395
     },
     "MainMongolia": {
-      "population": 20
+      "population": 20,
+      "tradeValue": 9,
+      "area": 1564.12
     },
     "MainNepal": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainBhutan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainBangladesh": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainBirma": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainThailand": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainKampuchia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainLaos": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainVietnam": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Medium"
     },
     "MainNorthKorea": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9
     },
     "MainSouthKorea": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12
     },
     "MainTaiwan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12,
+      "hasOil": "Small"
     },
     "Veihai": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "MainPhilippines": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Small"
     },
     "MainPapua": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Medium"
     },
     "MainAustralia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12,
+      "hasOil": "Medium"
     },
     "MainNewZealand": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 12,
+      "hasOil": "Small"
     },
     "MainKuwait": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9,
+      "hasOil": "Large"
     },
     "MainSaudiArabia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9,
+      "hasOil": "Large"
     },
     "MainLebanon": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9
     },
     "MainOman": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9,
+      "hasOil": "Medium"
     },
     "MainJordan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9
     },
     "MainNorthYemen": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 8,
+      "hasOil": "Small"
     },
     "MainSouthYemen": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9,
+      "hasOil": "Small"
     },
     "MainUAE": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9,
+      "hasOil": "Large"
     },
     "MainQatar": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9,
+      "hasOil": "Medium"
     },
     "MainEgypt": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9,
+      "hasOil": "Medium"
     },
     "MainLibia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9,
+      "hasOil": "Large"
     },
     "MainTunisia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Small"
     },
     "MainAlgeria": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Large"
     },
     "MainChad": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 2
     },
     "ChadBorder": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "MainMarocco": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainSahara": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "MainDjibouti": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "NorthSudan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 2
     },
     "SouthSudan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 2
     },
     "MainMadagascar": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainMali": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainMauritania": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainNiger": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainBurkinaFaso": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainSenegal": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainGambia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainBissau": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainGuinea": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainSierraLeone": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainLiberia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainIvoryCoast": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainGhana": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainTogo": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainBelize": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainBenin": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainNigeria": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Large"
     },
     "MainCameroon": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainCAR": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainZaire": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainEquatorialGuinea": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Small"
     },
     "MainGabon": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Medium"
     },
     "MainCongo": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Medium"
     },
     "MainAngola": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Medium"
     },
     "MainKenya": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "EastKenya": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "MainUganda": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainRwanda": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainBurundi": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainTanzania": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainZambia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainMalawi": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainMozambique": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainZimbabwe": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Small"
     },
     "MainBotswana": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainLesotho": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainSwaziland": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainGuyana": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainBrazil": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 5,
+      "hasOil": "Medium"
     },
     "MainUruguay": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainParaguay": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainBolivia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Small"
     },
     "MainPeru": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Small"
     },
     "MainEcuador": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Medium"
     },
     "MainColumbia": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3,
+      "hasOil": "Medium"
     },
     "MainVenezuela": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 4,
+      "hasOil": "Large"
     },
     "MainCostaRica": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainNicaragua": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainHonduras": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainSalvador": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainGuatemala": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainCuba": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 9,
+      "hasOil": "Small"
     },
     "MainHaiti": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainDominica": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "MainJamaica": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 3
     },
     "Spitzbergen": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "Qinghai": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     },
     "Vilnus": {
-      "population": 5
+      "population": 5,
+      "tradeValue": 3,
+      "area": 10.0
     },
     "Druskininkai": {
-      "population": 0.2
+      "population": 0.2,
+      "tradeValue": 1,
+      "area": 0.02
     },
     "Karelia": {
-      "population": 7
+      "population": 7,
+      "tradeValue": 1,
+      "area": 180.52
     },
     "SouthKuriles": {
-      "population": 0.1
+      "population": 0.1,
+      "tradeValue": 1,
+      "area": 10.0
     },
     "Shymkent": {
-      "population": 5
+      "population": 5,
+      "tradeValue": 1,
+      "hasOil": "Small",
+      "area": 0.35
     },
     "JewishAR": {
-      "population": 2
+      "population": 2,
+      "tradeValue": 1,
+      "area": 36.0
     },
     "GilgitBaltistan": {
-      "population": 0
+      "population": 0,
+      "tradeValue": 1
     }
   },
   "factionsStates": {
@@ -2672,9 +3236,7 @@
       "Agriculture": 75,
       "Oil": 102,
       "HeavyIndustry": 66,
-      "Housing": 0,
       "LightIndustry": 101,
-      "LuxuryGoods": 0,
       "MilitaryIndustrialComplex": 56,
       "Population": 48,
       "Services": 53,
@@ -3023,7 +3585,8 @@
         "Schemer"
       ],
       "power": 50,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "SecondSecretary"
     },
     "Gorbachev": {
       "birthDay": "1931-03-02T00:00:00",
@@ -3041,7 +3604,7 @@
       ],
       "power": 80,
       "desiredPosition": "ChairmanOfTheSupremeCouncil",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia"
     },
     "Grishin": {
       "birthday": "1914-09-18t00:00:00",
@@ -3059,7 +3622,8 @@
       ],
       "power": 1,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": []
     },
     "Gromyko": {
       "birthday": "1909-07-18t00:00:00",
@@ -3077,7 +3641,7 @@
       ],
       "power": 75,
       "desiredPosition": "ChairmanOfTheSupremeCouncil",
-      "homeLand": "Russia",
+      "homeLand": "MainRussia",
       "monthsOfIllness": 1000
     },
     "Zhirinovsky": {
@@ -3095,7 +3659,8 @@
         "Voluntarist"
       ],
       "power": 25,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "President"
     },
     "Lukyanov": {
       "birthday": "1930-05-07t00:00:00",
@@ -3113,7 +3678,10 @@
       ],
       "desiredPosition": "ChairmanOfTheSupremeCouncil",
       "power": 50,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Gorbachev"
+      ]
     },
     "Pugo": {
       "birthday": "1937-02-19t00:00:00",
@@ -3130,7 +3698,9 @@
         "StrongArm"
       ],
       "power": 50,
-      "homeLand": "Latvia"
+      "homeLand": "MainLatvia",
+      "IsMilitaryExpert": true,
+      "desiredPosition": "MinisterOfInternalAffairs"
     },
     "Romanov": {
       "birthday": "1923-02-7t00:00:00",
@@ -3148,7 +3718,7 @@
       ],
       "desiredPosition": "SecondSecretary",
       "power": 1,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Chernenko": {
       "birthday": "1911-09-24t00:00:00",
@@ -3165,8 +3735,9 @@
         "Peaceful"
       ],
       "power": 65,
-      "homeLand": "Russia",
-      "monthsOfIllness": 1000
+      "homeLand": "MainRussia",
+      "monthsOfIllness": 1000,
+      "desiredPosition": "SecondSecretary"
     },
     "Shcherbytsky": {
       "birthday": "1918-02-17t00:00:00",
@@ -3184,7 +3755,8 @@
       ],
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
       "power": 1,
-      "homeLand": "Ukraine"
+      "homeLand": "KharkivDniproKirovograd",
+      "historicalFriends": []
     },
     "Tikhonov": {
       "birthday": "1905-05-14t00:00:00",
@@ -3202,7 +3774,12 @@
       ],
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
       "power": 1,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Chernenko",
+        "Shcherbytsky",
+        "Grishin"
+      ]
     },
     "Ligachyov": {
       "birthday": "1920-11-29t00:00:00",
@@ -3220,7 +3797,7 @@
       ],
       "desiredPosition": "SecondSecretary",
       "power": 1,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Shevardnadze": {
       "birthday": "1928-01-25t00:00:00",
@@ -3238,7 +3815,10 @@
       ],
       "desiredPosition": "ForeignSecretary",
       "power": 50,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Gorbachev"
+      ]
     },
     "Ryzhkov": {
       "birthday": "1929-09-28t00:00:00",
@@ -3256,7 +3836,7 @@
       ],
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
       "power": 1,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Chebrikov": {
       "birthday": "1923-04-27t00:00:00",
@@ -3274,7 +3854,10 @@
       ],
       "desiredPosition": "ChairmanOfTheKGB",
       "power": 1,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsMilitaryExpert": true,
+      "IsKgbExpert": true,
+      "historicalFriends": []
     },
     "Yakovlev": {
       "birthday": "1923-12-02t00:00:00",
@@ -3292,7 +3875,8 @@
       ],
       "desiredPosition": "SecondSecretary",
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Aliyev": {
       "birthday": "1923-05-10t00:00:00",
@@ -3310,7 +3894,8 @@
       ],
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
       "power": 20,
-      "homeLand": "Azerbaijan"
+      "homeLand": "Nakhichevan",
+      "IsKgbExpert": true
     },
     "Vlasov": {
       "birthday": "1932-01-20t00:00:00",
@@ -3327,7 +3912,8 @@
         "Compromise"
       ],
       "power": 35,
-      "homeLand": "Russia"
+      "homeLand": "Chechnya",
+      "desiredPosition": "MinisterOfInternalAffairs"
     },
     "Fedorchuk": {
       "birthday": "1918-12-27t00:00:00",
@@ -3345,7 +3931,12 @@
       ],
       "desiredPosition": "ChairmanOfTheKGB",
       "power": 1,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsMilitaryExpert": true,
+      "IsKgbExpert": true,
+      "historicalFriends": [
+        "Shcherbytsky"
+      ]
     },
     "Arkhipov": {
       "birthday": "1907-05-01t00:00:00",
@@ -3362,7 +3953,7 @@
         "Economical"
       ],
       "power": 1,
-      "homeLand": "Russia",
+      "homeLand": "MainRussia",
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Demichev": {
@@ -3380,7 +3971,8 @@
         "Ascetic"
       ],
       "power": 1,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Sokolov": {
       "birthday": "1911-07-01t00:00:00",
@@ -3398,7 +3990,8 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsMilitaryExpert": true
     },
     "Abalkin": {
       "birthday": "1930-05-05t00:00:00",
@@ -3415,7 +4008,9 @@
         "Peaceful"
       ],
       "power": 25,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfFinance"
     },
     "Vorotnikov": {
       "birthday": "1926-01-20t00:00:00",
@@ -3432,7 +4027,9 @@
         "StrongArm"
       ],
       "power": 25,
-      "homeLand": "Russia"
+      "homeLand": "Kozakia",
+      "historicalFriends": [],
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Kryuchkov": {
       "birthday": "1924-02-29t00:00:00",
@@ -3450,7 +4047,8 @@
       ],
       "power": 50,
       "desiredPosition": "ChairmanOfTheKGB",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsKgbExpert": true
     },
     "Dolgikh": {
       "birthday": "1924-12-05t00:00:00",
@@ -3467,7 +4065,8 @@
         "ProMarket"
       ],
       "power": 1,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfIndustry"
     },
     "Bobkov": {
       "birthday": "1925-12-01t00:00:00",
@@ -3485,7 +4084,8 @@
       ],
       "power": 1,
       "desiredPosition": "ChairmanOfTheKGB",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsKgbExpert": true
     },
     "Yeltsin": {
       "birthday": "1931-02-01t00:00:00",
@@ -3502,7 +4102,8 @@
         "Radical"
       ],
       "power": 60,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "President"
     },
     "Yazov": {
       "birthday": "1924-11-08t00:00:00",
@@ -3520,7 +4121,8 @@
       ],
       "power": 50,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsMilitaryExpert": true
     },
     "Shaposhnikov": {
       "birthday": "1942-02-03t00:00:00",
@@ -3538,7 +4140,8 @@
       ],
       "power": 45,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia",
+      "IsMilitaryExpert": true
     },
     "Ryzhov": {
       "birthday": "1907-06-08t00:00:00",
@@ -3556,7 +4159,8 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Troyanovsky": {
       "birthday": "1919-12-24t00:00:00",
@@ -3574,7 +4178,7 @@
       ],
       "power": 1,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Kosolapov": {
       "birthday": "1930-03-25t00:00:00",
@@ -3592,7 +4196,11 @@
       ],
       "power": 1,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia",
+      "IsScientist": true,
+      "historicalFriends": [
+        "Chernenko"
+      ]
     },
     "Kuznetsov": {
       "birthday": "1901-02-13t00:00:00",
@@ -3610,7 +4218,8 @@
       ],
       "power": 45,
       "desiredPosition": "ChairmanOfTheSupremeCouncil",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Mishin": {
       "birthday": "1943-05-14t00:00:00",
@@ -3628,7 +4237,8 @@
       ],
       "power": 20,
       "desiredPosition": "MinisterForYouthAffairs",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Mironenko": {
       "birthday": "1953-06-07t00:00:00",
@@ -3646,7 +4256,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterForYouthAffairs",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Lomako": {
       "birthday": "1904-07-12t00:00:00",
@@ -3664,7 +4274,7 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia"
     },
     "Baibakov": {
       "birthday": "1911-03-07t00:00:00",
@@ -3682,7 +4292,7 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Afanasyev": {
       "birthday": "1918-08-30t00:00:00",
@@ -3700,7 +4310,8 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Dumachev": {
       "birthday": "1932-05-06t00:00:00",
@@ -3718,7 +4329,10 @@
       ],
       "power": 10,
       "desiredPosition": "MinisterOfEducation",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Romanov"
+      ]
     },
     "Yagodin": {
       "birthday": "1927-06-03t00:00:00",
@@ -3736,7 +4350,8 @@
       ],
       "power": 10,
       "desiredPosition": "MinisterOfEducation",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Yelutin": {
       "birthday": "1907-03-11t00:00:00",
@@ -3754,7 +4369,8 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfEducation",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Ivashutin": {
       "birthday": "1909-09-18t00:00:00",
@@ -3772,7 +4388,9 @@
       ],
       "power": 15,
       "desiredPosition": "GRU",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsMilitaryExpert": true,
+      "IsKgbExpert": true
     },
     "Tyazhelnikov": {
       "birthday": "1928-01-07t00:00:00",
@@ -3790,7 +4408,7 @@
       ],
       "power": 1,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Mesiats": {
       "birthday": "1928-05-01t00:00:00",
@@ -3808,7 +4426,8 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfAgriculture",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Murakhovsky": {
       "birthday": "1926-10-20t00:00:00",
@@ -3826,7 +4445,10 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfAgriculture",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia",
+      "historicalFriends": [
+        "Gorbachev"
+      ]
     },
     "Velichko": {
       "birthday": "1937-04-23t00:00:00",
@@ -3844,7 +4466,8 @@
       ],
       "power": 35,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": []
     },
     "Ponomarev": {
       "birthday": "1905-01-17t00:00:00",
@@ -3862,7 +4485,8 @@
       ],
       "power": 1,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Zimyanin": {
       "birthday": "1914-11-21t00:00:00",
@@ -3880,7 +4504,7 @@
       ],
       "power": 1,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Mikhailov": {
       "birthday": "1925-01-22t00:00:00",
@@ -3898,7 +4522,7 @@
       ],
       "power": 30,
       "desiredPosition": "GRU",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Kunaev": {
       "birthday": "1912-01-12t00:00:00",
@@ -3915,7 +4539,8 @@
         "EffectiveManager"
       ],
       "power": 1,
-      "homeLand": "Kazakhstan"
+      "homeLand": "MainKasakhstan",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Slyonkow": {
       "birthday": "1929-04-25t00:00:00",
@@ -3932,7 +4557,8 @@
         "EffectiveManager"
       ],
       "power": 1,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfIndustry"
     },
     "Fedoseyev": {
       "birthday": "1908-08-22t00:00:00",
@@ -3950,7 +4576,8 @@
       ],
       "power": 20,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Solomentsev": {
       "birthday": "1913-11-07t00:00:00",
@@ -3968,7 +4595,10 @@
       ],
       "power": 1,
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Ligachyov"
+      ]
     },
     "Yasnov": {
       "birthday": "1906-06-05t00:00:00",
@@ -3986,7 +4616,7 @@
       ],
       "power": 50,
       "desiredPosition": "ChairmanOfTheSupremeCouncil",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Usmonxojayev": {
       "birthday": "1932-05-22t00:00:00",
@@ -4003,7 +4633,8 @@
         "Uncompromising"
       ],
       "power": 1,
-      "homeLand": "Uzbekistan"
+      "homeLand": "FerghanaValley",
+      "desiredPosition": "SecondSecretary"
     },
     "Koldunov": {
       "birthday": "1923-09-20t00:00:00",
@@ -4021,7 +4652,8 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsMilitaryExpert": true
     },
     "Smyrtioukov": {
       "birthday": "1909-09-13t00:00:00",
@@ -4039,7 +4671,7 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Kolbin": {
       "birthday": "1927-05-07t00:00:00",
@@ -4056,7 +4688,8 @@
         "Partocrat"
       ],
       "power": 1,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfInternalAffairs"
     },
     "Bessmertnykh": {
       "birthday": "1933-11-10t00:00:00",
@@ -4074,7 +4707,10 @@
       ],
       "power": 35,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Gromyko"
+      ]
     },
     "Voronin": {
       "birthday": "1928-02-22t00:00:00",
@@ -4092,7 +4728,7 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Zaykov": {
       "birthday": "1923-04-03t00:00:00",
@@ -4110,7 +4746,10 @@
       ],
       "power": 1,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Romanov"
+      ]
     },
     "Sitaryan": {
       "birthday": "1930-09-27t00:00:00",
@@ -4128,7 +4767,8 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Umalatova": {
       "birthday": "1953-08-03t00:00:00",
@@ -4146,7 +4786,8 @@
       ],
       "isWoman": true,
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "Chechnya",
+      "desiredPosition": "MinisterOfIndustry"
     },
     "Barannikov": {
       "birthday": "1940-10-20t00:00:00",
@@ -4164,7 +4805,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfInternalAffairs",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Achalov": {
       "birthday": "1945-11-13t00:00:00",
@@ -4182,7 +4823,8 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "Tatarstan",
+      "IsMilitaryExpert": true
     },
     "Moiseyev": {
       "birthday": "1939-01-22t00:00:00",
@@ -4200,7 +4842,8 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsMilitaryExpert": true
     },
     "Maslyukov": {
       "birthday": "1937-09-30t00:00:00",
@@ -4218,7 +4861,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Talyzin": {
       "birthday": "1929-01-28t00:00:00",
@@ -4236,7 +4879,8 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Konovalov": {
       "birthday": "1932-09-14t00:00:00",
@@ -4254,7 +4898,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Ryabev": {
       "birthday": "1933-09-08t00:00:00",
@@ -4272,7 +4916,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Bakatin": {
       "birthday": "1937-11-06t00:00:00",
@@ -4290,7 +4934,7 @@
       ],
       "power": 25,
       "desiredPosition": "ChairmanOfTheKGB",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Shebarshin": {
       "birthday": "1935-03-24t00:00:00",
@@ -4308,7 +4952,8 @@
       ],
       "power": 25,
       "desiredPosition": "ChairmanOfTheKGB",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsKgbExpert": true
     },
     "Ladygin": {
       "birthday": "1937-03-10t00:00:00",
@@ -4326,7 +4971,7 @@
       ],
       "power": 25,
       "desiredPosition": "GRU",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Pastykhov": {
       "birthday": "1933-10-10t00:00:00",
@@ -4344,7 +4989,7 @@
       ],
       "power": 25,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Zyukin": {
       "birthday": "1954-05-11t00:00:00",
@@ -4362,7 +5007,7 @@
       ],
       "power": 25,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Isaev": {
       "birthday": "1943-07-01t00:00:00",
@@ -4380,7 +5025,7 @@
       ],
       "power": 10,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Tarasov": {
       "birthday": "1958-03-08t00:00:00",
@@ -4398,7 +5043,7 @@
       ],
       "power": 10,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Zyuganov": {
       "birthday": "1944-06-26t00:00:00",
@@ -4416,7 +5061,7 @@
       ],
       "power": 35,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Shenin": {
       "birthday": "1937-07-22t00:00:00",
@@ -4434,7 +5079,7 @@
       ],
       "power": 35,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Andreeva": {
       "birthday": "1938-10-12t00:00:00",
@@ -4453,7 +5098,7 @@
       "isWoman": true,
       "power": 10,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Rutskoy": {
       "birthday": "1947-09-16t00:00:00",
@@ -4470,7 +5115,8 @@
         "Compromise"
       ],
       "power": 40,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfDefense"
     },
     "Limonov": {
       "birthday": "1943-02-22t00:00:00",
@@ -4488,7 +5134,7 @@
       ],
       "power": 30,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Sakharov": {
       "birthday": "1921-05-21t00:00:00",
@@ -4505,7 +5151,8 @@
         "Peoplefavorite"
       ],
       "power": 60,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Novodvorskaya": {
       "birthday": "1950-05-17t00:00:00",
@@ -4523,7 +5170,8 @@
       ],
       "isWoman": true,
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Dugin": {
       "birthday": "1962-01-07t00:00:00",
@@ -4540,7 +5188,8 @@
         "StrongArm"
       ],
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Kagarlitsky": {
       "birthday": "1958-08-29t00:00:00",
@@ -4557,7 +5206,9 @@
         "Dissident"
       ],
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "ChairmanOfTheSupremeCouncil"
     },
     "Alksnis": {
       "birthday": "1950-06-21t00:00:00",
@@ -4574,7 +5225,8 @@
         "Uncompromising"
       ],
       "power": 30,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfDefense"
     },
     "Kruchina": {
       "birthday": "1928-05-14t00:00:00",
@@ -4592,7 +5244,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Dobrynin": {
       "birthday": "1919-04-06t00:00:00",
@@ -4610,7 +5262,10 @@
       ],
       "power": 30,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Gromyko"
+      ]
     },
     "Shcherbina": {
       "birthday": "1919-10-05t00:00:00",
@@ -4628,7 +5283,7 @@
       ],
       "power": 40,
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Ruutel": {
       "birthday": "1928-05-10t00:00:00",
@@ -4645,7 +5300,8 @@
         "Atlantophile"
       ],
       "power": 40,
-      "homeLand": "Estonia"
+      "homeLand": "Tartu",
+      "desiredPosition": "MinisterOfAgriculture"
     },
     "Vaino": {
       "birthday": "1923-05-28t00:00:00",
@@ -4662,7 +5318,8 @@
         "Uncompromising"
       ],
       "power": 40,
-      "homeLand": "Estonia"
+      "homeLand": "MainEstonia",
+      "desiredPosition": "MinisterOfIndustry"
     },
     "Valjas": {
       "birthday": "1931-03-28t00:00:00",
@@ -4679,7 +5336,8 @@
         "Uncompromising"
       ],
       "power": 35,
-      "homeLand": "Estonia"
+      "homeLand": "EstonianIslands",
+      "desiredPosition": "ForeignSecretary"
     },
     "Annus": {
       "birthday": "1941-09-17t00:00:00",
@@ -4696,7 +5354,8 @@
         "Unambitious"
       ],
       "power": 25,
-      "homeLand": "Estonia"
+      "homeLand": "MainEstonia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Rubiks": {
       "birthday": "1935-09-24t00:00:00",
@@ -4713,7 +5372,8 @@
         "EffectiveManager"
       ],
       "power": 25,
-      "homeLand": "Latvia"
+      "homeLand": "RussianLatvia",
+      "desiredPosition": "MinisterOfIndustry"
     },
     "Nikonov": {
       "birthday": "1929-02-28t00:00:00",
@@ -4731,7 +5391,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfAgriculture",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia"
     },
     "Buzgalin": {
       "birthday": "1954-07-19t00:00:00",
@@ -4748,7 +5408,9 @@
         "Idealist"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfEducation"
     },
     "Kolganov": {
       "birthday": "1954-07-19t00:00:00",
@@ -4765,7 +5427,9 @@
         "Idealist"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfFinance"
     },
     "Luzhkov": {
       "birthday": "1936-09-21t00:00:00",
@@ -4783,7 +5447,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Afanasyev2": {
       "birthday": "1934-09-05t00:00:00",
@@ -4800,7 +5464,9 @@
         "Unambitious"
       ],
       "power": 25,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfEducation"
     },
     "Kudyukin": {
       "birthday": "1953-07-19t00:00:00",
@@ -4817,7 +5483,8 @@
         "Idealist"
       ],
       "power": 10,
-      "homeLand": "Belorussia"
+      "homeLand": "MainBelorussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Popov": {
       "birthday": "1936-10-31t00:00:00",
@@ -4834,7 +5501,9 @@
         "Idealist"
       ],
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Sobchak": {
       "birthday": "1937-08-10t00:00:00",
@@ -4850,7 +5519,10 @@
         "Uncompromising",
         "Monarchist"
       ],
-      "power": 25
+      "power": 25,
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Gaidar": {
       "birthday": "1956-03-19t00:00:00",
@@ -4868,7 +5540,8 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Kozyrev": {
       "birthday": "1951-03-27t00:00:00",
@@ -4886,7 +5559,7 @@
       ],
       "power": 30,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Chubais": {
       "birthday": "1955-06-16t00:00:00",
@@ -4904,7 +5577,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Yavlinskiy": {
       "birthday": "1952-04-10t00:00:00",
@@ -4922,7 +5595,8 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Bietz": {
       "birthday": "1968-06-17t00:00:00",
@@ -4940,7 +5614,7 @@
       ],
       "power": 10,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Anpilov": {
       "birthday": "1945-10-02t00:00:00",
@@ -4958,7 +5632,7 @@
       ],
       "power": 15,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia"
     },
     "Makashov": {
       "birthday": "1938-06-12t00:00:00",
@@ -4976,7 +5650,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Tyulkin": {
       "birthday": "1951-05-14t00:00:00",
@@ -4993,7 +5667,8 @@
         "Idealist"
       ],
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "SecondSecretary"
     },
     "Ivashko": {
       "birthday": "1932-10-28t00:00:00",
@@ -5011,7 +5686,7 @@
       ],
       "power": 40,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Ukraine"
+      "homeLand": "KharkivDniproKirovograd"
     },
     "Nishanov": {
       "birthday": "1926-09-15t00:00:00",
@@ -5028,7 +5703,8 @@
         "Orientalist"
       ],
       "power": 35,
-      "homeLand": "Uzbekistan"
+      "homeLand": "MainUzbekistan",
+      "desiredPosition": "ForeignSecretary"
     },
     "Nazarbaev": {
       "birthday": "1940-07-06t00:00:00",
@@ -5045,7 +5721,8 @@
         "Peaceful"
       ],
       "power": 35,
-      "homeLand": "Kazakhstan"
+      "homeLand": "MainKasakhstan",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Polozkov": {
       "birthday": "1935-02-16t00:00:00",
@@ -5062,7 +5739,8 @@
         "Partocrat"
       ],
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "Kozakia",
+      "desiredPosition": "SecondSecretary"
     },
     "Kuptsov": {
       "birthday": "1937-12-04t00:00:00",
@@ -5079,7 +5757,8 @@
         "ProMarket"
       ],
       "power": 25,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "SecondSecretary"
     },
     "Medvedev": {
       "birthday": "1929-03-29t00:00:00",
@@ -5097,7 +5776,8 @@
       ],
       "power": 25,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Chernomyrdin": {
       "birthday": "1938-04-09t00:00:00",
@@ -5115,7 +5795,7 @@
       ],
       "power": 35,
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Silaev": {
       "birthday": "1930-10-21t00:00:00",
@@ -5133,7 +5813,7 @@
       ],
       "power": 25,
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Pavlov": {
       "birthday": "1937-09-26t00:00:00",
@@ -5151,7 +5831,7 @@
       ],
       "power": 50,
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Medvedev2": {
       "birthday": "1925-11-14t00:00:00",
@@ -5168,7 +5848,9 @@
         "Intelligent"
       ],
       "power": 15,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfEducation"
     },
     "Mitina": {
       "birthday": "1973-08-14t00:00:00",
@@ -5186,7 +5868,8 @@
       ],
       "isWoman": true,
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterForYouthAffairs"
     },
     "Ryzhkov2": {
       "birthday": "1966-09-03t00:00:00",
@@ -5204,7 +5887,7 @@
       ],
       "power": 10,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Nemtsov": {
       "birthday": "1959-10-09t00:00:00",
@@ -5221,7 +5904,9 @@
         "Atlantophile"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "AbkhazianRussia",
+      "IsScientist": true,
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Vasiliev": {
       "birthday": "1945-05-30t00:00:00",
@@ -5238,7 +5923,8 @@
         "ConspiracyTheorist"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Khasbulatov": {
       "birthday": "1942-11-22t00:00:00",
@@ -5255,7 +5941,9 @@
         "Peaceful"
       ],
       "power": 15,
-      "homeLand": "Chechnya"
+      "homeLand": "Chechnya",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfFinance"
     },
     "Varennikov": {
       "birthday": "1923-12-15t00:00:00",
@@ -5273,7 +5961,8 @@
       ],
       "power": 35,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia",
+      "IsMilitaryExpert": true
     },
     "Manaenkov": {
       "birthday": "1936-08-02t00:00:00",
@@ -5290,7 +5979,8 @@
         "Compromise"
       ],
       "power": 25,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "SecondSecretary"
     },
     "Boldin": {
       "birthday": "1935-09-07t00:00:00",
@@ -5307,7 +5997,11 @@
         "Compromise"
       ],
       "power": 35,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Gorbachev"
+      ],
+      "desiredPosition": "SecondSecretary"
     },
     "Baklanov": {
       "birthday": "1932-03-17t00:00:00",
@@ -5324,7 +6018,8 @@
         "Compromise"
       ],
       "power": 40,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfIndustry"
     },
     "Baburin": {
       "birthday": "1959-01-31t00:00:00",
@@ -5342,7 +6037,7 @@
       ],
       "power": 20,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Travkin": {
       "birthday": "1946-03-19t00:00:00",
@@ -5359,7 +6054,8 @@
         "Compromise"
       ],
       "power": 25,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfIndustry"
     },
     "Ivanenko": {
       "birthday": "1947-09-19t00:00:00",
@@ -5377,7 +6073,8 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheKGB",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsKgbExpert": true
     },
     "Zinoviev": {
       "birthday": "1922-10-29t00:00:00",
@@ -5394,7 +6091,9 @@
         "Peaceful"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfEducation"
     },
     "Burokevicius": {
       "birthday": "1927-10-07t00:00:00",
@@ -5411,7 +6110,8 @@
         "Ascetic"
       ],
       "power": 25,
-      "homeLand": "Litva"
+      "homeLand": "Vilnus",
+      "desiredPosition": "SecondSecretary"
     },
     "Jermalavicius": {
       "birthday": "1940-02-04t00:00:00",
@@ -5428,7 +6128,8 @@
         "Ascetic"
       ],
       "power": 25,
-      "homeLand": "Latvia"
+      "homeLand": "Vilnus",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Lobov": {
       "birthday": "1937-09-07t00:00:00",
@@ -5445,7 +6146,8 @@
         "Atlantophile"
       ],
       "power": 35,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Primakov": {
       "birthday": "1929-10-29t00:00:00",
@@ -5463,7 +6165,8 @@
       ],
       "power": 40,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Fokin": {
       "birthday": "1932-10-25t00:00:00",
@@ -5480,7 +6183,8 @@
         "InefficientManager"
       ],
       "power": 25,
-      "homeLand": "Ukraine"
+      "homeLand": "Donbass",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Kravchenko": {
       "birthday": "1938-05-10t00:00:00",
@@ -5497,7 +6201,8 @@
         "Intelligent"
       ],
       "power": 30,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Shaimiev": {
       "birthday": "1937-01-20t00:00:00",
@@ -5514,7 +6219,8 @@
         "Hedonist"
       ],
       "power": 30,
-      "homeLand": "Tatarstan"
+      "homeLand": "Tatarstan",
+      "desiredPosition": "MinisterOfAgriculture"
     },
     "Biryukova": {
       "birthday": "1929-02-25t00:00:00",
@@ -5532,7 +6238,8 @@
       ],
       "isWoman": true,
       "power": 35,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfIndustry"
     },
     "Kvitsinsky": {
       "birthday": "1936-09-28t00:00:00",
@@ -5550,7 +6257,7 @@
       ],
       "power": 35,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Chikin": {
       "birthday": "1932-01-25t00:00:00",
@@ -5567,7 +6274,8 @@
         "Idealist"
       ],
       "power": 30,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Gerashchenko": {
       "birthday": "1937-12-21t00:00:00",
@@ -5585,7 +6293,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Gidaspov": {
       "birthday": "1933-04-16t00:00:00",
@@ -5602,7 +6310,9 @@
         "Peaceful"
       ],
       "power": 25,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfIndustry"
     },
     "Yasin": {
       "birthday": "1934-05-07t00:00:00",
@@ -5620,7 +6330,8 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Volsky": {
       "birthday": "1934-05-07t00:00:00",
@@ -5638,7 +6349,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Ageev": {
       "birthday": "1929-10-30t00:00:00",
@@ -5656,7 +6367,7 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheKGB",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Prokofiev": {
       "birthday": "1939-02-20t00:00:00",
@@ -5673,7 +6384,11 @@
         "Unambitious"
       ],
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Grishin"
+      ],
+      "desiredPosition": "SecondSecretary"
     },
     "Konstantinov": {
       "birthday": "1956-12-28t00:00:00",
@@ -5690,7 +6405,8 @@
         "Economical"
       ],
       "power": 15,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfFinance"
     },
     "Barkashov": {
       "birthday": "1953-10-06t00:00:00",
@@ -5707,7 +6423,8 @@
         "Monarchist"
       ],
       "power": 15,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfInternalAffairs"
     },
     "Stroev": {
       "birthday": "1937-02-25t00:00:00",
@@ -5724,7 +6441,8 @@
         "ProMarket"
       ],
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfAgriculture"
     },
     "Niyazov": {
       "birthday": "1940-02-19t00:00:00",
@@ -5741,7 +6459,8 @@
         "Partocrat"
       ],
       "power": 25,
-      "homeLand": "Turkmenia"
+      "homeLand": "MainTurkmenia",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Lukashenko": {
       "birthday": "1954-08-30t00:00:00",
@@ -5758,7 +6477,8 @@
         "Schemer"
       ],
       "power": 25,
-      "homeLand": "Belorussia"
+      "homeLand": "MainBelorussia",
+      "desiredPosition": "MinisterOfAgriculture"
     },
     "Starodubtsev": {
       "birthday": "1931-12-25t00:00:00",
@@ -5776,7 +6496,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfAgriculture",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Tizyakov": {
       "birthday": "1926-09-10t00:00:00",
@@ -5794,7 +6514,7 @@
       ],
       "power": 35,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "Tatarstan"
     },
     "Eukurov": {
       "birthday": "1963-07-30t00:00:00",
@@ -5812,7 +6532,7 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "Ingushetia"
     },
     "Alexeyev": {
       "birthday": "1964-04-23t00:00:00",
@@ -5830,7 +6550,7 @@
       ],
       "power": 1,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Patiashvili": {
       "birthday": "1939-08-05t00:00:00",
@@ -5847,7 +6567,8 @@
         "Unambitious"
       ],
       "power": 30,
-      "homeLand": "Georgia"
+      "homeLand": "MainGeorgia",
+      "desiredPosition": "SecondSecretary"
     },
     "Gamsakhurdia": {
       "birthday": "1939-03-31t00:00:00",
@@ -5864,7 +6585,9 @@
         "Chauvinist"
       ],
       "power": 20,
-      "homeLand": "Georgia"
+      "homeLand": "MainGeorgia",
+      "IsScientist": true,
+      "desiredPosition": "President"
     },
     "Kebich": {
       "birthday": "1936-06-10t00:00:00",
@@ -5881,7 +6604,8 @@
         "ProMarket"
       ],
       "power": 20,
-      "homeLand": "Belorussia"
+      "homeLand": "MainBelorussia",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Alekseeva": {
       "birthday": "1927-07-20t00:00:00",
@@ -5899,7 +6623,8 @@
       ],
       "isWoman": true,
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Kravchuk": {
       "birthday": "1934-01-10t00:00:00",
@@ -5916,7 +6641,8 @@
         "Radical"
       ],
       "power": 30,
-      "homeLand": "Ukraine"
+      "homeLand": "MainUkraine",
+      "desiredPosition": "SecondSecretary"
     },
     "Shushkevich": {
       "birthday": "1934-12-15t00:00:00",
@@ -5933,7 +6659,9 @@
         "Voluntarist"
       ],
       "power": 35,
-      "homeLand": "Belorussia"
+      "homeLand": "MainBelorussia",
+      "IsScientist": true,
+      "desiredPosition": "President"
     },
     "Chernovol": {
       "birthday": "1937-12-24t00:00:00",
@@ -5950,7 +6678,8 @@
         "Idealist"
       ],
       "power": 20,
-      "homeLand": "Ukraine"
+      "homeLand": "GaliciaUk",
+      "desiredPosition": "President"
     },
     "Pazniak": {
       "birthday": "1944-04-24t00:00:00",
@@ -5967,7 +6696,9 @@
         "Idealist"
       ],
       "power": 20,
-      "homeLand": "Belorussia"
+      "homeLand": "MainBelorussia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfEducation"
     },
     "Melnikov": {
       "birthday": "1930-10-20t00:00:00",
@@ -5984,7 +6715,8 @@
         "Idealist"
       ],
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "SecondSecretary"
     },
     "Prokhanov": {
       "birthday": "1938-02-26t00:00:00",
@@ -6001,7 +6733,8 @@
         "Intelligent"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Gurenko": {
       "birthday": "1936-05-30t00:00:00",
@@ -6018,7 +6751,8 @@
         "Technocrat"
       ],
       "power": 25,
-      "homeLand": "Ukraine"
+      "homeLand": "Donbass",
+      "desiredPosition": "SecondSecretary"
     },
     "Vasiliev2": {
       "birthday": "1961-05-30t00:00:00",
@@ -6035,7 +6769,8 @@
         "Uncompromising"
       ],
       "power": 30,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterForYouthAffairs"
     },
     "Evseev": {
       "birthday": "1932-10-16t00:00:00",
@@ -6053,7 +6788,7 @@
       ],
       "power": 10,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Grossu": {
       "birthday": "1934-03-18t00:00:00",
@@ -6070,7 +6805,8 @@
         "Peaceful"
       ],
       "power": 35,
-      "homeLand": "Moldavia"
+      "homeLand": "MainMoldavia",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Kitov": {
       "birthday": "1920-10-09t00:00:00",
@@ -6088,7 +6824,8 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Bushin": {
       "birthday": "1924-01-24t00:00:00",
@@ -6106,7 +6843,7 @@
       ],
       "power": 15,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Zhvaniya": {
       "birthday": "1967-08-01t00:00:00",
@@ -6124,7 +6861,7 @@
       ],
       "power": 10,
       "desiredPosition": "GRU",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Grachev": {
       "birthday": "1948-01-01t00:00:00",
@@ -6142,7 +6879,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Terekhov": {
       "birthday": "1955-08-28t00:00:00",
@@ -6160,7 +6897,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Molyarov": {
       "birthday": "1965-07-24t00:00:00",
@@ -6178,7 +6915,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterForYouthAffairs",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Boldyirev": {
       "birthday": "1960-05-29t00:00:00",
@@ -6195,7 +6932,8 @@
         "Chauvinist"
       ],
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfFinance"
     },
     "Ponomarev2": {
       "birthday": "1941-09-02t00:00:00",
@@ -6212,7 +6950,9 @@
         "Dissident"
       ],
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfEducation"
     },
     "Khabarova": {
       "birthday": "1935-02-03t00:00:00",
@@ -6229,7 +6969,8 @@
         "Atlantophobe"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "SecondSecretary"
     },
     "Tuleev": {
       "birthday": "1944-05-13t00:00:00",
@@ -6246,7 +6987,7 @@
         "Economical"
       ],
       "power": 25,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Lebed": {
       "birthday": "1950-04-20t00:00:00",
@@ -6264,7 +7005,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia"
     },
     "Magnat": {
       "birthday": "1954-11-05t00:00:00",
@@ -6282,7 +7023,8 @@
       ],
       "isWoman": true,
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Rogovin": {
       "birthday": "1937-05-10t00:00:00",
@@ -6299,7 +7041,9 @@
         "Intelligent"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfEducation"
     },
     "Dzhugashvili": {
       "birthday": "1936-01-10t00:00:00",
@@ -6316,7 +7060,8 @@
         "Atlantophobe"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "Kozakia",
+      "desiredPosition": "MinisterOfDefense"
     },
     "Shtilmark": {
       "birthday": "1954-04-17t00:00:00",
@@ -6333,7 +7078,8 @@
         "Unambitious"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Goryacheva": {
       "birthday": "1947-06-03t00:00:00",
@@ -6350,7 +7096,8 @@
         "StrongArm"
       ],
       "power": 15,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfInternalAffairs"
     },
     "Denisov": {
       "birthday": "1934-06-11t00:00:00",
@@ -6367,7 +7114,9 @@
         "Intelligent"
       ],
       "power": 15,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfEducation"
     },
     "Volodin": {
       "birthday": "1939-12-06t00:00:00",
@@ -6384,7 +7133,8 @@
         "Intelligent"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Aksyuchits": {
       "birthday": "1949-08-29t00:00:00",
@@ -6401,7 +7151,8 @@
         "Intelligent"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Shafarevich": {
       "birthday": "1923-06-03t00:00:00",
@@ -6418,7 +7169,9 @@
         "Intelligent"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfEducation"
     },
     "Lapshin": {
       "birthday": "1934-09-01t00:00:00",
@@ -6435,7 +7188,8 @@
         "Unambitious"
       ],
       "power": 25,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfAgriculture"
     },
     "Gusev": {
       "birthday": "1968-03-01t00:00:00",
@@ -6452,7 +7206,8 @@
         "Intelligent"
       ],
       "power": 15,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterForYouthAffairs"
     },
     "Zorkaltsev": {
       "birthday": "1936-08-29t00:00:00",
@@ -6469,7 +7224,11 @@
         "Peaceful"
       ],
       "power": 30,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Ligachyov"
+      ],
+      "desiredPosition": "SecondSecretary"
     },
     "Rybkin": {
       "birthday": "1946-10-20t00:00:00",
@@ -6487,7 +7246,7 @@
       ],
       "power": 20,
       "desiredPosition": "MinisterOfAgriculture",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Popov2": {
       "birthday": "1945-02-24t00:00:00",
@@ -6505,7 +7264,7 @@
       ],
       "power": 10,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Orlov": {
       "birthday": "1921-08-16t00:00:00",
@@ -6523,7 +7282,8 @@
       ],
       "power": 40,
       "desiredPosition": "ChairmanOfTheSupremeCouncil",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Polyakov": {
       "birthday": "1915-03-03t00:00:00",
@@ -6541,7 +7301,7 @@
       ],
       "power": 40,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Grushko": {
       "birthday": "1930-07-10t00:00:00",
@@ -6559,7 +7319,8 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheKGB",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia",
+      "IsKgbExpert": true
     },
     "Semenova": {
       "birthday": "1937-08-24t00:00:00",
@@ -6577,7 +7338,8 @@
       ],
       "isWoman": true,
       "power": 30,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Mukashev": {
       "birthday": "1927-10-21t00:00:00",
@@ -6594,7 +7356,8 @@
         "Partocrat"
       ],
       "power": 30,
-      "homeLand": "Kazakhstan"
+      "homeLand": "WesternKazakhstan",
+      "desiredPosition": "SecondSecretary"
     },
     "Ermash": {
       "birthday": "1923-09-04t00:00:00",
@@ -6611,7 +7374,8 @@
         "Partocrat"
       ],
       "power": 30,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Brovikov": {
       "birthday": "1931-05-12t00:00:00",
@@ -6628,7 +7392,8 @@
         "Partocrat"
       ],
       "power": 30,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Kovalev": {
       "birthday": "1925-08-16t00:00:00",
@@ -6645,7 +7410,8 @@
         "Partocrat"
       ],
       "power": 30,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Polyansky": {
       "birthday": "1917-11-07t00:00:00",
@@ -6663,7 +7429,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfAgriculture",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia"
     },
     "Gromov": {
       "birthday": "1943-11-07t00:00:00",
@@ -6681,7 +7447,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Frolov": {
       "birthday": "1929-09-01t00:00:00",
@@ -6698,7 +7464,8 @@
         "Intelligent"
       ],
       "power": 25,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Zavgaev": {
       "birthday": "1940-12-22t00:00:00",
@@ -6715,7 +7482,8 @@
         "Partocrat"
       ],
       "power": 25,
-      "homeLand": "Chechnya"
+      "homeLand": "Chechnya",
+      "desiredPosition": "MinisterOfAgriculture"
     },
     "Shcherbakov": {
       "birthday": "1925-09-21t00:00:00",
@@ -6733,7 +7501,7 @@
       ],
       "power": 35,
       "desiredPosition": "MinisterOfEducation",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Prigarin": {
       "birthday": "1930-12-06t00:00:00",
@@ -6751,7 +7519,7 @@
       ],
       "power": 20,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Meshcheryakov": {
       "birthday": "1920-04-23t00:00:00",
@@ -6769,7 +7537,7 @@
       ],
       "power": 35,
       "desiredPosition": "GRU",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Salimov": {
       "birthday": "1928-12-24t00:00:00",
@@ -6786,7 +7554,8 @@
         "Technocrat"
       ],
       "power": 30,
-      "homeLand": "Uzbekistan"
+      "homeLand": "MainUzbekistan",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Karamanov": {
       "birthday": "1937-08-20t00:00:00",
@@ -6803,7 +7572,8 @@
         "Compromise"
       ],
       "power": 30,
-      "homeLand": "Kazakhstan"
+      "homeLand": "MainKasakhstan",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Karimov": {
       "birthday": "1938-01-30t00:00:00",
@@ -6820,7 +7590,8 @@
         "Schemer"
       ],
       "power": 40,
-      "homeLand": "Uzbekistan"
+      "homeLand": "MainUzbekistan",
+      "desiredPosition": "MinisterOfFinance"
     },
     "Gapurov": {
       "birthday": "1922-02-15t00:00:00",
@@ -6837,7 +7608,8 @@
         "Unambitious"
       ],
       "power": 30,
-      "homeLand": "Turkmenia"
+      "homeLand": "MainTurkmenia",
+      "desiredPosition": "SecondSecretary"
     },
     "Akaev": {
       "birthday": "1944-11-10t00:00:00",
@@ -6854,7 +7626,9 @@
         "Hedonist"
       ],
       "power": 30,
-      "homeLand": "Kyrgizia"
+      "homeLand": "MainKyrgizia",
+      "IsScientist": true,
+      "desiredPosition": "MinisterOfEducation"
     },
     "Mutalibov": {
       "birthday": "1938-05-12t00:00:00",
@@ -6871,7 +7645,8 @@
         "Partocrat"
       ],
       "power": 30,
-      "homeLand": "Azerbaijan"
+      "homeLand": "MainAzerbaijan",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Elchibey": {
       "birthday": "1938-06-24t00:00:00",
@@ -6888,7 +7663,9 @@
         "Schemer"
       ],
       "power": 30,
-      "homeLand": "Azerbaijan"
+      "homeLand": "Nakhichevan",
+      "IsScientist": true,
+      "desiredPosition": "ForeignSecretary"
     },
     "TerPetrosyan": {
       "birthday": "1945-01-09t00:00:00",
@@ -6905,7 +7682,9 @@
         "Chauvinist"
       ],
       "power": 30,
-      "homeLand": "Armenia"
+      "homeLand": "MainArmenia",
+      "IsScientist": true,
+      "desiredPosition": "President"
     },
     "Nabiev": {
       "birthday": "1930-10-05t00:00:00",
@@ -6922,7 +7701,8 @@
         "Peaceful   "
       ],
       "power": 30,
-      "homeLand": "Tajikistan"
+      "homeLand": "MainTajikistan",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Seidov": {
       "birthday": "1932-08-16t00:00:00",
@@ -6939,7 +7719,8 @@
         "Industrialist"
       ],
       "power": 30,
-      "homeLand": "Azerbaijan"
+      "homeLand": "MainAzerbaijan",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Kovalev2": {
       "birthday": "1923-05-18t00:00:00",
@@ -6956,7 +7737,11 @@
         "Peaceful"
       ],
       "power": 30,
-      "homeLand": "Russia"
+      "homeLand": "Kozakia",
+      "historicalFriends": [
+        "Gromyko"
+      ],
+      "desiredPosition": "ForeignSecretary"
     },
     "Shevchenko": {
       "birthday": "1935-05-12t00:00:00",
@@ -6974,7 +7759,8 @@
       ],
       "isWoman": true,
       "power": 30,
-      "homeLand": "Ukraine"
+      "homeLand": "KharkivDniproKirovograd",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Ibragimov": {
       "birthday": "1928-05-10t00:00:00",
@@ -6992,7 +7778,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Uzbekistan"
+      "homeLand": "FerghanaValley"
     },
     "Masol": {
       "birthday": "1928-11-14t00:00:00",
@@ -7009,7 +7795,11 @@
         "Unambitious"
       ],
       "power": 30,
-      "homeLand": "Ukraine"
+      "homeLand": "Donbass",
+      "historicalFriends": [
+        "Shcherbytsky"
+      ],
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Gasanov": {
       "birthday": "1940-10-20t00:00:00",
@@ -7026,7 +7816,8 @@
         "Peaceful"
       ],
       "power": 30,
-      "homeLand": "Azerbaijan"
+      "homeLand": "MainAzerbaijan",
+      "desiredPosition": "ForeignSecretary"
     },
     "Movsisyan": {
       "birthday": "1933-11-12t00:00:00",
@@ -7044,7 +7835,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfAgriculture",
-      "homeLand": "Armenia"
+      "homeLand": "MainArmenia"
     },
     "Snegur": {
       "birthday": "1940-10-17t00:00:00",
@@ -7062,7 +7853,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfAgriculture",
-      "homeLand": "Moldavia"
+      "homeLand": "MainMoldavia"
     },
     "Lucinschi": {
       "birthday": "1940-01-27t00:00:00",
@@ -7079,7 +7870,8 @@
         "Technocrat"
       ],
       "power": 25,
-      "homeLand": "Moldavia"
+      "homeLand": "MainMoldavia",
+      "desiredPosition": "SecondSecretary"
     },
     "Eremei": {
       "birthday": "1935-04-22t00:00:00",
@@ -7096,7 +7888,8 @@
         "Technocrat"
       ],
       "power": 20,
-      "homeLand": "Moldavia"
+      "homeLand": "MainMoldavia",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Saveliev": {
       "birthday": "1962-04-22t00:00:00",
@@ -7113,7 +7906,8 @@
         "Chauvinist"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Rogozin": {
       "birthday": "1963-12-21t00:00:00",
@@ -7130,7 +7924,8 @@
         "Chauvinist"
       ],
       "power": 10,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterForYouthAffairs"
     },
     "Gorbunov": {
       "birthday": "1942-02-10t00:00:00",
@@ -7148,7 +7943,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Latvia"
+      "homeLand": "RussianLatvia"
     },
     "Bresis": {
       "birthday": "1938-01-30t00:00:00",
@@ -7166,7 +7961,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfAgriculture",
-      "homeLand": "Latvia"
+      "homeLand": "MainLatvia"
     },
     "Godmanis": {
       "birthday": "1951-11-27t00:00:00",
@@ -7183,7 +7978,9 @@
         "ProMarket"
       ],
       "power": 25,
-      "homeLand": "Latvia"
+      "homeLand": "MainLatvia",
+      "IsScientist": true,
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Smirnov": {
       "birthday": "1940-10-23t00:00:00",
@@ -7200,7 +7997,8 @@
         "Uncompromising"
       ],
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfIndustry"
     },
     "Vlasov2": {
       "birthday": "1935-12-05t00:00:00",
@@ -7217,7 +8015,8 @@
         "Uncompromising"
       ],
       "power": 20,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterForYouthAffairs"
     },
     "Sakalauskas": {
       "birthday": "1933-04-24t00:00:00",
@@ -7234,7 +8033,8 @@
         "Unambitious"
       ],
       "power": 20,
-      "homeLand": "Latvia"
+      "homeLand": "Vilnus",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Skurlatov": {
       "birthday": "1938-12-14t00:00:00",
@@ -7252,7 +8052,7 @@
       ],
       "power": 10,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Latvia"
+      "homeLand": "MainLatvia"
     },
     "Ilyukhin": {
       "birthday": "1949-03-01t00:00:00",
@@ -7269,7 +8069,8 @@
         "Atlantophobe"
       ],
       "power": 25,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfInternalAffairs"
     },
     "Kulikov": {
       "birthday": "1921-07-05t00:00:00",
@@ -7287,7 +8088,7 @@
       ],
       "power": 25,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Lomakhin": {
       "birthday": "1926-04-22t00:00:00",
@@ -7305,7 +8106,7 @@
       ],
       "power": 25,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Masaliev": {
       "birthday": "1933-04-10t00:00:00",
@@ -7322,7 +8123,8 @@
         "Peaceful"
       ],
       "power": 25,
-      "homeLand": "Kyrgizia"
+      "homeLand": "SouthKyrgizia",
+      "desiredPosition": "SecondSecretary"
     },
     "Mahkamov": {
       "birthday": "1932-04-16t00:00:00",
@@ -7339,7 +8141,8 @@
         "Partocrat"
       ],
       "power": 25,
-      "homeLand": "Tajikistan"
+      "homeLand": "MainTajikistan",
+      "desiredPosition": "ChairmanOfTheCouncilOfMinisters"
     },
     "Ryabov": {
       "birthday": "1928-03-24t00:00:00",
@@ -7356,7 +8159,8 @@
         "Industrialist"
       ],
       "power": 30,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfIndustry"
     },
     "Soloviev": {
       "birthday": "1925-08-20t00:00:00",
@@ -7374,7 +8178,10 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Romanov"
+      ]
     },
     "Yemelyanov": {
       "birthday": "1929-05-24t00:00:00",
@@ -7392,7 +8199,7 @@
       ],
       "power": 10,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Usmanov": {
       "birthday": "1932-02-23t00:00:00",
@@ -7428,7 +8235,10 @@
       ],
       "power": 30,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Gromyko"
+      ]
     },
     "Sterligov": {
       "birthday": "1943-10-20t00:00:00",
@@ -7445,7 +8255,8 @@
         "Radical"
       ],
       "power": 15,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "ChairmanOfTheKGB"
     },
     "Sherbacov": {
       "birthday": "1949-12-05t00:00:00",
@@ -7462,7 +8273,7 @@
         "Peaceful"
       ],
       "power": 25,
-      "homeLand": "Russia",
+      "homeLand": "MainRussia",
       "desiredPosition": "MinisterOfFinance"
     },
     "Grushin": {
@@ -7480,7 +8291,8 @@
         "Hedonist"
       ],
       "power": 1,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfIndustry"
     },
     "Molotov": {
       "birthDay": "1890-03-9T00:00:00",
@@ -7497,7 +8309,7 @@
         "EffectiveManager"
       ],
       "power": 1,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Pribytkov": {
       "birthday": "1935-10-10t00:00:00",
@@ -7515,7 +8327,10 @@
       ],
       "power": 30,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "historicalFriends": [
+        "Chernenko"
+      ]
     },
     "Afanasyev3": {
       "birthday": "1922-11-18t00:00:00",
@@ -7533,7 +8348,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfEducation",
-      "homeLand": "Russia"
+      "homeLand": "Tatarstan"
     },
     "Lazarenko": {
       "birthday": "1973-06-28t00:00:00",
@@ -7551,7 +8366,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterForYouthAffairs",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Dobrovolski": {
       "birthday": "1938-10-13t00:00:00",
@@ -7569,7 +8384,7 @@
       ],
       "power": 30,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Petrov": {
       "birthday": "1945-08-23t00:00:00",
@@ -7587,7 +8402,7 @@
       ],
       "power": 30,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Shiropaev": {
       "birthday": "1959-08-23t00:00:00",
@@ -7605,7 +8420,7 @@
       ],
       "power": 30,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Shandybin": {
       "birthday": "1941-07-25t00:00:00",
@@ -7623,7 +8438,7 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheSupremeCouncil",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Ahromeev": {
       "birthday": "1923-05-05t00:00:00",
@@ -7641,7 +8456,8 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsMilitaryExpert": true
     },
     "Kondratenko": {
       "birthday": "1940-02-16t00:00:00",
@@ -7659,7 +8475,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfAgriculture",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia"
     },
     "Mavrodi": {
       "birthday": "1955-08-11t00:00:00",
@@ -7677,7 +8493,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Shubin": {
       "birthday": "1965-07-18t00:00:00",
@@ -7695,7 +8511,7 @@
       ],
       "power": 30,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Isaev2": {
       "birthday": "1964-10-01t00:00:00",
@@ -7713,7 +8529,7 @@
       ],
       "power": 30,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Cherepanov": {
       "birthday": "1950-01-21t00:00:00",
@@ -7731,7 +8547,7 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Yabrova": {
       "birthday": "1929-12-31t00:00:00",
@@ -7749,7 +8565,7 @@
       ],
       "power": 30,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Ukraine"
+      "homeLand": "MainUkraine"
     },
     "Zaslavskaya": {
       "birthday": "1927-04-09t00:00:00",
@@ -7767,7 +8583,8 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Aganbegyan": {
       "birthday": "1932-10-08t00:00:00",
@@ -7785,7 +8602,8 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "IsScientist": true
     },
     "Ferberov": {
       "birthday": "1946-05-28t00:00:00",
@@ -7803,7 +8621,7 @@
       ],
       "power": 30,
       "desiredPosition": "GRU",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Gunko": {
       "birthday": "1933-08-31t00:00:00",
@@ -7821,7 +8639,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfEducation",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Letov": {
       "birthday": "1964-09-10t00:00:00",
@@ -7839,7 +8657,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterForYouthAffairs",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Bylevsky": {
       "birthday": "1964-07-12t00:00:00",
@@ -7857,7 +8675,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterForYouthAffairs",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Muhin": {
       "birthday": "1949-03-22t00:00:00",
@@ -7875,7 +8693,7 @@
       ],
       "power": 30,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Kostenko": {
       "birthday": "1967-08-16t00:00:00",
@@ -7893,7 +8711,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterForYouthAffairs",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Pechenyov": {
       "birthday": "1940-06-08t00:00:00",
@@ -7911,7 +8729,10 @@
       ],
       "power": 30,
       "desiredPosition": null,
-      "homeLand": "Russia"
+      "homeLand": "Dagestan",
+      "historicalFriends": [
+        "Chernenko"
+      ]
     },
     "Lyashko": {
       "birthday": "1916-01-12t00:00:00",
@@ -7929,7 +8750,10 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
-      "homeLand": "Ukraine"
+      "homeLand": "Donbass",
+      "historicalFriends": [
+        "Shcherbytsky"
+      ]
     },
     "Titarenko": {
       "birthday": "1915-03-30t00:00:00",
@@ -7947,7 +8771,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Ukraine"
+      "homeLand": "Donbass"
     },
     "Georgadze": {
       "birthday": "1925-08-17t00:00:00",
@@ -7965,7 +8789,7 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheKGB",
-      "homeLand": "Georgia"
+      "homeLand": "MainGeorgia"
     },
     "Vitrenko": {
       "birthday": "1951-12-28t00:00:00",
@@ -7983,7 +8807,8 @@
       ],
       "power": 30,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Ukraine"
+      "homeLand": "MainUkraine",
+      "IsScientist": true
     },
     "Kucherenko": {
       "birthday": "1966-12-21t00:00:00",
@@ -8001,7 +8826,7 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Markov": {
       "birthday": "1934-07-28t00:00:00",
@@ -8019,7 +8844,7 @@
       ],
       "power": 30,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Marychev": {
       "birthday": "1939-09-21t00:00:00",
@@ -8037,7 +8862,7 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheSupremeCouncil",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Lysenko": {
       "birthday": "1961-05-17t00:00:00",
@@ -8055,7 +8880,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfEducation",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Rohlin": {
       "birthday": "1947-06-06t00:00:00",
@@ -8073,7 +8898,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfDefense",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "ISuharevsky": {
       "birthday": "1950-07-26t00:00:00",
@@ -8091,7 +8916,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfInternalAffairs",
-      "homeLand": "Russia"
+      "homeLand": "Kozakia"
     },
     "Ostanina": {
       "birthday": "1955-12-26t00:00:00",
@@ -8109,7 +8934,7 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheSupremeCouncil",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Harchikov": {
       "birthday": "1949-01-21t00:00:00",
@@ -8127,7 +8952,7 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheSupremeCouncil",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Novikov": {
       "birthday": "1959-01-14t00:00:00",
@@ -8145,7 +8970,7 @@
       ],
       "power": 30,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Kryuchkov2": {
       "birthday": "1944-04-29t00:00:00",
@@ -8163,7 +8988,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfInternalAffairs",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Krupenko": {
       "birthday": "1962-08-18t00:00:00",
@@ -8181,7 +9006,7 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheSupremeCouncil",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Morozova": {
       "birthday": "1963-05-17t00:00:00",
@@ -8199,7 +9024,7 @@
       ],
       "power": 30,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Fadin": {
       "birthday": "1953-11-28t00:00:00",
@@ -8217,7 +9042,7 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheSupremeCouncil",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Maidanik": {
       "birthday": "1929-01-18t00:00:00",
@@ -8235,7 +9060,7 @@
       ],
       "power": 30,
       "desiredPosition": "ForeignSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Maysuryan": {
       "birthday": "1969-06-15t00:00:00",
@@ -8253,7 +9078,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfEducation",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Osmolovsky": {
       "birthday": "1969-07-01t00:00:00",
@@ -8271,7 +9096,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterForYouthAffairs",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Grigoriev": {
       "birthday": "1949-08-16t00:00:00",
@@ -8289,7 +9114,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Malentsov": {
       "birthday": "1962-09-26t00:00:00",
@@ -8307,7 +9132,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Terentyev": {
       "birthday": "1941-09-01t00:00:00",
@@ -8325,7 +9150,7 @@
       ],
       "power": 30,
       "desiredPosition": "SecondSecretary",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Kvachkov": {
       "birthday": "1948-08-05t00:00:00",
@@ -8343,7 +9168,7 @@
       ],
       "power": 30,
       "desiredPosition": "GRU",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Sergeev": {
       "birthday": "1930-12-02t00:00:00",
@@ -8361,7 +9186,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfFinance",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Avaliani": {
       "birthday": "1932-09-18t00:00:00",
@@ -8379,7 +9204,7 @@
       ],
       "power": 30,
       "desiredPosition": "MinisterOfIndustry",
-      "homeLand": "Russia"
+      "homeLand": "MainRussia"
     },
     "Dudyrev": {
       "birthday": "1945-03-30t00:00:00",
@@ -8396,7 +9221,8 @@
         "Intelligent"
       ],
       "power": 30,
-      "homeLand": "Russia"
+      "homeLand": "MainRussia",
+      "desiredPosition": "MinisterOfEducation"
     },
     "Mikhalevich": {
       "birthday": "1930-03-10t00:00:00",
@@ -8414,157 +9240,515 @@
       ],
       "power": 30,
       "desiredPosition": "ChairmanOfTheCouncilOfMinisters",
-      "homeLand": "Ukraine"
+      "homeLand": "MainUkraine"
     },
     "Character301": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character302": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character303": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character304": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character305": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character306": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character307": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character308": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character309": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character310": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character311": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character312": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character313": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character314": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character315": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character316": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character317": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character318": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character319": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character320": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character321": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character322": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character323": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character324": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character325": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character326": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character327": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character328": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character329": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character330": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character331": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character332": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character333": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character334": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character335": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character336": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character337": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character338": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character339": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character340": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character341": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character342": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character343": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character344": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character345": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character346": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character347": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character348": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character349": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
     },
     "Character350": {
-      "isRandomized": true
+      "isRandomized": true,
+      "homeLand": "MainRussia"
+    },
+    "Demirchyan": {
+      "birthday": "1932-04-17t00:00:00",
+      "status": "NotPresented",
+      "charLevel": {
+        "Diplomacy": 1,
+        "Intrigue": 4,
+        "Thrift": 4
+      },
+      "traits": [
+        "ProModerate",
+        "Voluntarist",
+        "Schemer",
+        "Chauvinist"
+      ],
+      "power": 45,
+      "desiredPosition": "MinisterOfIndustry",
+      "homeLand": "MainArmenia"
+    },
+    "Sokolov2": {
+      "birthday": "1926-04-25t00:00:00",
+      "status": "NotPresented",
+      "charLevel": {
+        "Diplomacy": 1,
+        "Intrigue": 2,
+        "Thrift": 4
+      },
+      "traits": [
+        "ProModerate",
+        "GlasnostActivist",
+        "EffectiveManager",
+        "Idealist"
+      ],
+      "power": 40,
+      "desiredPosition": "MinisterOfAgriculture",
+      "homeLand": "MainBelorussia"
+    },
+    "Stukalin": {
+      "birthday": "1923-04-18t00:00:00",
+      "status": "NotPresented",
+      "charLevel": {
+        "Diplomacy": 2,
+        "Intrigue": 2,
+        "Thrift": 3
+      },
+      "traits": [
+        "ProConservative",
+        "Uncompromising",
+        "Partocrat",
+        "StrongArm"
+      ],
+      "power": 30,
+      "desiredPosition": "SecondSecretary",
+      "homeLand": "MainRussia"
+    },
+    "Mazurov": {
+      "birthday": "1914-04-07t00:00:00",
+      "status": "Dead",
+      "charLevel": {
+        "Diplomacy": 2,
+        "Intrigue": 1,
+        "Thrift": 4
+      },
+      "traits": [
+        "ProConservative",
+        "Unambitious",
+        "Compromise",
+        "StrongArm"
+      ],
+      "power": 5,
+      "desiredPosition": "MinisterOfIndustry",
+      "homeLand": "MainBelorussia"
+    },
+    "Romanovsky": {
+      "birthday": "1923-10-21t00:00:00",
+      "status": "NotPresented",
+      "charLevel": {
+        "Diplomacy": 4,
+        "Intrigue": 1,
+        "Thrift": 2
+      },
+      "traits": [
+        "ProModerate",
+        "Unambitious",
+        "Compromise",
+        "Intelligent"
+      ],
+      "power": 5,
+      "desiredPosition": "ForeignSecretary",
+      "homeLand": "MainRussia"
+    },
+    "Polyanichko": {
+      "birthday": "1937-03-09t00:00:00",
+      "status": "NotPresented",
+      "charLevel": {
+        "Diplomacy": 2,
+        "Intrigue": 3,
+        "Thrift": 3
+      },
+      "traits": [
+        "ProReformist",
+        "Schemer",
+        "Idealist",
+        "Peaceful"
+      ],
+      "power": 10,
+      "desiredPosition": "SecondSecretary",
+      "homeLand": "Kozakia"
+    },
+    "Reshetov": {
+      "birthday": "1930-01-01t00:00:00",
+      "status": "NotPresented",
+      "charLevel": {
+        "Diplomacy": 3,
+        "Intrigue": 2,
+        "Thrift": 2
+      },
+      "traits": [
+        "ProReformist",
+        "Unambitious",
+        "EffectiveManager",
+        "Intelligent"
+      ],
+      "power": 5,
+      "desiredPosition": "MinisterForYouthAffairs",
+      "homeLand": "MainRussia"
+    },
+    "Myasnikov": {
+      "birthday": "1926-03-20t00:00:00",
+      "status": "NotPresented",
+      "charLevel": {
+        "Diplomacy": 2,
+        "Intrigue": 1,
+        "Thrift": 3
+      },
+      "traits": [
+        "ProNeotrotskist",
+        "Atlantophobe",
+        "Idealist",
+        "Intelligent"
+      ],
+      "power": 5,
+      "desiredPosition": "MinisterOfEducation",
+      "homeLand": "MainRussia"
+    },
+    "Egorychev": {
+      "birthday": "1920-05-03t00:00:00",
+      "status": "NotPresented",
+      "charLevel": {
+        "Diplomacy": 3,
+        "Intrigue": 2,
+        "Thrift": 3
+      },
+      "traits": [
+        "ProNeostalinist",
+        "Idealist",
+        "Industrialist",
+        "StrongArm"
+      ],
+      "power": 10,
+      "desiredPosition": "SecondSecretary",
+      "homeLand": "MainRussia"
+    },
+    "Mesyatsev": {
+      "birthday": "1920-07-03t00:00:00",
+      "status": "Dead",
+      "charLevel": {
+        "Diplomacy": 2,
+        "Intrigue": 3,
+        "Thrift": 2
+      },
+      "traits": [
+        "ProNeostalinist",
+        "StrongArm",
+        "Orientalist",
+        "EffectiveManager"
+      ],
+      "power": 5,
+      "desiredPosition": "MinisterOfEducation",
+      "homeLand": "MainRussia",
+      "IsMilitaryExpert": true
+    },
+    "Goryunov": {
+      "birthday": "1915-09-30t00:00:00",
+      "status": "Dead",
+      "charLevel": {
+        "Diplomacy": 3,
+        "Intrigue": 2,
+        "Thrift": 2
+      },
+      "traits": [
+        "ProNeostalinist",
+        "Unambitious",
+        "Idealist",
+        "Intelligent"
+      ],
+      "power": 5,
+      "desiredPosition": "MinisterForYouthAffairs",
+      "homeLand": "MainRussia"
+    },
+    "Burkov": {
+      "birthday": "1908-05-11t00:00:00",
+      "status": "Dead",
+      "charLevel": {
+        "Diplomacy": 2,
+        "Intrigue": 1,
+        "Thrift": 2
+      },
+      "traits": [
+        "ProNeostalinist",
+        "Unambitious",
+        "Idealist",
+        "Intelligent"
+      ],
+      "power": 5,
+      "desiredPosition": "MinisterForYouthAffairs",
+      "homeLand": "MainRussia"
+    },
+    "Pavlov2": {
+      "birthday": "1929-01-19t00:00:00",
+      "status": "Dead",
+      "charLevel": {
+        "Diplomacy": 2,
+        "Intrigue": 3,
+        "Thrift": 3
+      },
+      "traits": [
+        "ProNeostalinist",
+        "Peoplefavorite",
+        "Hedonist",
+        "Schemer"
+      ],
+      "power": 5,
+      "desiredPosition": "MinisterForYouthAffairs",
+      "homeLand": "MainRussia"
+    },
+    "Golikov": {
+      "birthday": "1914-02-12t00:00:00",
+      "status": "Dead",
+      "charLevel": {
+        "Diplomacy": 1,
+        "Intrigue": 3,
+        "Thrift": 2
+      },
+      "traits": [
+        "ProNeostalinist",
+        "Maoist",
+        "Unambitious",
+        "Idealist"
+      ],
+      "power": 5,
+      "desiredPosition": "MinisterOfAgriculture",
+      "homeLand": "Kozakia"
+    },
+    "Semichastny": {
+      "birthday": "1924-01-15t00:00:00",
+      "status": "Dead",
+      "charLevel": {
+        "Diplomacy": 1,
+        "Intrigue": 4,
+        "Thrift": 2
+      },
+      "traits": [
+        "ProNeostalinist",
+        "EffectiveManager",
+        "StrongArm",
+        "Idealist"
+      ],
+      "power": 5,
+      "desiredPosition": "ChairmanOfTheKGB",
+      "homeLand": "KharkivDniproKirovograd",
+      "IsMilitaryExpert": true
+    },
+    "Rusakov": {
+      "birthday": "1909-12-31t00:00:00",
+      "status": "NotPresented",
+      "charLevel": {
+        "Diplomacy": 4,
+        "Intrigue": 2,
+        "Thrift": 2
+      },
+      "traits": [
+        "ProConservative",
+        "Unambitious",
+        "EffectiveManager",
+        "StrongArm"
+      ],
+      "power": 35,
+      "desiredPosition": "ForeignSecretary",
+      "homeLand": "MainRussia"
+    },
+    "Kapitonov": {
+      "birthday": "1915-03-08t00:00:00",
+      "status": "NotPresented",
+      "charLevel": {
+        "Diplomacy": 2,
+        "Intrigue": 3,
+        "Thrift": 3
+      },
+      "traits": [
+        "ProConservative",
+        "Compromise",
+        "Economical",
+        "Partocrat"
+      ],
+      "power": 35,
+      "desiredPosition": "SecondSecretary",
+      "homeLand": "MainRussia"
     }
   },
   "expenses": {
@@ -8995,8 +10179,8 @@
   "countries": {
     "USSR": {
       "activeInGame": true,
-      "economyAlliance": "COMECON",
-      "militaryAlliance": "WarsawPact",
+      "economyAlliance": "None",
+      "militaryAlliance": "None",
       "ZoneType": "EastEurope",
       "tradeValue": 4,
       "governmentType": "ConservativeSocialism",
@@ -9016,7 +10200,7 @@
       "puppetType": "None",
       "puppetOf": null,
       "rulingPartyName": "LiberalConservativeParty",
-      "relationshipWithPlayer": 30,
+      "relationshipWithPlayer": 55,
       "foreignPolicyVector": 0,
       "tradeValue": 6,
       "needRelations": true,
@@ -9175,11 +10359,12 @@
       "puppetType": "None",
       "puppetOf": null,
       "rulingPartyName": "CommunistParty",
-      "foreignPolicyVector": 40,
+      "foreignPolicyVector": 45,
       "needRelations": true,
       "tradeValue": 5,
-      "relationshipWithPlayer": 35,
-      "nuclearPower": true
+      "relationshipWithPlayer": 50,
+      "nuclearPower": true,
+      "isChineseState": true
     },
     "Uyghuristan": {
       "activeInGame": false,
@@ -9193,7 +10378,8 @@
       "foreignPolicyVector": 100,
       "needRelations": true,
       "tradeValue": 3,
-      "relationshipWithPlayer": 100
+      "relationshipWithPlayer": 100,
+      "isChineseState": true
     },
     "Tibet": {
       "activeInGame": false,
@@ -9207,7 +10393,8 @@
       "foreignPolicyVector": 100,
       "needRelations": true,
       "tradeValue": 3,
-      "relationshipWithPlayer": 100
+      "relationshipWithPlayer": 100,
+      "isChineseState": true
     },
     "Manchuria": {
       "activeInGame": false,
@@ -9221,7 +10408,8 @@
       "foreignPolicyVector": 100,
       "needRelations": true,
       "tradeValue": 3,
-      "relationshipWithPlayer": 100
+      "relationshipWithPlayer": 100,
+      "isChineseState": true
     },
     "InnerMongolia": {
       "activeInGame": false,
@@ -9235,7 +10423,8 @@
       "foreignPolicyVector": 100,
       "needRelations": true,
       "tradeValue": 3,
-      "relationshipWithPlayer": 100
+      "relationshipWithPlayer": 100,
+      "isChineseState": true
     },
     "Quinghai": {
       "activeInGame": false,
@@ -9249,7 +10438,8 @@
       "foreignPolicyVector": 100,
       "needRelations": true,
       "tradeValue": 3,
-      "relationshipWithPlayer": 100
+      "relationshipWithPlayer": 100,
+      "isChineseState": true
     },
     "France": {
       "activeInGame": true,
@@ -9676,7 +10866,8 @@
       "rulingPartyName": "LiberalConservativeParty",
       "foreignPolicyVector": 30,
       "needRelations": true,
-      "relationshipWithPlayer": 0
+      "relationshipWithPlayer": 30,
+      "hasBase": "Soviet"
     },
     "Czechoslovakia": {
       "activeInGame": true,
@@ -9690,10 +10881,10 @@
       "rulingPartyName": "LiberalConservativeParty",
       "foreignPolicyVector": 30,
       "needRelations": true,
-      "relationshipWithPlayer": 0
+      "relationshipWithPlayer": 35
     },
     "Slovakia": {
-      "activeInGame": true,
+      "activeInGame": false,
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "ZoneType": "EastEurope",
@@ -9733,7 +10924,7 @@
       "rulingPartyName": "LiberalConservativeParty",
       "foreignPolicyVector": 30,
       "needRelations": true,
-      "relationshipWithPlayer": 0
+      "relationshipWithPlayer": 35
     },
     "Romania": {
       "activeInGame": true,
@@ -9745,9 +10936,9 @@
       "puppetType": "None",
       "puppetOf": null,
       "rulingPartyName": "LiberalConservativeParty",
-      "foreignPolicyVector": 30,
+      "foreignPolicyVector": 40,
       "needRelations": true,
-      "relationshipWithPlayer": 0
+      "relationshipWithPlayer": 45
     },
     "Bulgaria": {
       "activeInGame": true,
@@ -9759,9 +10950,9 @@
       "puppetType": "None",
       "puppetOf": null,
       "rulingPartyName": "LiberalConservativeParty",
-      "foreignPolicyVector": 30,
+      "foreignPolicyVector": 40,
       "needRelations": true,
-      "relationshipWithPlayer": 0
+      "relationshipWithPlayer": 45
     },
     "DDR": {
       "activeInGame": false,
@@ -9796,12 +10987,12 @@
     "Finland": {
       "activeInGame": true,
       "militaryAlliance": "OfficialNeutrality",
-      "governmentType": "SocialDemocracy",
+      "governmentType": "Centrism",
       "puppetType": "UnderInfluence",
       "puppetOf": "USSR",
       "ZoneType": "WestEurope",
-      "rulingPartyName": "SocialDemocracyParty",
-      "foreignPolicyVector": 60,
+      "rulingPartyName": "CentristParty",
+      "foreignPolicyVector": 50,
       "needRelations": true,
       "tradeValue": 4,
       "relationshipWithPlayer": 75,
@@ -9820,23 +11011,23 @@
       "foreignPolicyVector": 20,
       "tradeValue": 5,
       "needRelations": true,
-      "relationshipWithPlayer": 50,
+      "relationshipWithPlayer": 55,
       "Trade": true
     },
     "Mongolia": {
       "activeInGame": true,
-      "economyAlliance": "COMECON",
+      "economyAlliance": "None",
       "hasBase": "Soviet",
       "militaryAlliance": "None",
-      "governmentType": "ConservativeSocialism",
-      "puppetType": "PuppetOtherState",
+      "governmentType": "SocialistReformism",
+      "puppetType": "UnderInfluence",
       "puppetOf": "USSR",
       "ZoneType": "OtherAsia",
       "rulingPartyName": "CommunistParty",
-      "foreignPolicyVector": 100,
+      "foreignPolicyVector": 80,
       "needRelations": true,
       "tradeValue": 3,
-      "relationshipWithPlayer": 100
+      "relationshipWithPlayer": 85
     },
     "Iran": {
       "activeInGame": true,
@@ -9850,7 +11041,7 @@
       "foreignPolicyVector": 50,
       "needRelations": true,
       "tradeValue": 3,
-      "relationshipWithPlayer": 30
+      "relationshipWithPlayer": 45
     },
     "Canada": {
       "activeInGame": true,
@@ -9879,18 +11070,18 @@
       "rulingPartyName": "CommunistParty",
       "foreignPolicyVector": 55,
       "needRelations": true,
-      "relationshipWithPlayer": 10
+      "relationshipWithPlayer": 35
     },
     "Yugoslavia": {
       "activeInGame": true,
-      "economyAlliance": "AssociativeCOMECON",
+      "economyAlliance": "None",
       "militaryAlliance": "OfficialNeutrality",
       "governmentType": "SocialistReformism",
       "puppetType": "None",
       "ZoneType": "EastEurope",
       "tradeValue": 4,
       "puppetOf": null,
-      "rulingPartyName": "CommunistParty",
+      "rulingPartyName": "None",
       "foreignPolicyVector": 60,
       "needRelations": true,
       "relationshipWithPlayer": 75,
@@ -10083,19 +11274,19 @@
       "economyAlliance": "EU",
       "militaryAlliance": "NATO",
       "ZoneType": "WestEurope",
-      "hasBase": "American",
+      "hasBase": "Soviet",
       "governmentType": "LiberalConservative",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "rulingPartyName": "LiberalConservativeParty",
-      "foreignPolicyVector": 0,
+      "foreignPolicyVector": 20,
       "tradeValue": 5,
       "needRelations": true,
-      "relationshipWithPlayer": 40,
+      "relationshipWithPlayer": 60,
       "Trade": true
     },
     "UnitedYemen": {
-      "activeInGame": false,
+      "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "governmentType": "Centrism",
@@ -10121,7 +11312,7 @@
       "relationshipWithPlayer": 60
     },
     "Namibia": {
-      "activeInGame": false,
+      "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "governmentType": "LeftNationalism",
@@ -10142,7 +11333,7 @@
       "governmentType": "LiberalProgressive",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
-      "rulingPartyName": "SocialDemocracyParty",
+      "rulingPartyName": "CentristParty",
       "foreignPolicyVector": 25,
       "tradeValue": 4,
       "needRelations": true,
@@ -10151,7 +11342,7 @@
     },
     "Spain": {
       "activeInGame": true,
-      "economyAlliance": "None",
+      "economyAlliance": "EU",
       "militaryAlliance": "NATO",
       "ZoneType": "WestEurope",
       "hasBase": "American",
@@ -10166,13 +11357,13 @@
     },
     "Portugal": {
       "activeInGame": true,
-      "economyAlliance": "None",
+      "economyAlliance": "EU",
       "militaryAlliance": "NATO",
       "ZoneType": "WestEurope",
-      "governmentType": "SocialDemocracy",
+      "governmentType": "LiberalConservative",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
-      "rulingPartyName": "SocialDemocracyParty",
+      "rulingPartyName": "LiberalConservativeParty",
       "foreignPolicyVector": 30,
       "tradeValue": 4,
       "hasBase": "American",
@@ -10264,7 +11455,7 @@
       "puppetOf": "USA",
       "hasBase": "American",
       "tradeValue": 4,
-      "rulingPartyName": "LiberalConservativeParty",
+      "rulingPartyName": "SocialDemocracyParty",
       "foreignPolicyVector": 15,
       "needRelations": true,
       "relationshipWithPlayer": 40
@@ -10321,7 +11512,7 @@
       "governmentType": "LiberalProgressive",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
-      "rulingPartyName": "SocialDemocracyParty",
+      "rulingPartyName": "LiberalConservativeParty",
       "foreignPolicyVector": 20,
       "needRelations": true,
       "tradeValue": 4,
@@ -10360,10 +11551,10 @@
       "economyAlliance": "EU",
       "militaryAlliance": "NATO",
       "ZoneType": "WestEurope",
-      "governmentType": "SocialDemocracy",
+      "governmentType": "LiberalConservative",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
-      "rulingPartyName": "SocialDemocracyParty",
+      "rulingPartyName": "LiberalConservativeParty",
       "foreignPolicyVector": 40,
       "tradeValue": 4,
       "needRelations": true,
@@ -10374,7 +11565,7 @@
       "economyAlliance": "None",
       "militaryAlliance": "NATO",
       "ZoneType": "OtherAsia",
-      "governmentType": "RightPopulism",
+      "governmentType": "LiberalConservative",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "hasBase": "American",
@@ -10382,7 +11573,7 @@
       "foreignPolicyVector": 20,
       "tradeValue": 3,
       "needRelations": true,
-      "relationshipWithPlayer": 30
+      "relationshipWithPlayer": 40
     },
     "Iraq": {
       "activeInGame": true,
@@ -10396,7 +11587,7 @@
       "foreignPolicyVector": 60,
       "tradeValue": 3,
       "needRelations": true,
-      "relationshipWithPlayer": 80
+      "relationshipWithPlayer": 50
     },
     "Syria": {
       "activeInGame": true,
@@ -10408,14 +11599,14 @@
       "puppetType": "UnderInfluence",
       "puppetOf": "USSR",
       "rulingPartyName": "LeftNationalismParty",
-      "foreignPolicyVector": 65,
+      "foreignPolicyVector": 55,
       "tradeValue": 3,
       "needRelations": true,
       "relationshipWithPlayer": 70,
       "Trade": true
     },
     "SouthYemen": {
-      "activeInGame": true,
+      "activeInGame": false,
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "hasBase": "Soviet",
@@ -10441,48 +11632,48 @@
       "foreignPolicyVector": 40,
       "tradeValue": 3,
       "needRelations": true,
-      "relationshipWithPlayer": 30
+      "relationshipWithPlayer": 40
     },
     "Vietnam": {
       "activeInGame": true,
-      "economyAlliance": "COMECON",
+      "economyAlliance": "None",
       "hasBase": "Soviet",
       "militaryAlliance": "None",
       "ZoneType": "SouthEastAsia",
-      "governmentType": "ConservativeSocialism",
+      "governmentType": "SocialistReformism",
       "puppetType": "UnderInfluence",
       "puppetOf": "USSR",
       "rulingPartyName": "CommunistParty",
-      "foreignPolicyVector": 95,
+      "foreignPolicyVector": 85,
       "liberalizationVector": 15,
       "needRelations": true,
-      "relationshipWithPlayer": 95
+      "relationshipWithPlayer": 85
     },
     "Laos": {
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "ConservativeSocialism",
+      "governmentType": "SocialistReformism",
       "ZoneType": "SouthEastAsia",
       "puppetType": "UnderInfluence",
       "puppetOf": "USSR",
       "rulingPartyName": "CommunistParty",
-      "foreignPolicyVector": 85,
+      "foreignPolicyVector": 80,
       "needRelations": true,
-      "relationshipWithPlayer": 95
+      "relationshipWithPlayer": 85
     },
     "Kampuchia": {
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "ConservativeSocialism",
+      "governmentType": "SocialistReformism",
       "ZoneType": "SouthEastAsia",
-      "puppetType": "PuppetOtherState",
+      "puppetType": "UnderInfluence",
       "puppetOf": "Vietnam",
       "rulingPartyName": "CommunistParty",
-      "foreignPolicyVector": 85,
+      "foreignPolicyVector": 75,
       "needRelations": true,
-      "relationshipWithPlayer": 95
+      "relationshipWithPlayer": 75
     },
     "India": {
       "activeInGame": true,
@@ -10553,10 +11744,10 @@
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "ZoneType": "OtherAsia",
-      "governmentType": "ReactonaryAuthoritarian",
+      "governmentType": "LiberalConservative",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
-      "rulingPartyName": "MarketAuthoritarianParty",
+      "rulingPartyName": "LiberalConservativeParty",
       "foreignPolicyVector": 20,
       "tradeValue": 3,
       "needRelations": true,
@@ -10622,12 +11813,12 @@
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "LeftNationalism",
+      "governmentType": "MarketAuthoritarian",
       "ZoneType": "SouthEastAsia",
       "puppetType": "None",
       "puppetOf": null,
-      "rulingPartyName": "LeftNationalismParty",
-      "foreignPolicyVector": 55,
+      "rulingPartyName": "MarketAuthoritarianParty",
+      "foreignPolicyVector": 50,
       "needRelations": true,
       "relationshipWithPlayer": 50
     },
@@ -10737,7 +11928,7 @@
     },
     "NorthKorea": {
       "activeInGame": true,
-      "economyAlliance": "AssociativeCOMECON",
+      "economyAlliance": "None",
       "militaryAlliance": "None",
       "governmentType": "SocialismNationalSpecific",
       "ZoneType": "OtherAsia",
@@ -10745,9 +11936,9 @@
       "puppetOf": null,
       "tradeValue": 3,
       "rulingPartyName": "CommunistParty",
-      "foreignPolicyVector": 60,
+      "foreignPolicyVector": 45,
       "needRelations": true,
-      "relationshipWithPlayer": 75
+      "relationshipWithPlayer": 45
     },
     "SouthKorea": {
       "activeInGame": true,
@@ -10756,13 +11947,13 @@
       "tradeValue": 4,
       "hasBase": "American",
       "ZoneType": "OtherAsia",
-      "governmentType": "MarketAuthoritarian",
+      "governmentType": "LiberalConservative",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
-      "rulingPartyName": "MarketAuthoritarianParty",
-      "foreignPolicyVector": 15,
+      "rulingPartyName": "LiberalConservativeParty",
+      "foreignPolicyVector": 25,
       "needRelations": true,
-      "relationshipWithPlayer": 30
+      "relationshipWithPlayer": 50
     },
     "Thailand": {
       "activeInGame": true,
@@ -10904,14 +12095,14 @@
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "ZoneType": "MiddleEast",
-      "governmentType": "Centrism",
+      "governmentType": "LiberalConservative",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "tradeValue": 4,
-      "rulingPartyName": "CentristParty",
+      "rulingPartyName": "LiberalConservativeParty",
       "foreignPolicyVector": 10,
       "needRelations": true,
-      "relationshipWithPlayer": 10,
+      "relationshipWithPlayer": 25,
       "nuclearPower": true,
       "_comment": "0 - Сила ООП, 1 - Сила ХАМАС",
       "additionalValues": [
@@ -10939,8 +12130,8 @@
       "militaryAlliance": "None",
       "ZoneType": "MiddleEast",
       "governmentType": "ReactonaryAuthoritarian",
-      "puppetType": "None",
-      "puppetOf": null,
+      "puppetType": "UnderInfluence",
+      "puppetOf": "Syria",
       "rulingPartyName": "None",
       "foreignPolicyVector": 50,
       "tradeValue": 3,
@@ -10973,7 +12164,7 @@
       "tradeValue": 3,
       "foreignPolicyVector": 35,
       "needRelations": true,
-      "relationshipWithPlayer": 30
+      "relationshipWithPlayer": 40
     },
     "Qatar": {
       "activeInGame": true,
@@ -11018,7 +12209,7 @@
       "relationshipWithPlayer": 30
     },
     "NorthYemen": {
-      "activeInGame": true,
+      "activeInGame": false,
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "governmentType": "Centrism",
@@ -11033,7 +12224,7 @@
     },
     "Cuba": {
       "activeInGame": true,
-      "economyAlliance": "COMECON",
+      "economyAlliance": "None",
       "hasBase": "Soviet",
       "ZoneType": "SouthAmerica",
       "militaryAlliance": "None",
@@ -11042,10 +12233,10 @@
       "puppetOf": "USSR",
       "tradeValue": 3,
       "rulingPartyName": "CommunistParty",
-      "foreignPolicyVector": 85,
+      "foreignPolicyVector": 75,
       "liberalizationVector": 20,
       "needRelations": true,
-      "relationshipWithPlayer": 80
+      "relationshipWithPlayer": 65
     },
     "Cyprus": {
       "activeInGame": true,
@@ -11080,14 +12271,13 @@
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "ZoneType": "Africa",
-      "hasBase": "Soviet",
       "governmentType": "LeftNationalism",
-      "puppetType": "UnderInfluence",
-      "puppetOf": "USSR",
+      "puppetType": "None",
+      "puppetOf": null,
       "rulingPartyName": "LeftNationalismParty",
-      "foreignPolicyVector": 90,
+      "foreignPolicyVector": 40,
       "needRelations": true,
-      "relationshipWithPlayer": 90,
+      "relationshipWithPlayer": 35,
       "torg": true
     },
     "Benin": {
@@ -11095,67 +12285,66 @@
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "ZoneType": "Africa",
-      "governmentType": "SocialismNationalSpecific",
-      "puppetType": "UnderInfluence",
-      "puppetOf": "USSR",
-      "rulingPartyName": "CommunistParty",
-      "foreignPolicyVector": 65,
+      "governmentType": "LiberalProgressive",
+      "puppetType": "None",
+      "puppetOf": null,
+      "rulingPartyName": "LiberalProgressiveParty",
+      "foreignPolicyVector": 45,
       "needRelations": false,
       "isCoupAvailable": true,
-      "relationshipWithPlayer": 70
+      "relationshipWithPlayer": 40
     },
     "Mozambique": {
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "ZoneType": "Africa",
-      "governmentType": "SocialismNationalSpecific",
-      "puppetType": "UnderInfluence",
-      "puppetOf": "USSR",
-      "rulingPartyName": "CommunistParty",
-      "foreignPolicyVector": 75,
+      "governmentType": "LeftPragmatism",
+      "puppetType": "None",
+      "puppetOf": null,
+      "rulingPartyName": "LeftPragmatismParty",
+      "foreignPolicyVector": 55,
       "needRelations": false,
       "isCoupAvailable": true,
-      "relationshipWithPlayer": 70
+      "relationshipWithPlayer": 55
     },
     "Angola": {
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "hasBase": "Soviet",
       "ZoneType": "Africa",
-      "governmentType": "SocialismNationalSpecific",
-      "puppetType": "UnderInfluence",
-      "puppetOf": "USSR",
+      "governmentType": "LeftPragmatism",
+      "puppetType": "None",
+      "puppetOf": null,
       "rulingPartyName": "CommunistParty",
-      "foreignPolicyVector": 75,
+      "foreignPolicyVector": 60,
       "needRelations": true,
-      "relationshipWithPlayer": 70
+      "relationshipWithPlayer": 60
     },
     "Congo": {
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "SocialismNationalSpecific",
-      "puppetType": "UnderInfluence",
-      "puppetOf": "USSR",
+      "governmentType": "LeftPragmatism",
+      "puppetType": "None",
+      "puppetOf": null,
       "isCoupAvailable": true,
       "ZoneType": "Africa",
-      "rulingPartyName": "CommunistParty",
-      "foreignPolicyVector": 75,
+      "rulingPartyName": "LeftPragmatismParty",
+      "foreignPolicyVector": 55,
       "needRelations": false,
-      "relationshipWithPlayer": 70
+      "relationshipWithPlayer": 55
     },
     "Sudan": {
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "LeftNationalism",
-      "puppetType": "UnderInfluence",
-      "puppetOf": "USSR",
+      "governmentType": "ReactonaryAuthoritarian",
+      "puppetType": "None",
+      "puppetOf": null,
       "ZoneType": "Africa",
       "isCoupAvailable": true,
-      "rulingPartyName": "LeftNationalismParty",
+      "rulingPartyName": "ReactonaryAuthoritarianParty",
       "foreignPolicyVector": 60,
       "needRelations": false,
       "relationshipWithPlayer": 50
@@ -11178,14 +12367,14 @@
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "SocialismNationalSpecific",
+      "governmentType": "MarketAuthoritarian",
       "puppetType": "UnderInfluence",
-      "puppetOf": "USSR",
+      "puppetOf": "France",
       "ZoneType": "Africa",
-      "rulingPartyName": "SocialistParty",
-      "foreignPolicyVector": 80,
+      "rulingPartyName": "MarketAuthoritarianParty",
+      "foreignPolicyVector": 40,
       "needRelations": true,
-      "relationshipWithPlayer": 75
+      "relationshipWithPlayer": 40
     },
     "Algeria": {
       "activeInGame": true,
@@ -11230,15 +12419,15 @@
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "RightPopulism",
+      "governmentType": "LiberalConservative",
       "puppetType": "None",
       "ZoneType": "Africa",
       "puppetOf": null,
-      "rulingPartyName": "MarketAuthoritarianParty",
+      "rulingPartyName": "LiberalConservativeParty",
       "foreignPolicyVector": 50,
       "needRelations": true,
       "tradeValue": 4,
-      "relationshipWithPlayer": 10,
+      "relationshipWithPlayer": 20,
       "nuclearPower": true
     },
     "Tanzania": {
@@ -11305,7 +12494,7 @@
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "ZoneType": "Africa",
-      "rulingPartyName": "SocialDemocracyParty",
+      "rulingPartyName": "MarketAuthoritarianParty",
       "foreignPolicyVector": 40,
       "isCoupAvailable": true,
       "needRelations": false,
@@ -11666,8 +12855,8 @@
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "governmentType": "LeftPragmatism",
-      "puppetType": "UnderInfluence",
-      "puppetOf": "USSR",
+      "puppetType": "None",
+      "puppetOf": null,
       "ZoneType": "Africa",
       "rulingPartyName": "LeftPragmatismParty",
       "foreignPolicyVector": 60,
@@ -11690,21 +12879,21 @@
       "relationshipWithPlayer": 20
     },
     "Senegal": {
-      "activeInGame": false,
+      "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "governmentType": "SocialDemocracy",
       "puppetType": "UnderInfluence",
       "puppetOf": "France",
       "ZoneType": "Africa",
-      "rulingPartyName": "SocialistParty",
+      "rulingPartyName": "SocialDemocracyParty",
       "foreignPolicyVector": 55,
       "isCoupAvailable": true,
       "needRelations": false,
       "relationshipWithPlayer": 35
     },
     "Gambia": {
-      "activeInGame": false,
+      "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "governmentType": "LiberalProgressive",
@@ -11718,7 +12907,7 @@
       "relationshipWithPlayer": 35
     },
     "Senegambia": {
-      "activeInGame": true,
+      "activeInGame": false,
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "governmentType": "LiberalProgressive",
@@ -11767,7 +12956,7 @@
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "ZoneType": "SouthAmerica",
-      "rulingPartyName": "LiberalProgressiveParty",
+      "rulingPartyName": "PopulistConservativeParty",
       "foreignPolicyVector": 40,
       "needRelations": true,
       "relationshipWithPlayer": 50
@@ -11777,23 +12966,23 @@
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "ZoneType": "SouthAmerica",
-      "governmentType": "MarketAuthoritarian",
+      "governmentType": "Centrism",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
-      "rulingPartyName": "None",
-      "foreignPolicyVector": 10,
+      "rulingPartyName": "CentristParty",
+      "foreignPolicyVector": 25,
       "needRelations": true,
-      "relationshipWithPlayer": 0
+      "relationshipWithPlayer": 30
     },
     "Peru": {
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
       "ZoneType": "SouthAmerica",
-      "governmentType": "LiberalConservative",
+      "governmentType": "RightPopulism",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
-      "rulingPartyName": "LiberalProgressiveParty",
+      "rulingPartyName": "RightPopulismParty",
       "foreignPolicyVector": 25,
       "needRelations": false,
       "isCoupAvailable": true,
@@ -11803,11 +12992,11 @@
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "LiberalProgressive",
+      "governmentType": "PopulistConservative",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "ZoneType": "SouthAmerica",
-      "rulingPartyName": "CentristParty",
+      "rulingPartyName": "PopulistConservativeParty",
       "foreignPolicyVector": 20,
       "needRelations": true,
       "relationshipWithPlayer": 30,
@@ -11830,15 +13019,15 @@
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "MarketAuthoritarian",
+      "governmentType": "LiberalConservative",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "ZoneType": "SouthAmerica",
-      "rulingPartyName": "RightPopulismParty",
+      "rulingPartyName": "LiberalConservativeParty",
       "foreignPolicyVector": 20,
       "needRelations": false,
       "isCoupAvailable": true,
-      "relationshipWithPlayer": 10
+      "relationshipWithPlayer": 25
     },
     "Paraguay": {
       "activeInGame": true,
@@ -11852,7 +13041,7 @@
       "foreignPolicyVector": 0,
       "needRelations": false,
       "isCoupAvailable": true,
-      "relationshipWithPlayer": 0
+      "relationshipWithPlayer": 20
     },
     "Bolivia": {
       "activeInGame": true,
@@ -11862,7 +13051,7 @@
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "ZoneType": "SouthAmerica",
-      "rulingPartyName": "LeftNationalismParty",
+      "rulingPartyName": "SocialDemocracyParty",
       "foreignPolicyVector": 40,
       "needRelations": false,
       "isCoupAvailable": true,
@@ -11890,7 +13079,7 @@
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "ZoneType": "SouthAmerica",
-      "rulingPartyName": "LiberalConservativeParty",
+      "rulingPartyName": "LiberalProgressiveParty",
       "foreignPolicyVector": 20,
       "needRelations": false,
       "isCoupAvailable": true,
@@ -11928,9 +13117,9 @@
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "SocialistReformism",
-      "puppetType": "UnderInfluence",
-      "puppetOf": "USSR",
+      "governmentType": "LeftPragmatism",
+      "puppetType": "None",
+      "puppetOf": null,
       "ZoneType": "SouthAmerica",
       "rulingPartyName": "SocialDemocracyParty",
       "foreignPolicyVector": 60,
@@ -11975,7 +13164,7 @@
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "ZoneType": "NorthAmerica",
-      "rulingPartyName": "CentristParty",
+      "rulingPartyName": "LiberalConservativeParty",
       "foreignPolicyVector": 20,
       "needRelations": false,
       "isCoupAvailable": true,
@@ -11989,7 +13178,7 @@
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "ZoneType": "NorthAmerica",
-      "rulingPartyName": "LiberalConservativeParty",
+      "rulingPartyName": "RightPopulismParty",
       "foreignPolicyVector": 10,
       "needRelations": false,
       "isCoupAvailable": true,
@@ -11999,14 +13188,14 @@
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "SocialistReformism",
+      "governmentType": "LiberalConservative",
       "puppetType": "UnderInfluence",
-      "puppetOf": "USSR",
+      "puppetOf": "USA",
       "ZoneType": "NorthAmerica",
-      "rulingPartyName": "SocialistParty",
-      "foreignPolicyVector": 60,
+      "rulingPartyName": "LiberalConservativeParty",
+      "foreignPolicyVector": 30,
       "needRelations": true,
-      "relationshipWithPlayer": 60
+      "relationshipWithPlayer": 35
     },
     "CostaRica": {
       "activeInGame": true,
@@ -12016,7 +13205,7 @@
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "ZoneType": "NorthAmerica",
-      "rulingPartyName": "LeftPragmatismParty",
+      "rulingPartyName": "LiberalConservativeParty",
       "foreignPolicyVector": 40,
       "needRelations": false,
       "isCoupAvailable": true,
@@ -12026,14 +13215,14 @@
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "RightPopulism",
-      "puppetType": "None",
-      "puppetOf": null,
+      "governmentType": "LiberalConservative",
+      "puppetType": "UnderInfluence",
+      "puppetOf": "USA",
       "ZoneType": "NorthAmerica",
-      "rulingPartyName": "LeftPragmatismParty",
-      "foreignPolicyVector": 50,
+      "rulingPartyName": "LiberalConservativeParty",
+      "foreignPolicyVector": 15,
       "needRelations": true,
-      "relationshipWithPlayer": 40
+      "relationshipWithPlayer": 20
     },
     "Dominica": {
       "activeInGame": true,
@@ -12043,7 +13232,7 @@
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "ZoneType": "SouthAmerica",
-      "rulingPartyName": "LeftPragmatismParty",
+      "rulingPartyName": "PopulistConservativeParty",
       "foreignPolicyVector": 30,
       "isCoupAvailable": true,
       "needRelations": false,
@@ -12053,11 +13242,11 @@
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "RightPopulism",
+      "governmentType": "LeftPragmatism",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "ZoneType": "SouthAmerica",
-      "rulingPartyName": "RightPopulismParty",
+      "rulingPartyName": "LeftPragmatismParty",
       "foreignPolicyVector": 30,
       "isCoupAvailable": true,
       "needRelations": false,
@@ -12081,43 +13270,45 @@
       "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "RightPopulism",
+      "governmentType": "SocialDemocracy",
       "puppetType": "UnderInfluence",
       "puppetOf": "USA",
       "ZoneType": "SouthAmerica",
-      "rulingPartyName": "RightPopulismParty",
+      "rulingPartyName": "SocialDemocracyParty",
       "foreignPolicyVector": 20,
       "needRelations": false,
       "isCoupAvailable": true,
       "relationshipWithPlayer": 10
     },
     "Slovenia": {
-      "activeInGame": false,
+      "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "LiberalProgressive",
+      "governmentType": "SocialDemocracy",
       "puppetType": "None",
       "ZoneType": "EastEurope",
       "tradeValue": 4,
       "puppetOf": null,
-      "rulingPartyName": "CentristParty",
-      "foreignPolicyVector": 50,
+      "rulingPartyName": "SocialDemocracyParty",
+      "foreignPolicyVector": 25,
       "needRelations": true,
-      "relationshipWithPlayer": 50
+      "relationshipWithPlayer": 40,
+      "treasonTimer": 12
     },
     "Croatia": {
-      "activeInGame": false,
+      "activeInGame": true,
       "economyAlliance": "None",
       "militaryAlliance": "None",
-      "governmentType": "LiberalConservative",
+      "governmentType": "RightPopulism",
       "puppetType": "None",
       "puppetOf": null,
       "ZoneType": "EastEurope",
       "tradeValue": 4,
-      "rulingPartyName": "LiberalConservativeParty",
-      "foreignPolicyVector": 50,
+      "rulingPartyName": "RightPopulismParty",
+      "foreignPolicyVector": 25,
       "needRelations": true,
-      "relationshipWithPlayer": 50
+      "relationshipWithPlayer": 35,
+      "treasonTimer": 12
     },
     "Kosovo": {
       "activeInGame": false,
@@ -12230,6 +13421,132 @@
       "foreignPolicyVector": 50,
       "needRelations": true,
       "relationshipWithPlayer": 50
+    },
+    "CentralEurope": {
+      "activeInGame": false,
+      "economyAlliance": "None",
+      "militaryAlliance": "None",
+      "ZoneType": "SovietZone",
+      "governmentType": "LiberalConservative",
+      "puppetType": "None",
+      "puppetOf": null,
+      "rulingPartyName": "LiberalConservativeParty",
+      "foreignPolicyVector": 50,
+      "needRelations": true,
+      "tradeValue": 3,
+      "relationshipWithPlayer": 60
+    },
+    "England": {
+      "activeInGame": false,
+      "economyAlliance": "None",
+      "militaryAlliance": "None",
+      "ZoneType": "WestEurope",
+      "governmentType": "SocialDemocracy",
+      "puppetType": "None",
+      "puppetOf": null,
+      "rulingPartyName": "SocialDemocracyParty",
+      "relationshipWithPlayer": 50,
+      "foreignPolicyVector": 50,
+      "tradeValue ": 6,
+      "needRelations": true
+    },
+    "Scotland": {
+      "activeInGame": false,
+      "economyAlliance": "None",
+      "militaryAlliance": "None",
+      "ZoneType": "WestEurope",
+      "governmentType": "SocialDemocracy",
+      "puppetType": "None",
+      "puppetOf": null,
+      "rulingPartyName": "SocialDemocracyParty",
+      "relationshipWithPlayer": 50,
+      "foreignPolicyVector": 50,
+      "tradeValue ": 6,
+      "needRelations": true
+    },
+    "Wales": {
+      "activeInGame": false,
+      "economyAlliance": "None",
+      "militaryAlliance": "None",
+      "ZoneType": "WestEurope",
+      "governmentType": "SocialDemocracy",
+      "puppetType": "None",
+      "puppetOf": null,
+      "rulingPartyName": "SocialDemocracyParty",
+      "relationshipWithPlayer": 50,
+      "foreignPolicyVector": 50,
+      "tradeValue ": 6,
+      "needRelations": true
+    },
+    "Cathalony": {
+      "activeInGame": false,
+      "economyAlliance": "None",
+      "militaryAlliance": "None",
+      "ZoneType": "WestEurope",
+      "governmentType": "SocialDemocracy",
+      "puppetType": "None",
+      "puppetOf": null,
+      "rulingPartyName": "SocialDemocracyParty",
+      "relationshipWithPlayer": 50,
+      "foreignPolicyVector": 50,
+      "tradeValue ": 6,
+      "needRelations": true
+    },
+    "SpainBasque": {
+      "activeInGame": false,
+      "economyAlliance": "None",
+      "militaryAlliance": "None",
+      "ZoneType": "WestEurope",
+      "governmentType": "SocialDemocracy",
+      "puppetType": "None",
+      "puppetOf": null,
+      "rulingPartyName": "SocialDemocracyParty",
+      "relationshipWithPlayer": 50,
+      "foreignPolicyVector": 50,
+      "tradeValue ": 6,
+      "needRelations": true
+    },
+    "Galicia": {
+      "activeInGame": false,
+      "economyAlliance": "None",
+      "militaryAlliance": "None",
+      "ZoneType": "WestEurope",
+      "governmentType": "SocialDemocracy",
+      "puppetType": "None",
+      "puppetOf": null,
+      "rulingPartyName": "SocialDemocracyParty",
+      "relationshipWithPlayer": 50,
+      "foreignPolicyVector": 50,
+      "tradeValue ": 6,
+      "needRelations": true
+    },
+    "Quebec": {
+      "activeInGame": false,
+      "economyAlliance": "None",
+      "militaryAlliance": "None",
+      "ZoneType": "NorthAmerica",
+      "governmentType": "LiberalProgressive",
+      "puppetType": "None",
+      "puppetOf": null,
+      "rulingPartyName": "SocialDemocracyParty",
+      "relationshipWithPlayer": 50,
+      "foreignPolicyVector": 50,
+      "tradeValue ": 6,
+      "needRelations": true
+    },
+    "Iberia": {
+      "activeInGame": false,
+      "economyAlliance": "None",
+      "militaryAlliance": "None",
+      "ZoneType": "WestEurope",
+      "governmentType": "SocialDemocracy",
+      "puppetType": "None",
+      "puppetOf": null,
+      "rulingPartyName": "SocialDemocracyParty",
+      "relationshipWithPlayer": 50,
+      "foreignPolicyVector": 50,
+      "tradeValue ": 6,
+      "needRelations": true
     }
   },
   "parliamentState": {
@@ -12854,9 +14171,65 @@
   "usLoan": 223,
   "fraLoan": 60,
   "imfLoan": 0,
-  "lastElectionsDate": "1900-01-01T00:00:00",
-  "presidentialTermsEnding": "1989-01-01T00:00:00",
+  "lastElectionsDate": "1990-01-01T00:00:00",
+  "presidentialTermsEnding": "1994-03-01T00:00:00",
   "americanPresident": "Bush",
   "SumOfTradeValues": 44,
-  "TradeLimit": 112
+  "TradeLimit": 112,
+  "eventsDone": {
+    "256": {
+      "choice": 3,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "completionDate": "1987-08-01T00:00:00"
+    },
+    "257": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "completionDate": "1987-09-23T00:00:00"
+    },
+    "258": {
+      "choice": 3,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "completionDate": "1988-03-14T00:00:00"
+    },
+    "259": {
+      "choice": 0,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "completionDate": "1988-06-01T00:00:00"
+    },
+    "260": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "completionDate": "1989-03-16T00:00:00"
+    },
+    "261": {
+      "choice": 2,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "completionDate": "1990-01-22T00:00:00"
+    },
+    "262": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "completionDate": "1990-10-14T00:00:00"
+    },
+    "263": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "completionDate": "1991-05-15T00:00:00"
+    },
+    "264": {
+      "choice": 1,
+      "variantOfChoice": 0,
+      "expirationDate": "9999-12-31T23:59:59",
+      "completionDate": "1991-06-25T00:00:00"
+    }
+  }
 }

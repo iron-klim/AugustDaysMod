@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using AugustDaysMod.Assets;
 using Backend.Gamedesign;
+using Backend.Gamedesign.EventSystem;
 using Backend.Gamedesign.EventSystem.DataStructures;
-using Backend.Gamedesign.EventSystem.Events;
 using Backend.Gamedesign.Utils;
 using Backend.Gamedesign.Utils.TextFormatter;
 using Backend.Gamedesign.Utils.UnitsOfWork;
@@ -11,7 +10,8 @@ using Backend.Managers;
 
 namespace AugustDaysMod.Events
 {
-    public class SovietsPalace : AbstractEvent
+    [Event(ID)]
+    public class SovietsPalace : CoupEvent
     {
         public const int ID = 1006;
         public const int TITLE = 4;
@@ -24,88 +24,56 @@ namespace AugustDaysMod.Events
         public const int RESULT_3 = 7;
         public const int RESULT_2_FAIL= 8;
         public const int YELTSIN_ALIVE = 9;
-        
-        private EventInfo eventInfo = new EventInfo()
+
+        public SovietsPalace() : base(new DateTime(1991, 8, 20))
         {
-            priority = 0,
-            startDate = new DateTime(1991, 8, 20),
-            endDate = new DateTime(1991, 8, 21),
-            countryLimitation = Countries.USSR,
-            eventType = EventType.Dialog,
-        };
-        
-        public override EventInfo EventInfo => eventInfo;
-        
-        private int[] _resultNumbers = Array.Empty<int>();
-        
-        public override bool CheckConditions(GameState gameState)
-        {
-            return !gameState.eventsDone.ContainsKey(ID) && gameState.date >= eventInfo.startDate;
         }
 
         public override UnitOfWork[] StartEvent(GameState gameState, EventDrawInfo eventDrawInfo)
         {
-            const int optionsCount = 3;
-            _resultNumbers = new int[optionsCount];
-            string eventTitle = Texts.GetEvent(ID, TITLE);
             string eventDesc = Texts.GetEvent(ID, DESCRIPTION);
 
             if (gameState.characters[Characters.Yeltsin].status == CharacterInfo.PoliticStatus.Alive)
             {
                 eventDesc += Texts.GetEvent(ID, YELTSIN_ALIVE);
             }
-            
+
             Characters minister = gameState.politicPositions[PoliticPosition.MinisterOfInternalAffairs].Value;
-            EventUtils.SetupEventDrawInfo(eventDrawInfo, ID, eventInfo, optionsCount, eventTitle, eventDesc, minister);
-            List<UnitOfWork[]> descriptionVariants = EventUtils.PrepareDescriptionVariants(3, optionsCount);
-            UnitOfWork[] unitOfWorkArray = new UnitOfWork[optionsCount];
-        
-            for (int index = 0; index < optionsCount; ++index)
-            {
-                _resultNumbers[index] = 0;
-                unitOfWorkArray[index] = UnitOfWork.StartCreation();
-                SetupOption(gameState, eventDrawInfo, index, descriptionVariants, unitOfWorkArray[index]);
-            }
-            
-            return unitOfWorkArray;
+            return StartOptions(gameState, eventDrawInfo, 3, Texts.GetEvent(ID, TITLE), eventDesc, minister);
         }
-        
+
         public override string FinishEvent(GameState gameState, int choice)
         {
             EventUtils.ExecuteEventEffects(gameState, ID, choice);
-            
+
             switch (choice)
             {
                 case ANSWER_1:
-                    return Texts.GetEvent(ID, Manager.RESULT_START + ANSWER_1);
+                    return Texts.GetEvent(ID, RESULT_START + ANSWER_1);
                 case ANSWER_3:
-                    return Texts.GetEvent(ID, Manager.RESULT_START + ANSWER_3);
+                    return Texts.GetEvent(ID, RESULT_START + ANSWER_3);
             }
-            
+
+            Country russia = gameState.countries[Countries.Russia];
             if (gameState.MilitaryStaffLoyalty >= 60 && gameState.SpecialServicesLoyalty >= 60)
             {
                 gameState.RadicalsPower -= 10;
-                gameState.countries[Countries.Russia].RelationshipWithPlayer += 5;
-                gameState.countries[Countries.Russia].ForeignPolicyVector += 5;
-                    
+                russia.RelationshipWithPlayer += 5;
+                russia.ForeignPolicyVector += 5;
+
                 return Texts.GetEvent(ID, RESULT_2_OK);
             }
-            
+
             gameState.RadicalsPower += 30;
-            gameState.countries[Countries.Russia].RelationshipWithPlayer -= 10;
-            gameState.countries[Countries.Russia].ForeignPolicyVector -= 10;
+            russia.RelationshipWithPlayer -= 10;
+            russia.ForeignPolicyVector -= 10;
             gameState.MilitaryStaffLoyalty -= 10;
             gameState.SpecialServicesLoyalty -= 10;
-            
+
             return Texts.GetEvent(ID, RESULT_2_FAIL);
         }
 
-        private void SetupOption(
-            GameState gameState,
-            EventDrawInfo eventDrawInfo,
-            int optionIndex,
-            List<UnitOfWork[]> descriptionVariants,
-            UnitOfWork description)
+        protected override void SetupOption(GameState gameState, int optionIndex, UnitOfWork description)
         {
             switch (optionIndex)
             {
@@ -130,19 +98,14 @@ namespace AugustDaysMod.Events
                     description.AddRadicalsPower(25);
                     break;
             }
-        
-            eventDrawInfo.optionsNames[optionIndex] = Texts.GetEvent(ID, optionIndex);
-            eventDrawInfo.optionsEnabled[optionIndex] = true;
-            eventDrawInfo.optionsNamesAlt[optionIndex] = EventUtils.GenerateOptionDescription(descriptionVariants, optionIndex, description);
-            EventUtils.FinalizeDescription(descriptionVariants, optionIndex, description, _resultNumbers);
+        }
 
-            if (optionIndex == ANSWER_2)
-            {
-                if (gameState.eventsDone[MiltaryAction.ID].choice == MiltaryAction.ANSWER_3)
-                {
-                    eventDrawInfo.optionsEnabled[optionIndex] = false;
-                }
-            }
+        // Второй вариант недоступен, если в событии MiltaryAction был выбран третий
+        protected override bool IsOptionEnabled(GameState gameState, int optionIndex)
+        {
+            return optionIndex != ANSWER_2
+                   || !gameState.eventsDone.TryGetValue(MiltaryAction.ID, out var militaryAction)
+                   || militaryAction.choice != MiltaryAction.ANSWER_3;
         }
     }
 }

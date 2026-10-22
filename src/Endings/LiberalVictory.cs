@@ -2,12 +2,15 @@
 using AugustDaysMod.Assets;
 using AugustDaysMod.Events;
 using Backend.Gamedesign;
+using Backend.Gamedesign.EndingsSystem;
 using Backend.Gamedesign.EndingsSystem.Endings;
 using Frontend.Ending;
 using UnityEngine;
 
 namespace AugustDaysMod.Endings
 {
+    // Игра сама регистрирует концовки модов по атрибуту [Ending]
+    [Ending(ID)]
     public class LiberalVictory : AbstractEnding
     {
         public const int ID = 1000;
