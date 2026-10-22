@@ -49,24 +49,6 @@ namespace AugustDaysMod.DevTools
         public static void Log(string message) => Debug.Log($"{LOG_TAG} {message}");
     }
 
-    // Переключаем страну игрока уже после всех приготовлений сценария, в том числе нашей Setup
-    [HarmonyPatch(typeof(GameStartUtils), nameof(GameStartUtils.MakeFinalScenarioPreparations))]
-    public static class PatchStartCountry
-    {
-        static void Postfix()
-        {
-            Countries? country = DevSettings.StartCountry;
-            GameState gameState = GameStateManager.inst.GameState;
-            if (!country.HasValue || country.Value == gameState.playerCountry)
-            {
-                return;
-            }
-
-            PlayerCountry.Switch(gameState, country.Value);
-            DevSettings.Log($"игрок начинает за {gameState.playerCountry}, СССР под управлением ИИ");
-        }
-    }
-
     [HarmonyPatch(typeof(CountryUtils), nameof(CountryUtils.TickCountries))]
     public static class PatchMonthlyDebugLog
     {
@@ -109,7 +91,7 @@ namespace AugustDaysMod.DevTools
 
             return $"{key}: puppet={country.puppetType}/{country.puppetOf?.ToString() ?? "-"} gov={country.governmentType} " +
                    $"leader={country.leaderType} party={country.rulingPartyName} кИгроку={country.RelationshipWithPlayer:F0} " +
-                   $"кСоюзу={UnionRelations.Get(country):F0} вектор={country.ForeignPolicyVector:F0}";
+                   $"кСоюзу={UnionRelations.Get(gameState, key):F0} вектор={country.ForeignPolicyVector:F0}";
         }
     }
 

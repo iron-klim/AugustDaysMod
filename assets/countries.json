@@ -11,8 +11,237 @@
       "baseIncome": 2696,
       "dependent": true,
       "comment": "Доля в населении и экономике СССР около 18%. Бюджет, доход и резерв заданы в союзном эквиваленте на душу населения (см. economyScale): союзный бюджет без космической программы, с небольшими расходами на размещенный ядерный арсенал, почти без посольств, без импорта зерна, с повышенными расходами на экологию после Чернобыля. Внешних долгов нет",
+      "fullName": "Украина",
+      "abbreviation": "Украина",
+      "flagImage": "flag_ukraine.png",
+      "startDescription": "16 августа 1991 года. Украинская ССР — вторая по величине республика Союза: 52 миллиона человек, Донбасс, черноземы, Черноморский флот, третий в мире ядерный арсенал. Год назад Верховный Совет провозгласил государственный суверенитет, и председатель Рады Леонид Кравчук осторожно ведет республику между Москвой и Рухом. Через три дня в Москве попытаются остановить развал Союза силой. Сумеет ли Украина стать независимым государством — и каким оно будет?",
+      "ruler": "Kravchuk",
+      "posts": {
+        "ChairmanOfTheCouncilOfMinisters": "Fokin",
+        "ChairmanOfTheSupremeCouncil": "@plyushch",
+        "ForeignSecretary": "@zlenko",
+        "MinisterOfFinance": "@pyatachenko",
+        "ChairmanOfTheKGB": "@marchuk",
+        "MinisterOfInternalAffairs": "@vasylyshyn",
+        "MinisterOfDefense": "@morozov",
+        "MinisterOfAgriculture": "@tkachenko",
+        "MinisterOfIndustry": "Titarenko",
+        "MinisterOfEducation": "@talanchuk"
+      },
+      "council": [
+        "Kravchuk",
+        "@plyushch",
+        "Fokin",
+        "Gurenko",
+        "Masol",
+        "Chernovol",
+        "@lukyanenko",
+        "@moroz",
+        "Shevchenko"
+      ],
+      "politicians": [
+        "@kuchma",
+        "Vitrenko"
+      ],
+      "newCharacters": [
+        {
+          "key": "plyushch",
+          "name": "Иван",
+          "surname": "Плющ",
+          "age": 50,
+          "homeLand": "MainUkraine",
+          "traits": [
+            "ProModerate",
+            "Partocrat",
+            "Compromise"
+          ],
+          "power": 35,
+          "diplomacy": 5,
+          "intrigue": 5,
+          "thrift": 3
+        },
+        {
+          "key": "zlenko",
+          "name": "Анатолий",
+          "surname": "Зленко",
+          "age": 53,
+          "homeLand": "MainUkraine",
+          "traits": [
+            "ProLiberalDemocrat",
+            "Atlantophile",
+            "Compromise"
+          ],
+          "power": 20,
+          "diplomacy": 7,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "pyatachenko",
+          "name": "Григорий",
+          "surname": "Пятаченко",
+          "age": 59,
+          "homeLand": "MainUkraine",
+          "traits": [
+            "ProModerate",
+            "Economical",
+            "Unambitious"
+          ],
+          "power": 15,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 6
+        },
+        {
+          "key": "marchuk",
+          "name": "Евгений",
+          "surname": "Марчук",
+          "age": 50,
+          "homeLand": "KharkivDniproKirovograd",
+          "traits": [
+            "ProModerate",
+            "Schemer",
+            "EffectiveManager"
+          ],
+          "power": 30,
+          "diplomacy": 3,
+          "intrigue": 7,
+          "thrift": 3
+        },
+        {
+          "key": "vasylyshyn",
+          "name": "Андрей",
+          "surname": "Василишин",
+          "age": 58,
+          "homeLand": "MainUkraine",
+          "traits": [
+            "ProConservative",
+            "StrongArm",
+            "Unambitious"
+          ],
+          "power": 15,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "morozov",
+          "name": "Константин",
+          "surname": "Морозов",
+          "age": 47,
+          "homeLand": "Donbass",
+          "traits": [
+            "ProNationalDemocrat",
+            "EffectiveManager",
+            "Peaceful"
+          ],
+          "power": 20,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "tkachenko",
+          "name": "Александр",
+          "surname": "Ткаченко",
+          "age": 52,
+          "homeLand": "MainUkraine",
+          "traits": [
+            "ProModerate",
+            "Technocrat",
+            "Partocrat"
+          ],
+          "power": 20,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 5
+        },
+        {
+          "key": "talanchuk",
+          "name": "Петр",
+          "surname": "Таланчук",
+          "age": 53,
+          "homeLand": "MainUkraine",
+          "traits": [
+            "ProNationalDemocrat",
+            "Intelligent",
+            "Idealist"
+          ],
+          "power": 15,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "lukyanenko",
+          "name": "Левко",
+          "surname": "Лукьяненко",
+          "age": 63,
+          "homeLand": "MainUkraine",
+          "traits": [
+            "ProNationalDemocrat",
+            "Dissident",
+            "Uncompromising",
+            "Idealist"
+          ],
+          "power": 30,
+          "diplomacy": 4,
+          "intrigue": 4,
+          "thrift": 3
+        },
+        {
+          "key": "moroz",
+          "name": "Александр",
+          "surname": "Мороз",
+          "age": 47,
+          "homeLand": "MainUkraine",
+          "traits": [
+            "ProSocialPatriot",
+            "Peoplefavorite",
+            "Compromise"
+          ],
+          "power": 30,
+          "diplomacy": 5,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "kuchma",
+          "name": "Леонид",
+          "surname": "Кучма",
+          "age": 53,
+          "homeLand": "KharkivDniproKirovograd",
+          "traits": [
+            "ProModerate",
+            "Industrialist",
+            "RocketBuilder",
+            "Technocrat"
+          ],
+          "power": 25,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 5
+        }
+      ],
+      "relations": {
+        "USSR": 50,
+        "Russia": 60,
+        "Belorussia": 60,
+        "Moldavia": 55,
+        "Kazakhstan": 55,
+        "Litva": 60,
+        "Latvia": 60,
+        "Estonia": 60,
+        "Poland": 55,
+        "Romania": 45,
+        "Hungary": 55,
+        "Czechoslovakia": 55,
+        "USA": 45,
+        "Canada": 60,
+        "FRG": 50,
+        "UnitedGermany": 50
+      },
       "indicators": {
-        "playerCountryCustomName": "Украина",
         "reserve": 330,
         "usLoan": 0,
         "fraLoan": 0,

@@ -27,8 +27,49 @@ namespace AugustDaysMod.Catalog
 
         [JsonProperty] public string comment;
 
+        // Название страны игрока и его сокращение в текстах игры
+        [JsonProperty] public string fullName;
+        [JsonProperty] public string abbreviation;
+
+        // Картинка флага в папке images мода
+        [JsonProperty] public string flagImage;
+
+        // Описание старта в меню новой игры
+        [JsonProperty] public string startDescription;
+
+        // Руководство. Персонажи задаются именем из Characters или @ключом нового персонажа из newCharacters
+        [JsonProperty] public string ruler;
+        [JsonProperty] public Dictionary<PoliticPosition, string> posts;
+        [JsonProperty] public List<string> politicians;
+        [JsonProperty] public List<string> council;
+        [JsonProperty] public List<NewCharacter> newCharacters;
+
+        // Отношения стран к стране игрока на старте
+        [JsonProperty] public Dictionary<Countries, float> relations;
+
         // Поля GameState под теми же именами, что в state.json
         [JsonProperty] public JObject indicators;
+    }
+
+    // Политик, которого нет в игре. Портрет — нейтральный силуэт из папки portraits мода, если не задан свой
+    public class NewCharacter
+    {
+        [JsonProperty] public string key;
+
+        // Персонаж игры, у которого нет записи в состоянии: имя и портрет остаются из игры
+        [JsonProperty] public string character;
+
+        [JsonProperty] public string name;
+        [JsonProperty] public string surname;
+        [JsonProperty] public int age = 50;
+        [JsonProperty] public bool isWoman;
+        [JsonProperty] public Backend.Gamedesign.Regions homeLand = Backend.Gamedesign.Regions.MainUkraine;
+        [JsonProperty] public List<Traits> traits = new List<Traits>();
+        [JsonProperty] public int power = 30;
+        [JsonProperty] public int diplomacy = 3;
+        [JsonProperty] public int intrigue = 3;
+        [JsonProperty] public int thrift = 3;
+        [JsonProperty] public string portrait = "silhouette.png";
     }
 
     public static class CountryCatalog
@@ -104,6 +145,13 @@ namespace AugustDaysMod.Catalog
             foreach (KeyValuePair<Countries, CountryProfile> pair in file.countries)
             {
                 Validate(pair.Key, pair.Value);
+                foreach (NewCharacter newCharacter in pair.Value.newCharacters ?? new List<NewCharacter>())
+                {
+                    if (string.IsNullOrEmpty(newCharacter.character))
+                    {
+                        NewCharacterPortraits.Register(CountryLeadership.IdOf(newCharacter), newCharacter.portrait);
+                    }
+                }
             }
 
             Debug.Log($"[AugustDays] справочник стран: {string.Join(", ", file.countries.Keys)}");

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using AugustDaysMod.Storage;
 using Backend.Gamedesign;
 using HarmonyLib;
 
@@ -24,31 +25,30 @@ namespace AugustDaysMod.Union
                 }
             }
         }
+
+        public static UnionData Data(GameState gameState) => ModStorage.For(gameState).union;
     }
 
-    // У страны в игре одно поле отношений — к игроку. Отношения республик к союзному центру храним в штатном словаре
-    // влияния великих держав под ключом СССР: у союзных республик он не используется, а в сохранение попадает сам
+    // У страны в игре одно поле отношений — к игроку. Отношения республик к союзному центру хранит мод
     public static class UnionRelations
     {
-        public static float Get(Country country) =>
-            country.pointOfInfluence != null && country.pointOfInfluence.TryGetValue(Countries.USSR, out float value) ? value : 50f;
+        public const float DEFAULT = 50f;
 
-        public static void Set(Country country, float value)
-        {
-            if (country.pointOfInfluence == null)
-            {
-                country.pointOfInfluence = new Dictionary<Countries, float>();
-            }
+        public static float Get(GameState gameState, Countries country) =>
+            ModStorage.For(gameState).unionRelations.TryGetValue(country, out float value) ? value : DEFAULT;
 
-            country.pointOfInfluence[Countries.USSR] = Math.Max(0f, Math.Min(100f, value));
-        }
+        public static void Set(GameState gameState, Countries country, float value) =>
+            ModStorage.For(gameState).unionRelations[country] = Math.Max(0f, Math.Min(100f, value));
+
+        public static void Add(GameState gameState, Countries country, float delta) =>
+            Set(gameState, country, Get(gameState, country) + delta);
 
         // Пока игрок управлял Союзом, отношения республик к нему и были отношениями к центру
         public static void CaptureFromPlayer(GameState gameState)
         {
             foreach (KeyValuePair<Countries, Country> subject in SovietUnion.Subjects(gameState))
             {
-                Set(subject.Value, subject.Value.RelationshipWithPlayer);
+                Set(gameState, subject.Key, subject.Value.RelationshipWithPlayer);
             }
         }
     }
@@ -64,7 +64,8 @@ namespace AugustDaysMod.Union
 
         private readonly GameState gameState;
         private readonly Countries player;
-        private readonly List<KeyValuePair<Country, float>> swapped = new List<KeyValuePair<Country, float>>();
+        private readonly List<(Countries key, Country country, float playerRelations)> swapped =
+            new List<(Countries, Country, float)>();
 
         private UnionContext(GameState gameState)
         {
@@ -72,9 +73,8 @@ namespace AugustDaysMod.Union
             player = gameState.playerCountry;
             foreach (KeyValuePair<Countries, Country> subject in SovietUnion.Subjects(gameState))
             {
-                Country country = subject.Value;
-                swapped.Add(new KeyValuePair<Country, float>(country, RelationshipWithPlayer(country)));
-                RelationshipWithPlayer(country) = UnionRelations.Get(country);
+                swapped.Add((subject.Key, subject.Value, RelationshipWithPlayer(subject.Value)));
+                RelationshipWithPlayer(subject.Value) = UnionRelations.Get(gameState, subject.Key);
             }
 
             gameState.playerCountry = Countries.USSR;
@@ -86,10 +86,10 @@ namespace AugustDaysMod.Union
         public void Dispose()
         {
             gameState.playerCountry = player;
-            foreach (KeyValuePair<Country, float> pair in swapped)
+            foreach ((Countries key, Country country, float playerRelations) in swapped)
             {
-                UnionRelations.Set(pair.Key, RelationshipWithPlayer(pair.Key));
-                RelationshipWithPlayer(pair.Key) = pair.Value;
+                UnionRelations.Set(gameState, key, RelationshipWithPlayer(country));
+                RelationshipWithPlayer(country) = playerRelations;
             }
 
             Active = false;

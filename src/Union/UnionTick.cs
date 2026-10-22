@@ -41,6 +41,9 @@ namespace AugustDaysMod.Union
                     CountryUtils.RealizeFederalStatesAI(gameState);
                 }
             }
+
+            // Отношения к центру меняем уже вне союзного контекста: при выходе из него они перезаписываются
+            UnionDynamics.Tick(gameState);
         }
     }
 
