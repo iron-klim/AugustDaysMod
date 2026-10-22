@@ -56,7 +56,8 @@ namespace AugustDaysMod.Events
             int optionsCount,
             string eventTitle,
             string eventDesc,
-            Characters minister)
+            Characters minister,
+            int optionsTextOffset = 0)
         {
             EventUtils.SetupEventDrawInfo(eventDrawInfo, Id, eventInfo, optionsCount, eventTitle, eventDesc, minister);
             UnitOfWork[] effects = new UnitOfWork[optionsCount];
@@ -66,7 +67,7 @@ namespace AugustDaysMod.Events
                 effects[index] = UnitOfWork.StartCreation();
                 SetupOption(gameState, index, effects[index]);
 
-                eventDrawInfo.optionsNames[index] = Texts.GetEvent(Id, index);
+                eventDrawInfo.optionsNames[index] = Texts.GetEvent(Id, optionsTextOffset + index);
                 eventDrawInfo.optionsEnabled[index] = IsOptionEnabled(gameState, index);
                 eventDrawInfo.optionsNamesAlt[index] = EventUtils.GenerateOptionDescription(NoDescriptionVariants, index, effects[index]);
             }

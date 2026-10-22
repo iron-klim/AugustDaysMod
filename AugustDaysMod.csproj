@@ -57,6 +57,7 @@
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="src\Assets\Interceptor.cs" />
         <Compile Include="src\Assets\Texts.cs" />
+        <Compile Include="src\Endings\GorbachevResignation.cs" />
         <Compile Include="src\Endings\LiberalVictory.cs" />
         <Compile Include="src\Events\Broadcast.cs" />
         <Compile Include="src\Events\BuiltInEvents.cs" />
@@ -64,12 +65,15 @@
         <Compile Include="src\Events\CoupEvent.cs" />
         <Compile Include="src\Events\Final.cs" />
         <Compile Include="src\Events\Foros.cs" />
+        <Compile Include="src\Events\ForosDelegation.cs" />
         <Compile Include="src\Events\ForosIsolation.cs" />
+        <Compile Include="src\Events\ForosPlane.cs" />
         <Compile Include="src\Events\ForosReturn.cs" />
         <Compile Include="src\Events\MiltaryAction.cs" />
         <Compile Include="src\Events\Negotiations.cs" />
         <Compile Include="src\Events\PoliticalDirection.cs" />
         <Compile Include="src\Events\SovietsPalace.cs" />
+        <Compile Include="src\Events\WhiteHouseDefense.cs" />
         <Compile Include="src\Events\YeltsinProblem.cs" />
         <Compile Include="src\Scenarios\GkchpConspiracy.cs" />
         <Compile Include="src\Scenarios\NewGame.cs" />

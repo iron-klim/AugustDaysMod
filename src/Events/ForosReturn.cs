@@ -1,8 +1,9 @@
 using System;
-using System.Linq;
 using AugustDaysMod.Assets;
+using AugustDaysMod.Endings;
 using AugustDaysMod.Scenarios;
 using Backend.Gamedesign;
+using Backend.Gamedesign.EndingsSystem.Utils;
 using Backend.Gamedesign.EventSystem;
 using Backend.Gamedesign.EventSystem.DataStructures;
 using Backend.Gamedesign.Utils;
@@ -10,7 +11,8 @@ using Backend.Gamedesign.Utils.UnitsOfWork;
 
 namespace AugustDaysMod.Events
 {
-    // Игра за Горбачева: путч провалился, президент возвращается в Москву и меняет руководство
+    // Игра за Горбачева, 22 августа: если путч провалился, президент возвращается в Москву и меняет руководство,
+    // иначе — уходит в отставку «по состоянию здоровья»
     [Event(ID)]
     public class ForosReturn : CoupEvent
     {
@@ -20,6 +22,9 @@ namespace AugustDaysMod.Events
         public const int TITLE = 2;
         public const int RESULT_1 = 5;
 
+        // Тексты варианта с победой путча сдвинуты на RESIGNATION
+        public const int RESIGNATION = 10;
+
         // Новые руководители силовых ведомств и правительства после путча
         private static readonly (Characters character, PoliticPosition position)[] NewCabinet =
         {
@@ -28,7 +33,13 @@ namespace AugustDaysMod.Events
             (Characters.Bakatin, PoliticPosition.ChairmanOfTheKGB),
             (Characters.Barannikov, PoliticPosition.MinisterOfInternalAffairs),
             (Characters.Shaposhnikov, PoliticPosition.MinisterOfDefense),
+            // Министерства до конца года ведет Комитет по оперативному управлению народным хозяйством
+            (Characters.Luzhkov, PoliticPosition.MinisterOfAgriculture),
+            (Characters.Volsky, PoliticPosition.MinisterOfIndustry),
         };
+
+        // Вариант запоминается при показе: эффекты выбранного ответа игра применяет раньше FinishEvent
+        private int shownOffset;
 
         public ForosReturn() : base(new DateTime(1991, 8, 22))
         {
@@ -39,30 +50,41 @@ namespace AugustDaysMod.Events
         public override bool CheckConditions(GameState gameState)
         {
             return base.CheckConditions(gameState)
-                && gameState.eventsDone.ContainsKey(ForosIsolation.ID)
+                && gameState.eventsDone.ContainsKey(ForosPlane.ID)
                 && GkchpConspiracy.Find(gameState) != null;
         }
 
         public override UnitOfWork[] StartEvent(GameState gameState, EventDrawInfo eventDrawInfo)
         {
-            return StartOptions(gameState, eventDrawInfo, 1, Texts.GetEvent(ID, TITLE), Texts.GetEvent(ID, DESCRIPTION), Characters.Rutskoy);
+            shownOffset = GkchpConspiracy.IsWinning(gameState) ? RESIGNATION : 0;
+            Characters minister = shownOffset == RESIGNATION ? Characters.Yanayev : Characters.Rutskoy;
+            return StartOptions(gameState, eventDrawInfo, 1, Texts.GetEvent(ID, shownOffset + TITLE), Texts.GetEvent(ID, shownOffset + DESCRIPTION),
+                minister, shownOffset);
         }
 
         public override string FinishEvent(GameState gameState, int choice)
         {
-            // К этому моменту эффекты варианта могли уже убрать заговорщиков, поэтому ищем заговор без проверки состава
-            ConspiracyInfo conspiracy = gameState.conspiracies.FirstOrDefault(GkchpConspiracy.IsGkchp);
-            if (conspiracy != null)
+            EventUtils.ExecuteEventEffects(gameState, ID, choice);
+            if (shownOffset == RESIGNATION)
             {
-                ConspiracyUtils.EndConspiracy(gameState, conspiracy, false);
+                EndingsManager.inst.ExecuteEnding(GorbachevResignation.ID, gameState);
+            }
+            else
+            {
+                GkchpConspiracy.End(gameState);
             }
 
-            EventUtils.ExecuteEventEffects(gameState, ID, choice);
-            return Texts.GetEvent(ID, RESULT_START + choice);
+            return Texts.GetEvent(ID, shownOffset + RESULT_START + choice);
         }
 
         protected override void SetupOption(GameState gameState, int optionIndex, UnitOfWork description)
         {
+            if (shownOffset == RESIGNATION)
+            {
+                description.AddText("Игра будет окончена", "#FF0000");
+                return;
+            }
+
             // Члены ГКЧП арестованы, Пуго застрелился
             foreach (Characters member in GkchpConspiracy.Members)
             {
@@ -78,10 +100,6 @@ namespace AugustDaysMod.Events
 
                 description.AddCharacterTakesPost(gameState, character, position, true);
             }
-
-            // Победителем из августа вышел Ельцин, а не союзный президент
-            description.AddPoliticPower(15, Characters.Yeltsin);
-            description.AddPoliticPower(-10, Characters.Gorbachev);
         }
     }
 }
