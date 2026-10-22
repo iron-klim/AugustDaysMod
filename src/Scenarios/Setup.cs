@@ -1,4 +1,5 @@
-﻿using Backend.Gamedesign;
+﻿using System;
+using Backend.Gamedesign;
 using Backend.Gamedesign.ScenarioSettings.Scenarios.GameScenarios;
 using HarmonyLib;
 
@@ -7,6 +8,14 @@ namespace AugustDaysMod.Scenarios
     [HarmonyPatch(typeof(ScenarioUSSR1985), nameof(ScenarioUSSR1985.SetUpScenario))]
     public static class NewGameControllerSetYearPatch
     {
+      private static readonly Characters[] Politburo =
+      {
+        Characters.Annus, Characters.Burokevicius, Characters.Gorbachev, Characters.Gurenko, Characters.Eremei,
+        Characters.Ivashko, Characters.Karimov, Characters.Lucinschi, Characters.Masaliev, Characters.Mahkamov,
+        Characters.Mutalibov, Characters.Nazarbaev, Characters.Niyazov, Characters.Polozkov, Characters.Prokofiev,
+        Characters.Rubiks, Characters.Stroev, Characters.Frolov, Characters.Shenin
+      };
+
       static void Postfix(
         GameState gameState,
         GameScenario gameScenario,
@@ -28,13 +37,23 @@ namespace AugustDaysMod.Scenarios
           level = 1
         };
         gameState.activeModificators[91] = modificatorState;
-        
-        gameState.characters[Characters.Yeltsin].traits.Remove(Traits.ProReformist);
-        gameState.characters[Characters.Yeltsin].traits.Add(Traits.ProNationalDemocrat);
+        // «Последствия зачистки КПСС 1983» добавляет сценарий 1985 года, к 1991 году они неактуальны
+        gameState.activeModificators.Remove(99);
+        // Сценарий 1985 года сам отмечает съезд партии, поэтому в state.json его нет: XXVIII съезд прошёл в июле 1990,
+        // следующий очередной — через пять лет
+        gameState.eventsDone[109] = new EventCompletionState(2, 0, new DateTime(1995, 7, 13), new DateTime(1990, 7, 13));
+
+        var yeltsinTraits = gameState.characters[Characters.Yeltsin].traits;
+        yeltsinTraits.Remove(Traits.ProReformist);
+        yeltsinTraits.Add(Traits.ProNationalDemocrat);
 
         AssignPolitburo(gameState);
         AssignCabinet(gameState);
 
+        if (GkchpConspiracy.IsGorbachevGame(gameState))
+        {
+          GkchpConspiracy.Create(gameState);
+        }
 
         gameState.MilitaryStaffLoyalty = 70;
         gameState.SpecialServicesLoyalty = 70;
@@ -46,15 +65,10 @@ namespace AugustDaysMod.Scenarios
         switch (president)
         {
           case Characters.Gorbachev:
-            // gameState.politicPositions[Characters.Yanayev] =  PoliticPosition.SecondSecretary;
-            // gameState.politicPositions[Characters.Pugo] =  PoliticPosition.MinisterOfInternalAffairs;
-            // gameState.politicPositions[Characters.Lukyanov] =  PoliticPosition.ChairmanOfTheSupremeCouncil;
-
-            gameState.politicPositions[Characters.Yanayev] = PoliticPosition.President;
+            // Горбачев остается президентом. Должности вице-президента в игре нет, поэтому Янаев — второй секретарь
+            gameState.politicPositions[Characters.Yanayev] =  PoliticPosition.SecondSecretary;
             gameState.politicPositions[Characters.Pugo] =  PoliticPosition.MinisterOfInternalAffairs;
             gameState.politicPositions[Characters.Lukyanov] =  PoliticPosition.ChairmanOfTheSupremeCouncil;
-            gameState.politicPositions[Characters.Baklanov] = PoliticPosition.SecondSecretary;
-            
             break;
           case Characters.Lukyanov:
             gameState.politicPositions[Characters.Yanayev] =  PoliticPosition.SecondSecretary;
@@ -72,10 +86,6 @@ namespace AugustDaysMod.Scenarios
             gameState.politicPositions[Characters.Varennikov] =  PoliticPosition.MinisterOfInternalAffairs;
             break;
           case Characters.Zhirinovsky:
-            gameState.politicPositions[Characters.Yanayev] =  PoliticPosition.SecondSecretary;
-            gameState.politicPositions[Characters.Pugo] =  PoliticPosition.MinisterOfInternalAffairs;
-            gameState.politicPositions[Characters.Lukyanov] =  PoliticPosition.ChairmanOfTheSupremeCouncil;
-            break;
           case Characters.CustomCharacter:
             gameState.politicPositions[Characters.Yanayev] =  PoliticPosition.SecondSecretary;
             gameState.politicPositions[Characters.Pugo] =  PoliticPosition.MinisterOfInternalAffairs;
@@ -87,26 +97,7 @@ namespace AugustDaysMod.Scenarios
       private static void AssignPolitburo(GameState gameState)
       {
         gameState.politBuro.Clear();
-        gameState.politBuro.Add(Characters.Annus);
-        gameState.politBuro.Add(Characters.Burokevicius);
-        gameState.politBuro.Add(Characters.Gorbachev);
-        gameState.politBuro.Add(Characters.Gurenko);
-        gameState.politBuro.Add(Characters.Eremei);
-        gameState.politBuro.Add(Characters.Ivashko);
-        gameState.politBuro.Add(Characters.Karimov);
-        gameState.politBuro.Add(Characters.Lucinschi);
-        gameState.politBuro.Add(Characters.Masaliev);
-        gameState.politBuro.Add(Characters.Mahkamov);
-        gameState.politBuro.Add(Characters.Mutalibov);
-        gameState.politBuro.Add(Characters.Nazarbaev);
-        gameState.politBuro.Add(Characters.Niyazov);
-        gameState.politBuro.Add(Characters.Polozkov);
-        gameState.politBuro.Add(Characters.Prokofiev);
-        gameState.politBuro.Add(Characters.Rubiks);
-        gameState.politBuro.Add(Characters.Stroev);
-        gameState.politBuro.Add(Characters.Frolov);
-        gameState.politBuro.Add(Characters.Shenin);
-        
+        gameState.politBuro.UnionWith(Politburo);
         gameState.membersOfPolitBuro = gameState.politBuro.Count;
       }
 

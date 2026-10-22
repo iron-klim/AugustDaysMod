@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using AugustDaysMod.Assets;
 using AugustDaysMod.Endings;
 using Backend.Gamedesign;
 using Backend.Gamedesign.EndingsSystem.Utils;
+using Backend.Gamedesign.EventSystem;
 using Backend.Gamedesign.EventSystem.DataStructures;
-using Backend.Gamedesign.EventSystem.Events;
 using Backend.Gamedesign.Utils;
 using Backend.Gamedesign.Utils.TextFormatter;
 using Backend.Gamedesign.Utils.UnitsOfWork;
@@ -12,7 +13,8 @@ using Backend.Managers;
 
 namespace AugustDaysMod.Events
 {
-    public class Final : AbstractEvent
+    [Event(ID)]
+    public class Final : CoupEvent
     {
         public const int ID = 1008;
         public const int TITLE = 0;
@@ -22,21 +24,14 @@ namespace AugustDaysMod.Events
         public const int RESULT_1 = 4;
         public const int YELTSIN_ALIVE = 5;
         public const int YELTSIN_INACTIVE = 6;
-        
-        private EventInfo eventInfo = new EventInfo()
+
+        private static readonly Countries[] LoyalAfterYeltsinDeath =
         {
-            priority = 0,
-            startDate = new DateTime(1991, 8, 22),
-            endDate = new DateTime(1991, 8, 23),
-            countryLimitation = Countries.USSR,
-            eventType = EventType.Dialog,
+            Countries.Russia, Countries.Ukraine, Countries.Armenia, Countries.Georgia, Countries.Belorussia, Countries.Moldavia
         };
-        
-        public override EventInfo EventInfo => eventInfo;
-        
-        public override bool CheckConditions(GameState gameState)
+
+        public Final() : base(new DateTime(1991, 8, 22))
         {
-            return !gameState.eventsDone.ContainsKey(ID) && gameState.date >= eventInfo.startDate;
         }
 
         public override UnitOfWork[] StartEvent(GameState gameState, EventDrawInfo eventDrawInfo)
@@ -52,13 +47,12 @@ namespace AugustDaysMod.Events
             {
                 eventDesc = string.Format(Texts.GetEvent(ID, DESCRIPTION_FAIL), PoliticUtils.GetPoliticFullName(gameState,  gameState.politicPositions[PoliticPosition.President].Value));
             }
-            
+
             Characters minister = gameState.politicPositions[PoliticPosition.SecondSecretary].Value;
-            EventUtils.SetupEventDrawInfo(eventDrawInfo, ID, eventInfo, optionsCount, eventTitle, eventDesc, minister);
-            UnitOfWork[] unitOfWorkArray = new UnitOfWork[optionsCount];
+            EventUtils.SetupEventDrawInfo(eventDrawInfo, ID, EventInfo, optionsCount, eventTitle, eventDesc, minister);
             eventDrawInfo.optionsNames[0] = Texts.GetEvent(ID, ANSWER_1);
             eventDrawInfo.optionsEnabled[0] = true;
-            
+
             TextFormatter textFormatter = TextFormatter.StartCreation();
             if (gameState.characters[Characters.Yeltsin].status == CharacterInfo.PoliticStatus.NotPresented)
             {
@@ -66,41 +60,19 @@ namespace AugustDaysMod.Events
             }
             textFormatter.AddText(LanguageManager.inst["conspiracy_desc", "success"]);
             textFormatter.AddDeleteCharacter(gameState, Characters.Gorbachev, true);
-            if (gameState.characters[Characters.Yeltsin].status != CharacterInfo.PoliticStatus.Alive && gameState.RadicalsPower > 40)
+            foreach (var change in GetLeaderChanges(gameState))
             {
-                textFormatter.AddChangeLeaderType(gameState, Countries.Russia, Country.LeaderType.Moderate);
+                textFormatter.AddChangeLeaderType(gameState, change.Key, change.Value);
             }
 
-            if (gameState.characters[Characters.Yeltsin].status == CharacterInfo.PoliticStatus.Dead && gameState.RadicalsPower < 40)
-            {
-                textFormatter.AddChangeLeaderType(gameState, Countries.Russia, Country.LeaderType.Loyal);
-                textFormatter.AddChangeLeaderType(gameState, Countries.Ukraine, Country.LeaderType.Loyal);
-                textFormatter.AddChangeLeaderType(gameState, Countries.Armenia, Country.LeaderType.Loyal);
-                textFormatter.AddChangeLeaderType(gameState, Countries.Georgia, Country.LeaderType.Loyal);
-                textFormatter.AddChangeLeaderType(gameState, Countries.Belorussia, Country.LeaderType.Loyal);
-                textFormatter.AddChangeLeaderType(gameState, Countries.Moldavia, Country.LeaderType.Loyal);
-                if (gameState.countries[Countries.Estonia].puppetType == Country.PuppetType.InnerState && gameState.countries[Countries.Estonia].leaderType != Country.LeaderType.Separatist)
-                {
-                    textFormatter.AddChangeLeaderType(gameState, Countries.Estonia, Country.LeaderType.Loyal);
-                }
-                if (gameState.countries[Countries.Latvia].puppetType == Country.PuppetType.InnerState && gameState.countries[Countries.Latvia].leaderType != Country.LeaderType.Separatist)
-                {
-                    textFormatter.AddChangeLeaderType(gameState, Countries.Latvia, Country.LeaderType.Loyal);
-                }
-                if (gameState.countries[Countries.Litva].puppetType == Country.PuppetType.InnerState && gameState.countries[Countries.Litva].leaderType != Country.LeaderType.Separatist)
-                {
-                    textFormatter.AddChangeLeaderType(gameState, Countries.Litva, Country.LeaderType.Loyal);
-                }
-            }
-            
             textFormatter.AddText(LanguageManager.inst["conspiracy_desc", "lost"]);
             textFormatter.AddText("Игра будет окончена");
 
             eventDrawInfo.optionsNamesAlt[0] = textFormatter.Finalize();
-            
-            return unitOfWorkArray;
+
+            return new UnitOfWork[optionsCount];
         }
-        
+
         public override string FinishEvent(GameState gameState, int choice)
         {
             if (!CalculateWin(gameState))
@@ -109,44 +81,51 @@ namespace AugustDaysMod.Events
             }
 
             EventUtils.ExecuteEventEffects(gameState, ID, choice);
-            
+
             PoliticUtils.RemovePolitician(gameState, Characters.Gorbachev);
-            
-            if (gameState.characters[Characters.Yeltsin].status != CharacterInfo.PoliticStatus.Alive && gameState.RadicalsPower > 40)
+
+            foreach (var change in GetLeaderChanges(gameState))
             {
-                gameState.countries[Countries.Russia].leaderType = Country.LeaderType.Moderate;
+                gameState.countries[change.Key].leaderType = change.Value;
             }
-            
-            if (gameState.characters[Characters.Yeltsin].status == CharacterInfo.PoliticStatus.Dead && gameState.RadicalsPower < 40)
-            {
-                gameState.countries[Countries.Russia].leaderType = Country.LeaderType.Loyal;
-                gameState.countries[Countries.Ukraine].leaderType = Country.LeaderType.Loyal;
-                gameState.countries[Countries.Armenia].leaderType = Country.LeaderType.Loyal;
-                gameState.countries[Countries.Georgia].leaderType = Country.LeaderType.Loyal;
-                gameState.countries[Countries.Belorussia].leaderType = Country.LeaderType.Loyal;
-                gameState.countries[Countries.Moldavia].leaderType = Country.LeaderType.Loyal;
-                if (gameState.countries[Countries.Estonia].puppetType == Country.PuppetType.InnerState && gameState.countries[Countries.Estonia].leaderType != Country.LeaderType.Separatist)
-                {
-                    gameState.countries[Countries.Estonia].leaderType = Country.LeaderType.Loyal;
-                }
-                if (gameState.countries[Countries.Latvia].puppetType == Country.PuppetType.InnerState && gameState.countries[Countries.Latvia].leaderType != Country.LeaderType.Separatist)
-                {
-                    gameState.countries[Countries.Latvia].leaderType = Country.LeaderType.Loyal;
-                }
-                if (gameState.countries[Countries.Litva].puppetType == Country.PuppetType.InnerState && gameState.countries[Countries.Litva].leaderType != Country.LeaderType.Separatist)
-                {
-                    gameState.countries[Countries.Litva].leaderType = Country.LeaderType.Loyal;
-                }
-            }
-            
+
             var text = Texts.GetEvent(ID, RESULT_1) + GetYeltsinText(gameState);
 
-            if (gameState.characters[Characters.Yeltsin].status == CharacterInfo.PoliticStatus.NotPresented)
+            CharacterInfo yeltsin = gameState.characters[Characters.Yeltsin];
+            if (yeltsin.status == CharacterInfo.PoliticStatus.NotPresented)
             {
-                gameState.characters[Characters.Yeltsin].status = CharacterInfo.PoliticStatus.Alive;
+                yeltsin.status = CharacterInfo.PoliticStatus.Alive;
             }
 
             return text;
+        }
+
+        // Смена лидеров республик по итогам путча. Используется и для описания варианта, и для его применения
+        private static IEnumerable<KeyValuePair<Countries, Country.LeaderType>> GetLeaderChanges(GameState gameState)
+        {
+            CharacterInfo.PoliticStatus yeltsinStatus = gameState.characters[Characters.Yeltsin].status;
+
+            if (yeltsinStatus != CharacterInfo.PoliticStatus.Alive && gameState.RadicalsPower > 40)
+            {
+                yield return new KeyValuePair<Countries, Country.LeaderType>(Countries.Russia, Country.LeaderType.Moderate);
+            }
+
+            if (yeltsinStatus == CharacterInfo.PoliticStatus.Dead && gameState.RadicalsPower < 40)
+            {
+                foreach (Countries country in LoyalAfterYeltsinDeath)
+                {
+                    yield return new KeyValuePair<Countries, Country.LeaderType>(country, Country.LeaderType.Loyal);
+                }
+
+                foreach (Countries country in BalticStates)
+                {
+                    Country state = gameState.countries[country];
+                    if (state.puppetType == Country.PuppetType.InnerState && state.leaderType != Country.LeaderType.Separatist)
+                    {
+                        yield return new KeyValuePair<Countries, Country.LeaderType>(country, Country.LeaderType.Loyal);
+                    }
+                }
+            }
         }
 
         private static bool CalculateWin(GameState gameState)
@@ -163,10 +142,8 @@ namespace AugustDaysMod.Events
                 case CharacterInfo.PoliticStatus.NotPresented:
                     return Texts.GetEvent(ID, YELTSIN_INACTIVE);
                 default:
-                    break;
+                    return "";
             }
-            
-            return "";
         }
     }
 }

@@ -1,7 +1,5 @@
 ﻿using System.IO;
-using System.Linq;
 using System.Reflection;
-using AugustDaysMod.Utils;
 using Backend.Gamedesign;
 using Backend.Managers;
 using HarmonyLib;
@@ -10,80 +8,59 @@ using Newtonsoft.Json;
 // Перехватываем вызовы игры на загрузку ресурсов и загружаем свои
 namespace AugustDaysMod.Assets
 {
-    [HarmonyPatch(typeof(GameStateManager), "LoadGameRules")]
-    public static class PatchGameStateManagerLoadGameRules
-    {
-      static bool Prefix(GameStateManager __instance)
-      {
-        string text = File.ReadAllText(Interceptor.GetPath("rules.json"));
-        
-        JsonSerializerSettings settings = (JsonSerializerSettings)ReflectionUtils.getFieldValue(__instance, "jsonSettings");
-        
-        GameRules rules = JsonConvert.DeserializeObject<GameRules>(text, settings);
-        
-        ReflectionUtils.SetFieldValue(__instance, "gameRules", rules);
-        
-        return false;
-      }
-    }
-    
+    // Сценарий загружает игра, а мы поверх меняем только те поля, что заданы в scenario.json
     [HarmonyPatch(typeof(GameStateManager), "LoadGameScenario")]
     public static class PatchGameStateManagerLoadGameScenario
     {
-      static bool Prefix(GameStateManager __instance, ScenarioType type)
+      static void Postfix(GameStateManager __instance)
       {
-        string text = File.ReadAllText(Interceptor.GetPath("scenario.json"));
-
-        var settings = (JsonSerializerSettings)ReflectionUtils.getFieldValue(__instance, "jsonSettings");
-
-        GameScenario scenario = JsonConvert.DeserializeObject<GameScenario>(text, settings);
-
-        ReflectionUtils.SetFieldValue(__instance, "gameScenario", scenario);
-        
-        PortraitsManager.inst.LoadPortraits(scenario.portraitsInfo);
-
-        return false;
+        JsonConvert.PopulateObject(File.ReadAllText(Interceptor.GetPath("scenario.json")), __instance.GameScenario, Interceptor.JsonSettingsRef(__instance));
       }
     }
-    
-    [HarmonyPatch(typeof(GameStateManager), "LoadStartGameState")]
+
+    // У метода две перегрузки: LoadStartGameState(type) просто вызывает LoadStartGameState(type, files), поэтому патчим вторую
+    [HarmonyPatch(typeof(GameStateManager), nameof(GameStateManager.LoadStartGameState), typeof(ScenarioType), typeof(ScenarioType))]
     public static class PatchGameStateManagerLoadStartGameState
     {
-      static bool Prefix(GameStateManager __instance, ScenarioType type)
+      static readonly AccessTools.FieldRef<GameStateManager, GameState> GameStateRef =
+        AccessTools.FieldRefAccess<GameStateManager, GameState>("gameState");
+
+      // Вызывается раз за новую игру, поэтому хватает обычного Invoke.
+      // AccessTools.MethodDelegate не используем: в игре может быть загружен Harmony старее, чем тот, с которым собирается мод
+      static readonly MethodInfo LoadGameScenario = AccessTools.Method(typeof(GameStateManager), "LoadGameScenario");
+
+      static bool Prefix(GameStateManager __instance, ScenarioType type, ScenarioType files)
       {
-        string text = File.ReadAllText(Interceptor.GetPath("state.json"));
+        GameState state = JsonConvert.DeserializeObject<GameState>(File.ReadAllText(Interceptor.GetPath("state.json")), Interceptor.JsonSettingsRef(__instance));
+        state.scenarioType = type;
+        state.customScenarioBase = files;
+        GameStateRef(__instance) = state;
 
-        var settings = (JsonSerializerSettings)ReflectionUtils.getFieldValue(__instance, "jsonSettings");
+        LoadGameScenario.Invoke(__instance, new object[] { type });
 
-        GameState state = JsonConvert.DeserializeObject<GameState>(text, settings);
-
-        ReflectionUtils.SetFieldValue(__instance, "gameState", state);
-        
-        var loadScenarioMethod = typeof(GameStateManager).GetMethod("LoadGameScenario", BindingFlags.NonPublic | BindingFlags.Instance);
-        loadScenarioMethod.Invoke(__instance, new object[] { type });
-        
         return false;
       }
     }
 
     public static class Interceptor
     {
+      internal static readonly AccessTools.FieldRef<GameStateManager, JsonSerializerSettings> JsonSettingsRef =
+        AccessTools.FieldRefAccess<GameStateManager, JsonSerializerSettings>("jsonSettings");
+
+      private static string modFolder;
+
       public static string GetPath(string item)
       {
-        var currentDir = Directory.GetCurrentDirectory();
-        
-        string[] parts = currentDir.Split(Path.DirectorySeparatorChar);
-        
-        var basePath = string.Join(Path.DirectorySeparatorChar.ToString(), parts.Take(parts.Length - 2));
-        
-        return Path.Combine(
-          basePath,
-          "workshop",
-          "content",
-          ModEntryPoint.GAME_ID.ToString(),
-          ModEntryPoint.MOD_ID.ToString(),
-          item
-        );
+        if (modFolder == null)
+        {
+          // Папку мода знает менеджер модов игры: это может быть и папка Steam Workshop, и локальная папка mods
+          ModsManager.ModEntry entry = ModsManager.inst != null ? ModsManager.inst.GetModInfo(ModEntryPoint.MOD_INFO_ID) : null;
+          modFolder = entry != null
+            ? entry.pathToModFolder
+            : Path.GetDirectoryName(typeof(Interceptor).Assembly.Location);
+        }
+
+        return Path.Combine(modFolder, item);
       }
     }
 }
