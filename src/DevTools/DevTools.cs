@@ -5,11 +5,14 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using AugustDaysMod.Catalog;
+using AugustDaysMod.Story;
 using AugustDaysMod.Union;
 using Backend.Gamedesign;
+using Backend.Gamedesign.EventSystem.DataStructures;
+using Backend.Gamedesign.EventSystem.Events;
 using Backend.Gamedesign.EventSystem.Utils;
-using Backend.Gamedesign.Utils;
 using Backend.Gamedesign.Utils.UnitsOfWork;
+using Backend.Gamedesign.Utils;
 using Backend.Managers;
 using HarmonyLib;
 using UnityEngine;
@@ -46,6 +49,9 @@ namespace AugustDaysMod.DevTools
 
         public static bool DebugLog => File.Exists(Path.Combine(Application.persistentDataPath, "august_debug_log"));
 
+        // Сюжетные события мода решаются сами первым вариантом — для долгих проверочных прогонов
+        public static bool AutoPlay => File.Exists(Path.Combine(Application.persistentDataPath, "august_autoplay"));
+
         public static void Log(string message) => Debug.Log($"{LOG_TAG} {message}");
     }
 
@@ -78,7 +84,9 @@ namespace AugustDaysMod.DevTools
                 builder.Append("  ").Append(Describe(gameState, republic)).Append('\n');
             }
 
-            builder.Append($"  субъектов СССР: {SovietUnion.Subjects(gameState).Count()}, республик игрока: {CountryUtils.GetNumberOfRepublicsOfPlayer(gameState)}");
+            builder.Append($"  субъектов СССР: {SovietUnion.Subjects(gameState).Count()}, республик игрока: {CountryUtils.GetNumberOfRepublicsOfPlayer(gameState)}\n");
+            List<int> decisions = Backend.Gamedesign.DecisionsSystem.Utils.DecisionsManager.inst.GetDecisionsIdsForCountry(gameState);
+            builder.Append($"  решения игрока: {string.Join(", ", decisions)}");
             DevSettings.Log(builder.ToString());
         }
 
@@ -92,6 +100,32 @@ namespace AugustDaysMod.DevTools
             return $"{key}: puppet={country.puppetType}/{country.puppetOf?.ToString() ?? "-"} gov={country.governmentType} " +
                    $"leader={country.leaderType} party={country.rulingPartyName} кИгроку={country.RelationshipWithPlayer:F0} " +
                    $"кСоюзу={UnionRelations.Get(gameState, key):F0} вектор={country.ForeignPolicyVector:F0}";
+        }
+    }
+
+    // Из чего складывается изменение политической власти за месяц
+    [HarmonyPatch(typeof(TickUtils), "ProcessTickCore")]
+    public static class PatchPoliticalPowerDebugLog
+    {
+        static void Postfix(GameState gameState)
+        {
+            if (gameState.date.Day != 1 || !DevSettings.DebugLog)
+            {
+                return;
+            }
+
+            GameStateHistory history = gameState.gameStateHistory;
+            string sources = history.lastValuesChangesSources.TryGetValue("PoliticalPower", out var bySource)
+                ? string.Join(", ", bySource.Where(p => Math.Abs(p.Value) >= 0.5f).OrderBy(p => p.Value).Select(p => $"{p.Key}={p.Value:F0}"))
+                : "-";
+            string inputs = history.lastValuesChangesByInput.TryGetValue("PoliticalPower", out var byInput)
+                ? string.Join(", ", byInput.Where(p => Math.Abs(p.Value) >= 0.5f).OrderBy(p => p.Value).Take(14).Select(p => $"{p.Key}={p.Value:F0}"))
+                : "-";
+            string ministers = history.lastValuesChangesByEntity.TryGetValue("PoliticalPower", out var byEntity) &&
+                               byEntity.TryGetValue(StatisticImpactSourceType.Ministers, out var byMinister)
+                ? string.Join(", ", byMinister.Where(p => Math.Abs(p.Value) >= 0.5f).OrderBy(p => p.Value).Select(p => $"{p.Key}={p.Value:F0}"))
+                : "-";
+            DevSettings.Log($"власть {gameState.date:dd.MM.yyyy}: {gameState.PoliticalPower:F0}\n  по источникам: {sources}\n  по входам: {inputs}\n  министры: {ministers}");
         }
     }
 
@@ -125,12 +159,36 @@ namespace AugustDaysMod.DevTools
             yield return AccessTools.Method(typeof(EventManager), nameof(EventManager.GetNewSuperEvent));
         }
 
-        static void Postfix(GameState gameState, int? __result)
+        private static readonly AccessTools.FieldRef<EventManager, Dictionary<int, AbstractEvent>> Events =
+            AccessTools.FieldRefAccess<EventManager, Dictionary<int, AbstractEvent>>("events");
+
+        private static readonly AccessTools.FieldRef<EventManager, Dictionary<int, AbstractEvent>> CrisisEvents =
+            AccessTools.FieldRefAccess<EventManager, Dictionary<int, AbstractEvent>>("crisisEvents");
+
+        static void Postfix(EventManager __instance, GameState gameState, ref int? __result)
         {
-            if (__result.HasValue && DevSettings.DebugLog)
+            if (!__result.HasValue)
+            {
+                return;
+            }
+
+            if (DevSettings.DebugLog)
             {
                 DevSettings.Log($"событие {__result.Value} {gameState.date:dd.MM.yyyy}");
             }
+
+            if (!DevSettings.AutoPlay ||
+                !(Events(__instance).TryGetValue(__result.Value, out AbstractEvent story) || CrisisEvents(__instance).TryGetValue(__result.Value, out story)) ||
+                !(story is StoryEvent))
+            {
+                return;
+            }
+
+            UnitOfWork[] effects = story.StartEvent(gameState, new EventDrawInfo());
+            effects[0].Execute(gameState);
+            string result = story.FinishEvent(gameState, 0);
+            DevSettings.Log($"автовыбор {__result.Value}: {result}");
+            __result = null;
         }
     }
 }

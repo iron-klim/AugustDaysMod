@@ -8,7 +8,12 @@ ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 MSBUILD="/c/Program Files/JetBrains/JetBrains Rider 2025.2.4/tools/MSBuild/Current/Bin/MSBuild.exe"
 TARGET="/c/Program Files (x86)/Steam/steamapps/workshop/content/1922740/3606829008"
 
-"$MSBUILD" "$ROOT/AugustDaysMod.csproj" -p:Configuration="$CONFIGURATION" -v:m -nologo | grep -E "error|->" || true
+BUILD_LOG="$("$MSBUILD" "$ROOT/AugustDaysMod.csproj" -p:Configuration="$CONFIGURATION" -v:m -nologo)" || true
+echo "$BUILD_LOG" | grep -E "error|->" || true
+if echo "$BUILD_LOG" | grep -q "error"; then
+  echo "сборка не удалась, ничего не выкладываю" >&2
+  exit 1
+fi
 
 cp "$ROOT/bin/$CONFIGURATION/AugustDaysMod.dll" "$TARGET/code.dll"
 for file in 0Harmony.dll icon.png info.json localRU.xml scenario.json state.json countries.json story.json; do

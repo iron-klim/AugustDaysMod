@@ -202,6 +202,7 @@ namespace AugustDaysMod.Compat
 
             float multiplier = 1f + gameState.FreedomLevel / 50f + (DoctrineUtils.IsOneParty(gameState) ? 0f : 1f);
             gameState.PoliticalPowerNotClamped += (int)(gameState.UnityLevel * gameState.FreedomLevel / 100f) * multiplier;
+            gameState.PoliticalPowerNotClamped += CountryCatalog.Get(gameState.playerCountry)?.politicalPowerBonus ?? 0f;
         }
     }
 
