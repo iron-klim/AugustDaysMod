@@ -33,6 +33,14 @@
         "Верховной Радой",
         "Верховной Раде"
       ],
+      "textOverrides": {
+        "politics_window/filter_12": "Президиум Рады",
+        "politic_position_name/pos10_*": "Президент",
+        "politic_position_name/pos1_*": "Премьер-министр",
+        "politic_position_name/pos4_*": "Председатель Верховной Рады",
+        "politic_position_name/pos5_*": "Председатель СБУ",
+        "politic_position_name/pos3_*": "Министр финансов"
+      },
       "ruler": "Kravchuk",
       "posts": {
         "ChairmanOfTheCouncilOfMinisters": "Fokin",

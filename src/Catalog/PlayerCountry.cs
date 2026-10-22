@@ -232,4 +232,40 @@ namespace AugustDaysMod.Catalog
             }
         }
     }
+
+    // Строки интерфейса для страны игрока: Президиум Рады вместо Политбюро, свои названия постов и т. д.
+    [HarmonyPatch(typeof(LanguageManager), "Item", MethodType.Getter)]
+    public static class PatchLanguageOverrides
+    {
+        static void Postfix(string category, string item, ref string __result)
+        {
+            GameState gameState = GameStateManager.inst != null ? GameStateManager.inst.GameState : null;
+            if (gameState == null || gameState.playerCountry == Countries.USSR)
+            {
+                return;
+            }
+
+            Dictionary<string, string> overrides = CountryCatalog.Get(gameState.playerCountry)?.textOverrides;
+            if (overrides == null)
+            {
+                return;
+            }
+
+            string key = $"{category}/{item}";
+            if (overrides.TryGetValue(key, out string text))
+            {
+                __result = text;
+                return;
+            }
+
+            foreach (KeyValuePair<string, string> pair in overrides)
+            {
+                if (pair.Key.EndsWith("*") && key.StartsWith(pair.Key.Substring(0, pair.Key.Length - 1)))
+                {
+                    __result = pair.Value;
+                    return;
+                }
+            }
+        }
+    }
 }

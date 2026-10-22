@@ -49,6 +49,10 @@ namespace AugustDaysMod.Catalog
         [JsonProperty] public List<string> councilName;
         [JsonProperty] public List<string> parliamentName;
 
+        // Свои строки вместо союзных: «категория/ключ» из локализации игры, ключ может кончаться на * —
+        // тогда подходит любой ключ с этим началом
+        [JsonProperty] public Dictionary<string, string> textOverrides;
+
         // Руководство. Персонажи задаются именем из Characters или @ключом нового персонажа из newCharacters
         [JsonProperty] public string ruler;
         [JsonProperty] public Dictionary<PoliticPosition, string> posts;
