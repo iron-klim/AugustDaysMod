@@ -56,9 +56,10 @@ namespace AugustDaysMod.Union
             }
 
             int seceded = 0;
+            // Страна игрока выходит из Союза по сюжету, а не по отношениям к центру
             foreach (KeyValuePair<Countries, Country> member in members)
             {
-                if (WantsIndependence(gameState, member.Key, member.Value))
+                if (member.Key != gameState.playerCountry && WantsIndependence(gameState, member.Key, member.Value))
                 {
                     DeclareIndependence(gameState, member.Key);
                     seceded++;

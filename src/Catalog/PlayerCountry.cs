@@ -16,7 +16,8 @@ namespace AugustDaysMod.Catalog
     public static class PlayerCountry
     {
         // Новая игра за страну из справочника. Состояние игры к этому моменту — союзное на 16.08.1991:
-        // отделяем страну игрока от Союза и передаем Союз под управление ИИ
+        // Союз переходит под управление ИИ, а страна игрока остается в нем союзной республикой, как в state.json,
+        // пока не выйдет из него по сюжету или вместе с распадом Союза
         public static void SetupStart(GameState gameState)
         {
             Countries country = gameState.playerCountry;
@@ -33,10 +34,6 @@ namespace AugustDaysMod.Catalog
             // Середина августа 1991: Союз еще держится, но новый союзный договор подписан не будет
             union.cohesion = 45f;
 
-            Country player = gameState.countries[country];
-            player.puppetOf = null;
-            player.puppetType = Country.PuppetType.None;
-            player.leaderType = Country.LeaderType.None;
             gameState.countries[Countries.USSR].RelationshipWithPlayer = 50f;
             foreach (KeyValuePair<Countries, Country> subject in SovietUnion.Subjects(gameState))
             {

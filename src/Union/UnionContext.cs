@@ -54,7 +54,8 @@ namespace AugustDaysMod.Union
     }
 
     // Временно делает СССР страной игрока, чтобы прогнать штатный ИИ республик от его лица.
-    // Отношения республик к игроку на это время подменяются отношениями к центру
+    // Отношения республик к игроку на это время подменяются отношениями к центру. Страну игрока, если она еще
+    // в Союзе, на это время из него убираем: ее лидером и правительством распоряжается игрок, а не ИИ центра
     public sealed class UnionContext : IDisposable
     {
         private static readonly AccessTools.FieldRef<Country, float> RelationshipWithPlayer =
@@ -67,10 +68,14 @@ namespace AugustDaysMod.Union
         private readonly List<(Countries key, Country country, float playerRelations)> swapped =
             new List<(Countries, Country, float)>();
 
+        private readonly Countries? playerPuppetOf;
+
         private UnionContext(GameState gameState)
         {
             this.gameState = gameState;
             player = gameState.playerCountry;
+            playerPuppetOf = gameState.countries[player].puppetOf;
+            gameState.countries[player].puppetOf = null;
             foreach (KeyValuePair<Countries, Country> subject in SovietUnion.Subjects(gameState))
             {
                 swapped.Add((subject.Key, subject.Value, RelationshipWithPlayer(subject.Value)));
@@ -86,6 +91,7 @@ namespace AugustDaysMod.Union
         public void Dispose()
         {
             gameState.playerCountry = player;
+            gameState.countries[player].puppetOf = playerPuppetOf;
             foreach ((Countries key, Country country, float playerRelations) in swapped)
             {
                 UnionRelations.Set(gameState, key, RelationshipWithPlayer(country));

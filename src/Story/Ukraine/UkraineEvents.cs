@@ -149,12 +149,14 @@ namespace AugustDaysMod.Story.Ukraine
                 effects.AddPoliticalPower(25).AddUnityLevel(10).AddFreedomLevel(5).AddLiberalizationLevel(5)
                     .AddCountryRelations(gameState, -10, Countries.Russia).AddCountryRelations(gameState, 10, Countries.USA)
                     .AddCountryRelations(gameState, 15, Countries.Canada).AddCountryRelations(gameState, 15, Countries.Poland)
-                    .AddUnionCohesion(-15).AddFlag(StoryFlags.Referendum, 1);
+                    .AddUnionCohesion(-15).AddFlag(StoryFlags.Referendum, 1)
+                    .AddIndependence(gameState, gameState.playerCountry);
             }
             else
             {
                 effects.AddPoliticalPower(-10).AddUnityLevel(-5).AddIntelligentsiaLoyalty(-10)
-                    .AddUnionCohesion(-10).AddFlag(StoryFlags.Referendum, 1).AddFlag(StoryFlags.Independence, 1);
+                    .AddUnionCohesion(-10).AddFlag(StoryFlags.Referendum, 1).AddFlag(StoryFlags.Independence, 1)
+                    .AddIndependence(gameState, gameState.playerCountry);
             }
         }
     }

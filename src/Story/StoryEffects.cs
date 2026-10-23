@@ -28,6 +28,13 @@ namespace AugustDaysMod.Story
                 (state, gameRules, gameScenario) => UnionRelations.Add(state, country, value));
         }
 
+        public static UnitOfWork AddIndependence(this UnitOfWork effects, GameState gameState, Countries country)
+        {
+            return effects.AddAction(
+                textFormatter => textFormatter.AddText($"{CountryUtils.GetCountryName(gameState, country)} выходит из состава СССР", GOOD),
+                (state, gameRules, gameScenario) => UnionDynamics.DeclareIndependence(state, country));
+        }
+
         public static UnitOfWork AddFlag(this UnitOfWork effects, string key, int value = 1)
         {
             return effects.AddAction(
