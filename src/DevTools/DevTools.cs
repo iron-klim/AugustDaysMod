@@ -164,6 +164,16 @@ namespace AugustDaysMod.DevTools
                 ? string.Join(", ", byMinister.Where(p => Math.Abs(p.Value) >= 0.5f).OrderBy(p => p.Value).Select(p => $"{p.Key}={p.Value:F0}"))
                 : "-";
             DevSettings.Log($"власть {gameState.date:dd.MM.yyyy}: {gameState.PoliticalPower:F0}\n  по источникам: {sources}\n  по входам: {inputs}\n  министры: {ministers}");
+            foreach (string stat in new[] { "UnityLevel", "RadicalsPower", "OrderLevel", "FirstNeedsGoods", "ForgeryLevel" })
+            {
+                string statSources = history.lastValuesChangesSources.TryGetValue(stat, out var statBySource)
+                    ? string.Join(", ", statBySource.Where(p => Math.Abs(p.Value) >= 0.5f).OrderBy(p => p.Value).Select(p => $"{p.Key}={p.Value:F1}"))
+                    : "-";
+                string statInputs = history.lastValuesChangesByInput.TryGetValue(stat, out var statByInput)
+                    ? string.Join(", ", statByInput.Where(p => Math.Abs(p.Value) >= 0.5f).OrderBy(p => p.Value).Take(12).Select(p => $"{p.Key}={p.Value:F1}"))
+                    : "-";
+                DevSettings.Log($"{stat} {gameState.date:dd.MM.yyyy}\n  по источникам: {statSources}\n  по входам: {statInputs}");
+            }
         }
     }
 

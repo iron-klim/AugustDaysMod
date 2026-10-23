@@ -107,6 +107,7 @@
         <Compile Include="src\Catalog\DependentCountryEndings.cs" />
         <Compile Include="src\Catalog\PlayerCountry.cs" />
         <Compile Include="src\DevTools\DevTools.cs" />
+        <Compile Include="src\DevTools\Simulation.cs" />
         <Compile Include="src\Storage\ModStorage.cs" />
         <Compile Include="src\Story\StoryDecision.cs" />
         <Compile Include="src\Story\StoryEffects.cs" />
