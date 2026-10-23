@@ -14,9 +14,18 @@
       "comment": "Доля в населении и экономике СССР около 18%. Бюджет, доход и резерв заданы в союзном эквиваленте на душу населения (см. economyScale): союзный бюджет без космической программы, с небольшими расходами на размещенный ядерный арсенал, почти без посольств, без импорта зерна, с повышенными расходами на экологию после Чернобыля. Внешних долгов нет",
       "fullName": "Украина",
       "abbreviation": "Украина",
+      "sovietFullName": "Украинская ССР",
+      "sovietAbbreviation": "УССР",
       "flagImage": "flag_ukraine.png",
       "communistFlagImage": "flag_ukraine_ssr.png",
-      "communistGovernments": ["ConstructingCommunism", "ConservativeSocialism", "SocialistReformism", "SocialismNationalSpecific", "LeftNationalism", "LeftPragmatism"],
+      "communistGovernments": [
+        "ConstructingCommunism",
+        "ConservativeSocialism",
+        "SocialistReformism",
+        "SocialismNationalSpecific",
+        "LeftNationalism",
+        "LeftPragmatism"
+      ],
       "startDescription": "16 августа 1991 года. Украинская ССР — вторая по величине республика Союза: 52 миллиона человек, Донбасс, черноземы, Черноморский флот, третий в мире ядерный арсенал. Год назад Верховный Совет провозгласил государственный суверенитет, и председатель Рады Леонид Кравчук осторожно ведет республику между Москвой и Рухом. Через три дня в Москве попытаются остановить развал Союза силой. Сумеет ли Украина стать независимым государством — и каким оно будет?",
       "rulerCard": "<b>Леонид Кравчук</b>\nПредседатель Рады\nОсторожный аппаратчик\nКоммунист-государственник",
       "councilName": [
@@ -468,6 +477,528 @@
           "CulturalEducation": 180,
           "Ecology": 330,
           "DiplomaticMissions": 55,
+          "SalariesOfCivilServants": 70,
+          "DebtService": 0,
+          "DiplomaticActions": 0
+        }
+      }
+    },
+    "Russia": {
+      "name": "Россия",
+      "economyScale": 0.51,
+      "baseIncome": 3100,
+      "politicalPowerBonus": 75,
+      "dependent": true,
+      "comment": "Доля в населении СССР около 51%: economyScale в этой модели — доля населения, поэтому инфляция и влияние бюджета считаются так же, как у Союза. Экономика РСФСР богаче среднесоюзной на душу населения за счет нефти и газа. Бюджет, доход и резерв заданы в союзном эквиваленте на душу населения: союзный бюджет с большей частью ядерного арсенала, но без союзного космоса и с меньшей сетью посольств. Армия и КГБ в августе 1991 года еще союзные, у РСФСР — только свои комитеты. Внешних долгов нет: долги СССР Россия возьмет на себя позже",
+      "fullName": "Россия",
+      "abbreviation": "РФ",
+      "sovietFullName": "РСФСР",
+      "sovietAbbreviation": "РСФСР",
+      "flagImage": "flag_russia.png",
+      "communistFlagImage": "flag_rsfsr.png",
+      "communistGovernments": [
+        "ConstructingCommunism",
+        "ConservativeSocialism",
+        "SocialistReformism",
+        "SocialismNationalSpecific",
+        "LeftNationalism",
+        "LeftPragmatism"
+      ],
+      "mapFlagHoist": {
+        "image": "flag_rsfsr.png",
+        "width": 0.3,
+        "region": "Karelia"
+      },
+      "startDescription": "16 августа 1991 года. РСФСР — сердце Союза: 148 миллионов человек, сибирская нефть, Москва и Ленинград. Два месяца назад Борис Ельцин стал первым всенародно избранным президентом России. Союзные министерства, армия и КГБ подчиняются Горбачеву, но реальная сила все больше переходит к российскому руководству. 20 августа должны подписать новый Союзный договор — и через три дня в Москве попытаются сорвать его силой. Удастся ли вам построить новую Россию на обломках Союза?",
+      "rulerCard": "<b>Борис Ельцин</b>\nПрезидент РСФСР\nРадикальный реформатор\nНародный трибун",
+      "councilName": [
+        "Государственный совет РСФСР",
+        "Государственного совета РСФСР",
+        "Государственному совету РСФСР",
+        "Государственный совет РСФСР",
+        "Государственным советом РСФСР",
+        "Государственном совете РСФСР"
+      ],
+      "parliamentName": [
+        "Верховный Совет РСФСР",
+        "Верховного Совета РСФСР",
+        "Верховному Совету РСФСР",
+        "Верховный Совет РСФСР",
+        "Верховным Советом РСФСР",
+        "Верховном Совете РСФСР"
+      ],
+      "textOverrides": {
+        "politics_window/filter_12": "Государственный совет",
+        "politic_position_name/pos0_*": "Вице-президент",
+        "politic_position_name/pos10_*": "Президент",
+        "politic_position_name/pos1_*": "Председатель правительства",
+        "politic_position_name/pos4_*": "Председатель Верховного Совета",
+        "politic_position_name/pos5_*": "Председатель КГБ РСФСР",
+        "politic_position_name/pos3_*": "Министр финансов",
+        "politic_position_name/pos12_*": "Председатель Госкомитета по обороне"
+      },
+      "ruler": "Yeltsin",
+      "posts": {
+        "SecondSecretary": "Rutskoy",
+        "ChairmanOfTheCouncilOfMinisters": "Silaev",
+        "ChairmanOfTheSupremeCouncil": "Khasbulatov",
+        "ForeignSecretary": "Kozyrev",
+        "MinisterOfFinance": "@lazarev",
+        "ChairmanOfTheKGB": "Ivanenko",
+        "MinisterOfInternalAffairs": "Barannikov",
+        "MinisterOfDefense": "@kobets",
+        "MinisterOfAgriculture": "@khlystun",
+        "MinisterOfIndustry": "Lobov",
+        "MinisterOfEducation": "@dneprov"
+      },
+      "council": [
+        "Yeltsin",
+        "Rutskoy",
+        "Khasbulatov",
+        "Silaev",
+        "@burbulis",
+        "@shakhrai",
+        "@poltoranin",
+        "@skokov",
+        "@stankevich",
+        "Sobchak",
+        "Popov"
+      ],
+      "politicians": [
+        "Gaidar",
+        "Chubais",
+        "Luzhkov",
+        "Yavlinskiy",
+        "Chernomyrdin",
+        "Zhirinovsky",
+        "Baburin",
+        "Travkin",
+        "Volsky",
+        "Zyuganov",
+        "Polozkov",
+        "Grachev",
+        "Gerashchenko",
+        "Yasin",
+        "Nemtsov",
+        "Rybkin",
+        "Lebed",
+        "Primakov"
+      ],
+      "newCharacters": [
+        {
+          "key": "burbulis",
+          "name": "Геннадий",
+          "surname": "Бурбулис",
+          "age": 46,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProLiberalDemocrat",
+            "Schemer",
+            "Intelligent"
+          ],
+          "power": 35,
+          "diplomacy": 3,
+          "intrigue": 7,
+          "thrift": 3
+        },
+        {
+          "key": "shakhrai",
+          "name": "Сергей",
+          "surname": "Шахрай",
+          "age": 35,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProLiberalDemocrat",
+            "Intelligent",
+            "Compromise"
+          ],
+          "power": 20,
+          "diplomacy": 5,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "poltoranin",
+          "name": "Михаил",
+          "surname": "Полторанин",
+          "age": 52,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProLiberalDemocrat",
+            "GlasnostActivist",
+            "Radical"
+          ],
+          "power": 20,
+          "diplomacy": 3,
+          "intrigue": 5,
+          "thrift": 3
+        },
+        {
+          "key": "skokov",
+          "name": "Юрий",
+          "surname": "Скоков",
+          "age": 53,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProModerate",
+            "Industrialist",
+            "Schemer"
+          ],
+          "power": 25,
+          "diplomacy": 3,
+          "intrigue": 6,
+          "thrift": 3
+        },
+        {
+          "key": "stankevich",
+          "name": "Сергей",
+          "surname": "Станкевич",
+          "age": 37,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProLiberalDemocrat",
+            "Peoplefavorite",
+            "Voluntarist"
+          ],
+          "power": 15,
+          "diplomacy": 5,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "lazarev",
+          "name": "Игорь",
+          "surname": "Лазарев",
+          "age": 44,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProReformist",
+            "Economical",
+            "Unambitious"
+          ],
+          "power": 10,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 5
+        },
+        {
+          "key": "kobets",
+          "name": "Константин",
+          "surname": "Кобец",
+          "age": 52,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProLiberalDemocrat",
+            "StrongArm",
+            "Compromise"
+          ],
+          "power": 20,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "khlystun",
+          "name": "Виктор",
+          "surname": "Хлыстун",
+          "age": 45,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProModerate",
+            "Technocrat",
+            "Unambitious"
+          ],
+          "power": 10,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 4
+        },
+        {
+          "key": "dneprov",
+          "name": "Эдуард",
+          "surname": "Днепров",
+          "age": 55,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProLiberalDemocrat",
+            "Intelligent",
+            "Idealist"
+          ],
+          "power": 10,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "shokhin",
+          "name": "Александр",
+          "surname": "Шохин",
+          "age": 40,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProLiberalDemocrat",
+            "Economical",
+            "Compromise"
+          ],
+          "power": 15,
+          "diplomacy": 5,
+          "intrigue": 3,
+          "thrift": 5
+        },
+        {
+          "key": "nechaev",
+          "name": "Андрей",
+          "surname": "Нечаев",
+          "age": 38,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProLiberalDemocrat",
+            "ProMarket",
+            "Intelligent"
+          ],
+          "power": 10,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 5
+        },
+        {
+          "key": "bfyodorov",
+          "name": "Борис",
+          "surname": "Федоров",
+          "age": 33,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProLiberalDemocrat",
+            "ProMarket",
+            "Uncompromising"
+          ],
+          "power": 15,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 6
+        },
+        {
+          "key": "filatov",
+          "name": "Сергей",
+          "surname": "Филатов",
+          "age": 55,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProLiberalDemocrat",
+            "Compromise",
+            "Unambitious"
+          ],
+          "power": 15,
+          "diplomacy": 5,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "starovoitova",
+          "name": "Галина",
+          "surname": "Старовойтова",
+          "age": 45,
+          "isWoman": true,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProLiberalDemocrat",
+            "Dissident",
+            "Idealist"
+          ],
+          "power": 15,
+          "diplomacy": 5,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "yerin",
+          "name": "Виктор",
+          "surname": "Ерин",
+          "age": 47,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProModerate",
+            "StrongArm",
+            "Unambitious"
+          ],
+          "power": 15,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "golushko",
+          "name": "Николай",
+          "surname": "Голушко",
+          "age": 54,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProConservative",
+            "StrongArm",
+            "Partocrat"
+          ],
+          "power": 15,
+          "diplomacy": 3,
+          "intrigue": 5,
+          "thrift": 3
+        },
+        {
+          "key": "shumeiko",
+          "name": "Владимир",
+          "surname": "Шумейко",
+          "age": 46,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProModerate",
+            "Industrialist",
+            "Hedonist"
+          ],
+          "power": 20,
+          "diplomacy": 3,
+          "intrigue": 5,
+          "thrift": 3
+        },
+        {
+          "key": "korzhakov",
+          "name": "Александр",
+          "surname": "Коржаков",
+          "age": 41,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProModerate",
+            "StrongArm",
+            "Schemer"
+          ],
+          "power": 15,
+          "diplomacy": 3,
+          "intrigue": 7,
+          "thrift": 3
+        },
+        {
+          "key": "soskovets",
+          "name": "Олег",
+          "surname": "Сосковец",
+          "age": 42,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProModerate",
+            "Industrialist",
+            "Hedonist"
+          ],
+          "power": 20,
+          "diplomacy": 3,
+          "intrigue": 3,
+          "thrift": 3
+        },
+        {
+          "key": "lukin",
+          "name": "Владимир",
+          "surname": "Лукин",
+          "age": 54,
+          "homeLand": "MainRussia",
+          "traits": [
+            "ProLiberalDemocrat",
+            "Intelligent",
+            "Atlantophile"
+          ],
+          "power": 15,
+          "diplomacy": 6,
+          "intrigue": 3,
+          "thrift": 3
+        }
+      ],
+      "relations": {
+        "USSR": 40,
+        "Ukraine": 60,
+        "Belorussia": 65,
+        "Kazakhstan": 65,
+        "Litva": 65,
+        "Latvia": 65,
+        "Estonia": 65,
+        "Moldavia": 50,
+        "Georgia": 45,
+        "Armenia": 55,
+        "Azerbaijan": 50,
+        "USA": 60,
+        "Britain": 55,
+        "France": 55,
+        "FRG": 55,
+        "UnitedGermany": 55,
+        "Poland": 55,
+        "China": 45,
+        "Japan": 45
+      },
+      "indicators": {
+        "reserve": 400,
+        "usLoan": 0,
+        "fraLoan": 0,
+        "imfLoan": 0,
+        "export": 30,
+        "politicalPower": 50,
+        "militaryStaffLoyalty": 35,
+        "armyStaffLoyalty": 35,
+        "specialServicesLoyalty": 35,
+        "specialServices": 25,
+        "radicalsPower": 45,
+        "freedomLevel": 60,
+        "liberalizationLevel": 55,
+        "unityLevel": 50,
+        "intelligentsiaLoyalty": 70,
+        "spiritualContentment": 55,
+        "orderLevel": 65,
+        "healthCare": 65,
+        "education": 88,
+        "ecology": 40,
+        "educationAccess": 94,
+        "healthCareAccess": 85,
+        "selfFulfillment": 70,
+        "luxuryGoodsLevel": 35,
+        "firstNeedsGoods": 60,
+        "housingLevel": 60,
+        "employmentLevel": 100,
+        "agroEffectiveness": 50,
+        "servicesEffectiveness": 30,
+        "lightIndustryEffectiveness": 50,
+        "heavyIndustryEffectiveness": 75,
+        "armyIndustryEffectiveness": 75,
+        "competitivenessLevel": 25,
+        "corruptionLevel": 50,
+        "forgeryLevel": 40,
+        "armyQuantityLevel": 55,
+        "warheadsQuantity": 70,
+        "combatability": 50,
+        "expenses": {
+          "ArmamentAndEquipment": 120,
+          "SoldiersSupply": 180,
+          "StateMechanism": 320,
+          "SocialSpending": 280,
+          "LawAndOrder": 90,
+          "SpecialServices": 100,
+          "MilitaryTechnology": 80,
+          "NuclearTechnology": 100,
+          "ElectronicTechnology": 70,
+          "CivilTechnology": 60,
+          "MedicalSystem": 80,
+          "EducationSystem": 140,
+          "BribesToGenerals": 0,
+          "BribesToSecretServices": 0,
+          "BribesToIntellectuals": 0,
+          "BribesToOfficials": 100,
+          "Propaganda": 100,
+          "Agriculture": 180,
+          "Infrastructure": 180,
+          "LightIndustry": 120,
+          "HeavyIndustry": 150,
+          "MilitaryIndustrialComplex": 160,
+          "ServicesSector": 100,
+          "ImportOfAgriculture": 90,
+          "ImportOfLuxuryGoods": 20,
+          "ImportOfMedicines": 0,
+          "ImportOfArts": 0,
+          "ImportOfIndustrialEquipment": 0,
+          "CulturalEducation": 180,
+          "Ecology": 200,
+          "DiplomaticMissions": 120,
           "SalariesOfCivilServants": 70,
           "DebtService": 0,
           "DiplomaticActions": 0

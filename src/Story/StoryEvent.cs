@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using AugustDaysMod.Storage;
+using AugustDaysMod.Union;
 using Backend.Gamedesign;
 using Backend.Gamedesign.EventSystem.DataStructures;
 using Backend.Gamedesign.EventSystem.Events;
@@ -38,6 +40,24 @@ namespace AugustDaysMod.Story
         }
 
         public override EventInfo EventInfo => eventInfo;
+
+        protected static int Flag(GameState gameState, string key) => ModStorage.For(gameState).Flag(key);
+
+        protected static bool HasFlag(GameState gameState, string key) => ModStorage.For(gameState).flags.ContainsKey(key);
+
+        protected static bool Done(GameState gameState, int id) => gameState.eventsDone.ContainsKey(id);
+
+        protected static bool UnionDissolved(GameState gameState) => SovietUnion.Data(gameState).dissolved;
+
+        // Персонаж из справочника, а если его уже нет в игре — правитель
+        public static Characters CharacterOrRuler(GameState gameState, string reference)
+        {
+            Characters? character = Catalog.CountryLeadership.Resolve(reference);
+            return character.HasValue && gameState.characters.TryGetValue(character.Value, out CharacterInfo info) &&
+                   info.status == CharacterInfo.PoliticStatus.Alive
+                ? character.Value
+                : gameState.gameCharacter;
+        }
 
         protected virtual int OptionsCount(GameState gameState) => StoryTexts.Event(Id, Variant(gameState)).options.Count;
 

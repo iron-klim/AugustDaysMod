@@ -13,14 +13,6 @@ namespace AugustDaysMod.Story.Ukraine
         protected UkraineEvent(DateTime startDate, DateTime? endDate = null) : base(Countries.Ukraine, startDate, endDate)
         {
         }
-
-        protected static int Flag(GameState gameState, string key) => ModStorage.For(gameState).Flag(key);
-
-        protected static bool HasFlag(GameState gameState, string key) => ModStorage.For(gameState).flags.ContainsKey(key);
-
-        protected static bool Done(GameState gameState, int id) => gameState.eventsDone.ContainsKey(id);
-
-        protected static bool UnionDissolved(GameState gameState) => SovietUnion.Data(gameState).dissolved;
     }
 
     // 19.08.1991. В Москве ГКЧП, в Киев прилетает генерал Варенников
@@ -87,11 +79,6 @@ namespace AugustDaysMod.Story.Ukraine
             }
         }
 
-        public static Characters CharacterOrRuler(GameState gameState, string reference)
-        {
-            Characters? character = Catalog.CountryLeadership.Resolve(reference);
-            return character.HasValue && gameState.characters.ContainsKey(character.Value) ? character.Value : gameState.gameCharacter;
-        }
     }
 
     // Сентябрь 1991. Войска Киевского, Одесского и Прикарпатского округов на территории республики
@@ -104,7 +91,7 @@ namespace AugustDaysMod.Story.Ukraine
         {
         }
 
-        protected override Characters Speaker(GameState gameState) => UkraineIndependenceAct.CharacterOrRuler(gameState, "@morozov");
+        protected override Characters Speaker(GameState gameState) => CharacterOrRuler(gameState, "@morozov");
 
         protected override bool Condition(GameState gameState) => Flag(gameState, StoryFlags.Independence) == 1;
 
@@ -200,7 +187,7 @@ namespace AugustDaysMod.Story.Ukraine
         {
         }
 
-        protected override Characters Speaker(GameState gameState) => UkraineIndependenceAct.CharacterOrRuler(gameState, "@pyatachenko");
+        protected override Characters Speaker(GameState gameState) => CharacterOrRuler(gameState, "@pyatachenko");
 
         protected override bool Condition(GameState gameState) => UnionDissolved(gameState);
 
@@ -229,7 +216,7 @@ namespace AugustDaysMod.Story.Ukraine
         {
         }
 
-        protected override Characters Speaker(GameState gameState) => UkraineIndependenceAct.CharacterOrRuler(gameState, "@morozov");
+        protected override Characters Speaker(GameState gameState) => CharacterOrRuler(gameState, "@morozov");
 
         protected override bool Condition(GameState gameState) => UnionDissolved(gameState);
 
@@ -293,7 +280,7 @@ namespace AugustDaysMod.Story.Ukraine
         {
         }
 
-        protected override Characters Speaker(GameState gameState) => UkraineIndependenceAct.CharacterOrRuler(gameState, "@zlenko");
+        protected override Characters Speaker(GameState gameState) => CharacterOrRuler(gameState, "@zlenko");
 
         protected override bool Condition(GameState gameState) => UnionDissolved(gameState);
 
@@ -326,7 +313,7 @@ namespace AugustDaysMod.Story.Ukraine
         {
         }
 
-        protected override Characters Speaker(GameState gameState) => UkraineIndependenceAct.CharacterOrRuler(gameState, "@zlenko");
+        protected override Characters Speaker(GameState gameState) => CharacterOrRuler(gameState, "@zlenko");
 
         protected override bool Condition(GameState gameState) => Flag(gameState, StoryFlags.NuclearDelay) == 1;
 
@@ -355,7 +342,7 @@ namespace AugustDaysMod.Story.Ukraine
         {
         }
 
-        protected override Characters Speaker(GameState gameState) => UkraineIndependenceAct.CharacterOrRuler(gameState, "@kuchma");
+        protected override Characters Speaker(GameState gameState) => CharacterOrRuler(gameState, "@kuchma");
 
         protected override void SetupOption(GameState gameState, int optionIndex, UnitOfWork effects)
         {

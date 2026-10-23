@@ -62,6 +62,19 @@ namespace AugustDaysMod.Union
             },
             new Milestone
             {
+                // Когда Украиной управляет игрок, референдум — его сюжетное событие
+                key = "timeline_ukraine_referendum",
+                date = new DateTime(1991, 12, 1),
+                condition = gameState => gameState.playerCountry != Countries.Ukraine && SovietUnion.IsSubject(gameState.countries[Countries.Ukraine]),
+                action = gameState =>
+                {
+                    UnionNews.Add(gameState, "На Украине прошел референдум: за независимость проголосовали более 90% избирателей. " +
+                                             "Президентом избран Леонид Кравчук.");
+                    UnionDynamics.DeclareIndependence(gameState, Countries.Ukraine);
+                }
+            },
+            new Milestone
+            {
                 key = "timeline_dissolution",
                 date = new DateTime(1991, 12, 26),
                 condition = gameState => ModStorage.For(gameState).flags.ContainsKey(StoryFlags.Belovezha),

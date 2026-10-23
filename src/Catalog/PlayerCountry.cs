@@ -129,9 +129,12 @@ namespace AugustDaysMod.Catalog
             }
 
             CountryProfile profile = CountryCatalog.Get(country);
-            if (!string.IsNullOrEmpty(profile?.fullName))
+            bool soviet = gameState.countries[country].puppetOf == Countries.USSR && !string.IsNullOrEmpty(profile?.sovietFullName);
+            string fullName = soviet ? profile.sovietFullName : profile?.fullName;
+            string abbreviation = soviet ? profile.sovietAbbreviation : profile?.abbreviation;
+            if (!string.IsNullOrEmpty(fullName))
             {
-                __result = (profile.fullName, string.IsNullOrEmpty(profile.abbreviation) ? profile.fullName : profile.abbreviation);
+                __result = (fullName, string.IsNullOrEmpty(abbreviation) ? fullName : abbreviation);
             }
         }
     }

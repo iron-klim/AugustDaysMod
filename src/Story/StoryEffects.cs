@@ -73,5 +73,15 @@ namespace AugustDaysMod.Story
         public const string EarlyElections = "ukr_early_elections";
         public const string OwnCurrency = "ukr_own_currency";
         public const string Fleet = "ukr_fleet";
+
+        public const string RussiaCoupStance = "ru_coup_stance";
+        public const string RussiaCommunists = "ru_communists";
+        public const string RussiaReform = "ru_reform";
+        public const string RussiaChechnya = "ru_chechnya";
+        public const string RussiaVouchers = "ru_vouchers";
+        public const string RussiaGaidar = "ru_gaidar";
+        public const string RussiaReferendum = "ru_referendum";
+        public const string RussiaDecree1400 = "ru_decree_1400";
+        public const string RussiaChechenWar = "ru_chechen_war";
     }
 }

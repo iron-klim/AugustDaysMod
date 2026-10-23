@@ -7,8 +7,8 @@ using UnityEngine;
 
 namespace AugustDaysMod.Catalog
 {
-    // На политической карте территория страны игрока закрашена ее флагом: один флаг растянут на всю страну,
-    // а маски по форме ее регионов обрезают его по границам
+    // На политической карте территория страны игрока закрашена ее флагом, а маски по форме ее регионов
+    // обрезают флаг по границам
     [HarmonyPatch(typeof(MapController), "RepaintRegions")]
     public static class PatchMapPlayerFlag
     {
@@ -20,7 +20,9 @@ namespace AugustDaysMod.Catalog
 
         private static readonly AccessTools.FieldRef<int> MapModeRef = AccessTools.StaticFieldRefAccess<int>(AccessTools.Field(typeof(MapController), "currentMapMode"));
 
-        private static SpriteRenderer flag;
+        private static SpriteRenderer background;
+        private static SpriteRenderer hoist;
+        private static SpriteRenderer edge;
 
         static void Postfix(MapController __instance)
         {
@@ -31,9 +33,17 @@ namespace AugustDaysMod.Catalog
                 return;
             }
 
-            Sprite sprite = gameState.playerCountry != Countries.USSR && MapModeRef() == 0 ? CountryFlags.Current(gameState) : null;
+            string image = gameState.playerCountry != Countries.USSR && MapModeRef() == 0 ? CountryFlags.CurrentImage(gameState) : null;
+            Sprite sprite = CountryFlags.Load(image);
+            MapFlagHoist hoistSettings = CountryCatalog.Get(gameState.playerCountry)?.mapFlagHoist;
+            if (hoistSettings != null && hoistSettings.image != image)
+            {
+                hoistSettings = null;
+            }
+
             bool hasBounds = false;
             Bounds bounds = default;
+            Bounds? hoistRegionBounds = null;
             SpriteRenderer sample = null;
             foreach (RegionController region in regions)
             {
@@ -62,6 +72,11 @@ namespace AugustDaysMod.Catalog
 
                 mask.GetComponent<SpriteMask>().sprite = renderer.sprite;
                 mask.gameObject.SetActive(true);
+                if (hoistSettings != null && region.CurrentRegion == hoistSettings.region)
+                {
+                    hoistRegionBounds = renderer.bounds;
+                }
+
                 if (hasBounds)
                 {
                     bounds.Encapsulate(renderer.bounds);
@@ -76,35 +91,131 @@ namespace AugustDaysMod.Catalog
 
             if (!hasBounds)
             {
-                if (flag != null)
-                {
-                    flag.gameObject.SetActive(false);
-                }
-
+                Hide(background);
+                Hide(hoist);
+                Hide(edge);
                 return;
             }
 
-            if (flag == null)
+            background = Ensure(background, "AugustPlayerFlag", sample, 1);
+            if (hoistSettings == null || !hoistRegionBounds.HasValue)
             {
-                var flagObject = new GameObject("AugustPlayerFlag");
-                flagObject.transform.SetParent(sample.transform.parent, false);
-                flag = flagObject.AddComponent<SpriteRenderer>();
-                flag.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+                // Флаг растянут на прямоугольник, описанный вокруг страны
+                background.sprite = sprite;
+                Place(background, bounds.min.x, bounds.max.x, bounds.min.y, bounds.max.y);
+                Hide(hoist);
+                Hide(edge);
+                return;
             }
 
-            flag.gameObject.layer = sample.gameObject.layer;
-            flag.sortingLayerID = sample.sortingLayerID;
-            flag.sortingOrder = sample.sortingOrder + 1;
-            flag.sprite = sprite;
-            flag.color = new Color(1f, 1f, 1f, ALPHA);
-            flag.gameObject.SetActive(true);
+            // Флаг с гербом у древка: полоса и герб в своих пропорциях закрывают часть страны от западной границы
+            // опорного региона и по высоте до его верхнего края, остальная территория — цветом свободного края полотна
+            Texture2D texture = sprite.texture;
+            int hoistWidth = Mathf.Clamp(Mathf.RoundToInt(texture.width * hoistSettings.width), 1, texture.width);
+            background.sprite = Part(texture, texture.width - 1, 1);
+            Place(background, bounds.min.x, bounds.max.x, bounds.min.y, bounds.max.y);
 
-            // Флаг растягиваем на прямоугольник, описанный вокруг страны
-            Vector3 size = sprite.bounds.size;
-            Transform transform = flag.transform;
-            transform.position = new Vector3(bounds.center.x, bounds.center.y, sample.transform.position.z);
+            float top = hoistRegionBounds.Value.max.y;
+            float left = hoistRegionBounds.Value.min.x;
+            float height = top - bounds.min.y;
+            hoist = Ensure(hoist, "AugustPlayerFlagHoist", sample, 2);
+            hoist.sprite = HoistPart(texture, hoistWidth);
+            Place(hoist, left, left + height * hoistWidth / texture.height, bounds.min.y, top);
+
+            // Западнее опорного региона полоса у древка продолжается до границы
+            if (left > bounds.min.x)
+            {
+                edge = Ensure(edge, "AugustPlayerFlagEdge", sample, 2);
+                edge.sprite = Part(texture, 0, 1);
+                Place(edge, bounds.min.x, left, bounds.min.y, top);
+            }
+            else
+            {
+                Hide(edge);
+            }
+        }
+
+        private static void Hide(SpriteRenderer renderer)
+        {
+            if (renderer != null)
+            {
+                renderer.gameObject.SetActive(false);
+            }
+        }
+
+        private static SpriteRenderer Ensure(SpriteRenderer renderer, string name, SpriteRenderer sample, int order)
+        {
+            if (renderer == null)
+            {
+                var flagObject = new GameObject(name);
+                flagObject.transform.SetParent(sample.transform.parent, false);
+                renderer = flagObject.AddComponent<SpriteRenderer>();
+                renderer.maskInteraction = SpriteMaskInteraction.VisibleInsideMask;
+            }
+
+            renderer.gameObject.layer = sample.gameObject.layer;
+            renderer.sortingLayerID = sample.sortingLayerID;
+            renderer.sortingOrder = sample.sortingOrder + order;
+            renderer.color = new Color(1f, 1f, 1f, ALPHA);
+            Vector3 position = renderer.transform.position;
+            renderer.transform.position = new Vector3(position.x, position.y, sample.transform.position.z);
+            renderer.gameObject.SetActive(true);
+            return renderer;
+        }
+
+        // Растягивает спрайт на прямоугольник карты
+        private static void Place(SpriteRenderer renderer, float xMin, float xMax, float yMin, float yMax)
+        {
+            Vector3 size = renderer.sprite.bounds.size;
+            Transform transform = renderer.transform;
             Vector3 parentScale = transform.parent != null ? transform.parent.lossyScale : Vector3.one;
-            transform.localScale = new Vector3(bounds.size.x / size.x / parentScale.x, bounds.size.y / size.y / parentScale.y, 1f);
+            transform.position = new Vector3((xMin + xMax) / 2f, (yMin + yMax) / 2f, transform.position.z);
+            transform.localScale = new Vector3((xMax - xMin) / size.x / parentScale.x, (yMax - yMin) / size.y / parentScale.y, 1f);
+        }
+
+        private static readonly Dictionary<(Texture2D, int, int), Sprite> Parts = new Dictionary<(Texture2D, int, int), Sprite>();
+
+        // Вертикальная полоса картинки флага во всю ее высоту
+        private static Sprite Part(Texture2D texture, int x, int width)
+        {
+            if (!Parts.TryGetValue((texture, x, width), out Sprite part) || part == null)
+            {
+                part = Sprite.Create(texture, new Rect(x, 0f, width, texture.height), new Vector2(0.5f, 0.5f), 100f);
+                Parts[(texture, x, width)] = part;
+            }
+
+            return part;
+        }
+
+        private static readonly Dictionary<(Texture2D, int), Sprite> Hoists = new Dictionary<(Texture2D, int), Sprite>();
+
+        // Часть у древка без цвета полотна: она лежит поверх фона того же цвета, и двойной полупрозрачный слой
+        // был бы заметен прямоугольником
+        private static Sprite HoistPart(Texture2D texture, int width)
+        {
+            if (Hoists.TryGetValue((texture, width), out Sprite part) && part != null)
+            {
+                return part;
+            }
+
+            Color field = texture.GetPixel(texture.width - 1, texture.height / 2);
+            Color[] pixels = texture.GetPixels(0, 0, width, texture.height);
+            for (int index = 0; index < pixels.Length; index++)
+            {
+                Color pixel = pixels[index];
+                float distance = Mathf.Abs(pixel.r - field.r) + Mathf.Abs(pixel.g - field.g) + Mathf.Abs(pixel.b - field.b);
+                if (distance < 0.12f)
+                {
+                    pixels[index].a = 0f;
+                }
+            }
+
+            var hoistTexture = new Texture2D(width, texture.height, TextureFormat.RGBA32, false) { wrapMode = TextureWrapMode.Clamp };
+            hoistTexture.SetPixels(pixels);
+            hoistTexture.Apply();
+            part = Sprite.Create(hoistTexture, new Rect(0f, 0f, width, texture.height), new Vector2(0.5f, 0.5f), 100f);
+            Hoists[(texture, width)] = part;
+            return part;
         }
 
         private static Transform CreateMask(Transform region, SpriteRenderer renderer)

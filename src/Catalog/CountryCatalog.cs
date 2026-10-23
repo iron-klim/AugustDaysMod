@@ -35,12 +35,19 @@ namespace AugustDaysMod.Catalog
         [JsonProperty] public string fullName;
         [JsonProperty] public string abbreviation;
 
+        // Название, пока страна остается союзной республикой
+        [JsonProperty] public string sovietFullName;
+        [JsonProperty] public string sovietAbbreviation;
+
         // Картинка флага в папке images мода
         [JsonProperty] public string flagImage;
 
         // Флаг при коммунистическом правительстве. Он же — в меню новой игры: в августе 1991 года страна еще советская
         [JsonProperty] public string communistFlagImage;
         [JsonProperty] public List<Country.GovernmentType> communistGovernments = new List<Country.GovernmentType>();
+
+        // Как разместить на карте флаг с гербом у древка. Без настройки флаг растягивается на всю страну
+        [JsonProperty] public MapFlagHoist mapFlagHoist;
 
         // Описание старта в меню новой игры
         [JsonProperty] public string startDescription;
@@ -69,6 +76,20 @@ namespace AugustDaysMod.Catalog
 
         // Поля GameState под теми же именами, что в state.json
         [JsonProperty] public JObject indicators;
+    }
+
+    // Часть флага у древка (полоса, герб) не растягивается на всю страну: в своих пропорциях она закрывает территорию
+    // от западной границы опорного региона и по высоте до его верхнего края, а остальная страна закрашивается цветом
+    // свободного края полотна. Западнее опорного региона полоса у древка продолжается до границы
+    public class MapFlagHoist
+    {
+        // Картинка флага, к которой относится настройка
+        [JsonProperty] public string image;
+
+        // Ширина части у древка в долях ширины флага
+        [JsonProperty] public float width = 0.3f;
+
+        [JsonProperty] public Backend.Gamedesign.Regions region;
     }
 
     // Политик, которого нет в игре. Портрет — нейтральный силуэт из папки portraits мода, если не задан свой

@@ -124,6 +124,11 @@ namespace AugustDaysMod.Union
             country.puppetType = Country.PuppetType.None;
             SovietUnion.Data(gameState).independence[key] = gameState.date;
             UnionNews.Add(gameState, $"{CountryUtils.GetCountryName(gameState, key)} провозглашает независимость и выходит из состава СССР.");
+            // Без России Союза нет
+            if (key == Countries.Russia)
+            {
+                Dissolve(gameState, "russia");
+            }
         }
 
         // Союз прекращает существование: оставшиеся республики становятся независимыми
