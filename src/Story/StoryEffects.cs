@@ -1,3 +1,4 @@
+using AugustDaysMod.Assets;
 using AugustDaysMod.Storage;
 using AugustDaysMod.Union;
 using Backend.Gamedesign;
@@ -17,21 +18,23 @@ namespace AugustDaysMod.Story
         public static UnitOfWork AddUnionCohesion(this UnitOfWork effects, float value)
         {
             return effects.AddAction(
-                textFormatter => textFormatter.AddText($"Сплоченность Союза: {value:+#;-#;0}", value > 0 ? GOOD : BAD),
+                textFormatter => textFormatter.AddText(ModLanguage.Pick($"Сплоченность Союза: {value:+#;-#;0}", $"Union cohesion: {value:+#;-#;0}"), value > 0 ? GOOD : BAD),
                 (gameState, gameRules, gameScenario) => UnionDynamics.ChangeCohesion(gameState, value));
         }
 
         public static UnitOfWork AddUnionRelations(this UnitOfWork effects, GameState gameState, Countries country, float value)
         {
             return effects.AddAction(
-                textFormatter => textFormatter.AddText($"Отношения {CountryUtils.GetCountryName(gameState, country)} к союзному центру: {value:+#;-#;0}", value > 0 ? GOOD : BAD),
+                textFormatter => textFormatter.AddText(ModLanguage.Pick($"Отношения {CountryUtils.GetCountryName(gameState, country)} к союзному центру: {value:+#;-#;0}",
+                    $"Relations of {CountryUtils.GetCountryName(gameState, country)} with the Union centre: {value:+#;-#;0}"), value > 0 ? GOOD : BAD),
                 (state, gameRules, gameScenario) => UnionRelations.Add(state, country, value));
         }
 
         public static UnitOfWork AddIndependence(this UnitOfWork effects, GameState gameState, Countries country)
         {
             return effects.AddAction(
-                textFormatter => textFormatter.AddText($"{CountryUtils.GetCountryName(gameState, country)} выходит из состава СССР", GOOD),
+                textFormatter => textFormatter.AddText(ModLanguage.Pick($"{CountryUtils.GetCountryName(gameState, country)} выходит из состава СССР",
+                    $"{CountryUtils.GetCountryName(gameState, country)} leaves the USSR"), GOOD),
                 (state, gameRules, gameScenario) => UnionDynamics.DeclareIndependence(state, country));
         }
 
@@ -45,7 +48,7 @@ namespace AugustDaysMod.Story
         public static UnitOfWork AddEnding(this UnitOfWork effects, int endingId)
         {
             return effects.AddAction(
-                textFormatter => textFormatter.AddText("Игра будет окончена", BAD),
+                textFormatter => textFormatter.AddText(ModLanguage.Pick("Игра будет окончена", "The game will end"), BAD),
                 (gameState, gameRules, gameScenario) => ModStorage.For(gameState).SetFlag(StoryFlags.PendingEnding, endingId));
         }
 

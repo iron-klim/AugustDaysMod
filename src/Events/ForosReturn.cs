@@ -81,7 +81,7 @@ namespace AugustDaysMod.Events
         {
             if (shownOffset == RESIGNATION)
             {
-                description.AddText("Игра будет окончена", "#FF0000");
+                description.AddText(ModLanguage.Pick("Игра будет окончена", "The game will end"), "#FF0000");
                 return;
             }
 

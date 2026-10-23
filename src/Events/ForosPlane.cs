@@ -67,7 +67,7 @@ namespace AugustDaysMod.Events
             {
                 if (optionIndex == ANSWER_1)
                 {
-                    description.AddText("Игра будет окончена", "#FF0000");
+                    description.AddText(ModLanguage.Pick("Игра будет окончена", "The game will end"), "#FF0000");
                 }
                 else
                 {

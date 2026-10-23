@@ -1,3 +1,4 @@
+using AugustDaysMod.Assets;
 using System;
 using System.Linq;
 using Backend.Gamedesign;
@@ -71,7 +72,7 @@ namespace AugustDaysMod.Scenarios
         public static UnitOfWork AddCoupPower(this UnitOfWork effects, int value)
         {
             return effects.AddAction(
-                textFormatter => textFormatter.AddText($"Сила ГКЧП: {value:+#;-#;0}", value > 0 ? "#FF0000" : "#006400"),
+                textFormatter => textFormatter.AddText(ModLanguage.Pick($"Сила ГКЧП: {value:+#;-#;0}", $"GKChP strength: {value:+#;-#;0}"), value > 0 ? "#FF0000" : "#006400"),
                 (gameState, gameRules, gameScenario) =>
                 {
                     ConspiracyInfo conspiracy = Find(gameState);

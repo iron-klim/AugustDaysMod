@@ -1,3 +1,4 @@
+using AugustDaysMod.Assets;
 using System;
 using System.Collections.Generic;
 using AugustDaysMod.Storage;
@@ -104,7 +105,7 @@ namespace AugustDaysMod.Story
             {
                 effects[index] = UnitOfWork.StartCreation();
                 SetupOption(gameState, index, effects[index]);
-                eventDrawInfo.optionsNames[index] = index < text.options.Count ? text.options[index].name : "Далее";
+                eventDrawInfo.optionsNames[index] = index < text.options.Count ? text.options[index].name : ModLanguage.Pick("Далее", "Next");
                 eventDrawInfo.optionsEnabled[index] = IsOptionEnabled(gameState, index);
                 eventDrawInfo.optionsNamesAlt[index] = EventUtils.GenerateOptionDescription(NoDescriptionVariants, index, effects[index]);
             }

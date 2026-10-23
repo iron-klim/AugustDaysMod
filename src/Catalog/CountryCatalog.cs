@@ -1,6 +1,7 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using AugustDaysMod.Assets;
 using Backend.Gamedesign;
 using Newtonsoft.Json;
@@ -8,7 +9,8 @@ using Newtonsoft.Json.Linq;
 using UnityEngine;
 
 // Справочник поддерживаемых стран (assets/countries.json): собственные показатели страны, которые
-// игра хранит одними на страну игрока. Применяются, когда игрок переходит в эту страну
+// игра хранит одними на страну игрока. Применяются, когда игрок переходит в эту страну.
+// Тексты справочника на английском — в assets/countries_en.json: он задает только текстовые поля поверх русских
 namespace AugustDaysMod.Catalog
 {
     public class CountryProfile
@@ -143,8 +145,22 @@ namespace AugustDaysMod.Catalog
         }
 
         private static Dictionary<Countries, CountryProfile> profiles;
+        private static string profilesLanguage;
 
-        public static IReadOnlyDictionary<Countries, CountryProfile> Profiles => profiles ?? (profiles = Load());
+        public static IReadOnlyDictionary<Countries, CountryProfile> Profiles
+        {
+            get
+            {
+                if (profiles == null || profilesLanguage != ModLanguage.Code)
+                {
+                    profilesLanguage = ModLanguage.Code;
+                    profiles = Load();
+                    ApplyTranslation(profiles);
+                }
+
+                return profiles;
+            }
+        }
 
         public static bool IsSupported(Countries country) => Profiles.ContainsKey(country);
 
@@ -204,6 +220,56 @@ namespace AugustDaysMod.Catalog
 
             Debug.Log($"[AugustDays] справочник стран: {string.Join(", ", file.countries.Keys)}");
             return file.countries;
+        }
+
+        private static void ApplyTranslation(Dictionary<Countries, CountryProfile> loaded)
+        {
+            string path = ModLanguage.TranslationPath(FILE_NAME);
+            if (path == null)
+            {
+                return;
+            }
+
+            JObject root;
+            try
+            {
+                root = JObject.Parse(File.ReadAllText(path));
+            }
+            catch (Exception exception)
+            {
+                Debug.LogError($"[AugustDays] перевод справочника стран не читается: {exception.Message}");
+                return;
+            }
+
+            // Списки и словари перевода заменяют русские целиком, а не дописываются к ним
+            var settings = new JsonSerializerSettings { ObjectCreationHandling = ObjectCreationHandling.Replace };
+            foreach (JProperty country in (root["countries"] as JObject)?.Properties() ?? Enumerable.Empty<JProperty>())
+            {
+                if (!Enum.TryParse(country.Name, out Countries key) || !loaded.TryGetValue(key, out CountryProfile profile) ||
+                    !(country.Value is JObject fields))
+                {
+                    continue;
+                }
+
+                // У новых политиков переводятся только имя и фамилия, политик находится по ключу
+                if (fields["newCharacters"] is JArray names)
+                {
+                    foreach (JObject name in names.OfType<JObject>())
+                    {
+                        NewCharacter target = profile.newCharacters?.Find(c => c.key == (string)name["key"]);
+                        if (target != null)
+                        {
+                            target.name = (string)name["name"] ?? target.name;
+                            target.surname = (string)name["surname"] ?? target.surname;
+                        }
+                    }
+
+                    fields = (JObject)fields.DeepClone();
+                    fields.Remove("newCharacters");
+                }
+
+                JsonConvert.PopulateObject(fields.ToString(), profile, settings);
+            }
         }
 
         // Неизвестные поля убираем: опечатка в имени не должна молча затирать что-то другое в состоянии игры

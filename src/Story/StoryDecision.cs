@@ -1,3 +1,4 @@
+using AugustDaysMod.Assets;
 using Backend.Gamedesign;
 using Backend.Gamedesign.DecisionsSystem;
 using Backend.Gamedesign.DecisionsSystem.Decisions;
@@ -76,7 +77,7 @@ namespace AugustDaysMod.Story
                 title = text.title,
                 description = text.description,
                 result = BuildAllEffects(gameState).NewFinalizeInColor() +
-                         (CooldownMonths > 0 ? $"\nСнова доступно через {CooldownMonths} мес." : ""),
+                         (CooldownMonths > 0 ? ModLanguage.Pick($"\nСнова доступно через {CooldownMonths} мес.", $"\nAvailable again in {CooldownMonths} mo.") : ""),
                 conditions = conditionsText,
                 conditionsMet = met,
                 decisionType = Type

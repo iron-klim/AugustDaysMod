@@ -50,16 +50,20 @@ namespace AugustDaysMod.Events
         {
             if (gameState.characters[Characters.Yeltsin].status == CharacterInfo.PoliticStatus.Alive)
             {
-                description.AddText("Ельцин возглавил оборону Белого дома");
+                description.AddText(ModLanguage.Pick("Ельцин возглавил оборону Белого дома", "Yeltsin has taken charge of the defence of the White House"));
                 description.AddCoupPower(-10);
             }
 
             bool armyLoyal = gameState.MilitaryStaffLoyalty >= LoyaltyThreshold;
-            description.AddText(armyLoyal ? "Генералитет отказывается штурмовать Белый дом" : "Генералитет готов выполнить приказ о штурме");
+            description.AddText(armyLoyal
+                ? ModLanguage.Pick("Генералитет отказывается штурмовать Белый дом", "The generals refuse to storm the White House")
+                : ModLanguage.Pick("Генералитет готов выполнить приказ о штурме", "The generals are ready to carry out the order to storm"));
             description.AddCoupPower(armyLoyal ? -5 : 5);
 
             bool specialServicesLoyal = gameState.SpecialServicesLoyalty >= LoyaltyThreshold;
-            description.AddText(specialServicesLoyal ? "Группа «Альфа» не выполнит приказ" : "Спецназ КГБ готов к операции");
+            description.AddText(specialServicesLoyal
+                ? ModLanguage.Pick("Группа «Альфа» не выполнит приказ", "Alpha Group will not carry out the order")
+                : ModLanguage.Pick("Спецназ КГБ готов к операции", "KGB special forces are ready for the operation"));
             description.AddCoupPower(specialServicesLoyal ? -5 : 5);
         }
     }

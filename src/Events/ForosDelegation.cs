@@ -52,7 +52,7 @@ namespace AugustDaysMod.Events
             {
                 case ANSWER_2:
                     // Президент сам вводит чрезвычайное положение: переворот больше не нужен
-                    description.AddEndCoup("ГКЧП будет действовать от имени президента");
+                    description.AddEndCoup(ModLanguage.Pick("ГКЧП будет действовать от имени президента", "The GKChP will act on behalf of the President"));
                     description.ChangeDoctrineToOnePoint(gameState, DoctrineType.ControlOfMedia, true);
                     description.AddMilitaryStaffLoyalty(10);
                     description.AddSpecialServicesLoyalty(10);

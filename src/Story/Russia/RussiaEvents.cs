@@ -1,3 +1,4 @@
+using AugustDaysMod.Assets;
 using System;
 using Backend.Gamedesign;
 using Backend.Gamedesign.EventSystem;
@@ -28,7 +29,7 @@ namespace AugustDaysMod.Story.Russia
         protected static UnitOfWork MultiplyPrices(UnitOfWork effects, float factor)
         {
             return effects.AddAction(
-                textFormatter => textFormatter.AddText($"Цены: +{(factor - 1f) * 100f:0}%", "#FF0000"),
+                textFormatter => textFormatter.AddText(ModLanguage.Pick($"Цены: +{(factor - 1f) * 100f:0}%", $"Prices: +{(factor - 1f) * 100f:0}%"), "#FF0000"),
                 (state, gameRules, gameScenario) => state.PriceIndex *= factor);
         }
     }
