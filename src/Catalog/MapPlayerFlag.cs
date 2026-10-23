@@ -23,6 +23,7 @@ namespace AugustDaysMod.Catalog
         private static SpriteRenderer background;
         private static SpriteRenderer hoist;
         private static SpriteRenderer edge;
+        private static SpriteRenderer bottomCap;
 
         static void Postfix(MapController __instance)
         {
@@ -41,9 +42,12 @@ namespace AugustDaysMod.Catalog
                 hoistSettings = null;
             }
 
+            CountryProfile profile = CountryCatalog.Get(gameState.playerCountry);
             bool hasBounds = false;
             Bounds bounds = default;
             Bounds? hoistRegionBounds = null;
+            Bounds? topRegionBounds = null;
+            Bounds? bottomRegionBounds = null;
             SpriteRenderer sample = null;
             foreach (RegionController region in regions)
             {
@@ -77,6 +81,16 @@ namespace AugustDaysMod.Catalog
                     hoistRegionBounds = renderer.bounds;
                 }
 
+                if (region.CurrentRegion == profile?.mapFlagTopRegion)
+                {
+                    topRegionBounds = renderer.bounds;
+                }
+
+                if (region.CurrentRegion == profile?.mapFlagBottomRegion)
+                {
+                    bottomRegionBounds = renderer.bounds;
+                }
+
                 if (hasBounds)
                 {
                     bounds.Encapsulate(renderer.bounds);
@@ -94,48 +108,59 @@ namespace AugustDaysMod.Catalog
                 Hide(background);
                 Hide(hoist);
                 Hide(edge);
+                Hide(bottomCap);
                 return;
             }
 
+            // Высота флага: от нижнего до верхнего опорного региона, без них — вся страна
+            float bottom = bottomRegionBounds.HasValue ? Mathf.Max(bottomRegionBounds.Value.min.y, bounds.min.y) : bounds.min.y;
+            float top = topRegionBounds.HasValue ? Mathf.Min(topRegionBounds.Value.max.y, bounds.max.y)
+                : hoistRegionBounds.HasValue ? hoistRegionBounds.Value.max.y : bounds.max.y;
+            Texture2D texture = sprite.texture;
             background = Ensure(background, "AugustPlayerFlag", sample, 1);
             if (hoistSettings == null || !hoistRegionBounds.HasValue)
             {
-                // Флаг растянут на прямоугольник, описанный вокруг страны
+                // Флаг растянут на всю ширину страны, севернее и южнее — цвет его крайних полос
                 background.sprite = sprite;
-                Place(background, bounds.min.x, bounds.max.x, bounds.min.y, bounds.max.y);
+                Place(background, bounds.min.x, bounds.max.x, bottom, top);
                 Hide(hoist);
-                Hide(edge);
+                PlaceCap(ref edge, "AugustPlayerFlagTop", sample, Row(texture, texture.height - 1), bounds.min.x, bounds.max.x, top, bounds.max.y);
+                PlaceCap(ref bottomCap, "AugustPlayerFlagBottom", sample, Row(texture, 0), bounds.min.x, bounds.max.x, bounds.min.y, bottom);
                 return;
             }
 
             // Флаг с гербом у древка: полоса и герб в своих пропорциях закрывают часть страны от западной границы
-            // опорного региона и по высоте до его верхнего края, остальная территория — цветом свободного края полотна
-            Texture2D texture = sprite.texture;
+            // опорного региона, остальная территория — цветом свободного края полотна
+            Hide(bottomCap);
             int hoistWidth = Mathf.Clamp(Mathf.RoundToInt(texture.width * hoistSettings.width), 1, texture.width);
             background.sprite = Part(texture, texture.width - 1, 1);
             Place(background, bounds.min.x, bounds.max.x, bounds.min.y, bounds.max.y);
 
-            float top = hoistRegionBounds.Value.max.y;
             float left = hoistRegionBounds.Value.min.x;
-            float height = top - bounds.min.y;
+            float pixel = (top - bottom) / texture.height;
             hoist = Ensure(hoist, "AugustPlayerFlagHoist", sample, 2);
             hoist.sprite = HoistPart(texture, hoistWidth);
-            float pixel = height / texture.height;
-            Place(hoist, left, left + hoistWidth * pixel, bounds.min.y, top);
+            Place(hoist, left, left + hoistWidth * pixel, bottom, top);
 
             // Полоса у древка идет на всю высоту страны и продолжается на запад до границы: так она закрывает
             // и то, что выше опорного региона (Кольский полуостров), и анклавы западнее него
-            float stripeRight = left + StripeWidth(texture) * pixel;
-            if (stripeRight > bounds.min.x)
+            PlaceCap(ref edge, "AugustPlayerFlagEdge", sample, Part(texture, 0, 1), bounds.min.x, left + StripeWidth(texture) * pixel,
+                bounds.min.y, bounds.max.y);
+        }
+
+        // Полоса одного цвета на прямоугольнике карты; пустой прямоугольник прячет ее
+        private static void PlaceCap(ref SpriteRenderer renderer, string name, SpriteRenderer sample, Sprite sprite,
+            float xMin, float xMax, float yMin, float yMax)
+        {
+            if (xMax <= xMin || yMax <= yMin)
             {
-                edge = Ensure(edge, "AugustPlayerFlagEdge", sample, 2);
-                edge.sprite = Part(texture, 0, 1);
-                Place(edge, bounds.min.x, stripeRight, bounds.min.y, bounds.max.y);
+                Hide(renderer);
+                return;
             }
-            else
-            {
-                Hide(edge);
-            }
+
+            renderer = Ensure(renderer, name, sample, 2);
+            renderer.sprite = sprite;
+            Place(renderer, xMin, xMax, yMin, yMax);
         }
 
         // Ширина полосы у древка в пикселях картинки: столбцы того же цвета, что и край
@@ -205,6 +230,20 @@ namespace AugustDaysMod.Catalog
             }
 
             return part;
+        }
+
+        private static readonly Dictionary<(Texture2D, int), Sprite> Rows = new Dictionary<(Texture2D, int), Sprite>();
+
+        // Строка картинки флага во всю ее ширину
+        private static Sprite Row(Texture2D texture, int y)
+        {
+            if (!Rows.TryGetValue((texture, y), out Sprite row) || row == null)
+            {
+                row = Sprite.Create(texture, new Rect(0f, y, texture.width, 1f), new Vector2(0.5f, 0.5f), 100f);
+                Rows[(texture, y)] = row;
+            }
+
+            return row;
         }
 
         private static readonly Dictionary<(Texture2D, int), Sprite> Hoists = new Dictionary<(Texture2D, int), Sprite>();

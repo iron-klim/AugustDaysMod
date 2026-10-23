@@ -20,14 +20,17 @@ namespace AugustDaysMod.Catalog
         public static Sprite ForMenu(CountryProfile profile) =>
             Load(profile?.communistFlagImage) ?? Load(profile?.flagImage);
 
-        // Флаг страны игрока сейчас: при коммунистическом правительстве — советский
+        // Флаг страны игрока сейчас: советский, пока она в Союзе или правят коммунисты
         public static Sprite Current(GameState gameState) => Load(CurrentImage(gameState));
 
         public static string CurrentImage(GameState gameState)
         {
             CountryProfile profile = CountryCatalog.Get(gameState.playerCountry);
-            Country.GovernmentType? government = gameState.countries[gameState.playerCountry].governmentType;
-            bool communist = government.HasValue && profile?.communistGovernments != null && profile.communistGovernments.Contains(government.Value);
+            Country country = gameState.countries[gameState.playerCountry];
+            Country.GovernmentType? government = country.governmentType;
+            // Союзная республика носит советский флаг при любом правительстве, независимая страна — только при коммунистах
+            bool communist = country.puppetOf == Countries.USSR ||
+                             government.HasValue && profile?.communistGovernments != null && profile.communistGovernments.Contains(government.Value);
             return communist && Load(profile.communistFlagImage) != null ? profile.communistFlagImage : profile?.flagImage;
         }
 

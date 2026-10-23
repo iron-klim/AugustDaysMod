@@ -42,12 +42,19 @@ namespace AugustDaysMod.Catalog
         // Картинка флага в папке images мода
         [JsonProperty] public string flagImage;
 
-        // Флаг при коммунистическом правительстве. Он же — в меню новой игры: в августе 1991 года страна еще советская
+        // Советский флаг: пока страна в Союзе, а после выхода — при коммунистическом правительстве из списка.
+        // Он же — в меню новой игры: в августе 1991 года страна еще советская
         [JsonProperty] public string communistFlagImage;
         [JsonProperty] public List<Country.GovernmentType> communistGovernments = new List<Country.GovernmentType>();
 
         // Как разместить на карте флаг с гербом у древка. Без настройки флаг растягивается на всю страну
         [JsonProperty] public MapFlagHoist mapFlagHoist;
+
+        // Регионы, по верхнему и нижнему краю которых на карте кончается флаг. Нужны, если у основного региона страны
+        // в картинке большие пустые поля (MainRussia) или на севере много островов: иначе полосы уйдут в море.
+        // Севернее и южнее флаг продолжается цветом крайних полос
+        [JsonProperty] public Backend.Gamedesign.Regions? mapFlagTopRegion;
+        [JsonProperty] public Backend.Gamedesign.Regions? mapFlagBottomRegion;
 
         // Описание старта в меню новой игры
         [JsonProperty] public string startDescription;
