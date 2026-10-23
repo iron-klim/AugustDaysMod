@@ -120,20 +120,40 @@ namespace AugustDaysMod.Catalog
             float height = top - bounds.min.y;
             hoist = Ensure(hoist, "AugustPlayerFlagHoist", sample, 2);
             hoist.sprite = HoistPart(texture, hoistWidth);
-            Place(hoist, left, left + height * hoistWidth / texture.height, bounds.min.y, top);
+            float pixel = height / texture.height;
+            Place(hoist, left, left + hoistWidth * pixel, bounds.min.y, top);
 
-            // Западнее опорного региона полоса у древка продолжается до границы
-            if (left > bounds.min.x)
+            // Полоса у древка идет на всю высоту страны и продолжается на запад до границы: так она закрывает
+            // и то, что выше опорного региона (Кольский полуостров), и анклавы западнее него
+            float stripeRight = left + StripeWidth(texture) * pixel;
+            if (stripeRight > bounds.min.x)
             {
                 edge = Ensure(edge, "AugustPlayerFlagEdge", sample, 2);
                 edge.sprite = Part(texture, 0, 1);
-                Place(edge, bounds.min.x, left, bounds.min.y, top);
+                Place(edge, bounds.min.x, stripeRight, bounds.min.y, bounds.max.y);
             }
             else
             {
                 Hide(edge);
             }
         }
+
+        // Ширина полосы у древка в пикселях картинки: столбцы того же цвета, что и край
+        private static int StripeWidth(Texture2D texture)
+        {
+            int row = texture.height / 2;
+            Color stripe = texture.GetPixel(0, row);
+            int width = 0;
+            while (width < texture.width && SameColor(texture.GetPixel(width, row), stripe))
+            {
+                width++;
+            }
+
+            return width;
+        }
+
+        private static bool SameColor(Color a, Color b) =>
+            Mathf.Abs(a.r - b.r) + Mathf.Abs(a.g - b.g) + Mathf.Abs(a.b - b.b) < 0.12f;
 
         private static void Hide(SpriteRenderer renderer)
         {
@@ -189,8 +209,8 @@ namespace AugustDaysMod.Catalog
 
         private static readonly Dictionary<(Texture2D, int), Sprite> Hoists = new Dictionary<(Texture2D, int), Sprite>();
 
-        // Часть у древка без цвета полотна: она лежит поверх фона того же цвета, и двойной полупрозрачный слой
-        // был бы заметен прямоугольником
+        // Часть у древка без цвета полотна и без полосы: под ней уже лежат фон и полоса тех же цветов, и двойной
+        // полупрозрачный слой был бы заметен прямоугольником. Остается герб
         private static Sprite HoistPart(Texture2D texture, int width)
         {
             if (Hoists.TryGetValue((texture, width), out Sprite part) && part != null)
@@ -199,12 +219,11 @@ namespace AugustDaysMod.Catalog
             }
 
             Color field = texture.GetPixel(texture.width - 1, texture.height / 2);
+            int stripeWidth = StripeWidth(texture);
             Color[] pixels = texture.GetPixels(0, 0, width, texture.height);
             for (int index = 0; index < pixels.Length; index++)
             {
-                Color pixel = pixels[index];
-                float distance = Mathf.Abs(pixel.r - field.r) + Mathf.Abs(pixel.g - field.g) + Mathf.Abs(pixel.b - field.b);
-                if (distance < 0.12f)
+                if (index % width < stripeWidth || SameColor(pixels[index], field))
                 {
                     pixels[index].a = 0f;
                 }
