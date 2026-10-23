@@ -51,6 +51,26 @@
         <Reference Include="UnityEngine.CoreModule">
           <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Crisis in the Kremlin Cold War\CrisisInTheKremlin2_Data\Managed\UnityEngine.CoreModule.dll</HintPath>
         </Reference>
+        <Reference Include="UnityEngine.ImageConversionModule">
+          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Crisis in the Kremlin Cold War\CrisisInTheKremlin2_Data\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.UI">
+          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Crisis in the Kremlin Cold War\CrisisInTheKremlin2_Data\Managed\UnityEngine.UI.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.UIModule">
+          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Crisis in the Kremlin Cold War\CrisisInTheKremlin2_Data\Managed\UnityEngine.UIModule.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="UnityEngine.SpriteMaskModule">
+          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Crisis in the Kremlin Cold War\CrisisInTheKremlin2_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Unity.TextMeshPro">
+          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Crisis in the Kremlin Cold War\CrisisInTheKremlin2_Data\Managed\Unity.TextMeshPro.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="ModEntryPoint.cs" />
@@ -79,6 +99,33 @@
         <Compile Include="src\Scenarios\NewGame.cs" />
         <Compile Include="src\Scenarios\Setup.cs" />
         <Compile Include="src\Scenarios\SovietGarrisons.cs" />
+        <Compile Include="src\Catalog\CountryCatalog.cs" />
+        <Compile Include="src\Catalog\CountryFlagsAndMenu.cs" />
+        <Compile Include="src\Catalog\MapPlayerFlag.cs" />
+        <Compile Include="src\Catalog\CountryLeadership.cs" />
+        <Compile Include="src\Compat\NonUnionPlayer.cs" />
+        <Compile Include="src\Catalog\DependentCountryEndings.cs" />
+        <Compile Include="src\Catalog\PlayerCountry.cs" />
+        <Compile Include="src\DevTools\DevTools.cs" />
+        <Compile Include="src\DevTools\Simulation.cs" />
+        <Compile Include="src\Storage\ModStorage.cs" />
+        <Compile Include="src\Story\StoryDecision.cs" />
+        <Compile Include="src\Story\StoryEffects.cs" />
+        <Compile Include="src\Story\Ukraine\UkraineDecisions.cs" />
+        <Compile Include="src\Story\StoryEnding.cs" />
+        <Compile Include="src\Story\StoryEvent.cs" />
+        <Compile Include="src\Story\Ukraine\UkraineEndings.cs" />
+        <Compile Include="src\Story\Ukraine\UkraineEvents.cs" />
+        <Compile Include="src\Story\Russia\RussiaDecisions.cs" />
+        <Compile Include="src\Story\Russia\RussiaEndings.cs" />
+        <Compile Include="src\Story\Russia\RussiaEvents.cs" />
+        <Compile Include="src\Union\UnionTimeline.cs" />
+        <Compile Include="src\Story\StoryTexts.cs" />
+        <Compile Include="src\Story\UnionNewsEvent.cs" />
+        <Compile Include="src\Union\UnionDynamics.cs" />
+        <Compile Include="src\Union\SafeRepublicAggregates.cs" />
+        <Compile Include="src\Union\UnionContext.cs" />
+        <Compile Include="src\Union\UnionTick.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />
@@ -87,6 +134,15 @@
     <ItemGroup>
       <Content Include="assets\0Harmony.dll" />
       <Content Include="assets\code.dll" />
+      <Content Include="assets\countries.json" />
+      <Content Include="assets\images\rsfsr.svg" />
+      <Content Include="assets\images\russia.webp" />
+      <Content Include="assets\story.json" />
+      <Content Include="assets\images\flag_ukraine.png" />
+      <Content Include="assets\images\flag_ukraine_ssr.png" />
+      <Content Include="assets\images\flag_rsfsr.png" />
+      <Content Include="assets\images\flag_russia.png" />
+      <Content Include="assets\portraits\silhouette.png" />
       <Content Include="assets\icon.png" />
       <Content Include="assets\localRU.xml" />
       <Content Include="assets\scenario.json" />
