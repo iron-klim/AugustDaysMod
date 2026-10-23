@@ -135,11 +135,8 @@
     </ItemGroup>
     <ItemGroup>
       <Content Include="assets\0Harmony.dll" />
-      <Content Include="assets\code.dll" />
       <Content Include="assets\countries.json" />
       <Content Include="assets\countries_en.json" />
-      <Content Include="assets\images\rsfsr.svg" />
-      <Content Include="assets\images\russia.webp" />
       <Content Include="assets\story.json" />
       <Content Include="assets\story_en.json" />
       <Content Include="assets\images\flag_ukraine.png" />
@@ -148,7 +145,6 @@
       <Content Include="assets\images\flag_russia.png" />
       <Content Include="assets\portraits\silhouette.png" />
       <Content Include="assets\icon.png" />
-      <Content Include="assets\localRU.xml" />
       <Content Include="assets\scenario.json" />
       <Content Include="assets\state.json" />
       <Content Include="readme.md" />
