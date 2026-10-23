@@ -1,3 +1,4 @@
+using AugustDaysMod.Assets;
 using AugustDaysMod.Storage;
 using AugustDaysMod.Union;
 using Backend.Gamedesign;
@@ -17,7 +18,8 @@ namespace AugustDaysMod.Story.Ukraine
             ModStorage.For(gameState).Flag(StoryFlags.Independence) == 1 || SovietUnion.Data(gameState).dissolved;
 
         protected static void RelationsAtLeast(GameState gameState, ConditionsFormatter conditions, Countries country, int value) =>
-            conditions.AddCondition($"Отношения с {Backend.Gamedesign.Utils.CountryUtils.GetCountryName(gameState, country)} не ниже {value}",
+            conditions.AddCondition(ModLanguage.Pick($"Отношения с {Backend.Gamedesign.Utils.CountryUtils.GetCountryName(gameState, country)} не ниже {value}",
+                    $"Relations with {Backend.Gamedesign.Utils.CountryUtils.GetCountryName(gameState, country)} at least {value}"),
                 gameState.countries[country].RelationshipWithPlayer >= value);
     }
 
@@ -79,7 +81,7 @@ namespace AugustDaysMod.Story.Ukraine
         protected override void AddEffects(GameState gameState, UnitOfWork effects)
         {
             effects.AddReserveAction(150).AddFirstNeedsGoods(-5).AddIntelligentsiaLoyalty(-5).AddAction(
-                textFormatter => textFormatter.AddText("Цены: +15%", "#FF0000"),
+                textFormatter => textFormatter.AddText(ModLanguage.Pick("Цены: +15%", "Prices: +15%"), "#FF0000"),
                 (state, gameRules, gameScenario) => state.PriceIndex *= 1.15f);
         }
     }

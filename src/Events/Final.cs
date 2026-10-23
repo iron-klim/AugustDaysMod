@@ -66,7 +66,7 @@ namespace AugustDaysMod.Events
             }
 
             textFormatter.AddText(LanguageManager.inst["conspiracy_desc", "lost"]);
-            textFormatter.AddText("Игра будет окончена");
+            textFormatter.AddText(ModLanguage.Pick("Игра будет окончена", "The game will end"));
 
             eventDrawInfo.optionsNamesAlt[0] = textFormatter.Finalize();
 

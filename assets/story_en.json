@@ -1,0 +1,666 @@
+{
+  "events": {
+    "2000": {
+      "title": "News from the Union",
+      "description": "{0}",
+      "options": [
+        {
+          "name": "Take note",
+          "result": ""
+        }
+      ]
+    },
+    "2001": {
+      "title": "Coup in Moscow",
+      "description": "On the morning of 19 August the radio broadcasts an address by the State Committee on the State of Emergency: Gorbachev has been removed “for health reasons” and power has passed to the GKChP. General Varennikov flies into Kiev and demands a state of emergency in the republic. Rukh calls people into the streets, while the Communist Party of Ukraine waits for orders from Moscow. What will Ukraine's leadership say?",
+      "options": [
+        {
+          "name": "“The situation is under control”: wait and don't provoke the army",
+          "result": "You go on television with a cautious address: no state of emergency will be declared in Ukraine, all is calm, and it is time to wait. Varennikov flies home empty-handed, but Rukh is already calling you an appeaser."
+        },
+        {
+          "name": "Condemn the GKChP as an unconstitutional coup",
+          "result": "The Presidium of the Supreme Soviet declares the GKChP's decisions null and void on Ukrainian territory. Thousands fill the Maidan, and in Moscow Yeltsin reads out your statement at the White House. The generals of the Kiev Military District keep a sullen silence."
+        },
+        {
+          "name": "Back the GKChP: order matters more than sovereignty",
+          "result": "You promise the committee your assistance and restrict rallies. Rukh goes underground and the intelligentsia is in shock. If the coup fails, every word will be remembered."
+        }
+      ]
+    },
+    "2002": {
+      "title": "Act of Declaration of Independence",
+      "description": "24 August. The coup has failed and Moscow is no longer the centre of power. At an extraordinary session of the Supreme Soviet, the deputies of the People's Council and yesterday's communists are unexpectedly united: the Communist Party needs protection from Yeltsin's bans, the democrats need a state. The Act of Declaration of Independence of Ukraine is put to a vote, to be confirmed by a nationwide referendum.",
+      "options": [
+        {
+          "name": "Declare independence and set the referendum for 1 December",
+          "result": "346 votes in favour. The yellow-and-blue banner is raised over the Supreme Soviet. Independence has yet to be confirmed by the people and defended against Moscow, but the point of no return has been passed."
+        },
+        {
+          "name": "No rush: first negotiate a renewed Union",
+          "result": "The session limits itself to a statement on sovereignty and a call for negotiations. Rukh accuses the leadership of betrayal, and Moscow breathes a sigh of relief. The referendum will have to be held anyway — the street demands it."
+        }
+      ]
+    },
+    "2003": {
+      "title": "Oath of Allegiance to Ukraine",
+      "description": "The republic hosts three military districts, the Black Sea Fleet, a missile army and some seven hundred thousand servicemen. Defence Minister Morozov proposes placing the troops under Ukrainian command. The officers, many of them not from here, do not know whom they now serve.",
+      "options": [
+        {
+          "name": "Place every unit on Ukrainian soil under Ukrainian command",
+          "result": "You sign a decree: all troops on the republic's territory come under Ukraine's jurisdiction. Some officers leave for Russia, the rest take a new oath. Moscow calls it a seizure of Union property."
+        },
+        {
+          "name": "The oath is voluntary; the rest may leave",
+          "result": "Only those who are willing take the oath. The army is smaller but calmer, and you manage to avoid a scandal with Moscow."
+        }
+      ]
+    },
+    "2004": {
+      "title": "The 1 December Referendum",
+      "description": "An all-Ukrainian referendum on confirming the Act of Independence. Turnout is 84%. {0}% of voters say “yes”; even in the Donbas and Crimea a majority backs independence. A presidential election is held at the same time: Leonid Kravchuk wins in the first round, with Vyacheslav Chornovil second.",
+      "options": [
+        {
+          "name": "The people have confirmed independence",
+          "result": "The next day Poland and Canada recognise Ukraine, followed by dozens of other states. A Union Treaty without Ukraine is of no use to anyone."
+        }
+      ],
+      "variants": {
+        "union": {
+          "title": "The 1 December Referendum",
+          "description": "You kept postponing the decision on independence, but the street forced it on you: the referendum asks about Ukraine's independence. Turnout is 84%, with {0}% voting “yes”. Kravchuk is elected president, but the victory was won without him: the country voted before its leadership made up its mind.",
+          "options": [
+            {
+              "name": "Submit to the will of the people",
+              "result": "Your hesitation cost you authority, but Ukraine is independent. A Union Treaty without it is of no use to anyone."
+            }
+          ]
+        }
+      }
+    },
+    "2005": {
+      "title": "Belovezha Forest",
+      "description": "7 December. The Viskuli hunting lodge near Brest. Yeltsin and Shushkevich propose not to revive the Union but to pronounce it dead: the USSR ceases to exist as a subject of international law, and the Commonwealth of Independent States is created in its place. They have decided to tell Gorbachev later.",
+      "options": [
+        {
+          "name": "Sign the agreement establishing the CIS",
+          "result": "The signatures go on late in the evening of 8 December. Yeltsin calls Bush before he calls Gorbachev. The Union is living out its last days."
+        },
+        {
+          "name": "Refuse: Ukraine needs no commonwealth",
+          "result": "You leave Viskuli without signing. Russia and Belarus sign a bilateral agreement, and without Russia the Union cannot survive anyway. Moscow will long remember your intransigence."
+        }
+      ]
+    },
+    "2006": {
+      "title": "Coupons Instead of Roubles",
+      "description": "On 2 January Russia freed prices. Roubles flow out of Ukraine to wherever they can still buy something, and the shelves empty. Finance Minister Pyatachenko proposes introducing a reusable coupon — a temporary currency — and leaving the rouble zone. Without a printing press of its own, it will be a currency with no reserves.",
+      "options": [
+        {
+          "name": "Introduce the coupon-karbovanets",
+          "result": "The coupons are printed abroad, and wages are paid in them as early as January. Your own money means your own policy — and your own inflation."
+        },
+        {
+          "name": "Stay in the rouble zone",
+          "result": "Decisions about Ukraine's money are still made in Moscow. But trade with Russia does not collapse."
+        }
+      ]
+    },
+    "2007": {
+      "title": "The Black Sea Fleet",
+      "description": "The fleet is based in Sevastopol. Admiral Kasatonov refuses to swear allegiance to Ukraine, and sailors hoist St Andrew's flags. Moscow insists the fleet is strategic and indivisible. Morozov demands a decision: without a fleet, Ukraine has no access to the sea as a power.",
+      "options": [
+        {
+          "name": "Split the fleet in half and agree on basing",
+          "result": "Negotiations begin that will take years. Ships sit at their moorings under two flags, but no shots are fired."
+        },
+        {
+          "name": "The fleet on Ukrainian soil belongs to Ukraine",
+          "result": "Some crews swear allegiance to Ukraine, and a patrol ship sails from Donuzlav to Odessa under the yellow-and-blue flag. In Moscow they speak of Sevastopol as the “city of Russian glory”."
+        },
+        {
+          "name": "Cede the fleet to Russia in exchange for leasing Sevastopol",
+          "result": "Russia pays for basing rights and writes off part of the gas debt. The money is needed, but nationalists call it the surrender of Crimea."
+        }
+      ]
+    },
+    "2008": {
+      "title": "Crimean Self-Rule",
+      "description": "On 5 May the Supreme Soviet of Crimea adopts an Act of State Independence and calls a referendum. Its chairman, Bagrov, assures Kiev that this is not separatism. Meanwhile the Russian parliament declares the 1954 transfer of Crimea to Ukraine illegal.",
+      "options": [
+        {
+          "name": "Veto it and negotiate autonomous status",
+          "result": "The Rada overturns the Crimean parliament's decision and talks begin. Crimea remains part of Ukraine with broad autonomy — and a grudge."
+        },
+        {
+          "name": "Recognise broad self-rule for Crimea",
+          "result": "The compromise suits Simferopol and Moscow. In Kiev you are accused of giving the peninsula away piece by piece."
+        },
+        {
+          "name": "Send in troops and disband the Crimean parliament",
+          "result": "National Guard units enter Simferopol. Order is restored by force, and Russia gains a pretext to talk about protecting its compatriots."
+        }
+      ]
+    },
+    "2009": {
+      "title": "The Nuclear Inheritance",
+      "description": "Ukraine has been left with 176 intercontinental missiles and almost two thousand warheads — the third-largest arsenal in the world. The launch controls are in Moscow, there is no one to maintain the missiles, and the US demands accession to the Non-Proliferation Treaty. In Lisbon a protocol is ready under which Ukraine becomes non-nuclear.",
+      "options": [
+        {
+          "name": "Sign the Lisbon Protocol and remove the warheads",
+          "result": "Ukraine pledges to become non-nuclear. Washington promises aid and loans; Moscow promises fuel for nuclear power plants in exchange for the uranium."
+        },
+        {
+          "name": "Keep the arsenal: it guarantees independence",
+          "result": "You declare the missiles the property of Ukraine. The generals are pleased, and for the first time the West and Russia are united — in pressuring Kiev."
+        },
+        {
+          "name": "Sign, but demand guarantees and compensation",
+          "result": "The protocol is signed, ratification postponed. The bargaining will be long."
+        }
+      ]
+    },
+    "2010": {
+      "title": "The Trilateral Statement",
+      "description": "14 January 1994, Moscow. The presidents of the US and Russia await Ukraine's signature: the warheads go to Russia for reprocessing, and Ukraine receives fuel for its nuclear plants, money for disarmament and security guarantees.",
+      "options": [
+        {
+          "name": "Sign",
+          "result": "The last nuclear arsenal in the post-Soviet space begins its journey to Russia. A year later the guarantees will be formalised in Budapest."
+        },
+        {
+          "name": "Refuse",
+          "result": "The talks collapse. Ukraine remains a nuclear power without the keys to its own missiles, and almost without friends."
+        }
+      ]
+    },
+    "2011": {
+      "title": "The Miners' Strike",
+      "description": "Prices have risen dozens of times over in a year, and wages go unpaid for months. On 7 June the Donbas goes on strike: the miners demand higher wages, economic autonomy for the region and a referendum on confidence in the president and parliament. Prime Minister Kuchma urges them to go back down the pits.",
+      "options": [
+        {
+          "name": "Give in: subsidies for the mines and early elections",
+          "result": "Money is allocated to the mines, and the Rada calls an early presidential election for the summer of 1994. You have bought a breathing space, but you have put your own power on the line."
+        },
+        {
+          "name": "Stand firm and restore order",
+          "result": "The strike gradually fizzles out, and the strike committee leaders are summoned to the prosecutor's office. The Donbas will not forget this year."
+        }
+      ]
+    },
+    "2012": {
+      "title": "Presidential Election",
+      "description": "The second round. Facing the president is Leonid Kuchma, former director of Yuzhmash and prime minister, who promises to put the economy in order and be friends with Russia.",
+      "options": [
+        {
+          "name": "Await the results",
+          "result": ""
+        }
+      ],
+      "variants": {
+        "win": {
+          "title": "Presidential Election",
+          "description": "The second round. Kuchma promised order and friendship with Russia, but the country chose the man who led it to independence. You are re-elected President of Ukraine.",
+          "options": [
+            {
+              "name": "Take the oath",
+              "result": ""
+            }
+          ]
+        },
+        "lose": {
+          "title": "Presidential Election",
+          "description": "The second round. The east and south vote for Kuchma, the west for you. The count goes on all night: 52 percent to 45. You have lost — and you are the first in the country's history to hand over power peacefully.",
+          "options": [
+            {
+              "name": "Concede defeat",
+              "result": ""
+            }
+          ]
+        }
+      }
+    },
+    "2101": {
+      "title": "State of Emergency",
+      "description": "The morning of 19 August. The radio reads out the GKChP statement: Gorbachev is unable to perform his duties “for health reasons”, a state of emergency is declared, and tanks of the Taman and Kantemirovskaya divisions are rolling into Moscow. Your dacha in Arkhangelskoye has not been cordoned off — the plotters either forgot or did not dare. The White House is half an hour's drive away.",
+      "options": [
+        {
+          "name": "Go to the White House and lead the resistance",
+          "result": "You climb onto a tank outside the White House and read the address “To the Citizens of Russia”. Barricades rise around the building, tens of thousands of Muscovites come to defend it, and some of the tanks come over to your side. Three days later the GKChP surrenders."
+        },
+        {
+          "name": "Open negotiations with the GKChP",
+          "result": "While you bargain with Yanayev over guarantees, Khasbulatov and Rutskoy lead the resistance. The coup fails without you, but others will be the heroes of these days."
+        },
+        {
+          "name": "Leave for Sverdlovsk and set up a reserve government",
+          "result": "You fly to the Urals and from there declare the GKChP outlawed. Moscow holds out without you, and the plotters, never daring to storm the city, surrender three days later."
+        }
+      ]
+    },
+    "2102": {
+      "title": "Victory",
+      "description": "23 August. Gorbachev, back from Foros, addresses a session of the Supreme Soviet of the RSFSR. The hall jeers at his excuses. On the rostrum in front of you lies a decree suspending the Communist Party of the RSFSR. The Union ministries have been left without masters, and everyone is waiting to see who will take them.",
+      "options": [
+        {
+          "name": "Sign the decree in front of Gorbachev and bring the Union ministries under Russian control",
+          "result": "“Boris Nikolayevich, what are you signing?” — “A decree suspending the Russian Communist Party.” The Central Committee buildings are sealed, and the Union government effectively passes under Russian control. Gorbachev is still president, but he no longer has any power."
+        },
+        {
+          "name": "Suspend the CPSU pending a court ruling",
+          "result": "The Communist Party is removed from the army, the KGB and the police, its property is sealed, and the Constitutional Court will decide its fate. Tough, but lawful."
+        },
+        {
+          "name": "No revenge: the party must answer at the ballot box",
+          "result": "You restrain the victors from reprisals. The intelligentsia is unhappy with your leniency, but many statist communists see you as something other than an enemy for the first time."
+        }
+      ],
+      "variants": {
+        "late": {
+          "title": "Victory",
+          "description": "23 August. The coup has failed, but you were not in the front ranks, and the deputies remember it. Gorbachev addresses a session of the Supreme Soviet of the RSFSR, and the hall demands a reckoning with the Communist Party. In front of you lies a decree suspending it — your last chance to regain the initiative.",
+          "options": [
+            {
+              "name": "Sign the decree in front of Gorbachev and bring the Union ministries under Russian control",
+              "result": "A decisive gesture restores your role as leader of the victors. The Central Committee buildings are sealed, and the Union government passes under Russian control."
+            },
+            {
+              "name": "Suspend the CPSU pending a court ruling",
+              "result": "The Communist Party is removed from the army, the KGB and the police, and the Constitutional Court will decide its fate."
+            },
+            {
+              "name": "No revenge: the party must answer at the ballot box",
+              "result": "You restrain the victors from reprisals, but many will decide you are simply still wavering."
+            }
+          ]
+        }
+      }
+    },
+    "2103": {
+      "title": "Reform Programme",
+      "description": "28 October. The Fifth Congress of People's Deputies of the RSFSR. The Union government is gone, the shops are empty, the gold reserves have been squandered, and every republic is printing roubles. Burbulis has brought you a team of young economists led by Yegor Gaidar: they propose freeing prices and carrying out privatisation within a year. Yavlinsky defends his “500 Days” programme in its Union-wide version. The Congress is ready to grant you emergency powers — but for which programme?",
+      "options": [
+        {
+          "name": "Shock therapy: a Gaidar government",
+          "result": "The Congress gives you the right to rule by decree for a year. You head the government yourself, with Gaidar in charge of the economy. Price liberalisation is set for January."
+        },
+        {
+          "name": "Gradual reform under Yavlinsky's programme",
+          "result": "There will be reforms — but slower, and together with the other republics. Yavlinsky takes over finance, and the West waits politely."
+        },
+        {
+          "name": "Keep price controls and ration cards",
+          "result": "You do not dare to hit voters in the wallet. The shelves keep emptying while the money supply keeps growing."
+        }
+      ]
+    },
+    "2104": {
+      "title": "Chechnya",
+      "description": "General Dzhokhar Dudayev, who dispersed the Supreme Soviet of Checheno-Ingushetia in September, has been elected president and proclaims the independence of the Chechen Republic. Rutskoy demands an immediate state of emergency to restore order. Khasbulatov, himself a Chechen, advises working through Dudayev's local opponents.",
+      "options": [
+        {
+          "name": "Don't recognise it, but don't use force either",
+          "result": "Grozny lives its own life. It is not a solution but a postponement — though for now no one is shooting."
+        },
+        {
+          "name": "Declare a state of emergency",
+          "result": "Planes carrying Interior Ministry troops are blockaded at Khankala airfield, surrounded by armed crowds. The Supreme Soviet overturns your decree. You have lost face, and Dudayev is the only one who has gained."
+        },
+        {
+          "name": "Impose an economic blockade on the republic",
+          "result": "You cut off money and supplies. Dudayev calls the blockade an act of aggression, but holding on to power is costing him more and more."
+        }
+      ]
+    },
+    "2105": {
+      "title": "Belovezha Forest",
+      "description": "8 December, the government dacha at Viskuli. A week ago Ukraine voted for independence, and Kravchuk has made it clear that it will join no Union. Shushkevich proposes that the three of you meet and decide what to do next. Burbulis and Shakhrai have prepared the text: “The USSR as a subject of international law and a geopolitical reality ceases to exist.”",
+      "options": [
+        {
+          "name": "Sign the agreement on the Commonwealth of Independent States",
+          "result": "The agreement is signed. George Bush is the first to learn of it, by telephone; Gorbachev is second. Within two weeks eight more republics will join the Commonwealth."
+        },
+        {
+          "name": "Announce Russia's unilateral withdrawal from the Union",
+          "result": "Without Ukraine, Russia has no need for the Union Treaty either. You announce withdrawal without consulting your neighbours. The Union will collapse, but not even a Commonwealth will remain in its place."
+        }
+      ]
+    },
+    "2106": {
+      "title": "Freeing Prices",
+      "description": "2 January 1992. The decree on price liberalisation takes effect. Gaidar is confident that within a month goods will be back on the counters and within six months prices will stabilise. Khasbulatov warns that people's savings will be wiped out within a week.",
+      "options": [
+        {
+          "name": "Free prices",
+          "result": "Prices triple in a month and rise twenty-sixfold by the end of the year. Savings are wiped out. But for the first time in years there is food in the shops, and impromptu markets spring up outside metro stations."
+        },
+        {
+          "name": "Postpone: the people won't bear it",
+          "result": "Prices stay controlled, and goods stay in warehouses and in other republics. The budget drowns in subsidies."
+        }
+      ],
+      "variants": {
+        "late": {
+          "title": "Freeing Prices",
+          "description": "January 1992. You did not prepare a radical reform, but the Union is gone and the neighbours are freeing prices on their own: roubles and goods flow to wherever they fetch more. The Finance Ministry reports that the country can no longer afford regulated prices.",
+          "options": [
+            {
+              "name": "Free prices",
+              "result": "Prices rise several times over and savings are wiped out, but food appears in the shops."
+            },
+            {
+              "name": "Hold prices as long as possible",
+              "result": "The warehouses empty, the budget drowns in subsidies, and the queues grow longer."
+            }
+          ]
+        }
+      }
+    },
+    "2107": {
+      "title": "The Federation Treaty",
+      "description": "Following the Union republics, the autonomous republics have declared sovereignty. On 21 March Tatarstan voted in a referendum that it is a “sovereign state, a subject of international law”. Shakhrai has drafted a Federation Treaty dividing powers. Tatarstan and Chechnya refuse to sign it.",
+      "options": [
+        {
+          "name": "Negotiate: special terms for Tatarstan",
+          "result": "The treaty is signed on 31 March, and talks with Shaimiev on a special status begin. Russia stays united — at the cost of tax concessions to the regions."
+        },
+        {
+          "name": "No special statuses",
+          "result": "You demand that the regions submit unconditionally. There are rallies in Kazan and Ufa, but the army is pleased with your firmness."
+        }
+      ]
+    },
+    "2108": {
+      "title": "Bendery",
+      "description": "June 1992. Moldovan police and volunteers enter Bendery, Transnistria returns fire, and hundreds are killed. The 14th Army, stationed on the left bank, is formally neutral. Its new commander, General Lebed, is waiting for orders — or is ready to do without them.",
+      "options": [
+        {
+          "name": "Let Lebed act",
+          "result": "The 14th Army's artillery stops the war overnight. Lebed becomes a national hero, and Chișinău and Bucharest become your adversaries."
+        },
+        {
+          "name": "A peacekeeping operation with Moldova",
+          "result": "You and Snegur sign a ceasefire agreement, and peacekeepers from three sides enter the conflict zone. The conflict is frozen."
+        },
+        {
+          "name": "Withdraw the army from Transnistria",
+          "result": "Russia gives up its foothold. The West praises you; the army and the patriots curse you."
+        }
+      ]
+    },
+    "2109": {
+      "title": "Privatisation Vouchers",
+      "description": "1 October 1992. Chubais presents the mass privatisation programme: every citizen will receive a voucher with a face value of 10,000 roubles that can be exchanged for shares in enterprises. “Two Volgas per voucher,” he promises. Factory directors want to buy out their enterprises themselves, while the Supreme Soviet proposes personal accounts instead of vouchers.",
+      "options": [
+        {
+          "name": "Voucher privatisation",
+          "result": "144 million people receive vouchers. Many sell them outside metro stations for a bottle of vodka, and shrewd operators buy them up by the thousand — but within two years millions will become owners."
+        },
+        {
+          "name": "Sell enterprises for cash",
+          "result": "The treasury fills up, but only those who already have money can buy factories: directors, bankers and yesterday's black-market operators."
+        },
+        {
+          "name": "Postpone privatisation",
+          "result": "The enterprises remain state-owned, and the directors remain masters without responsibility. Washington is displeased."
+        }
+      ]
+    },
+    "2110": {
+      "title": "Seventh Congress of People's Deputies",
+      "description": "December 1992. The Congress refuses to confirm Gaidar as head of government. Khasbulatov openly leads the deputies against you, and Rutskoy calls the reformers “boys in pink shorts”. A compromise is possible: the Congress will vote for any of the five candidates with the most votes. Among them is Viktor Chernomyrdin, head of Gazprom.",
+      "options": [
+        {
+          "name": "Stand by Gaidar",
+          "result": "You appeal to the people to support the course of reform and demand a referendum. The conflict with the Supreme Soviet comes out into the open."
+        },
+        {
+          "name": "Compromise: Chernomyrdin as prime minister",
+          "result": "Chernomyrdin promises “a market, not a bazaar”. The Congress is satisfied, and so are the directors. Gaidar leaves and reform slows down."
+        }
+      ]
+    },
+    "2111": {
+      "title": "Yes, Yes, No, Yes",
+      "description": "25 April 1993. A referendum on confidence in the president and his socio-economic policy, and on early presidential and parliamentary elections. Television runs the “Yes — yes — no — yes” clip on repeat. Turnout is 64%, and {0}% of voters express confidence in the president.",
+      "options": [
+        {
+          "name": "The people are on our side",
+          "result": "The referendum is won. The Supreme Soviet can no longer speak in the name of the people, but it has no intention of giving up."
+        }
+      ],
+      "variants": {
+        "lose": {
+          "title": "Yes, Yes, No, Yes",
+          "description": "25 April 1993. A referendum on confidence in the president and his policies. The “Yes — yes — no — yes” clip did not help: only {0}% of voters express confidence in the president. The Supreme Soviet triumphs and prepares impeachment.",
+          "options": [
+            {
+              "name": "Accept defeat",
+              "result": "You have lost the battle for public opinion. Khasbulatov and Rutskoy no longer hide that they are preparing to take power."
+            }
+          ]
+        }
+      }
+    },
+    "2112": {
+      "title": "Decree No. 1400",
+      "description": "21 September 1993. The standoff between the president and the Supreme Soviet has reached a dead end: the Congress overturns your decrees, and you ignore its resolutions. Filatov and Shakhrai have drafted the decree “On Gradual Constitutional Reform”: dissolve the Congress and the Supreme Soviet, call elections to a new parliament and a referendum on the Constitution. It violates the current Constitution. The Constitutional Court and Rutskoy will respond immediately.",
+      "options": [
+        {
+          "name": "Sign the decree and dissolve the Supreme Soviet",
+          "result": "In the evening you read out your address. The deputies declare you removed from office and swear in Rutskoy. The White House is surrounded by police, cordons and barbed wire."
+        },
+        {
+          "name": "The zero option: simultaneous early presidential and parliamentary elections",
+          "result": "You propose that everyone step down together. Khasbulatov is trapped: refusing would mean admitting he is clinging to his seat. The conflict turns into an election campaign."
+        },
+        {
+          "name": "Back down",
+          "result": "You shelve the decree. Sensing weakness, the Congress convenes an extraordinary session: impeachment is on the agenda."
+        }
+      ]
+    },
+    "2113": {
+      "title": "Black October",
+      "description": "3 October 1993. Supporters of the Supreme Soviet break through the cordon, seize the mayor's office and set off to storm Ostankino. From the balcony of the White House, Rutskoy calls for planes to bomb the Kremlin. Grachev hesitates: the army does not want to shoot its own, but awaits orders.",
+      "options": [
+        {
+          "name": "Send in troops and storm the White House",
+          "result": "On the morning of 4 October, tanks on the Novoarbatsky Bridge fire point-blank at the White House. By evening Rutskoy and Khasbulatov surrender. More than a hundred and fifty people are dead. The power is yours — and so is the blood on it."
+        },
+        {
+          "name": "Negotiations mediated by the Patriarch",
+          "result": "You halt the army. At the St Daniel Monastery the sides agree on leaving the White House, but there are no winners, and the country lives with dual power for several more months."
+        }
+      ]
+    },
+    "2114": {
+      "title": "The Constitution and the Duma",
+      "description": "12 December 1993. Russia votes on a draft of the new Constitution and elects the State Duma. The sensation of the election is Zhirinovsky's LDPR, which wins almost a quarter of the vote. You must decide what the new system of power will be: a presidential republic with a strong head of state, or a parliamentary one where the government answers to the Duma.",
+      "options": [
+        {
+          "name": "Presidential republic",
+          "result": "The Constitution is adopted: the president appoints the government and can dissolve the Duma. Strong power — and a temptation your successors will exploit."
+        },
+        {
+          "name": "Parliamentary republic",
+          "result": "You give the Duma the right to form the government. The president's power is limited, but Russia gains a mechanism for resolving conflicts peacefully."
+        }
+      ]
+    },
+    "2115": {
+      "title": "The Chechen War",
+      "description": "December 1994. For three years Chechnya has lived outside Russian law: slave trading, forged bank transfer notes, trains robbed on the move. The opposition's November assault on Grozny has failed, and Russian tank crews have been taken prisoner. Grachev promises to take the city “with one airborne regiment in two hours”.",
+      "options": [
+        {
+          "name": "Send in troops",
+          "result": "On 11 December columns move on Grozny. On New Year's Eve the assault turns into a disaster. The war will drag on for a long time, and the country will watch it on television."
+        },
+        {
+          "name": "Negotiate with Dudayev",
+          "result": "For the first time you sit down at the table with Dudayev. The generals call it betrayal, the patriots call it capitulation, but there are no coffins."
+        },
+        {
+          "name": "Blockade and reliance on the opposition",
+          "result": "You keep strangling Dudayev's regime economically and arming his opponents. Slow, expensive, unreliable."
+        }
+      ]
+    },
+    "2116": {
+      "title": "Presidential Election",
+      "description": "June 1996. Facing you are Gennady Zyuganov and the revived Communist Party of the Russian Federation. Over the winter your rating was below ten percent.",
+      "options": [
+        {
+          "name": "Await the results",
+          "result": ""
+        }
+      ],
+      "variants": {
+        "win": {
+          "title": "Presidential Election",
+          "description": "Second round, 3 July 1996. “Vote or lose” worked: a country that had lived through queues and coups did not want to go back. 54 percent to 40 — you are re-elected President of Russia.",
+          "options": [
+            {
+              "name": "Take the oath",
+              "result": ""
+            }
+          ]
+        },
+        "lose": {
+          "title": "Presidential Election",
+          "description": "Second round, 3 July 1996. The impoverished country has forgiven you neither the reforms nor Chechnya. Zyuganov wins. You are the first in Russia's history to hand power to the opposition — and you leave the Kremlin under red flags.",
+          "options": [
+            {
+              "name": "Concede defeat",
+              "result": ""
+            }
+          ]
+        }
+      }
+    }
+  },
+  "endings": {
+    "2001": {
+      "title": "Independent Ukraine",
+      "description": "You led the country through the collapse of the Union, empty shelves, coupons and the threat of a split — and the voters entrusted you with a second term. Ukraine has borders, an army, a currency and the recognition of the world. A hard road lies ahead, but it is the road of an independent state."
+    },
+    "2002": {
+      "title": "A Peaceful Transfer of Power",
+      "description": "Independence was achieved, but the economy did not survive the first years. Voters chose Kuchma and order. You step down, leaving the country what matters most — a state and a precedent for the peaceful transfer of power."
+    },
+    "2101": {
+      "title": "President of the New Russia",
+      "description": "You climbed onto a tank outside the White House, buried the Union, freed prices and won an election everyone thought was lost. Russia is poor, fragmented and tired — but it is a market country with free elections, and its fate was decided by its voters."
+    },
+    "2102": {
+      "title": "Communist Revenge",
+      "description": "The reforms proved too painful and the war too long. The country voted for the past. The new president promises to bring back Soviet stability, but the country he speaks of no longer exists."
+    },
+    "2103": {
+      "title": "Removed from Office",
+      "description": "The Congress of People's Deputies removed you from office, and Rutskoy became president. You lost to the Supreme Soviet that you yourself once chaired. Russia becomes a parliamentary republic — ruled by those who defended the White House alongside you in August 1991."
+    }
+  },
+  "decisions": {
+    "3001": {
+      "title": "International Monetary Fund Loan",
+      "description": "The IMF is ready to provide a stabilisation loan in exchange for cutting the deficit and freeing prices. The money is needed now; the conditions will have to be met later."
+    },
+    "3002": {
+      "title": "Gas Deal with Russia",
+      "description": "Gazprom offers a deferral on gas debts and a discounted price. Moscow makes it clear that its generosity depends on Kiev's behaviour."
+    },
+    "3003": {
+      "title": "Small-Scale Privatisation",
+      "description": "Hand shops, cafés, workshops and small enterprises over to private owners. Owners and taxes will appear — but so will the first fortunes made on the sell-off."
+    },
+    "3004": {
+      "title": "Coupon Issue",
+      "description": "The National Bank can print coupons and plug the holes in the budget. Within a few months that money will turn into rising prices."
+    },
+    "3005": {
+      "title": "National Guard",
+      "description": "Create reliable troops of your own to keep order and guard state facilities, independent of the former Soviet units."
+    },
+    "3006": {
+      "title": "Conversion of Defence Plants",
+      "description": "Switch some military plants to civilian production: tractors, refrigerators and trolleybuses instead of missiles."
+    },
+    "3007": {
+      "title": "Support for National Revival",
+      "description": "Support Rukh, “Prosvita” and Ukrainian-language schools. The intelligentsia will be on your side, but the east and south will view it warily."
+    },
+    "3008": {
+      "title": "The Big Treaty with Russia",
+      "description": "A treaty of friendship and cooperation recognising borders. The east will breathe a sigh of relief; the nationalists will call it capitulation."
+    },
+    "3009": {
+      "title": "Rural Support Programme",
+      "description": "Cheap loans to collective farms, machinery and fuel for the sowing season. The black earth should feed the country, not lie idle."
+    },
+    "3010": {
+      "title": "Army Reduction",
+      "description": "The army inherited from the Union is too large for Ukraine's budget. Cutting it saves money but leaves thousands of officers without work."
+    },
+    "3011": {
+      "title": "Presidential Address to the Nation",
+      "description": "Go on television to explain the course: why reforms are needed, why things are hard and when they will get easier. Trust must be maintained constantly."
+    },
+    "3012": {
+      "title": "Government of National Accord",
+      "description": "Invite representatives of the opposition into the government, from Rukh to the socialists. The rift at the top will narrow, but the generals won't like ministers now arguing in public."
+    },
+    "3101": {
+      "title": "International Monetary Fund Loan",
+      "description": "The IMF is ready to support the reforms with a stabilisation loan. The conditions: a tight budget, fighting inflation and ending subsidised loans to industry."
+    },
+    "3102": {
+      "title": "Oil and Gas Exports",
+      "description": "Western Siberia is the country's greatest wealth. Export quotas bring hard currency into the treasury — and into the pockets of those who hand them out."
+    },
+    "3103": {
+      "title": "Loans-for-Shares Auctions",
+      "description": "Bankers offer to lend to the budget against shares in oil and metals giants as collateral. The money is needed before the election, and the shares will most likely never return to the state."
+    },
+    "3104": {
+      "title": "Central Bank Credits",
+      "description": "Gerashchenko is ready to hand out subsidised loans to factories and collective farms. Non-payments will vanish and enterprises will start working — and prices will climb again."
+    },
+    "3105": {
+      "title": "Armed Forces of Russia",
+      "description": "The Union army is being divided among the republics. A decree creating a Russian Ministry of Defence will put the troops and the nuclear arsenal on Russian territory and beyond under your command."
+    },
+    "3106": {
+      "title": "Conversion",
+      "description": "Defence plants stand idle without orders. Switching them to saucepans and televisions means saving jobs but losing part of military production."
+    },
+    "3107": {
+      "title": "Rely on “Democratic Russia”",
+      "description": "The movement that brought you to power is ready to bring people onto the streets again and support the president in his struggle with the Supreme Soviet."
+    },
+    "3108": {
+      "title": "Community with Belarus",
+      "description": "Minsk asks for a union: common borders, currency and army. Integration will appeal to the patriots and please nostalgic voters, but it will cost the treasury in subsidies."
+    },
+    "3109": {
+      "title": "Support for Farmers",
+      "description": "The collective farms are falling apart and there are few private farmers. Loans and machinery for private farms will help feed the cities."
+    },
+    "3110": {
+      "title": "Tax Police",
+      "description": "Enterprises and banks are evading taxes en masse. A new armed service with the right to search will bring money back into the budget — and frighten business."
+    },
+    "3111": {
+      "title": "Address to the Nation",
+      "description": "A television address: explain why the reforms are needed and promise that the worst is over."
+    },
+    "3112": {
+      "title": "Alliance with “Civic Union”",
+      "description": "Arkady Volsky and the factory directors are ready to back the president in exchange for softer reforms and seats in the government."
+    },
+    "3113": {
+      "title": "Withdrawal of Troops from Europe and the Baltics",
+      "description": "The Western Group of Forces and the garrisons in the Baltics are the Union's legacy. Germany is ready to pay for the withdrawal and for officers' housing, and the West to appreciate the gesture."
+    }
+  }
+}

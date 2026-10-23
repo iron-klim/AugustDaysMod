@@ -5,7 +5,8 @@ using AugustDaysMod.Events;
 
 namespace AugustDaysMod.Assets
 {
-    public class Texts
+    // Русские тексты событий и концовок за Горбачева. Английские — в Texts.En.cs под теми же ключами
+    public partial class Texts
     {
         private static Dictionary<int, Dictionary<int, string>> EventsText = new Dictionary<int, Dictionary<int, string>>()
         {
@@ -784,14 +785,20 @@ namespace AugustDaysMod.Assets
             }
         };
         
-        public static string GetEvent(int section, int subsection)
-        {
-            return EventsText[section][subsection];
-        }
+        public static string GetEvent(int section, int subsection) => Get(EventsText, EventsTextEn, section, subsection);
 
-        public static string GetEndings(int section, int subsection)
+        public static string GetEndings(int section, int subsection) => Get(EndingsText, EndingsTextEn, section, subsection);
+
+        // Строки без перевода остаются русскими
+        private static string Get(Dictionary<int, Dictionary<int, string>> russian, Dictionary<int, Dictionary<int, string>> english, int section, int subsection)
         {
-            return EndingsText[section][subsection];
+            if (!ModLanguage.Russian && english.TryGetValue(section, out Dictionary<int, string> translated) &&
+                translated.TryGetValue(subsection, out string text))
+            {
+                return text;
+            }
+
+            return russian[section][subsection];
         }
     }
 }

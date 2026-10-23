@@ -1,0 +1,118 @@
+{
+  "countries": {
+    "USSR": {
+      "name": "USSR"
+    },
+    "Ukraine": {
+      "name": "Ukraine",
+      "fullName": "Ukraine",
+      "abbreviation": "Ukraine",
+      "sovietFullName": "Ukrainian SSR",
+      "sovietAbbreviation": "Ukrainian SSR",
+      "startDescription": "16 August 1991. The Ukrainian SSR is the second largest republic of the Union: 52 million people, the Donbas, the black-earth farmland, the Black Sea Fleet and the third largest nuclear arsenal in the world. A year ago the Supreme Soviet proclaimed state sovereignty, and the Chairman of the Rada, Leonid Kravchuk, carefully steers the republic between Moscow and Rukh. In three days Moscow will try to stop the collapse of the Union by force. Can Ukraine become an independent state, and what kind of state will it be?",
+      "rulerCard": "<b>Leonid Kravchuk</b>\nChairman of the Rada\nCautious apparatchik\nStatist communist",
+      "councilName": [
+        "Presidium of the Verkhovna Rada",
+        "Presidium of the Verkhovna Rada",
+        "Presidium of the Verkhovna Rada",
+        "Presidium of the Verkhovna Rada",
+        "Presidium of the Verkhovna Rada",
+        "Presidium of the Verkhovna Rada"
+      ],
+      "parliamentName": [
+        "Verkhovna Rada",
+        "Verkhovna Rada",
+        "Verkhovna Rada",
+        "Verkhovna Rada",
+        "Verkhovna Rada",
+        "Verkhovna Rada"
+      ],
+      "textOverrides": {
+        "politics_window/filter_12": "Presidium of the Rada",
+        "politic_position_name/pos10_*": "President",
+        "politic_position_name/pos1_*": "Prime Minister",
+        "politic_position_name/pos4_*": "Chairman of the Verkhovna Rada",
+        "politic_position_name/pos5_*": "Head of the SBU",
+        "politic_position_name/pos3_*": "Minister of Finance"
+      },
+      "newCharacters": [
+        { "key": "plyushch", "name": "Ivan", "surname": "Plyushch" },
+        { "key": "zlenko", "name": "Anatoliy", "surname": "Zlenko" },
+        { "key": "pyatachenko", "name": "Hryhoriy", "surname": "Pyatachenko" },
+        { "key": "marchuk", "name": "Yevhen", "surname": "Marchuk" },
+        { "key": "vasylyshyn", "name": "Andriy", "surname": "Vasylyshyn" },
+        { "key": "morozov", "name": "Kostiantyn", "surname": "Morozov" },
+        { "key": "tkachenko", "name": "Oleksandr", "surname": "Tkachenko" },
+        { "key": "talanchuk", "name": "Petro", "surname": "Talanchuk" },
+        { "key": "lukyanenko", "name": "Levko", "surname": "Lukyanenko" },
+        { "key": "moroz", "name": "Oleksandr", "surname": "Moroz" },
+        { "key": "kuchma", "name": "Leonid", "surname": "Kuchma" },
+        { "key": "pynzenyk", "name": "Viktor", "surname": "Pynzenyk" },
+        { "key": "lanovyi", "name": "Volodymyr", "surname": "Lanovyi" },
+        { "key": "drach", "name": "Ivan", "surname": "Drach" },
+        { "key": "horyn", "name": "Mykhailo", "surname": "Horyn" },
+        { "key": "symonenko", "name": "Petro", "surname": "Symonenko" },
+        { "key": "yushchenko", "name": "Viktor", "surname": "Yushchenko" },
+        { "key": "zvyahilsky", "name": "Yukhym", "surname": "Zvyahilsky" },
+        { "key": "pustovoitenko", "name": "Valeriy", "surname": "Pustovoitenko" }
+      ]
+    },
+    "Russia": {
+      "name": "Russia",
+      "fullName": "Russia",
+      "abbreviation": "RF",
+      "sovietFullName": "RSFSR",
+      "sovietAbbreviation": "RSFSR",
+      "startDescription": "16 August 1991. The RSFSR is the heart of the Union: 148 million people, Siberian oil, Moscow and Leningrad. Two months ago Boris Yeltsin became the first popularly elected President of Russia. The Union ministries, the army and the KGB still answer to Gorbachev, but real power is shifting to the Russian leadership. The new Union Treaty is to be signed on 20 August, and in three days Moscow will try to stop it by force. Can you build a new Russia on the ruins of the Union?",
+      "rulerCard": "<b>Boris Yeltsin</b>\nPresident of the RSFSR\nRadical reformer\nPeople's tribune",
+      "councilName": [
+        "State Council of the RSFSR",
+        "State Council of the RSFSR",
+        "State Council of the RSFSR",
+        "State Council of the RSFSR",
+        "State Council of the RSFSR",
+        "State Council of the RSFSR"
+      ],
+      "parliamentName": [
+        "Supreme Soviet of the RSFSR",
+        "Supreme Soviet of the RSFSR",
+        "Supreme Soviet of the RSFSR",
+        "Supreme Soviet of the RSFSR",
+        "Supreme Soviet of the RSFSR",
+        "Supreme Soviet of the RSFSR"
+      ],
+      "textOverrides": {
+        "politics_window/filter_12": "State Council",
+        "politic_position_name/pos0_*": "Vice President",
+        "politic_position_name/pos10_*": "President",
+        "politic_position_name/pos1_*": "Chairman of the Government",
+        "politic_position_name/pos4_*": "Chairman of the Supreme Soviet",
+        "politic_position_name/pos5_*": "Chairman of the RSFSR KGB",
+        "politic_position_name/pos3_*": "Minister of Finance",
+        "politic_position_name/pos12_*": "Chairman of the State Defence Committee"
+      },
+      "newCharacters": [
+        { "key": "burbulis", "name": "Gennady", "surname": "Burbulis" },
+        { "key": "shakhrai", "name": "Sergei", "surname": "Shakhrai" },
+        { "key": "poltoranin", "name": "Mikhail", "surname": "Poltoranin" },
+        { "key": "skokov", "name": "Yuri", "surname": "Skokov" },
+        { "key": "stankevich", "name": "Sergei", "surname": "Stankevich" },
+        { "key": "lazarev", "name": "Igor", "surname": "Lazarev" },
+        { "key": "kobets", "name": "Konstantin", "surname": "Kobets" },
+        { "key": "khlystun", "name": "Viktor", "surname": "Khlystun" },
+        { "key": "dneprov", "name": "Eduard", "surname": "Dneprov" },
+        { "key": "shokhin", "name": "Alexander", "surname": "Shokhin" },
+        { "key": "nechaev", "name": "Andrei", "surname": "Nechaev" },
+        { "key": "bfyodorov", "name": "Boris", "surname": "Fyodorov" },
+        { "key": "filatov", "name": "Sergei", "surname": "Filatov" },
+        { "key": "starovoitova", "name": "Galina", "surname": "Starovoitova" },
+        { "key": "yerin", "name": "Viktor", "surname": "Yerin" },
+        { "key": "golushko", "name": "Nikolai", "surname": "Golushko" },
+        { "key": "shumeiko", "name": "Vladimir", "surname": "Shumeiko" },
+        { "key": "korzhakov", "name": "Alexander", "surname": "Korzhakov" },
+        { "key": "soskovets", "name": "Oleg", "surname": "Soskovets" },
+        { "key": "lukin", "name": "Vladimir", "surname": "Lukin" }
+      ]
+    }
+  }
+}

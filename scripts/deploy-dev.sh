@@ -16,7 +16,7 @@ if echo "$BUILD_LOG" | grep -q "error"; then
 fi
 
 cp "$ROOT/bin/$CONFIGURATION/AugustDaysMod.dll" "$TARGET/code.dll"
-for file in 0Harmony.dll icon.png info.json localRU.xml scenario.json state.json countries.json story.json; do
+for file in 0Harmony.dll icon.png info.json localRU.xml scenario.json state.json countries.json countries_en.json story.json story_en.json; do
   cp "$ROOT/assets/$file" "$TARGET/$file"
 done
 mkdir -p "$TARGET/images" "$TARGET/portraits"

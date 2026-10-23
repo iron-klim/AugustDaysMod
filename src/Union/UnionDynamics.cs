@@ -1,3 +1,4 @@
+using AugustDaysMod.Assets;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -123,7 +124,9 @@ namespace AugustDaysMod.Union
             country.puppetOf = null;
             country.puppetType = Country.PuppetType.None;
             SovietUnion.Data(gameState).independence[key] = gameState.date;
-            UnionNews.Add(gameState, $"{CountryUtils.GetCountryName(gameState, key)} провозглашает независимость и выходит из состава СССР.");
+            string name = CountryUtils.GetCountryName(gameState, key);
+            UnionNews.Add(gameState, ModLanguage.Pick($"{name} провозглашает независимость и выходит из состава СССР.",
+                $"{name} declares independence and leaves the USSR."));
             // Без России Союза нет
             if (key == Countries.Russia)
             {
@@ -158,13 +161,19 @@ namespace AugustDaysMod.Union
             switch (reason)
             {
                 case "russia":
-                    text = "Россия заявляет о выходе из Союза. Без нее союзный центр теряет всякий смысл: СССР прекращает существование, все республики становятся независимыми государствами.";
+                    text = ModLanguage.Pick(
+                        "Россия заявляет о выходе из Союза. Без нее союзный центр теряет всякий смысл: СССР прекращает существование, все республики становятся независимыми государствами.",
+                        "Russia announces its withdrawal from the Union. Without it the Union centre loses all meaning: the USSR ceases to exist and all the republics become independent states.");
                     break;
                 case "agreement":
-                    text = "Руководители республик подписали соглашение о прекращении существования СССР как субъекта международного права и геополитической реальности. Над Кремлем спущен красный флаг.";
+                    text = ModLanguage.Pick(
+                        "Руководители республик подписали соглашение о прекращении существования СССР как субъекта международного права и геополитической реальности. Над Кремлем спущен красный флаг.",
+                        "The leaders of the republics have signed an agreement declaring that the USSR has ceased to exist as a subject of international law and a geopolitical reality. The red flag has been lowered over the Kremlin.");
                     break;
                 default:
-                    text = "Союзный центр больше ничего не контролирует. СССР прекращает существование, оставшиеся республики становятся независимыми государствами.";
+                    text = ModLanguage.Pick(
+                        "Союзный центр больше ничего не контролирует. СССР прекращает существование, оставшиеся республики становятся независимыми государствами.",
+                        "The Union centre no longer controls anything. The USSR ceases to exist, and the remaining republics become independent states.");
                     break;
             }
 

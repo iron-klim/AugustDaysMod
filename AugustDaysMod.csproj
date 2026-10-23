@@ -76,7 +76,9 @@
         <Compile Include="ModEntryPoint.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
         <Compile Include="src\Assets\Interceptor.cs" />
+        <Compile Include="src\Assets\ModLanguage.cs" />
         <Compile Include="src\Assets\Texts.cs" />
+        <Compile Include="src\Assets\Texts.En.cs" />
         <Compile Include="src\Endings\GorbachevResignation.cs" />
         <Compile Include="src\Endings\LiberalVictory.cs" />
         <Compile Include="src\Events\Broadcast.cs" />
@@ -135,9 +137,11 @@
       <Content Include="assets\0Harmony.dll" />
       <Content Include="assets\code.dll" />
       <Content Include="assets\countries.json" />
+      <Content Include="assets\countries_en.json" />
       <Content Include="assets\images\rsfsr.svg" />
       <Content Include="assets\images\russia.webp" />
       <Content Include="assets\story.json" />
+      <Content Include="assets\story_en.json" />
       <Content Include="assets\images\flag_ukraine.png" />
       <Content Include="assets\images\flag_ukraine_ssr.png" />
       <Content Include="assets\images\flag_rsfsr.png" />

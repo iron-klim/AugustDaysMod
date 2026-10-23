@@ -1,3 +1,4 @@
+using AugustDaysMod.Assets;
 using System;
 using System.Collections.Generic;
 using AugustDaysMod.Storage;
@@ -41,9 +42,13 @@ namespace AugustDaysMod.Union
                         UnionRelations.Add(gameState, member.Key, -8f);
                     }
 
-                    UnionNews.Add(gameState, "Путч в Москве провалился. Члены ГКЧП арестованы, Горбачев вернулся из Фороса в другую страну: " +
-                                             "деятельность КПСС приостановлена, союзные министерства переходят под контроль российского руководства. " +
-                                             "Республики одна за другой заявляют о независимости.");
+                    UnionNews.Add(gameState, ModLanguage.Pick(
+                        "Путч в Москве провалился. Члены ГКЧП арестованы, Горбачев вернулся из Фороса в другую страну: " +
+                        "деятельность КПСС приостановлена, союзные министерства переходят под контроль российского руководства. " +
+                        "Республики одна за другой заявляют о независимости.",
+                        "The coup in Moscow has failed. The GKChP members are under arrest, and Gorbachev has returned from Foros to a different country: " +
+                        "the CPSU is suspended and the Union ministries are passing under the control of the Russian leadership. " +
+                        "One republic after another declares independence."));
                 }
             },
             new Milestone
@@ -57,7 +62,8 @@ namespace AugustDaysMod.Union
                         UnionDynamics.DeclareIndependence(gameState, republic);
                     }
 
-                    UnionNews.Add(gameState, "Государственный Совет СССР признал независимость Литвы, Латвии и Эстонии.");
+                    UnionNews.Add(gameState, ModLanguage.Pick("Государственный Совет СССР признал независимость Литвы, Латвии и Эстонии.",
+                        "The USSR State Council has recognised the independence of Lithuania, Latvia and Estonia."));
                 }
             },
             new Milestone
@@ -68,8 +74,11 @@ namespace AugustDaysMod.Union
                 condition = gameState => gameState.playerCountry != Countries.Ukraine && SovietUnion.IsSubject(gameState.countries[Countries.Ukraine]),
                 action = gameState =>
                 {
-                    UnionNews.Add(gameState, "На Украине прошел референдум: за независимость проголосовали более 90% избирателей. " +
-                                             "Президентом избран Леонид Кравчук.");
+                    UnionNews.Add(gameState, ModLanguage.Pick(
+                        "На Украине прошел референдум: за независимость проголосовали более 90% избирателей. " +
+                        "Президентом избран Леонид Кравчук.",
+                        "Ukraine has held a referendum: more than 90% of voters supported independence. " +
+                        "Leonid Kravchuk has been elected President."));
                     UnionDynamics.DeclareIndependence(gameState, Countries.Ukraine);
                 }
             },
