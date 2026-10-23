@@ -16,29 +16,43 @@ namespace AugustDaysMod.Catalog
     {
         private static readonly Dictionary<string, Sprite> Cache = new Dictionary<string, Sprite>();
 
-        public static Sprite Get(CountryProfile profile)
+        // Флаг в меню новой игры: на август 1991 года
+        public static Sprite ForMenu(CountryProfile profile) =>
+            Load(profile?.communistFlagImage) ?? Load(profile?.flagImage);
+
+        // Флаг страны игрока сейчас: при коммунистическом правительстве — советский
+        public static Sprite Current(GameState gameState)
         {
-            if (string.IsNullOrEmpty(profile?.flagImage))
+            CountryProfile profile = CountryCatalog.Get(gameState.playerCountry);
+            Country.GovernmentType? government = gameState.countries[gameState.playerCountry].governmentType;
+            bool communist = government.HasValue && profile?.communistGovernments != null && profile.communistGovernments.Contains(government.Value);
+            return (communist ? Load(profile.communistFlagImage) : null) ?? Load(profile?.flagImage);
+        }
+
+        private static Sprite Load(string fileName)
+        {
+            if (string.IsNullOrEmpty(fileName))
             {
                 return null;
             }
 
-            if (Cache.TryGetValue(profile.flagImage, out Sprite sprite))
+            if (Cache.TryGetValue(fileName, out Sprite sprite))
             {
                 return sprite;
             }
 
-            string path = Interceptor.GetPath(Path.Combine("images", profile.flagImage));
+            string path = Interceptor.GetPath(Path.Combine("images", fileName));
             var texture = new Texture2D(2, 2, TextureFormat.RGBA32, false);
             if (!File.Exists(path) || !texture.LoadImage(File.ReadAllBytes(path)))
             {
                 Debug.LogWarning($"[AugustDays] флаг {path} не загружается");
-                Cache[profile.flagImage] = null;
+                Cache[fileName] = null;
                 return null;
             }
 
+            texture.wrapMode = TextureWrapMode.Clamp;
             sprite = Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), new Vector2(0.5f, 0.5f));
-            Cache[profile.flagImage] = sprite;
+            Cache[fileName] = sprite;
             return sprite;
         }
     }
@@ -57,7 +71,7 @@ namespace AugustDaysMod.Catalog
                 return;
             }
 
-            Sprite sprite = CountryFlags.Get(CountryCatalog.Get(gameState.playerCountry));
+            Sprite sprite = CountryFlags.Current(gameState);
             if (sprite != null)
             {
                 ImageRef(__instance).sprite = sprite;
@@ -90,7 +104,7 @@ namespace AugustDaysMod.Catalog
             int added = 0;
             foreach (KeyValuePair<Countries, CountryProfile> pair in CountryCatalog.Profiles)
             {
-                Sprite sprite = CountryFlags.Get(pair.Value);
+                Sprite sprite = CountryFlags.ForMenu(pair.Value);
                 if (pair.Key == Countries.USSR || sprite == null || __instance.flags.Exists(existing => CountryRef(existing) == pair.Key))
                 {
                     continue;

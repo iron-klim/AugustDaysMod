@@ -15,6 +15,8 @@
       "fullName": "Украина",
       "abbreviation": "Украина",
       "flagImage": "flag_ukraine.png",
+      "communistFlagImage": "flag_ukraine_ssr.png",
+      "communistGovernments": ["ConstructingCommunism", "ConservativeSocialism", "SocialistReformism", "SocialismNationalSpecific", "LeftNationalism", "LeftPragmatism"],
       "startDescription": "16 августа 1991 года. Украинская ССР — вторая по величине республика Союза: 52 миллиона человек, Донбасс, черноземы, Черноморский флот, третий в мире ядерный арсенал. Год назад Верховный Совет провозгласил государственный суверенитет, и председатель Рады Леонид Кравчук осторожно ведет республику между Москвой и Рухом. Через три дня в Москве попытаются остановить развал Союза силой. Сумеет ли Украина стать независимым государством — и каким оно будет?",
       "rulerCard": "<b>Леонид Кравчук</b>\nПредседатель Рады\nОсторожный аппаратчик\nКоммунист-государственник",
       "councilName": [

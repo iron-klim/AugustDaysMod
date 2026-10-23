@@ -63,6 +63,10 @@
           <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Crisis in the Kremlin Cold War\CrisisInTheKremlin2_Data\Managed\UnityEngine.UIModule.dll</HintPath>
           <Private>False</Private>
         </Reference>
+        <Reference Include="UnityEngine.SpriteMaskModule">
+          <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Crisis in the Kremlin Cold War\CrisisInTheKremlin2_Data\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+          <Private>False</Private>
+        </Reference>
         <Reference Include="Unity.TextMeshPro">
           <HintPath>..\..\..\..\Program Files (x86)\Steam\steamapps\common\Crisis in the Kremlin Cold War\CrisisInTheKremlin2_Data\Managed\Unity.TextMeshPro.dll</HintPath>
           <Private>False</Private>
@@ -97,6 +101,7 @@
         <Compile Include="src\Scenarios\SovietGarrisons.cs" />
         <Compile Include="src\Catalog\CountryCatalog.cs" />
         <Compile Include="src\Catalog\CountryFlagsAndMenu.cs" />
+        <Compile Include="src\Catalog\MapPlayerFlag.cs" />
         <Compile Include="src\Catalog\CountryLeadership.cs" />
         <Compile Include="src\Compat\NonUnionPlayer.cs" />
         <Compile Include="src\Catalog\DependentCountryEndings.cs" />
@@ -125,8 +130,10 @@
       <Content Include="assets\0Harmony.dll" />
       <Content Include="assets\code.dll" />
       <Content Include="assets\countries.json" />
+      <Content Include="assets\images\ukr_sov.svg" />
       <Content Include="assets\story.json" />
       <Content Include="assets\images\flag_ukraine.png" />
+      <Content Include="assets\images\flag_ukraine_ssr.png" />
       <Content Include="assets\portraits\silhouette.png" />
       <Content Include="assets\icon.png" />
       <Content Include="assets\localRU.xml" />

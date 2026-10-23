@@ -20,6 +20,6 @@ for file in 0Harmony.dll icon.png info.json localRU.xml scenario.json state.json
   cp "$ROOT/assets/$file" "$TARGET/$file"
 done
 mkdir -p "$TARGET/images" "$TARGET/portraits"
-cp "$ROOT"/assets/images/* "$TARGET/images/"
+cp "$ROOT"/assets/images/*.png "$TARGET/images/"
 cp "$ROOT"/assets/portraits/* "$TARGET/portraits/"
 echo "выложено в $TARGET"

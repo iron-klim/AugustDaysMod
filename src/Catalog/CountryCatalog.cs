@@ -38,6 +38,10 @@ namespace AugustDaysMod.Catalog
         // Картинка флага в папке images мода
         [JsonProperty] public string flagImage;
 
+        // Флаг при коммунистическом правительстве. Он же — в меню новой игры: в августе 1991 года страна еще советская
+        [JsonProperty] public string communistFlagImage;
+        [JsonProperty] public List<Country.GovernmentType> communistGovernments = new List<Country.GovernmentType>();
+
         // Описание старта в меню новой игры
         [JsonProperty] public string startDescription;
 
